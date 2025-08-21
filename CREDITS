@@ -1,0 +1,27 @@
+Tactica Adversa (C) 1996 - 2010 Multipoints ("..."). All Rights Reserved
+Protoforma (C) 1996 - 2010 Multipoints ("..."). All Rights Reserved
+
+ This is a list of people who have contributed to Skilful:
+
+"..." (Multipoints, http://protoforma.com): Tactica Adversa (cause-effect relations method of analysis includes characteristics determination, researching of process properties and prognosis of it's progress), Protoforma  (initial concept, plan), the main idea of the program, methodology of Tactica Adversa and Protoforma applying in analysis and prognosis, trade strategies. The group "..." is led by Jan Rootkevich (owner (Protoforma.com), researcher, financial analyst & capital markets specialist) <jan@protoforma.com>
+
+Alex Kokomov(Loylick): Project supervisor, searching of Models algorithm.
+
+Andrey Prokhorov(AVP, prokhorovavl@mail.ru): Searching of Models algorithm, classes coordination, color scheme, application config, source documentation, data manager 2.
+
+Andrey Zyablitsev (skat): Data manager and data support (Metastock, Rumus, Ducascopy), random generator, statistics block.
+
+Eugeniy Bazarov (obolon): Models searching multithread organisation, about window, work space and settings.
+
+Isabek Satybekov (isabek@gmail.com): License support, data support (Metatrader).
+
+Eugeniy Logvinenko (manuka): Graphic components.
+
+Pavel Kadomin (S_PASHKA, pkadomin@mail.ru): License requirements control, splash, logging, drag and drop.
+
+
+USER MANUAL (Help):
+
+Russian - Obolon;
+
+English - S_PASHKA edited by Loylick;

@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F634E89F-8A3F-4BEE-8E4B-8A824A8A72F6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Skilful</RootNamespace>
+    <AssemblyName>Skilful</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <SignAssembly>false</SignAssembly>
+    <ApplicationIcon>Resources\logos.ico</ApplicationIcon>
+    <PublishUrl>https://protoforma.svn.codeplex.com/svn/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>763</ApplicationRevision>
+    <ApplicationVersion>0.3.6.763</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChartV2\AxisPlot\Axis.cs" />
+    <Compile Include="ChartV2\AxisPlot\CursorInfoLable.cs" />
+    <Compile Include="ChartV2\AxisPlot\DrawingFunctions.cs" />
+    <Compile Include="ChartV2\AxisPlot\Grid.cs" />
+    <Compile Include="ChartV2\AxisPlot\Plot.cs" />
+    <Compile Include="ChartV2\Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartV2\Control.designer.cs">
+      <DependentUpon>Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartV2\GridSplitter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartV2\GridSplitter.designer.cs">
+      <DependentUpon>GridSplitter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartV2\Styles\Legend.cs">
+    </Compile>
+    <Compile Include="ChartV2\Styles\PlotStyle.cs" />
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartV2\Styles\UserLineStyle.cs" />
+    <Compile Include="Chart_Properties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chart_Properties.Designer.cs">
+      <DependentUpon>Chart_Properties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DataFormat_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\DataFormat_Form.Designer.cs">
+      <DependentUpon>DataFormat_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelManager\ModelTree.cs" />
+    <Compile Include="QuotesPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuotesPlayer.Designer.cs">
+      <DependentUpon>QuotesPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sample.cs" />
+    <Compile Include="Statistics\fstat.cs" />
+    <Compile Include="Statistics\StatCalc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLConfig.cs" />
+    <Compile Include="Data\CustomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\CustomForm.designer.cs">
+      <DependentUpon>CustomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DataSourceLibraryLoader.cs" />
+    <Compile Include="Data\DataSourceModule.cs" />
+    <Compile Include="Data\Mesh.cs" />
+    <Compile Include="Data\MT4messages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\MT4messages.Designer.cs">
+      <DependentUpon>MT4messages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MTproxy.cs" />
+    <Compile Include="Data\QuotesManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\SelectDataSource_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\SelectDataSource_Form.designer.cs">
+      <DependentUpon>SelectDataSource_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Model.cs" />
+    <Compile Include="Data\Serie.cs" />
+    <Compile Include="Data\TBar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\TQuotes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\TSymbol.cs" />
+    <Compile Include="Data\UserLine.cs" />
+    <Compile Include="Load.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Load.Designer.cs">
+      <DependentUpon>Load.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MT4control.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MT4control.Designer.cs">
+      <DependentUpon>MT4control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logging.cs" />
+    <Compile Include="ModelManager\ModelsManager.cs" />
+    <Compile Include="ModelManager\TAmodel.cs" />
+    <Compile Include="ModelManager\TModel.cs" />
+    <Compile Include="ModelManager\trend.cs" />
+    <Compile Include="Data\ViewPort.cs" />
+    <Compile Include="ChartV2\Enums.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptionsForm.designer.cs">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ChartV2\Control.resx">
+      <DependentUpon>Control.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartV2\GridSplitter.resx">
+      <DependentUpon>GridSplitter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart_Properties.resx">
+      <DependentUpon>Chart_Properties.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\CustomForm.resx">
+      <DependentUpon>CustomForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\DataFormat_Form.resx">
+      <DependentUpon>DataFormat_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\MT4messages.resx">
+      <DependentUpon>MT4messages.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\SelectDataSource_Form.resx">
+      <DependentUpon>SelectDataSource_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Load.resx">
+      <DependentUpon>Load.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MT4control.resx">
+      <DependentUpon>MT4control.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsForm.resx">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\DataWorkShopWindow.resx">
+      <DependentUpon>DataWorkShopWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuotesPlayer.resx">
+      <DependentUpon>QuotesPlayer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ChartV2\Serialization\CustomSerializer.cs" />
+    <Compile Include="ChartV2\Styles\AxisStyle.cs" />
+    <Compile Include="ChartV2\Styles\BarStyle.cs" />
+    <Compile Include="ChartV2\Styles\CandleStyle.cs" />
+    <Compile Include="ChartV2\Styles\GridStyle.cs" />
+    <Compile Include="ChartV2\Styles\LineStyle.cs" />
+    <Compile Include="ChartV2\Styles\ModelStyle.cs" />
+    <Compile Include="Data\DataWorkShopWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\DataWorkShopWindow.Designer.cs">
+      <DependentUpon>DataWorkShopWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Save.cs" />
+    <Compile Include="Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash.designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Working.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Установщик Windows 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\larr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Resources\rarr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chrtlst.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play1disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop1disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart_ico.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logos.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gtk-close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="SmartCom2Lib">
+      <Guid>{1299D34E-78D0-4B32-8DA8-5EAC7F08FC48}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="StClientLib">
+      <Guid>{AE0A53F5-46EF-4660-A1A7-2AF9F946C6E3}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
