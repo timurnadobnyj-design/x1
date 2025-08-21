@@ -1,0 +1,452 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Skilful: Исходный файл Skilful/Data/ViewPort.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javaScript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Создано системой Doxygen 1.7.1 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+--></script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пакеты</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="dirs.html"><span>Алфавитный&nbsp;указатель&nbsp;директорий</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath">
+    <ul>
+      <li><a class="el" href="dir_7adcdc1edff7620168fbc20357cad448.html">Skilful</a>      </li>
+      <li><a class="el" href="dir_c777626736fbbff11bce263deda591b3.html">Data</a>      </li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<h1>ViewPort.cs</h1>  </div>
+</div>
+<div class="contents">
+<a href="_view_port_8cs.html">См. документацию.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 ﻿<span class="comment">//---------------------------------------------------------------------------------------------------------------</span>
+<a name="l00002"></a>00002 <span class="comment">// Skilful. Tactica Adversa graphic and analysis tool.</span>
+<a name="l00003"></a>00003 <span class="comment">// Copyright (C) 2010 &quot;...&quot;, Logvinenko Eugeniy (manuka)</span>
+<a name="l00004"></a>00004 <span class="comment">//</span>
+<a name="l00005"></a>00005 <span class="comment">// This program is free software; you can redistribute it and/or</span>
+<a name="l00006"></a>00006 <span class="comment">// modify it under the terms of the GNU General Public License</span>
+<a name="l00007"></a>00007 <span class="comment">// as published by the Free Software Foundation; either version 2</span>
+<a name="l00008"></a>00008 <span class="comment">// of the License, or (at your option) any later version.</span>
+<a name="l00009"></a>00009 <span class="comment">//</span>
+<a name="l00010"></a>00010 <span class="comment">// This program is distributed in the hope that it will be useful,</span>
+<a name="l00011"></a>00011 <span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<a name="l00012"></a>00012 <span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<a name="l00013"></a>00013 <span class="comment">// GNU General Public License for more details.</span>
+<a name="l00014"></a>00014 <span class="comment">//</span>
+<a name="l00015"></a>00015 <span class="comment">// You should have received a copy of the GNU General Public License</span>
+<a name="l00016"></a>00016 <span class="comment">// along with this program; if not, write to the Free Software</span>
+<a name="l00017"></a>00017 <span class="comment">// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</span>
+<a name="l00018"></a>00018 <span class="comment">//</span>
+<a name="l00019"></a>00019 <span class="comment">// mail: support@protoforma.com </span>
+<a name="l00020"></a>00020 <span class="comment">//---------------------------------------------------------------------------------------------------------------</span>
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022 
+<a name="l00023"></a>00023 <span class="keyword">using</span> System;
+<a name="l00024"></a>00024 <span class="keyword">using</span> System.Collections.Generic;
+<a name="l00025"></a>00025 <span class="keyword">using</span> System.Drawing;
+<a name="l00026"></a>00026 <span class="keyword">using</span> System.Text;
+<a name="l00027"></a>00027 <span class="keyword">using</span> System.Drawing.Drawing2D;
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029 <span class="keyword">namespace </span>ChartV2.Data
+<a name="l00030"></a>00030 {
+<a name="l00031"></a><a class="code" href="class_chart_v2_1_1_data_1_1_view_port.html">00031</a>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_chart_v2_1_1_data_1_1_view_port.html">ViewPort</a>
+<a name="l00032"></a>00032     {
+<a name="l00033"></a>00033        <span class="comment">//эти переменные нужны для отсекани отрисовки графика, когда</span>
+<a name="l00034"></a>00034        <span class="comment">//вьюпорт вышел за пределы Данных как таковых.</span>
+<a name="l00035"></a><a class="code" href="class_chart_v2_1_1_data_1_1_view_port.html#a17644580aee0c9501c99d50252958714">00035</a>        <span class="keyword">public</span> <span class="keywordtype">float</span> absRealPriceMax;
+<a name="l00036"></a><a class="code" href="class_chart_v2_1_1_data_1_1_view_port.html#afb7c97f689bdab78e717498e806fcb67">00036</a>        <span class="keyword">public</span> <span class="keywordtype">float</span> absRealPriceMin;
+<a name="l00037"></a>00037        <span class="keyword">private</span> <span class="keywordtype">float</span> currentViewPortPriceMax;
+<a name="l00038"></a>00038        <span class="keyword">private</span> <span class="keywordtype">float</span> currentViewPortPriceMin;
+<a name="l00039"></a><a class="code" href="class_chart_v2_1_1_data_1_1_view_port.html#a5749d09c321fbc4e84de05443861dd92">00039</a>        <span class="keyword">static</span> <span class="keyword">public</span> <span class="keywordtype">int</span> maxBarInChart; 
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041        <span class="comment">//private int TimeRerfeshFinishedCounter = 0;</span>
+<a name="l00042"></a>00042         
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044         <span class="keyword">private</span> <span class="keywordtype">float</span> maxTime;
+<a name="l00045"></a>00045         <span class="keyword">private</span> <span class="keywordtype">float</span> minTime;
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047        <span class="keyword">public</span> <span class="keywordtype">float</span> VPMaxTime
+<a name="l00048"></a><a class="code" href="class_chart_v2_1_1_data_1_1_view_port.html#a4f3e44ed0bd42baca25e4240594c3686">00048</a>         {
+<a name="l00049"></a>00049             <span class="keyword">get</span> { <span class="keywordflow">return</span> maxTime; }
+<a name="l00050"></a>00050             <span class="keyword">set</span>
+<a name="l00051"></a>00051             {
+<a name="l00052"></a>00052                 maxTime = value;                
+<a name="l00053"></a>00053                <span class="comment">// LookForVisibleMinMax(1);</span>
+<a name="l00054"></a>00054                 
+<a name="l00055"></a>00055             }
+<a name="l00056"></a>00056         }
+<a name="l00057"></a>00057         <span class="keyword">public</span> <span class="keywordtype">float</span> VPMinTime
+<a name="l00058"></a><a class="code" href="class_chart_v2_1_1_data_1_1_view_port.html#a141a081caf6f0af935d06e4608ef711d">00058</a>         {
+<a name="l00059"></a>00059             <span class="keyword">get</span> { <span class="keywordflow">return</span> minTime; }
+<a name="l00060"></a>00060             <span class="keyword">set</span>
+<a name="l00061"></a>00061             {
+<a name="l00062"></a>00062                 minTime = value;  
+<a name="l00063"></a>00063                <span class="comment">// LookForVisibleMinMax(1);</span>
+<a name="l00064"></a>00064                
+<a name="l00065"></a>00065             }
+<a name="l00066"></a>00066         }
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068         <span class="keyword">private</span> <span class="keywordtype">int</span> height;
+<a name="l00069"></a>00069         <span class="keyword">private</span> <span class="keywordtype">int</span> width;
+<a name="l00070"></a><a class="code" href="class_chart_v2_1_1_data_1_1_view_port.html#ac6394eed228e977b95559ae2191c635c">00070</a>         <span class="keyword">public</span> <span class="keywordtype">float</span> varPrice;
+<a name="l00071"></a><a class="code" href="class_chart_v2_1_1_data_1_1_view_port.html#a39661fc9e9ccfe9262d68cda818d77de">00071</a>         <span class="keyword">public</span> <span class="keywordtype">float</span> varTime;
+<a name="l00072"></a>00072        <span class="comment">// temp vars for calculation</span>
+<a name="l00073"></a>00073         <span class="keyword">private</span> Point tempPoint=Point.Empty;
+<a name="l00074"></a>00074        <span class="keyword">private</span> <span class="keywordtype">float</span> tempFloat = 0F;
+<a name="l00075"></a><a class="code" href="class_chart_v2_1_1_data_1_1_view_port.html#a207082ec64402dd0273a607af8119752">00075</a>        <span class="keyword">public</span> <span class="keywordtype">int</span> stratTime = 0;
+<a name="l00076"></a><a class="code" href="class_chart_v2_1_1_data_1_1_view_port.html#af077eb8244e4277a1af37644f39c4f52">00076</a>       <span class="keyword">public</span> <span class="keywordtype">int</span> finishTime = 0;
+<a name="l00077"></a>00077 
+<a name="l00078"></a>00078        <span class="keyword">private</span> <span class="keywordtype">float</span> margin = 0;
+<a name="l00079"></a>00079        <span class="comment">//AutoScalseMarginsPoints</span>
+<a name="l00080"></a>00080        <span class="keyword">private</span> <span class="keywordtype">float</span> visibleMaxPrice;
+<a name="l00081"></a>00081        <span class="keyword">public</span> <span class="keywordtype">float</span> VPMaxPrice
+<a name="l00082"></a><a class="code" href="class_chart_v2_1_1_data_1_1_view_port.html#ad15f2eb27251ba485d67552379188b10">00082</a>        {
+<a name="l00083"></a>00083            <span class="keyword">get</span> { <span class="keywordflow">return</span> currentViewPortPriceMax; }
+<a name="l00084"></a>00084            <span class="keyword">set</span> 
+<a name="l00085"></a>00085            {
+<a name="l00086"></a>00086                
+<a name="l00087"></a>00087                currentViewPortPriceMax = value;
+<a name="l00088"></a>00088                margin = (currentViewPortPriceMax - visibleMaxPrice) / visibleMaxPrice;
+<a name="l00089"></a>00089               <span class="comment">// currentViewPortPriceMax = visibleMaxPrice - margin * currentViewPortPriceMax;</span>
+<a name="l00090"></a>00090            }
+<a name="l00091"></a>00091        }
+<a name="l00092"></a>00092        <span class="keyword">private</span> <span class="keywordtype">float</span> visibleMinPrice;
+<a name="l00093"></a>00093        <span class="keyword">public</span> <span class="keywordtype">float</span> VPMinPrice
+<a name="l00094"></a><a class="code" href="class_chart_v2_1_1_data_1_1_view_port.html#a3d898f5781f460f0e8a6e14fd846c3d4">00094</a>        {
+<a name="l00095"></a>00095            <span class="keyword">get</span> { <span class="keywordflow">return</span> currentViewPortPriceMin; }
+<a name="l00096"></a>00096            <span class="keyword">set</span> {
+<a name="l00097"></a>00097 
+<a name="l00098"></a>00098                currentViewPortPriceMin = value;
+<a name="l00099"></a>00099            }
+<a name="l00100"></a>00100        }
+<a name="l00101"></a>00101 
+<a name="l00102"></a>00102        <span class="keyword">private</span> Data.Series linkedSerie;
+<a name="l00103"></a>00103 
+<a name="l00104"></a><a class="code" href="class_chart_v2_1_1_data_1_1_view_port.html#a822f16773c78d846fc78631c7b43665f">00104</a>         <span class="keyword">public</span> <a class="code" href="class_chart_v2_1_1_data_1_1_view_port.html">ViewPort</a>()
+<a name="l00105"></a>00105         { }
+<a name="l00106"></a><a class="code" href="class_chart_v2_1_1_data_1_1_view_port.html#a18a764382fbbe884cd998cfde0c6c616">00106</a>         <span class="keyword">public</span> <a class="code" href="class_chart_v2_1_1_data_1_1_view_port.html">ViewPort</a>(Data.Series ds)
+<a name="l00107"></a>00107         {
+<a name="l00108"></a>00108             linkedSerie = ds;
+<a name="l00109"></a>00109             update();
+<a name="l00110"></a>00110         }
+<a name="l00111"></a><a class="code" href="class_chart_v2_1_1_data_1_1_view_port.html#ac98b10e3cfb3c0ddf5cd5061f379b287">00111</a>         <span class="keyword">public</span> <span class="keywordtype">void</span> update()
+<a name="l00112"></a>00112         {
+<a name="l00113"></a>00113             Data.Series ds = linkedSerie;
+<a name="l00114"></a>00114 
+<a name="l00115"></a>00115             <span class="comment">//задёт количество баров для первоначальной отрисовки</span>
+<a name="l00116"></a>00116             <span class="keywordflow">if</span> (ds.data.Count &lt; maxBarInChart)
+<a name="l00117"></a>00117             {
+<a name="l00118"></a>00118                 VPMaxTime = ds.data.Count + 2;
+<a name="l00119"></a>00119                 VPMinTime = 0;
+<a name="l00120"></a>00120                 stratTime = 0;
+<a name="l00121"></a>00121                 finishTime = ds.data.Count;
+<a name="l00122"></a>00122             }
+<a name="l00123"></a>00123             <span class="keywordflow">else</span>
+<a name="l00124"></a>00124             {
+<a name="l00125"></a>00125                 VPMaxTime = ds.data.Count + 2; <span class="comment">//2 бара - отступ от края</span>
+<a name="l00126"></a>00126                 VPMinTime = ds.data.Count - maxBarInChart;
+<a name="l00127"></a>00127                 stratTime = ds.data.Count - maxBarInChart;
+<a name="l00128"></a>00128                 finishTime = ds.data.Count;
+<a name="l00129"></a>00129             }
+<a name="l00130"></a>00130 
+<a name="l00131"></a>00131             LookForMinMax(ds);
+<a name="l00132"></a>00132             VPMaxPrice = visibleMaxPrice;
+<a name="l00133"></a>00133             VPMinPrice = visibleMinPrice;
+<a name="l00134"></a>00134         }
+<a name="l00135"></a>00135 
+<a name="l00142"></a>00142        <span class="comment">// public  static void ShiftViewPortByTime(Data.Series ds,int start, int finish)</span>
+<a name="l00143"></a>00143        <span class="comment">// {</span>
+<a name="l00144"></a>00144        <span class="comment">//     if (finish &gt; ds.data.Count)</span>
+<a name="l00145"></a>00145        <span class="comment">//         finish = ds.data.Count;</span>
+<a name="l00146"></a>00146        <span class="comment">//     if (finish &lt;=0)</span>
+<a name="l00147"></a>00147        <span class="comment">//         finish = 10; </span>
+<a name="l00148"></a>00148 
+<a name="l00149"></a>00149        <span class="comment">//     if (start &lt; 0)</span>
+<a name="l00150"></a>00150        <span class="comment">//         start = 0;</span>
+<a name="l00151"></a>00151        <span class="comment">//     if (start &gt;= ds.data.Count)</span>
+<a name="l00152"></a>00152        <span class="comment">//         start = ds.data.Count - 10;</span>
+<a name="l00153"></a>00153                
+<a name="l00154"></a>00154             
+<a name="l00155"></a>00155        <span class="comment">//     ds.viewPort.VisibleMaxPrice = 0;</span>
+<a name="l00156"></a>00156        <span class="comment">//     ds.viewPort.VisibleMinPrice = float.PositiveInfinity;</span>
+<a name="l00157"></a>00157             
+<a name="l00158"></a>00158            
+<a name="l00159"></a>00159        <span class="comment">//         ds.viewPort.VisibleMinTime = start;</span>
+<a name="l00160"></a>00160            
+<a name="l00161"></a>00161        <span class="comment">//         ds.viewPort.VisibleMaxTime = finish;</span>
+<a name="l00162"></a>00162             
+<a name="l00163"></a>00163        <span class="comment">//     for (int i = start; i &lt; finish; i++)</span>
+<a name="l00164"></a>00164        <span class="comment">//     {</span>
+<a name="l00165"></a>00165        <span class="comment">//         if (i &gt; ds.viewPort.VisibleMinTime)</span>
+<a name="l00166"></a>00166        <span class="comment">//         {</span>
+<a name="l00167"></a>00167        <span class="comment">//             if (ds.viewPort.VisibleMaxPrice &lt; (float)ds.data[i].d[3])</span>
+<a name="l00168"></a>00168        <span class="comment">//             {</span>
+<a name="l00169"></a>00169        <span class="comment">//                 ds.viewPort.VisibleMaxPrice = (float)ds.data[i].d[3];</span>
+<a name="l00170"></a>00170        <span class="comment">//                 //ds.viewPort.VisibleMaxPrice.X = i;</span>
+<a name="l00171"></a>00171        <span class="comment">//             }</span>
+<a name="l00172"></a>00172        <span class="comment">//             if (ds.viewPort.VisibleMinPrice &gt; (float)ds.data[i].d[4])</span>
+<a name="l00173"></a>00173        <span class="comment">//             {</span>
+<a name="l00174"></a>00174        <span class="comment">//                 ds.viewPort.VisibleMinPrice = (float)ds.data[i].d[4];</span>
+<a name="l00175"></a>00175        <span class="comment">//               //  ds.viewPort.VisibleMinPrice.X = i;</span>
+<a name="l00176"></a>00176        <span class="comment">//             }</span>
+<a name="l00177"></a>00177        <span class="comment">//         }</span>
+<a name="l00178"></a>00178 
+<a name="l00179"></a>00179        <span class="comment">//     }</span>
+<a name="l00180"></a>00180        <span class="comment">//     ds.viewPort.varPrice = ds.viewPort.VisibleMaxPrice - ds.viewPort.VisibleMinPrice;</span>
+<a name="l00181"></a>00181        <span class="comment">// }</span>
+<a name="l00182"></a>00182        
+<a name="l00183"></a><a class="code" href="class_chart_v2_1_1_data_1_1_view_port.html#a7654ad2def8ec2c0fe697213fa469fb9">00183</a>         <span class="keyword">public</span> <span class="keywordtype">void</span> AutoMarginLooking()
+<a name="l00184"></a>00184         {
+<a name="l00185"></a>00185 
+<a name="l00186"></a>00186             finishTime = (int)linkedSerie.viewPort.VPMaxTime+1;
+<a name="l00187"></a>00187             stratTime =(<span class="keywordtype">int</span>) linkedSerie.viewPort.VPMinTime;
+<a name="l00188"></a>00188 
+<a name="l00189"></a>00189             <span class="keywordflow">if</span> (finishTime &gt; linkedSerie.data.Count)    finishTime = linkedSerie.data.Count;
+<a name="l00190"></a>00190             <span class="keywordflow">if</span> (finishTime &lt; 0) finishTime = 0;
+<a name="l00191"></a>00191 
+<a name="l00192"></a>00192             <span class="keywordflow">if</span> (linkedSerie.viewPort.VPMinTime &lt; 0)
+<a name="l00193"></a>00193               stratTime = 0;
+<a name="l00194"></a>00194             <span class="keywordflow">if</span> (linkedSerie.viewPort.VPMinTime &gt;= linkedSerie.data.Count)
+<a name="l00195"></a>00195                 stratTime = linkedSerie.data.Count-1;
+<a name="l00196"></a>00196             
+<a name="l00197"></a>00197             
+<a name="l00198"></a>00198             linkedSerie.viewPort.visibleMaxPrice = <span class="keywordtype">float</span>.NegativeInfinity;
+<a name="l00199"></a>00199             linkedSerie.viewPort.visibleMinPrice = absRealPriceMax;
+<a name="l00200"></a>00200 
+<a name="l00201"></a>00201             <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = stratTime; i &lt; finishTime; i++)
+<a name="l00202"></a>00202             {
+<a name="l00203"></a>00203                 <span class="keywordflow">if</span> (i &gt; linkedSerie.viewPort.VPMinTime)
+<a name="l00204"></a>00204                 {
+<a name="l00205"></a>00205                     <span class="keywordflow">if</span> (linkedSerie.viewPort.visibleMaxPrice &lt; (<span class="keywordtype">float</span>)linkedSerie.data[i].d[3])
+<a name="l00206"></a>00206                     {
+<a name="l00207"></a>00207                         linkedSerie.viewPort.visibleMaxPrice = (float)linkedSerie.data[i].d[3];
+<a name="l00208"></a>00208                        <span class="comment">// linkedSerie.viewPort.VisibleMaxPrice.X = i;</span>
+<a name="l00209"></a>00209 
+<a name="l00210"></a>00210                     }
+<a name="l00211"></a>00211                     <span class="keywordflow">if</span> (linkedSerie.viewPort.visibleMinPrice &gt; (<span class="keywordtype">float</span>)linkedSerie.data[i].d[4])
+<a name="l00212"></a>00212                     {
+<a name="l00213"></a>00213                         linkedSerie.viewPort.visibleMinPrice = (float)linkedSerie.data[i].d[4];
+<a name="l00214"></a>00214                        <span class="comment">// linkedSerie.viewPort.VisibleMinPrice.X = i;</span>
+<a name="l00215"></a>00215                     }
+<a name="l00216"></a>00216                 }
+<a name="l00217"></a>00217 
+<a name="l00218"></a>00218             }
+<a name="l00219"></a>00219             <span class="keywordflow">if</span> (!<span class="keywordtype">float</span>.IsInfinity(margin) &amp;&amp; margin != 0 &amp;&amp;  !<span class="keywordtype">float</span>.IsNaN(margin) &amp;&amp; visibleMaxPrice != 0 &amp;&amp; visibleMinPrice != 0)
+<a name="l00220"></a>00220             {
+<a name="l00221"></a>00221                 linkedSerie.viewPort.VPMaxPrice = visibleMaxPrice + margin * visibleMaxPrice;
+<a name="l00222"></a>00222                 linkedSerie.viewPort.VPMinPrice = visibleMinPrice - margin * visibleMinPrice;
+<a name="l00223"></a>00223             }
+<a name="l00224"></a>00224             <span class="keywordflow">else</span>
+<a name="l00225"></a>00225             {
+<a name="l00226"></a>00226                 linkedSerie.viewPort.VPMaxPrice = visibleMaxPrice;
+<a name="l00227"></a>00227                 linkedSerie.viewPort.VPMinPrice = visibleMinPrice;
+<a name="l00228"></a>00228             }
+<a name="l00229"></a>00229             linkedSerie.viewPort.varPrice = linkedSerie.viewPort.VPMaxPrice - linkedSerie.viewPort.VPMinPrice;
+<a name="l00230"></a>00230 
+<a name="l00231"></a>00231         }
+<a name="l00232"></a>00232        
+<a name="l00233"></a><a class="code" href="class_chart_v2_1_1_data_1_1_view_port.html#a0e6bf92e90008bcd396ac26b61bc179b">00233</a>        <span class="keyword">public</span> <span class="keywordtype">void</span> LookForMinMax(Data.Series ds)
+<a name="l00234"></a>00234         {
+<a name="l00235"></a>00235             absRealPriceMax = <span class="keywordtype">float</span>.NegativeInfinity;
+<a name="l00236"></a>00236             absRealPriceMin = <span class="keywordtype">float</span>.PositiveInfinity;
+<a name="l00237"></a>00237             visibleMaxPrice = <span class="keywordtype">float</span>.NegativeInfinity;
+<a name="l00238"></a>00238             visibleMinPrice = <span class="keywordtype">float</span>.PositiveInfinity;
+<a name="l00239"></a>00239             <span class="comment">//зададим отступ в 5 пунктов</span>
+<a name="l00240"></a>00240             <span class="comment">//double dig = (ds.data[0].d[3]-Math.Truncate(ds.data[0].d[3]))*100;</span>
+<a name="l00241"></a>00241             <span class="keywordtype">double</span> padding = 5 * (ds.info != null ? ds.info.Symbol.pip : 0.0005);
+<a name="l00242"></a>00242             <span class="comment">//внутренний цикл для расчета масштаба(макс-мин) на участве графика, </span>
+<a name="l00243"></a>00243             <span class="comment">//предназначенного для первоначальной отрисовки.</span>
+<a name="l00244"></a>00244             <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; ds.data.Count; i++)
+<a name="l00245"></a>00245             {
+<a name="l00246"></a>00246                 <span class="keywordtype">double</span> lastBarHigh = (double)ds.data[i].d[3],
+<a name="l00247"></a>00247                        lastBarLow = (<span class="keywordtype">double</span>)ds.data[i].d[4];
+<a name="l00248"></a>00248                 <span class="keywordflow">if</span> ((ds.info!=null? ds.info.log: ds.legend.log))
+<a name="l00249"></a>00249                 {
+<a name="l00250"></a>00250                     lastBarHigh = Math.Log10(Math.Pow(10, lastBarHigh) + padding);
+<a name="l00251"></a>00251                     lastBarLow = Math.Log10(Math.Pow(10, lastBarLow) - padding);
+<a name="l00252"></a>00252                 }
+<a name="l00253"></a>00253                 <span class="keywordflow">else</span>{
+<a name="l00254"></a>00254                     lastBarHigh = (double)ds.data[i].d[3] + padding;
+<a name="l00255"></a>00255                     lastBarLow = (<span class="keywordtype">double</span>)ds.data[i].d[4] - padding;
+<a name="l00256"></a>00256                 }
+<a name="l00257"></a>00257                 <span class="keywordflow">if</span> (i &gt; VPMinTime)
+<a name="l00258"></a>00258                 {
+<a name="l00259"></a>00259                     <span class="keywordflow">if</span> (visibleMaxPrice &lt; lastBarHigh)
+<a name="l00260"></a>00260                     {
+<a name="l00261"></a>00261                         visibleMaxPrice = (float)lastBarHigh;
+<a name="l00262"></a>00262                        <span class="comment">// VisibleMaxPrice.X = i;</span>
+<a name="l00263"></a>00263                        
+<a name="l00264"></a>00264                     }
+<a name="l00265"></a>00265                     <span class="keywordflow">if</span> (visibleMinPrice &gt; lastBarLow)
+<a name="l00266"></a>00266                     {
+<a name="l00267"></a>00267                         visibleMinPrice = (float)lastBarLow;
+<a name="l00268"></a>00268                        <span class="comment">// VisibleMinPrice.X = i;</span>
+<a name="l00269"></a>00269                         
+<a name="l00270"></a>00270                     }
+<a name="l00271"></a>00271                 }
+<a name="l00272"></a>00272 
+<a name="l00273"></a>00273 
+<a name="l00274"></a>00274                 <span class="keywordflow">if</span> (absRealPriceMax &lt; (<span class="keywordtype">float</span>)ds.data[i].d[3])
+<a name="l00275"></a>00275                     absRealPriceMax = (<span class="keywordtype">float</span>)ds.data[i].d[3];
+<a name="l00276"></a>00276 
+<a name="l00277"></a>00277                 <span class="keywordflow">if</span> (absRealPriceMin &gt; (<span class="keywordtype">float</span>)ds.data[i].d[4])
+<a name="l00278"></a>00278                     absRealPriceMin = (<span class="keywordtype">float</span>)ds.data[i].d[4];
+<a name="l00279"></a>00279             }
+<a name="l00280"></a>00280 
+<a name="l00281"></a>00281         }
+<a name="l00286"></a><a class="code" href="class_chart_v2_1_1_data_1_1_view_port.html#ae6c8120a00483d79439d3effeea60b72">00286</a>         <span class="keyword">public</span> <span class="keywordtype">void</span> PrepareTransformFunctions(Bitmap bmp)
+<a name="l00287"></a>00287         {
+<a name="l00288"></a>00288 
+<a name="l00289"></a>00289 
+<a name="l00290"></a>00290 
+<a name="l00291"></a>00291             <span class="keywordflow">if</span> (linkedSerie.viewPort.VPMaxTime &gt;= linkedSerie.data.Count)
+<a name="l00292"></a>00292                 finishTime = linkedSerie.data.Count;
+<a name="l00293"></a>00293             <span class="keywordflow">else</span>
+<a name="l00294"></a>00294                 finishTime = (int) linkedSerie.viewPort.VPMaxTime+1;
+<a name="l00295"></a>00295 
+<a name="l00296"></a>00296 
+<a name="l00297"></a>00297             if (linkedSerie.viewPort.VPMinTime &lt; 2)
+<a name="l00298"></a>00298                 stratTime = 2;
+<a name="l00299"></a>00299             <span class="keywordflow">else</span>
+<a name="l00300"></a>00300                 stratTime = (int) linkedSerie.viewPort.VPMinTime;
+<a name="l00301"></a>00301            
+<a name="l00302"></a>00302             width = bmp.Width;
+<a name="l00303"></a>00303             height = bmp.Height;
+<a name="l00304"></a>00304 
+<a name="l00305"></a>00305             varTime = (width) / (this.VPMaxTime - this.VPMinTime);
+<a name="l00306"></a>00306             varPrice = (height) / (this.VPMaxPrice - this.VPMinPrice);
+<a name="l00307"></a>00307           
+<a name="l00308"></a>00308         }
+<a name="l00313"></a><a class="code" href="class_chart_v2_1_1_data_1_1_view_port.html#a85031c699db5918eefbb70f4d544441c">00313</a>         <span class="keyword">public</span> <span class="keywordtype">void</span> PrepareTransformFunctionsAutoMargins(Bitmap bmp)
+<a name="l00314"></a>00314         { 
+<a name="l00315"></a>00315             <span class="keywordflow">if</span>(linkedSerie.viewPort.VPMaxTime &gt;= linkedSerie.data.Count)
+<a name="l00316"></a>00316                 finishTime = linkedSerie.data.Count;
+<a name="l00317"></a>00317             <span class="keywordflow">else</span>
+<a name="l00318"></a>00318                 finishTime = (int) linkedSerie.viewPort.VPMaxTime+1;
+<a name="l00319"></a>00319 
+<a name="l00320"></a>00320 
+<a name="l00321"></a>00321             if (linkedSerie.viewPort.VPMinTime &lt; 2)
+<a name="l00322"></a>00322                 stratTime = 2;
+<a name="l00323"></a>00323             <span class="keywordflow">else</span>
+<a name="l00324"></a>00324                 stratTime = (int) linkedSerie.viewPort.VPMinTime;
+<a name="l00325"></a>00325            
+<a name="l00326"></a>00326 
+<a name="l00327"></a>00327             width = bmp.Width;
+<a name="l00328"></a>00328             height = bmp.Height;
+<a name="l00329"></a>00329             AutoMarginLooking();
+<a name="l00330"></a>00330 
+<a name="l00331"></a>00331             varTime = (width) / (this.VPMaxTime - this.VPMinTime);
+<a name="l00332"></a>00332             varPrice = (height) / (this.VPMaxPrice - this.VPMinPrice);
+<a name="l00333"></a>00333 
+<a name="l00334"></a>00334 
+<a name="l00335"></a>00335         }
+<a name="l00336"></a>00336 
+<a name="l00337"></a>00337 
+<a name="l00338"></a>00338 
+<a name="l00339"></a><a class="code" href="class_chart_v2_1_1_data_1_1_view_port.html#a2f1e090c19c1165887fa8d7c7c23b1d4">00339</a>         <span class="keyword">public</span> <span class="keywordtype">float</span> PixelToPrice(<span class="keywordtype">float</span> pt)
+<a name="l00340"></a>00340         {
+<a name="l00341"></a>00341             tempFloat = (height - pt) / varPrice + this.VPMinPrice;
+<a name="l00342"></a>00342             <span class="keywordflow">return</span> tempFloat;
+<a name="l00343"></a>00343         }
+<a name="l00344"></a><a class="code" href="class_chart_v2_1_1_data_1_1_view_port.html#ad40df7a9bacea4d697cd8c69739f4e29">00344</a>         <span class="keyword">public</span> <span class="keywordtype">float</span> PriceToPixels(<span class="keywordtype">float</span> pt)
+<a name="l00345"></a>00345         {
+<a name="l00346"></a>00346             tempFloat = height - (pt - this.VPMinPrice) * varPrice;
+<a name="l00347"></a>00347             <span class="keywordflow">if</span> (<span class="keywordtype">float</span>.IsNaN(tempFloat) || <span class="keywordtype">float</span>.IsInfinity(tempFloat))
+<a name="l00348"></a>00348                 <span class="keywordflow">return</span> 0;
+<a name="l00349"></a>00349 
+<a name="l00350"></a>00350             <span class="keywordflow">return</span> tempFloat;
+<a name="l00351"></a>00351 
+<a name="l00352"></a>00352         }
+<a name="l00353"></a><a class="code" href="class_chart_v2_1_1_data_1_1_view_port.html#aea6e106208e39f85df5b1f28dd445225">00353</a>         <span class="keyword">public</span> <span class="keywordtype">float</span> BarNumberToPixels(<span class="keywordtype">float</span> pt)
+<a name="l00354"></a>00354         {
+<a name="l00355"></a>00355             tempFloat = (pt - this.VPMinTime) * varTime;
+<a name="l00356"></a>00356             <span class="keywordflow">return</span> tempFloat;
+<a name="l00357"></a>00357         }
+<a name="l00358"></a><a class="code" href="class_chart_v2_1_1_data_1_1_view_port.html#a3deabd4054e11a968a119c64e37d4d53">00358</a>         <span class="keyword">public</span> <span class="keywordtype">float</span> PixelToBarNumber(<span class="keywordtype">float</span> pt)
+<a name="l00359"></a>00359         {
+<a name="l00360"></a>00360             tempFloat = pt / varTime + this.VPMinTime;
+<a name="l00361"></a>00361             <span class="keywordflow">return</span> tempFloat;
+<a name="l00362"></a>00362 
+<a name="l00363"></a>00363         }
+<a name="l00364"></a><a class="code" href="class_chart_v2_1_1_data_1_1_view_port.html#a211d14ca80b32f374d9d04f8b53f3a32">00364</a>         <span class="keyword">public</span> Point TransformToPixels(PointF pt)
+<a name="l00365"></a>00365         {
+<a name="l00366"></a>00366 
+<a name="l00367"></a>00367             <span class="comment">// ниже это дожно быть (width - 0) т.е. максимальный размах холста</span>
+<a name="l00368"></a>00368             <span class="comment">//полный расчет </span>
+<a name="l00369"></a>00369             <span class="comment">//tempPoint.X = (int)(((pt.X  - this.minTime) / (this.maxTime - this.minTime))* (bmp.Width)) ;</span>
+<a name="l00370"></a>00370             tempPoint.X = (int)((pt.X - <span class="keyword">this</span>.VPMinTime) * varTime);
+<a name="l00371"></a>00371             <span class="keywordflow">if</span> (tempPoint.X == <span class="keywordtype">int</span>.MinValue)
+<a name="l00372"></a>00372                 tempPoint.X = 0;
+<a name="l00373"></a>00373 
+<a name="l00374"></a>00374             <span class="comment">// ниже это дожно быть (хейт - 0) т.е. максимальный размах холста</span>
+<a name="l00375"></a>00375             tempPoint.Y = (int)(height - (pt.Y - <span class="keyword">this</span>.VPMinPrice) * varPrice);
+<a name="l00376"></a>00376             <span class="keywordflow">if</span> (tempPoint.Y == <span class="keywordtype">int</span>.MinValue)
+<a name="l00377"></a>00377                 tempPoint.Y = 0;
+<a name="l00378"></a>00378 
+<a name="l00379"></a>00379             <span class="keywordflow">return</span> tempPoint;
+<a name="l00380"></a>00380         }
+<a name="l00381"></a>00381       
+<a name="l00382"></a>00382 
+<a name="l00383"></a>00383 
+<a name="l00384"></a>00384 
+<a name="l00385"></a>00385 
+<a name="l00386"></a>00386     }
+<a name="l00387"></a>00387 }
+</pre></div></div>
+</div>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Перечисления</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&nbsp;</span>Свойства</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&nbsp;</span>События</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>
