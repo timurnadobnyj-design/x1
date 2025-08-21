@@ -1,0 +1,624 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Skilful: Исходный файл Skilful/ChartV2/ModelStyleWindow.Designer.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javaScript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Создано системой Doxygen 1.7.1 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+--></script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пакеты</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="dirs.html"><span>Алфавитный&nbsp;указатель&nbsp;директорий</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath">
+    <ul>
+      <li><a class="el" href="dir_7adcdc1edff7620168fbc20357cad448.html">Skilful</a>      </li>
+      <li><a class="el" href="dir_8daa841e026a5c92daaf3ffe66f86a47.html">ChartV2</a>      </li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<h1>ModelStyleWindow.Designer.cs</h1>  </div>
+</div>
+<div class="contents">
+<a href="_model_style_window_8_designer_8cs.html">См. документацию.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 ﻿namespace Skilful
+<a name="l00002"></a>00002 {
+<a name="l00003"></a>00003     <span class="keyword">partial class </span>ModelStyleWindow
+<a name="l00004"></a>00004     {
+<a name="l00008"></a>00008         <span class="keyword">private</span> System.ComponentModel.IContainer components = null;
+<a name="l00009"></a>00009 
+<a name="l00014"></a><a class="code" href="class_skilful_1_1_model_style_window.html#a8aa3c0c6aab13810c250d7f1d65a431d">00014</a>         <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> Dispose(<span class="keywordtype">bool</span> disposing)
+<a name="l00015"></a>00015         {
+<a name="l00016"></a>00016             <span class="keywordflow">if</span> (disposing &amp;&amp; (components != null))
+<a name="l00017"></a>00017             {
+<a name="l00018"></a>00018                 components.Dispose();
+<a name="l00019"></a>00019             }
+<a name="l00020"></a>00020             base.Dispose(disposing);
+<a name="l00021"></a>00021         }
+<a name="l00022"></a>00022 
+<a name="l00023"></a>00023 <span class="preprocessor">        #region Windows Form Designer generated code</span>
+<a name="l00024"></a>00024 <span class="preprocessor"></span>
+<a name="l00029"></a>00029         <span class="keyword">private</span> <span class="keywordtype">void</span> InitializeComponent()
+<a name="l00030"></a>00030         {
+<a name="l00031"></a>00031             this.notSelectedLineNumUpDown = <span class="keyword">new</span> System.Windows.Forms.NumericUpDown();
+<a name="l00032"></a>00032             this.lable1 = <span class="keyword">new</span> System.Windows.Forms.Label();
+<a name="l00033"></a>00033             this.notSelectedLineButton = <span class="keyword">new</span> System.Windows.Forms.Button();
+<a name="l00034"></a>00034             this.groupBox1 = <span class="keyword">new</span> System.Windows.Forms.GroupBox();
+<a name="l00035"></a>00035             this.label2 = <span class="keyword">new</span> System.Windows.Forms.Label();
+<a name="l00036"></a>00036             this.notSelectedAddLineButton = <span class="keyword">new</span> System.Windows.Forms.Button();
+<a name="l00037"></a>00037             this.label8 = <span class="keyword">new</span> System.Windows.Forms.Label();
+<a name="l00038"></a>00038             this.notSelectedAdditionalLineNumUpDown = <span class="keyword">new</span> System.Windows.Forms.NumericUpDown();
+<a name="l00039"></a>00039             this.notSelectedDashDotLineButton = <span class="keyword">new</span> System.Windows.Forms.Button();
+<a name="l00040"></a>00040             this.notSelectedDashDotLineNumUpDown = <span class="keyword">new</span> System.Windows.Forms.NumericUpDown();
+<a name="l00041"></a>00041             this.label6 = <span class="keyword">new</span> System.Windows.Forms.Label();
+<a name="l00042"></a>00042             this.notSelectedDashedLineButton = <span class="keyword">new</span> System.Windows.Forms.Button();
+<a name="l00043"></a>00043             this.notSelectedLineDashedNumUpDown = <span class="keyword">new</span> System.Windows.Forms.NumericUpDown();
+<a name="l00044"></a>00044             this.groupBox2 = <span class="keyword">new</span> System.Windows.Forms.GroupBox();
+<a name="l00045"></a>00045             this.label1 = <span class="keyword">new</span> System.Windows.Forms.Label();
+<a name="l00046"></a>00046             this.selectedAddLineColor = <span class="keyword">new</span> System.Windows.Forms.Button();
+<a name="l00047"></a>00047             this.selectedAddLineNumUpDo = <span class="keyword">new</span> System.Windows.Forms.NumericUpDown();
+<a name="l00048"></a>00048             this.label4 = <span class="keyword">new</span> System.Windows.Forms.Label();
+<a name="l00049"></a>00049             this.selectedDashDtLineColor = <span class="keyword">new</span> System.Windows.Forms.Button();
+<a name="l00050"></a>00050             this.selectedDashDotLineNumUpDo = <span class="keyword">new</span> System.Windows.Forms.NumericUpDown();
+<a name="l00051"></a>00051             this.label5 = <span class="keyword">new</span> System.Windows.Forms.Label();
+<a name="l00052"></a>00052             this.selectedDashLineColor = <span class="keyword">new</span> System.Windows.Forms.Button();
+<a name="l00053"></a>00053             this.selectedDashLineNumUpDo = <span class="keyword">new</span> System.Windows.Forms.NumericUpDown();
+<a name="l00054"></a>00054             this.label7 = <span class="keyword">new</span> System.Windows.Forms.Label();
+<a name="l00055"></a>00055             this.selectedLineColor = <span class="keyword">new</span> System.Windows.Forms.Button();
+<a name="l00056"></a>00056             this.selectedLineNumUpDo = <span class="keyword">new</span> System.Windows.Forms.NumericUpDown();
+<a name="l00057"></a>00057             this.groupBox3 = <span class="keyword">new</span> System.Windows.Forms.GroupBox();
+<a name="l00058"></a>00058             this.additionalLableFontButton = <span class="keyword">new</span> System.Windows.Forms.Button();
+<a name="l00059"></a>00059             this.mainLableFontButton = <span class="keyword">new</span> System.Windows.Forms.Button();
+<a name="l00060"></a>00060             this.label9 = <span class="keyword">new</span> System.Windows.Forms.Label();
+<a name="l00061"></a>00061             this.button10 = <span class="keyword">new</span> System.Windows.Forms.Button();
+<a name="l00062"></a>00062             this.label3 = <span class="keyword">new</span> System.Windows.Forms.Label();
+<a name="l00063"></a>00063             this.button6 = <span class="keyword">new</span> System.Windows.Forms.Button();
+<a name="l00064"></a>00064             this.fontDialog1 = <span class="keyword">new</span> System.Windows.Forms.FontDialog();
+<a name="l00065"></a>00065             this.colorDialog1 = <span class="keyword">new</span> System.Windows.Forms.ColorDialog();
+<a name="l00066"></a>00066             this.button1 = <span class="keyword">new</span> System.Windows.Forms.Button();
+<a name="l00067"></a>00067             ((System.ComponentModel.ISupportInitialize)(this.notSelectedLineNumUpDown)).BeginInit();
+<a name="l00068"></a>00068             this.groupBox1.SuspendLayout();
+<a name="l00069"></a>00069             ((System.ComponentModel.ISupportInitialize)(this.notSelectedAdditionalLineNumUpDown)).BeginInit();
+<a name="l00070"></a>00070             ((System.ComponentModel.ISupportInitialize)(this.notSelectedDashDotLineNumUpDown)).BeginInit();
+<a name="l00071"></a>00071             ((System.ComponentModel.ISupportInitialize)(this.notSelectedLineDashedNumUpDown)).BeginInit();
+<a name="l00072"></a>00072             this.groupBox2.SuspendLayout();
+<a name="l00073"></a>00073             ((System.ComponentModel.ISupportInitialize)(this.selectedAddLineNumUpDo)).BeginInit();
+<a name="l00074"></a>00074             ((System.ComponentModel.ISupportInitialize)(this.selectedDashDotLineNumUpDo)).BeginInit();
+<a name="l00075"></a>00075             ((System.ComponentModel.ISupportInitialize)(this.selectedDashLineNumUpDo)).BeginInit();
+<a name="l00076"></a>00076             ((System.ComponentModel.ISupportInitialize)(this.selectedLineNumUpDo)).BeginInit();
+<a name="l00077"></a>00077             this.groupBox3.SuspendLayout();
+<a name="l00078"></a>00078             this.SuspendLayout();
+<a name="l00079"></a>00079             <span class="comment">// </span>
+<a name="l00080"></a>00080             <span class="comment">// notSelectedLineNumUpDown</span>
+<a name="l00081"></a>00081             <span class="comment">// </span>
+<a name="l00082"></a>00082             this.notSelectedLineNumUpDown.DecimalPlaces = 1;
+<a name="l00083"></a>00083             this.notSelectedLineNumUpDown.Location = <span class="keyword">new</span> System.Drawing.Point(103, 11);
+<a name="l00084"></a>00084             this.notSelectedLineNumUpDown.Name = <span class="stringliteral">&quot;notSelectedLineNumUpDown&quot;</span>;
+<a name="l00085"></a>00085             this.notSelectedLineNumUpDown.Size = <span class="keyword">new</span> System.Drawing.Size(36, 20);
+<a name="l00086"></a>00086             this.notSelectedLineNumUpDown.TabIndex = 0;
+<a name="l00087"></a>00087             this.notSelectedLineNumUpDown.Value = <span class="keyword">new</span> decimal(<span class="keyword">new</span> <span class="keywordtype">int</span>[] {
+<a name="l00088"></a>00088             1,
+<a name="l00089"></a>00089             0,
+<a name="l00090"></a>00090             0,
+<a name="l00091"></a>00091             0});
+<a name="l00092"></a>00092             this.notSelectedLineNumUpDown.ValueChanged += <span class="keyword">new</span> System.EventHandler(this.notSelectedLineNumUpDown_ValueChanged);
+<a name="l00093"></a>00093             <span class="comment">// </span>
+<a name="l00094"></a>00094             <span class="comment">// lable1</span>
+<a name="l00095"></a>00095             <span class="comment">// </span>
+<a name="l00096"></a>00096             this.lable1.AutoSize = <span class="keyword">true</span>;
+<a name="l00097"></a>00097             this.lable1.Location = <span class="keyword">new</span> System.Drawing.Point(6, 15);
+<a name="l00098"></a>00098             this.lable1.Name = <span class="stringliteral">&quot;lable1&quot;</span>;
+<a name="l00099"></a>00099             this.lable1.Size = <span class="keyword">new</span> System.Drawing.Size(48, 13);
+<a name="l00100"></a>00100             this.lable1.TabIndex = 1;
+<a name="l00101"></a>00101             this.lable1.Text = <span class="stringliteral">&quot;main line&quot;</span>;
+<a name="l00102"></a>00102             <span class="comment">// </span>
+<a name="l00103"></a>00103             <span class="comment">// notSelectedLineButton</span>
+<a name="l00104"></a>00104             <span class="comment">// </span>
+<a name="l00105"></a>00105             this.notSelectedLineButton.Enabled = <span class="keyword">false</span>;
+<a name="l00106"></a>00106             this.notSelectedLineButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<a name="l00107"></a>00107             this.notSelectedLineButton.Location = <span class="keyword">new</span> System.Drawing.Point(145, 11);
+<a name="l00108"></a>00108             this.notSelectedLineButton.Name = <span class="stringliteral">&quot;notSelectedLineButton&quot;</span>;
+<a name="l00109"></a>00109             this.notSelectedLineButton.Size = <span class="keyword">new</span> System.Drawing.Size(44, 20);
+<a name="l00110"></a>00110             this.notSelectedLineButton.TabIndex = 2;
+<a name="l00111"></a>00111             this.notSelectedLineButton.Text = <span class="stringliteral">&quot;color&quot;</span>;
+<a name="l00112"></a>00112             this.notSelectedLineButton.UseVisualStyleBackColor = <span class="keyword">true</span>;
+<a name="l00113"></a>00113             this.notSelectedLineButton.Click += <span class="keyword">new</span> System.EventHandler(this.notSelectedLineButton_Click);
+<a name="l00114"></a>00114             <span class="comment">// </span>
+<a name="l00115"></a>00115             <span class="comment">// groupBox1</span>
+<a name="l00116"></a>00116             <span class="comment">// </span>
+<a name="l00117"></a>00117             this.groupBox1.Controls.Add(this.label2);
+<a name="l00118"></a>00118             this.groupBox1.Controls.Add(this.notSelectedAddLineButton);
+<a name="l00119"></a>00119             this.groupBox1.Controls.Add(this.label8);
+<a name="l00120"></a>00120             this.groupBox1.Controls.Add(this.notSelectedAdditionalLineNumUpDown);
+<a name="l00121"></a>00121             this.groupBox1.Controls.Add(this.notSelectedDashDotLineButton);
+<a name="l00122"></a>00122             this.groupBox1.Controls.Add(this.notSelectedDashDotLineNumUpDown);
+<a name="l00123"></a>00123             this.groupBox1.Controls.Add(this.label6);
+<a name="l00124"></a>00124             this.groupBox1.Controls.Add(this.notSelectedDashedLineButton);
+<a name="l00125"></a>00125             this.groupBox1.Controls.Add(this.notSelectedLineDashedNumUpDown);
+<a name="l00126"></a>00126             this.groupBox1.Controls.Add(this.lable1);
+<a name="l00127"></a>00127             this.groupBox1.Controls.Add(this.notSelectedLineButton);
+<a name="l00128"></a>00128             this.groupBox1.Controls.Add(this.notSelectedLineNumUpDown);
+<a name="l00129"></a>00129             this.groupBox1.Location = <span class="keyword">new</span> System.Drawing.Point(6, 3);
+<a name="l00130"></a>00130             this.groupBox1.Name = <span class="stringliteral">&quot;groupBox1&quot;</span>;
+<a name="l00131"></a>00131             this.groupBox1.Size = <span class="keyword">new</span> System.Drawing.Size(194, 93);
+<a name="l00132"></a>00132             this.groupBox1.TabIndex = 4;
+<a name="l00133"></a>00133             this.groupBox1.TabStop = <span class="keyword">false</span>;
+<a name="l00134"></a>00134             this.groupBox1.Text = <span class="stringliteral">&quot;not selected lines&quot;</span>;
+<a name="l00135"></a>00135             <span class="comment">// </span>
+<a name="l00136"></a>00136             <span class="comment">// label2</span>
+<a name="l00137"></a>00137             <span class="comment">// </span>
+<a name="l00138"></a>00138             this.label2.AutoSize = <span class="keyword">true</span>;
+<a name="l00139"></a>00139             this.label2.Location = <span class="keyword">new</span> System.Drawing.Point(6, 72);
+<a name="l00140"></a>00140             this.label2.Name = <span class="stringliteral">&quot;label2&quot;</span>;
+<a name="l00141"></a>00141             this.label2.Size = <span class="keyword">new</span> System.Drawing.Size(52, 13);
+<a name="l00142"></a>00142             this.label2.TabIndex = 32;
+<a name="l00143"></a>00143             this.label2.Text = <span class="stringliteral">&quot;additional&quot;</span>;
+<a name="l00144"></a>00144             <span class="comment">// </span>
+<a name="l00145"></a>00145             <span class="comment">// notSelectedAddLineButton</span>
+<a name="l00146"></a>00146             <span class="comment">// </span>
+<a name="l00147"></a>00147             this.notSelectedAddLineButton.Enabled = <span class="keyword">false</span>;
+<a name="l00148"></a>00148             this.notSelectedAddLineButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<a name="l00149"></a>00149             this.notSelectedAddLineButton.Location = <span class="keyword">new</span> System.Drawing.Point(145, 68);
+<a name="l00150"></a>00150             this.notSelectedAddLineButton.Name = <span class="stringliteral">&quot;notSelectedAddLineButton&quot;</span>;
+<a name="l00151"></a>00151             this.notSelectedAddLineButton.Size = <span class="keyword">new</span> System.Drawing.Size(44, 20);
+<a name="l00152"></a>00152             this.notSelectedAddLineButton.TabIndex = 33;
+<a name="l00153"></a>00153             this.notSelectedAddLineButton.Text = <span class="stringliteral">&quot;color&quot;</span>;
+<a name="l00154"></a>00154             this.notSelectedAddLineButton.UseVisualStyleBackColor = <span class="keyword">true</span>;
+<a name="l00155"></a>00155             this.notSelectedAddLineButton.Click += <span class="keyword">new</span> System.EventHandler(this.notSelectedAddLineButton_Click);
+<a name="l00156"></a>00156             <span class="comment">// </span>
+<a name="l00157"></a>00157             <span class="comment">// label8</span>
+<a name="l00158"></a>00158             <span class="comment">// </span>
+<a name="l00159"></a>00159             this.label8.AutoSize = <span class="keyword">true</span>;
+<a name="l00160"></a>00160             this.label8.Location = <span class="keyword">new</span> System.Drawing.Point(6, 53);
+<a name="l00161"></a>00161             this.label8.Name = <span class="stringliteral">&quot;label8&quot;</span>;
+<a name="l00162"></a>00162             this.label8.Size = <span class="keyword">new</span> System.Drawing.Size(47, 13);
+<a name="l00163"></a>00163             this.label8.TabIndex = 17;
+<a name="l00164"></a>00164             this.label8.Text = <span class="stringliteral">&quot;dotDash&quot;</span>;
+<a name="l00165"></a>00165             <span class="comment">// </span>
+<a name="l00166"></a>00166             <span class="comment">// notSelectedAdditionalLineNumUpDown</span>
+<a name="l00167"></a>00167             <span class="comment">// </span>
+<a name="l00168"></a>00168             this.notSelectedAdditionalLineNumUpDown.DecimalPlaces = 1;
+<a name="l00169"></a>00169             this.notSelectedAdditionalLineNumUpDown.Location = <span class="keyword">new</span> System.Drawing.Point(103, 68);
+<a name="l00170"></a>00170             this.notSelectedAdditionalLineNumUpDown.Name = <span class="stringliteral">&quot;notSelectedAdditionalLineNumUpDown&quot;</span>;
+<a name="l00171"></a>00171             this.notSelectedAdditionalLineNumUpDown.Size = <span class="keyword">new</span> System.Drawing.Size(36, 20);
+<a name="l00172"></a>00172             this.notSelectedAdditionalLineNumUpDown.TabIndex = 31;
+<a name="l00173"></a>00173             this.notSelectedAdditionalLineNumUpDown.Value = <span class="keyword">new</span> decimal(<span class="keyword">new</span> <span class="keywordtype">int</span>[] {
+<a name="l00174"></a>00174             1,
+<a name="l00175"></a>00175             0,
+<a name="l00176"></a>00176             0,
+<a name="l00177"></a>00177             0});
+<a name="l00178"></a>00178             this.notSelectedAdditionalLineNumUpDown.ValueChanged += <span class="keyword">new</span> System.EventHandler(this.notSelectedAdditionalLineNumUpDown_ValueChanged);
+<a name="l00179"></a>00179             <span class="comment">// </span>
+<a name="l00180"></a>00180             <span class="comment">// notSelectedDashDotLineButton</span>
+<a name="l00181"></a>00181             <span class="comment">// </span>
+<a name="l00182"></a>00182             this.notSelectedDashDotLineButton.Enabled = <span class="keyword">false</span>;
+<a name="l00183"></a>00183             this.notSelectedDashDotLineButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<a name="l00184"></a>00184             this.notSelectedDashDotLineButton.Location = <span class="keyword">new</span> System.Drawing.Point(145, 49);
+<a name="l00185"></a>00185             this.notSelectedDashDotLineButton.Name = <span class="stringliteral">&quot;notSelectedDashDotLineButton&quot;</span>;
+<a name="l00186"></a>00186             this.notSelectedDashDotLineButton.Size = <span class="keyword">new</span> System.Drawing.Size(44, 20);
+<a name="l00187"></a>00187             this.notSelectedDashDotLineButton.TabIndex = 18;
+<a name="l00188"></a>00188             this.notSelectedDashDotLineButton.Text = <span class="stringliteral">&quot;color&quot;</span>;
+<a name="l00189"></a>00189             this.notSelectedDashDotLineButton.UseVisualStyleBackColor = <span class="keyword">true</span>;
+<a name="l00190"></a>00190             this.notSelectedDashDotLineButton.Click += <span class="keyword">new</span> System.EventHandler(this.notSelectedDashDotLineButton_Click);
+<a name="l00191"></a>00191             <span class="comment">// </span>
+<a name="l00192"></a>00192             <span class="comment">// notSelectedDashDotLineNumUpDown</span>
+<a name="l00193"></a>00193             <span class="comment">// </span>
+<a name="l00194"></a>00194             this.notSelectedDashDotLineNumUpDown.DecimalPlaces = 1;
+<a name="l00195"></a>00195             this.notSelectedDashDotLineNumUpDown.Location = <span class="keyword">new</span> System.Drawing.Point(103, 49);
+<a name="l00196"></a>00196             this.notSelectedDashDotLineNumUpDown.Name = <span class="stringliteral">&quot;notSelectedDashDotLineNumUpDown&quot;</span>;
+<a name="l00197"></a>00197             this.notSelectedDashDotLineNumUpDown.Size = <span class="keyword">new</span> System.Drawing.Size(36, 20);
+<a name="l00198"></a>00198             this.notSelectedDashDotLineNumUpDown.TabIndex = 16;
+<a name="l00199"></a>00199             this.notSelectedDashDotLineNumUpDown.Value = <span class="keyword">new</span> decimal(<span class="keyword">new</span> <span class="keywordtype">int</span>[] {
+<a name="l00200"></a>00200             1,
+<a name="l00201"></a>00201             0,
+<a name="l00202"></a>00202             0,
+<a name="l00203"></a>00203             0});
+<a name="l00204"></a>00204             this.notSelectedDashDotLineNumUpDown.ValueChanged += <span class="keyword">new</span> System.EventHandler(this.notSelectedDashDotLineNumUpDown_ValueChanged);
+<a name="l00205"></a>00205             <span class="comment">// </span>
+<a name="l00206"></a>00206             <span class="comment">// label6</span>
+<a name="l00207"></a>00207             <span class="comment">// </span>
+<a name="l00208"></a>00208             this.label6.AutoSize = <span class="keyword">true</span>;
+<a name="l00209"></a>00209             this.label6.Location = <span class="keyword">new</span> System.Drawing.Point(6, 34);
+<a name="l00210"></a>00210             this.label6.Name = <span class="stringliteral">&quot;label6&quot;</span>;
+<a name="l00211"></a>00211             this.label6.Size = <span class="keyword">new</span> System.Drawing.Size(42, 13);
+<a name="l00212"></a>00212             this.label6.TabIndex = 13;
+<a name="l00213"></a>00213             this.label6.Text = <span class="stringliteral">&quot;dashed&quot;</span>;
+<a name="l00214"></a>00214             <span class="comment">// </span>
+<a name="l00215"></a>00215             <span class="comment">// notSelectedDashedLineButton</span>
+<a name="l00216"></a>00216             <span class="comment">// </span>
+<a name="l00217"></a>00217             this.notSelectedDashedLineButton.Enabled = <span class="keyword">false</span>;
+<a name="l00218"></a>00218             this.notSelectedDashedLineButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<a name="l00219"></a>00219             this.notSelectedDashedLineButton.Location = <span class="keyword">new</span> System.Drawing.Point(145, 30);
+<a name="l00220"></a>00220             this.notSelectedDashedLineButton.Name = <span class="stringliteral">&quot;notSelectedDashedLineButton&quot;</span>;
+<a name="l00221"></a>00221             this.notSelectedDashedLineButton.Size = <span class="keyword">new</span> System.Drawing.Size(44, 20);
+<a name="l00222"></a>00222             this.notSelectedDashedLineButton.TabIndex = 14;
+<a name="l00223"></a>00223             this.notSelectedDashedLineButton.Text = <span class="stringliteral">&quot;color&quot;</span>;
+<a name="l00224"></a>00224             this.notSelectedDashedLineButton.UseVisualStyleBackColor = <span class="keyword">true</span>;
+<a name="l00225"></a>00225             this.notSelectedDashedLineButton.Click += <span class="keyword">new</span> System.EventHandler(this.notSelectedDashedLineButton_Click);
+<a name="l00226"></a>00226             <span class="comment">// </span>
+<a name="l00227"></a>00227             <span class="comment">// notSelectedLineDashedNumUpDown</span>
+<a name="l00228"></a>00228             <span class="comment">// </span>
+<a name="l00229"></a>00229             this.notSelectedLineDashedNumUpDown.DecimalPlaces = 1;
+<a name="l00230"></a>00230             this.notSelectedLineDashedNumUpDown.Location = <span class="keyword">new</span> System.Drawing.Point(103, 30);
+<a name="l00231"></a>00231             this.notSelectedLineDashedNumUpDown.Name = <span class="stringliteral">&quot;notSelectedLineDashedNumUpDown&quot;</span>;
+<a name="l00232"></a>00232             this.notSelectedLineDashedNumUpDown.Size = <span class="keyword">new</span> System.Drawing.Size(36, 20);
+<a name="l00233"></a>00233             this.notSelectedLineDashedNumUpDown.TabIndex = 12;
+<a name="l00234"></a>00234             this.notSelectedLineDashedNumUpDown.Value = <span class="keyword">new</span> decimal(<span class="keyword">new</span> <span class="keywordtype">int</span>[] {
+<a name="l00235"></a>00235             1,
+<a name="l00236"></a>00236             0,
+<a name="l00237"></a>00237             0,
+<a name="l00238"></a>00238             0});
+<a name="l00239"></a>00239             this.notSelectedLineDashedNumUpDown.ValueChanged += <span class="keyword">new</span> System.EventHandler(this.notSelectedLineDashedNumUpDown_ValueChanged);
+<a name="l00240"></a>00240             <span class="comment">// </span>
+<a name="l00241"></a>00241             <span class="comment">// groupBox2</span>
+<a name="l00242"></a>00242             <span class="comment">// </span>
+<a name="l00243"></a>00243             this.groupBox2.Controls.Add(this.label1);
+<a name="l00244"></a>00244             this.groupBox2.Controls.Add(this.selectedAddLineColor);
+<a name="l00245"></a>00245             this.groupBox2.Controls.Add(this.selectedAddLineNumUpDo);
+<a name="l00246"></a>00246             this.groupBox2.Controls.Add(this.label4);
+<a name="l00247"></a>00247             this.groupBox2.Controls.Add(this.selectedDashDtLineColor);
+<a name="l00248"></a>00248             this.groupBox2.Controls.Add(this.selectedDashDotLineNumUpDo);
+<a name="l00249"></a>00249             this.groupBox2.Controls.Add(this.label5);
+<a name="l00250"></a>00250             this.groupBox2.Controls.Add(this.selectedDashLineColor);
+<a name="l00251"></a>00251             this.groupBox2.Controls.Add(this.selectedDashLineNumUpDo);
+<a name="l00252"></a>00252             this.groupBox2.Controls.Add(this.label7);
+<a name="l00253"></a>00253             this.groupBox2.Controls.Add(this.selectedLineColor);
+<a name="l00254"></a>00254             this.groupBox2.Controls.Add(this.selectedLineNumUpDo);
+<a name="l00255"></a>00255             this.groupBox2.Location = <span class="keyword">new</span> System.Drawing.Point(6, 102);
+<a name="l00256"></a>00256             this.groupBox2.Name = <span class="stringliteral">&quot;groupBox2&quot;</span>;
+<a name="l00257"></a>00257             this.groupBox2.Size = <span class="keyword">new</span> System.Drawing.Size(194, 100);
+<a name="l00258"></a>00258             this.groupBox2.TabIndex = 28;
+<a name="l00259"></a>00259             this.groupBox2.TabStop = <span class="keyword">false</span>;
+<a name="l00260"></a>00260             this.groupBox2.Text = <span class="stringliteral">&quot;selected lines&quot;</span>;
+<a name="l00261"></a>00261             <span class="comment">// </span>
+<a name="l00262"></a>00262             <span class="comment">// label1</span>
+<a name="l00263"></a>00263             <span class="comment">// </span>
+<a name="l00264"></a>00264             this.label1.AutoSize = <span class="keyword">true</span>;
+<a name="l00265"></a>00265             this.label1.Location = <span class="keyword">new</span> System.Drawing.Point(6, 79);
+<a name="l00266"></a>00266             this.label1.Name = <span class="stringliteral">&quot;label1&quot;</span>;
+<a name="l00267"></a>00267             this.label1.Size = <span class="keyword">new</span> System.Drawing.Size(52, 13);
+<a name="l00268"></a>00268             this.label1.TabIndex = 29;
+<a name="l00269"></a>00269             this.label1.Text = <span class="stringliteral">&quot;additional&quot;</span>;
+<a name="l00270"></a>00270             <span class="comment">// </span>
+<a name="l00271"></a>00271             <span class="comment">// selectedAddLineColor</span>
+<a name="l00272"></a>00272             <span class="comment">// </span>
+<a name="l00273"></a>00273             this.selectedAddLineColor.Enabled = <span class="keyword">false</span>;
+<a name="l00274"></a>00274             this.selectedAddLineColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<a name="l00275"></a>00275             this.selectedAddLineColor.Location = <span class="keyword">new</span> System.Drawing.Point(145, 75);
+<a name="l00276"></a>00276             this.selectedAddLineColor.Name = <span class="stringliteral">&quot;selectedAddLineColor&quot;</span>;
+<a name="l00277"></a>00277             this.selectedAddLineColor.Size = <span class="keyword">new</span> System.Drawing.Size(44, 20);
+<a name="l00278"></a>00278             this.selectedAddLineColor.TabIndex = 30;
+<a name="l00279"></a>00279             this.selectedAddLineColor.Text = <span class="stringliteral">&quot;color&quot;</span>;
+<a name="l00280"></a>00280             this.selectedAddLineColor.UseVisualStyleBackColor = <span class="keyword">true</span>;
+<a name="l00281"></a>00281             this.selectedAddLineColor.Click += <span class="keyword">new</span> System.EventHandler(this.selectedAddLineColor_Click);
+<a name="l00282"></a>00282             <span class="comment">// </span>
+<a name="l00283"></a>00283             <span class="comment">// selectedAddLineNumUpDo</span>
+<a name="l00284"></a>00284             <span class="comment">// </span>
+<a name="l00285"></a>00285             this.selectedAddLineNumUpDo.DecimalPlaces = 1;
+<a name="l00286"></a>00286             this.selectedAddLineNumUpDo.Location = <span class="keyword">new</span> System.Drawing.Point(103, 75);
+<a name="l00287"></a>00287             this.selectedAddLineNumUpDo.Name = <span class="stringliteral">&quot;selectedAddLineNumUpDo&quot;</span>;
+<a name="l00288"></a>00288             this.selectedAddLineNumUpDo.Size = <span class="keyword">new</span> System.Drawing.Size(36, 20);
+<a name="l00289"></a>00289             this.selectedAddLineNumUpDo.TabIndex = 28;
+<a name="l00290"></a>00290             this.selectedAddLineNumUpDo.Value = <span class="keyword">new</span> decimal(<span class="keyword">new</span> <span class="keywordtype">int</span>[] {
+<a name="l00291"></a>00291             1,
+<a name="l00292"></a>00292             0,
+<a name="l00293"></a>00293             0,
+<a name="l00294"></a>00294             0});
+<a name="l00295"></a>00295             this.selectedAddLineNumUpDo.ValueChanged += <span class="keyword">new</span> System.EventHandler(this.selectedAddLineNumUpDo_ValueChanged);
+<a name="l00296"></a>00296             <span class="comment">// </span>
+<a name="l00297"></a>00297             <span class="comment">// label4</span>
+<a name="l00298"></a>00298             <span class="comment">// </span>
+<a name="l00299"></a>00299             this.label4.AutoSize = <span class="keyword">true</span>;
+<a name="l00300"></a>00300             this.label4.Location = <span class="keyword">new</span> System.Drawing.Point(6, 60);
+<a name="l00301"></a>00301             this.label4.Name = <span class="stringliteral">&quot;label4&quot;</span>;
+<a name="l00302"></a>00302             this.label4.Size = <span class="keyword">new</span> System.Drawing.Size(47, 13);
+<a name="l00303"></a>00303             this.label4.TabIndex = 26;
+<a name="l00304"></a>00304             this.label4.Text = <span class="stringliteral">&quot;dotDash&quot;</span>;
+<a name="l00305"></a>00305             <span class="comment">// </span>
+<a name="l00306"></a>00306             <span class="comment">// selectedDashDtLineColor</span>
+<a name="l00307"></a>00307             <span class="comment">// </span>
+<a name="l00308"></a>00308             this.selectedDashDtLineColor.Enabled = <span class="keyword">false</span>;
+<a name="l00309"></a>00309             this.selectedDashDtLineColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<a name="l00310"></a>00310             this.selectedDashDtLineColor.Location = <span class="keyword">new</span> System.Drawing.Point(145, 56);
+<a name="l00311"></a>00311             this.selectedDashDtLineColor.Name = <span class="stringliteral">&quot;selectedDashDtLineColor&quot;</span>;
+<a name="l00312"></a>00312             this.selectedDashDtLineColor.Size = <span class="keyword">new</span> System.Drawing.Size(44, 20);
+<a name="l00313"></a>00313             this.selectedDashDtLineColor.TabIndex = 27;
+<a name="l00314"></a>00314             this.selectedDashDtLineColor.Text = <span class="stringliteral">&quot;color&quot;</span>;
+<a name="l00315"></a>00315             this.selectedDashDtLineColor.UseVisualStyleBackColor = <span class="keyword">true</span>;
+<a name="l00316"></a>00316             this.selectedDashDtLineColor.Click += <span class="keyword">new</span> System.EventHandler(this.selectedDashDtLineColor_Click);
+<a name="l00317"></a>00317             <span class="comment">// </span>
+<a name="l00318"></a>00318             <span class="comment">// selectedDashDotLineNumUpDo</span>
+<a name="l00319"></a>00319             <span class="comment">// </span>
+<a name="l00320"></a>00320             this.selectedDashDotLineNumUpDo.DecimalPlaces = 1;
+<a name="l00321"></a>00321             this.selectedDashDotLineNumUpDo.Location = <span class="keyword">new</span> System.Drawing.Point(103, 56);
+<a name="l00322"></a>00322             this.selectedDashDotLineNumUpDo.Name = <span class="stringliteral">&quot;selectedDashDotLineNumUpDo&quot;</span>;
+<a name="l00323"></a>00323             this.selectedDashDotLineNumUpDo.Size = <span class="keyword">new</span> System.Drawing.Size(36, 20);
+<a name="l00324"></a>00324             this.selectedDashDotLineNumUpDo.TabIndex = 25;
+<a name="l00325"></a>00325             this.selectedDashDotLineNumUpDo.Value = <span class="keyword">new</span> decimal(<span class="keyword">new</span> <span class="keywordtype">int</span>[] {
+<a name="l00326"></a>00326             1,
+<a name="l00327"></a>00327             0,
+<a name="l00328"></a>00328             0,
+<a name="l00329"></a>00329             0});
+<a name="l00330"></a>00330             this.selectedDashDotLineNumUpDo.ValueChanged += <span class="keyword">new</span> System.EventHandler(this.selectedDashDotLineNumUpDo_ValueChanged);
+<a name="l00331"></a>00331             <span class="comment">// </span>
+<a name="l00332"></a>00332             <span class="comment">// label5</span>
+<a name="l00333"></a>00333             <span class="comment">// </span>
+<a name="l00334"></a>00334             this.label5.AutoSize = <span class="keyword">true</span>;
+<a name="l00335"></a>00335             this.label5.Location = <span class="keyword">new</span> System.Drawing.Point(6, 41);
+<a name="l00336"></a>00336             this.label5.Name = <span class="stringliteral">&quot;label5&quot;</span>;
+<a name="l00337"></a>00337             this.label5.Size = <span class="keyword">new</span> System.Drawing.Size(42, 13);
+<a name="l00338"></a>00338             this.label5.TabIndex = 23;
+<a name="l00339"></a>00339             this.label5.Text = <span class="stringliteral">&quot;dashed&quot;</span>;
+<a name="l00340"></a>00340             <span class="comment">// </span>
+<a name="l00341"></a>00341             <span class="comment">// selectedDashLineColor</span>
+<a name="l00342"></a>00342             <span class="comment">// </span>
+<a name="l00343"></a>00343             this.selectedDashLineColor.Enabled = <span class="keyword">false</span>;
+<a name="l00344"></a>00344             this.selectedDashLineColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<a name="l00345"></a>00345             this.selectedDashLineColor.Location = <span class="keyword">new</span> System.Drawing.Point(145, 37);
+<a name="l00346"></a>00346             this.selectedDashLineColor.Name = <span class="stringliteral">&quot;selectedDashLineColor&quot;</span>;
+<a name="l00347"></a>00347             this.selectedDashLineColor.Size = <span class="keyword">new</span> System.Drawing.Size(44, 20);
+<a name="l00348"></a>00348             this.selectedDashLineColor.TabIndex = 24;
+<a name="l00349"></a>00349             this.selectedDashLineColor.Text = <span class="stringliteral">&quot;color&quot;</span>;
+<a name="l00350"></a>00350             this.selectedDashLineColor.UseVisualStyleBackColor = <span class="keyword">true</span>;
+<a name="l00351"></a>00351             this.selectedDashLineColor.Click += <span class="keyword">new</span> System.EventHandler(this.selectedDashLineColor_Click);
+<a name="l00352"></a>00352             <span class="comment">// </span>
+<a name="l00353"></a>00353             <span class="comment">// selectedDashLineNumUpDo</span>
+<a name="l00354"></a>00354             <span class="comment">// </span>
+<a name="l00355"></a>00355             this.selectedDashLineNumUpDo.DecimalPlaces = 1;
+<a name="l00356"></a>00356             this.selectedDashLineNumUpDo.Location = <span class="keyword">new</span> System.Drawing.Point(103, 37);
+<a name="l00357"></a>00357             this.selectedDashLineNumUpDo.Name = <span class="stringliteral">&quot;selectedDashLineNumUpDo&quot;</span>;
+<a name="l00358"></a>00358             this.selectedDashLineNumUpDo.Size = <span class="keyword">new</span> System.Drawing.Size(36, 20);
+<a name="l00359"></a>00359             this.selectedDashLineNumUpDo.TabIndex = 22;
+<a name="l00360"></a>00360             this.selectedDashLineNumUpDo.Value = <span class="keyword">new</span> decimal(<span class="keyword">new</span> <span class="keywordtype">int</span>[] {
+<a name="l00361"></a>00361             1,
+<a name="l00362"></a>00362             0,
+<a name="l00363"></a>00363             0,
+<a name="l00364"></a>00364             0});
+<a name="l00365"></a>00365             this.selectedDashLineNumUpDo.ValueChanged += <span class="keyword">new</span> System.EventHandler(this.selectedDashLineNumUpDo_ValueChanged);
+<a name="l00366"></a>00366             <span class="comment">// </span>
+<a name="l00367"></a>00367             <span class="comment">// label7</span>
+<a name="l00368"></a>00368             <span class="comment">// </span>
+<a name="l00369"></a>00369             this.label7.AutoSize = <span class="keyword">true</span>;
+<a name="l00370"></a>00370             this.label7.Location = <span class="keyword">new</span> System.Drawing.Point(6, 22);
+<a name="l00371"></a>00371             this.label7.Name = <span class="stringliteral">&quot;label7&quot;</span>;
+<a name="l00372"></a>00372             this.label7.Size = <span class="keyword">new</span> System.Drawing.Size(48, 13);
+<a name="l00373"></a>00373             this.label7.TabIndex = 20;
+<a name="l00374"></a>00374             this.label7.Text = <span class="stringliteral">&quot;main line&quot;</span>;
+<a name="l00375"></a>00375             <span class="comment">// </span>
+<a name="l00376"></a>00376             <span class="comment">// selectedLineColor</span>
+<a name="l00377"></a>00377             <span class="comment">// </span>
+<a name="l00378"></a>00378             this.selectedLineColor.Enabled = <span class="keyword">false</span>;
+<a name="l00379"></a>00379             this.selectedLineColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<a name="l00380"></a>00380             this.selectedLineColor.Location = <span class="keyword">new</span> System.Drawing.Point(145, 18);
+<a name="l00381"></a>00381             this.selectedLineColor.Name = <span class="stringliteral">&quot;selectedLineColor&quot;</span>;
+<a name="l00382"></a>00382             this.selectedLineColor.Size = <span class="keyword">new</span> System.Drawing.Size(44, 20);
+<a name="l00383"></a>00383             this.selectedLineColor.TabIndex = 21;
+<a name="l00384"></a>00384             this.selectedLineColor.Text = <span class="stringliteral">&quot;color&quot;</span>;
+<a name="l00385"></a>00385             this.selectedLineColor.UseVisualStyleBackColor = <span class="keyword">true</span>;
+<a name="l00386"></a>00386             this.selectedLineColor.Click += <span class="keyword">new</span> System.EventHandler(this.selectedLineColor_Click);
+<a name="l00387"></a>00387             <span class="comment">// </span>
+<a name="l00388"></a>00388             <span class="comment">// selectedLineNumUpDo</span>
+<a name="l00389"></a>00389             <span class="comment">// </span>
+<a name="l00390"></a>00390             this.selectedLineNumUpDo.DecimalPlaces = 1;
+<a name="l00391"></a>00391             this.selectedLineNumUpDo.Location = <span class="keyword">new</span> System.Drawing.Point(103, 18);
+<a name="l00392"></a>00392             this.selectedLineNumUpDo.Name = <span class="stringliteral">&quot;selectedLineNumUpDo&quot;</span>;
+<a name="l00393"></a>00393             this.selectedLineNumUpDo.Size = <span class="keyword">new</span> System.Drawing.Size(36, 20);
+<a name="l00394"></a>00394             this.selectedLineNumUpDo.TabIndex = 19;
+<a name="l00395"></a>00395             this.selectedLineNumUpDo.Value = <span class="keyword">new</span> decimal(<span class="keyword">new</span> <span class="keywordtype">int</span>[] {
+<a name="l00396"></a>00396             1,
+<a name="l00397"></a>00397             0,
+<a name="l00398"></a>00398             0,
+<a name="l00399"></a>00399             0});
+<a name="l00400"></a>00400             this.selectedLineNumUpDo.ValueChanged += <span class="keyword">new</span> System.EventHandler(this.selectedLineNumUpDo_ValueChanged);
+<a name="l00401"></a>00401             <span class="comment">// </span>
+<a name="l00402"></a>00402             <span class="comment">// groupBox3</span>
+<a name="l00403"></a>00403             <span class="comment">// </span>
+<a name="l00404"></a>00404             this.groupBox3.Controls.Add(this.additionalLableFontButton);
+<a name="l00405"></a>00405             this.groupBox3.Controls.Add(this.mainLableFontButton);
+<a name="l00406"></a>00406             this.groupBox3.Controls.Add(this.label9);
+<a name="l00407"></a>00407             this.groupBox3.Controls.Add(this.button10);
+<a name="l00408"></a>00408             this.groupBox3.Controls.Add(this.label3);
+<a name="l00409"></a>00409             this.groupBox3.Controls.Add(this.button6);
+<a name="l00410"></a>00410             this.groupBox3.Location = <span class="keyword">new</span> System.Drawing.Point(6, 208);
+<a name="l00411"></a>00411             this.groupBox3.Name = <span class="stringliteral">&quot;groupBox3&quot;</span>;
+<a name="l00412"></a>00412             this.groupBox3.Size = <span class="keyword">new</span> System.Drawing.Size(194, 100);
+<a name="l00413"></a>00413             this.groupBox3.TabIndex = 29;
+<a name="l00414"></a>00414             this.groupBox3.TabStop = <span class="keyword">false</span>;
+<a name="l00415"></a>00415             this.groupBox3.Text = <span class="stringliteral">&quot;fonts&quot;</span>;
+<a name="l00416"></a>00416             <span class="comment">// </span>
+<a name="l00417"></a>00417             <span class="comment">// additionalLableFontButton</span>
+<a name="l00418"></a>00418             <span class="comment">// </span>
+<a name="l00419"></a>00419             this.additionalLableFontButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<a name="l00420"></a>00420             this.additionalLableFontButton.Location = <span class="keyword">new</span> System.Drawing.Point(96, 54);
+<a name="l00421"></a>00421             this.additionalLableFontButton.Name = <span class="stringliteral">&quot;additionalLableFontButton&quot;</span>;
+<a name="l00422"></a>00422             this.additionalLableFontButton.Size = <span class="keyword">new</span> System.Drawing.Size(44, 29);
+<a name="l00423"></a>00423             this.additionalLableFontButton.TabIndex = 37;
+<a name="l00424"></a>00424             this.additionalLableFontButton.Text = <span class="stringliteral">&quot;font&quot;</span>;
+<a name="l00425"></a>00425             this.additionalLableFontButton.UseVisualStyleBackColor = <span class="keyword">true</span>;
+<a name="l00426"></a>00426             this.additionalLableFontButton.Click += <span class="keyword">new</span> System.EventHandler(this.additionalLableFontButton_Click);
+<a name="l00427"></a>00427             <span class="comment">// </span>
+<a name="l00428"></a>00428             <span class="comment">// mainLableFontButton</span>
+<a name="l00429"></a>00429             <span class="comment">// </span>
+<a name="l00430"></a>00430             this.mainLableFontButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<a name="l00431"></a>00431             this.mainLableFontButton.Location = <span class="keyword">new</span> System.Drawing.Point(96, 12);
+<a name="l00432"></a>00432             this.mainLableFontButton.Name = <span class="stringliteral">&quot;mainLableFontButton&quot;</span>;
+<a name="l00433"></a>00433             this.mainLableFontButton.Size = <span class="keyword">new</span> System.Drawing.Size(44, 36);
+<a name="l00434"></a>00434             this.mainLableFontButton.TabIndex = 36;
+<a name="l00435"></a>00435             this.mainLableFontButton.Text = <span class="stringliteral">&quot;font&quot;</span>;
+<a name="l00436"></a>00436             this.mainLableFontButton.UseVisualStyleBackColor = <span class="keyword">true</span>;
+<a name="l00437"></a>00437             this.mainLableFontButton.Click += <span class="keyword">new</span> System.EventHandler(this.mainLableFontButton_Click);
+<a name="l00438"></a>00438             <span class="comment">// </span>
+<a name="l00439"></a>00439             <span class="comment">// label9</span>
+<a name="l00440"></a>00440             <span class="comment">// </span>
+<a name="l00441"></a>00441             this.label9.AutoSize = <span class="keyword">true</span>;
+<a name="l00442"></a>00442             this.label9.Location = <span class="keyword">new</span> System.Drawing.Point(7, 62);
+<a name="l00443"></a>00443             this.label9.Name = <span class="stringliteral">&quot;label9&quot;</span>;
+<a name="l00444"></a>00444             this.label9.Size = <span class="keyword">new</span> System.Drawing.Size(77, 13);
+<a name="l00445"></a>00445             this.label9.TabIndex = 34;
+<a name="l00446"></a>00446             this.label9.Text = <span class="stringliteral">&quot;additional lable&quot;</span>;
+<a name="l00447"></a>00447             <span class="comment">// </span>
+<a name="l00448"></a>00448             <span class="comment">// button10</span>
+<a name="l00449"></a>00449             <span class="comment">// </span>
+<a name="l00450"></a>00450             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<a name="l00451"></a>00451             this.button10.Location = <span class="keyword">new</span> System.Drawing.Point(146, 54);
+<a name="l00452"></a>00452             this.button10.Name = <span class="stringliteral">&quot;button10&quot;</span>;
+<a name="l00453"></a>00453             this.button10.Size = <span class="keyword">new</span> System.Drawing.Size(44, 29);
+<a name="l00454"></a>00454             this.button10.TabIndex = 35;
+<a name="l00455"></a>00455             this.button10.Text = <span class="stringliteral">&quot;color&quot;</span>;
+<a name="l00456"></a>00456             this.button10.UseVisualStyleBackColor = <span class="keyword">true</span>;
+<a name="l00457"></a>00457             <span class="comment">// </span>
+<a name="l00458"></a>00458             <span class="comment">// label3</span>
+<a name="l00459"></a>00459             <span class="comment">// </span>
+<a name="l00460"></a>00460             this.label3.AutoSize = <span class="keyword">true</span>;
+<a name="l00461"></a>00461             this.label3.Location = <span class="keyword">new</span> System.Drawing.Point(7, 24);
+<a name="l00462"></a>00462             this.label3.Name = <span class="stringliteral">&quot;label3&quot;</span>;
+<a name="l00463"></a>00463             this.label3.Size = <span class="keyword">new</span> System.Drawing.Size(54, 13);
+<a name="l00464"></a>00464             this.label3.TabIndex = 32;
+<a name="l00465"></a>00465             this.label3.Text = <span class="stringliteral">&quot;main lable&quot;</span>;
+<a name="l00466"></a>00466             <span class="comment">// </span>
+<a name="l00467"></a>00467             <span class="comment">// button6</span>
+<a name="l00468"></a>00468             <span class="comment">// </span>
+<a name="l00469"></a>00469             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<a name="l00470"></a>00470             this.button6.Location = <span class="keyword">new</span> System.Drawing.Point(146, 12);
+<a name="l00471"></a>00471             this.button6.Name = <span class="stringliteral">&quot;button6&quot;</span>;
+<a name="l00472"></a>00472             this.button6.Size = <span class="keyword">new</span> System.Drawing.Size(44, 36);
+<a name="l00473"></a>00473             this.button6.TabIndex = 33;
+<a name="l00474"></a>00474             this.button6.Text = <span class="stringliteral">&quot;color&quot;</span>;
+<a name="l00475"></a>00475             this.button6.UseVisualStyleBackColor = <span class="keyword">true</span>;
+<a name="l00476"></a>00476             <span class="comment">// </span>
+<a name="l00477"></a>00477             <span class="comment">// button1</span>
+<a name="l00478"></a>00478             <span class="comment">// </span>
+<a name="l00479"></a>00479             this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
+<a name="l00480"></a>00480             this.button1.Location = <span class="keyword">new</span> System.Drawing.Point(118, 314);
+<a name="l00481"></a>00481             this.button1.Name = <span class="stringliteral">&quot;button1&quot;</span>;
+<a name="l00482"></a>00482             this.button1.Size = <span class="keyword">new</span> System.Drawing.Size(75, 23);
+<a name="l00483"></a>00483             this.button1.TabIndex = 30;
+<a name="l00484"></a>00484             this.button1.Text = <span class="stringliteral">&quot;Ok&quot;</span>;
+<a name="l00485"></a>00485             this.button1.UseVisualStyleBackColor = <span class="keyword">true</span>;
+<a name="l00486"></a>00486             this.button1.Click += <span class="keyword">new</span> System.EventHandler(this.button1_Click);
+<a name="l00487"></a>00487             <span class="comment">// </span>
+<a name="l00488"></a>00488             <span class="comment">// ModelStyleWindow</span>
+<a name="l00489"></a>00489             <span class="comment">// </span>
+<a name="l00490"></a>00490             this.AutoScaleDimensions = <span class="keyword">new</span> System.Drawing.SizeF(6F, 13F);
+<a name="l00491"></a>00491             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<a name="l00492"></a>00492             this.ClientSize = <span class="keyword">new</span> System.Drawing.Size(205, 343);
+<a name="l00493"></a>00493             this.Controls.Add(this.button1);
+<a name="l00494"></a>00494             this.Controls.Add(this.groupBox3);
+<a name="l00495"></a>00495             this.Controls.Add(this.groupBox2);
+<a name="l00496"></a>00496             this.Controls.Add(this.groupBox1);
+<a name="l00497"></a>00497             this.Name = <span class="stringliteral">&quot;ModelStyleWindow&quot;</span>;
+<a name="l00498"></a>00498             this.Text = <span class="stringliteral">&quot;ModelStyleWindow&quot;</span>;
+<a name="l00499"></a>00499             ((System.ComponentModel.ISupportInitialize)(this.notSelectedLineNumUpDown)).EndInit();
+<a name="l00500"></a>00500             this.groupBox1.ResumeLayout(<span class="keyword">false</span>);
+<a name="l00501"></a>00501             this.groupBox1.PerformLayout();
+<a name="l00502"></a>00502             ((System.ComponentModel.ISupportInitialize)(this.notSelectedAdditionalLineNumUpDown)).EndInit();
+<a name="l00503"></a>00503             ((System.ComponentModel.ISupportInitialize)(this.notSelectedDashDotLineNumUpDown)).EndInit();
+<a name="l00504"></a>00504             ((System.ComponentModel.ISupportInitialize)(this.notSelectedLineDashedNumUpDown)).EndInit();
+<a name="l00505"></a>00505             this.groupBox2.ResumeLayout(<span class="keyword">false</span>);
+<a name="l00506"></a>00506             this.groupBox2.PerformLayout();
+<a name="l00507"></a>00507             ((System.ComponentModel.ISupportInitialize)(this.selectedAddLineNumUpDo)).EndInit();
+<a name="l00508"></a>00508             ((System.ComponentModel.ISupportInitialize)(this.selectedDashDotLineNumUpDo)).EndInit();
+<a name="l00509"></a>00509             ((System.ComponentModel.ISupportInitialize)(this.selectedDashLineNumUpDo)).EndInit();
+<a name="l00510"></a>00510             ((System.ComponentModel.ISupportInitialize)(this.selectedLineNumUpDo)).EndInit();
+<a name="l00511"></a>00511             this.groupBox3.ResumeLayout(<span class="keyword">false</span>);
+<a name="l00512"></a>00512             this.groupBox3.PerformLayout();
+<a name="l00513"></a>00513             this.ResumeLayout(<span class="keyword">false</span>);
+<a name="l00514"></a>00514 
+<a name="l00515"></a>00515         }
+<a name="l00516"></a>00516 
+<a name="l00517"></a>00517 <span class="preprocessor">        #endregion</span>
+<a name="l00518"></a>00518 <span class="preprocessor"></span>
+<a name="l00519"></a>00519         <span class="keyword">private</span> System.Windows.Forms.NumericUpDown notSelectedLineNumUpDown;
+<a name="l00520"></a>00520         <span class="keyword">private</span> System.Windows.Forms.Label lable1;
+<a name="l00521"></a>00521         <span class="keyword">private</span> System.Windows.Forms.Button notSelectedLineButton;
+<a name="l00522"></a>00522         <span class="keyword">private</span> System.Windows.Forms.GroupBox groupBox1;
+<a name="l00523"></a>00523         <span class="keyword">private</span> System.Windows.Forms.Label label8;
+<a name="l00524"></a>00524         <span class="keyword">private</span> System.Windows.Forms.Button notSelectedDashDotLineButton;
+<a name="l00525"></a>00525         <span class="keyword">private</span> System.Windows.Forms.NumericUpDown notSelectedDashDotLineNumUpDown;
+<a name="l00526"></a>00526         <span class="keyword">private</span> System.Windows.Forms.Label label6;
+<a name="l00527"></a>00527         <span class="keyword">private</span> System.Windows.Forms.Button notSelectedDashedLineButton;
+<a name="l00528"></a>00528         <span class="keyword">private</span> System.Windows.Forms.NumericUpDown notSelectedLineDashedNumUpDown;
+<a name="l00529"></a>00529         <span class="keyword">private</span> System.Windows.Forms.GroupBox groupBox2;
+<a name="l00530"></a>00530         <span class="keyword">private</span> System.Windows.Forms.Label label4;
+<a name="l00531"></a>00531         <span class="keyword">private</span> System.Windows.Forms.Button selectedDashDtLineColor;
+<a name="l00532"></a>00532         <span class="keyword">private</span> System.Windows.Forms.NumericUpDown selectedDashDotLineNumUpDo;
+<a name="l00533"></a>00533         <span class="keyword">private</span> System.Windows.Forms.Label label5;
+<a name="l00534"></a>00534         <span class="keyword">private</span> System.Windows.Forms.Button selectedDashLineColor;
+<a name="l00535"></a>00535         <span class="keyword">private</span> System.Windows.Forms.NumericUpDown selectedDashLineNumUpDo;
+<a name="l00536"></a>00536         <span class="keyword">private</span> System.Windows.Forms.Label label7;
+<a name="l00537"></a>00537         <span class="keyword">private</span> System.Windows.Forms.Button selectedLineColor;
+<a name="l00538"></a>00538         <span class="keyword">private</span> System.Windows.Forms.NumericUpDown selectedLineNumUpDo;
+<a name="l00539"></a>00539         <span class="keyword">private</span> System.Windows.Forms.Label label1;
+<a name="l00540"></a>00540         <span class="keyword">private</span> System.Windows.Forms.Button selectedAddLineColor;
+<a name="l00541"></a>00541         <span class="keyword">private</span> System.Windows.Forms.NumericUpDown selectedAddLineNumUpDo;
+<a name="l00542"></a>00542         <span class="keyword">private</span> System.Windows.Forms.Label label2;
+<a name="l00543"></a>00543         <span class="keyword">private</span> System.Windows.Forms.Button notSelectedAddLineButton;
+<a name="l00544"></a>00544         <span class="keyword">private</span> System.Windows.Forms.NumericUpDown notSelectedAdditionalLineNumUpDown;
+<a name="l00545"></a>00545         <span class="keyword">private</span> System.Windows.Forms.GroupBox groupBox3;
+<a name="l00546"></a>00546         <span class="keyword">private</span> System.Windows.Forms.Label label3;
+<a name="l00547"></a>00547         <span class="keyword">private</span> System.Windows.Forms.Button button6;
+<a name="l00548"></a>00548         <span class="keyword">private</span> System.Windows.Forms.Button additionalLableFontButton;
+<a name="l00549"></a>00549         <span class="keyword">private</span> System.Windows.Forms.Button mainLableFontButton;
+<a name="l00550"></a>00550         <span class="keyword">private</span> System.Windows.Forms.Label label9;
+<a name="l00551"></a>00551         <span class="keyword">private</span> System.Windows.Forms.Button button10;
+<a name="l00552"></a>00552         <span class="keyword">private</span> System.Windows.Forms.FontDialog fontDialog1;
+<a name="l00553"></a>00553         <span class="keyword">private</span> System.Windows.Forms.ColorDialog colorDialog1;
+<a name="l00554"></a>00554         <span class="keyword">private</span> System.Windows.Forms.Button button1;
+<a name="l00555"></a>00555     }
+<a name="l00556"></a>00556 }
+</pre></div></div>
+</div>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Перечисления</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&nbsp;</span>Свойства</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&nbsp;</span>События</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

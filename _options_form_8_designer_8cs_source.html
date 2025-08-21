@@ -1,0 +1,654 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Skilful: Исходный файл Skilful/OptionsForm.Designer.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javaScript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Создано системой Doxygen 1.7.1 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+--></script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пакеты</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="dirs.html"><span>Алфавитный&nbsp;указатель&nbsp;директорий</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath">
+    <ul>
+      <li><a class="el" href="dir_7adcdc1edff7620168fbc20357cad448.html">Skilful</a>      </li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<h1>OptionsForm.Designer.cs</h1>  </div>
+</div>
+<div class="contents">
+<a href="_options_form_8_designer_8cs.html">См. документацию.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 ﻿<span class="comment">//---------------------------------------------------------------------------------------------------------------</span>
+<a name="l00002"></a>00002 <span class="comment">// Skilful. Tactica Adversa graphic and analysis tool.</span>
+<a name="l00003"></a>00003 <span class="comment">// Copyright (C) 2010 &quot;...&quot;, Andrey Prokhorov(AVP)</span>
+<a name="l00004"></a>00004 <span class="comment">//</span>
+<a name="l00005"></a>00005 <span class="comment">// This program is free software; you can redistribute it and/or</span>
+<a name="l00006"></a>00006 <span class="comment">// modify it under the terms of the GNU General Public License</span>
+<a name="l00007"></a>00007 <span class="comment">// as published by the Free Software Foundation; either version 2</span>
+<a name="l00008"></a>00008 <span class="comment">// of the License, or (at your option) any later version.</span>
+<a name="l00009"></a>00009 <span class="comment">//</span>
+<a name="l00010"></a>00010 <span class="comment">// This program is distributed in the hope that it will be useful,</span>
+<a name="l00011"></a>00011 <span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<a name="l00012"></a>00012 <span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<a name="l00013"></a>00013 <span class="comment">// GNU General Public License for more details.</span>
+<a name="l00014"></a>00014 <span class="comment">//</span>
+<a name="l00015"></a>00015 <span class="comment">// You should have received a copy of the GNU General Public License</span>
+<a name="l00016"></a>00016 <span class="comment">// along with this program; if not, write to the Free Software</span>
+<a name="l00017"></a>00017 <span class="comment">// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</span>
+<a name="l00018"></a>00018 <span class="comment">//</span>
+<a name="l00019"></a>00019 <span class="comment">// mail: support@protoforma.com </span>
+<a name="l00020"></a>00020 <span class="comment">//---------------------------------------------------------------------------------------------------------------</span>
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022 
+<a name="l00023"></a>00023 <span class="keyword">namespace </span>Skilful
+<a name="l00024"></a>00024     {
+<a name="l00025"></a>00025     <span class="keyword">partial class </span>OptionsForm
+<a name="l00026"></a>00026         {
+<a name="l00030"></a>00030         <span class="keyword">private</span> System.ComponentModel.IContainer components = null;
+<a name="l00031"></a>00031 
+<a name="l00036"></a><a class="code" href="class_skilful_1_1_options_form.html#aef2764a64cb10f8ada09a61266095839">00036</a>         <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_skilful_1_1_options_form.html#aef2764a64cb10f8ada09a61266095839" title="Освободить все используемые ресурсы.">Dispose</a>(<span class="keywordtype">bool</span> disposing)
+<a name="l00037"></a>00037             {
+<a name="l00038"></a>00038             <span class="keywordflow">if</span> (disposing &amp;&amp; (components != null))
+<a name="l00039"></a>00039                 {
+<a name="l00040"></a>00040                 components.Dispose();
+<a name="l00041"></a>00041                 }
+<a name="l00042"></a>00042             base.Dispose(disposing);
+<a name="l00043"></a>00043             }
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045 <span class="preprocessor">        #region Код, автоматически созданный конструктором форм Windows</span>
+<a name="l00046"></a>00046 <span class="preprocessor"></span>
+<a name="l00051"></a>00051         <span class="keyword">private</span> <span class="keywordtype">void</span> InitializeComponent()
+<a name="l00052"></a>00052             {
+<a name="l00053"></a>00053                 this.colorDialog = <span class="keyword">new</span> System.Windows.Forms.ColorDialog();
+<a name="l00054"></a>00054                 this.tabControl1 = <span class="keyword">new</span> System.Windows.Forms.TabControl();
+<a name="l00055"></a>00055                 this.ColorsPage = <span class="keyword">new</span> System.Windows.Forms.TabPage();
+<a name="l00056"></a>00056                 this.ModelLbl11 = <span class="keyword">new</span> System.Windows.Forms.Label();
+<a name="l00057"></a>00057                 this.ModelLbl10 = <span class="keyword">new</span> System.Windows.Forms.Label();
+<a name="l00058"></a>00058                 this.ModelLbl9 = <span class="keyword">new</span> System.Windows.Forms.Label();
+<a name="l00059"></a>00059                 this.ModelLbl8 = <span class="keyword">new</span> System.Windows.Forms.Label();
+<a name="l00060"></a>00060                 this.ModelLbl7 = <span class="keyword">new</span> System.Windows.Forms.Label();
+<a name="l00061"></a>00061                 this.ModelLbl6 = <span class="keyword">new</span> System.Windows.Forms.Label();
+<a name="l00062"></a>00062                 this.ModelLbl5 = <span class="keyword">new</span> System.Windows.Forms.Label();
+<a name="l00063"></a>00063                 this.ModelLbl4 = <span class="keyword">new</span> System.Windows.Forms.Label();
+<a name="l00064"></a>00064                 this.ModelLbl3 = <span class="keyword">new</span> System.Windows.Forms.Label();
+<a name="l00065"></a>00065                 this.ModelLbl2 = <span class="keyword">new</span> System.Windows.Forms.Label();
+<a name="l00066"></a>00066                 this.ModelLbl1 = <span class="keyword">new</span> System.Windows.Forms.Label();
+<a name="l00067"></a>00067                 this.RulesPage = <span class="keyword">new</span> System.Windows.Forms.TabPage();
+<a name="l00068"></a>00068                 this.panel2 = <span class="keyword">new</span> System.Windows.Forms.Panel();
+<a name="l00069"></a>00069                 this.RulesBox = <span class="keyword">new</span> System.Windows.Forms.CheckedListBox();
+<a name="l00070"></a>00070                 this.label7 = <span class="keyword">new</span> System.Windows.Forms.Label();
+<a name="l00071"></a>00071                 this.panel1 = <span class="keyword">new</span> System.Windows.Forms.Panel();
+<a name="l00072"></a>00072                 this.MDBSize2 = <span class="keyword">new</span> System.Windows.Forms.NumericUpDown();
+<a name="l00073"></a>00073                 this.MDBSize1 = <span class="keyword">new</span> System.Windows.Forms.NumericUpDown();
+<a name="l00074"></a>00074                 this.label10 = <span class="keyword">new</span> System.Windows.Forms.Label();
+<a name="l00075"></a>00075                 this.label9 = <span class="keyword">new</span> System.Windows.Forms.Label();
+<a name="l00076"></a>00076                 this.label8 = <span class="keyword">new</span> System.Windows.Forms.Label();
+<a name="l00077"></a>00077                 this.ExtremumSize5 = <span class="keyword">new</span> System.Windows.Forms.NumericUpDown();
+<a name="l00078"></a>00078                 this.label6 = <span class="keyword">new</span> System.Windows.Forms.Label();
+<a name="l00079"></a>00079                 this.ExtremumSize4 = <span class="keyword">new</span> System.Windows.Forms.NumericUpDown();
+<a name="l00080"></a>00080                 this.label5 = <span class="keyword">new</span> System.Windows.Forms.Label();
+<a name="l00081"></a>00081                 this.ExtremumSize3 = <span class="keyword">new</span> System.Windows.Forms.NumericUpDown();
+<a name="l00082"></a>00082                 this.label4 = <span class="keyword">new</span> System.Windows.Forms.Label();
+<a name="l00083"></a>00083                 this.ExtremumSize2 = <span class="keyword">new</span> System.Windows.Forms.NumericUpDown();
+<a name="l00084"></a>00084                 this.label3 = <span class="keyword">new</span> System.Windows.Forms.Label();
+<a name="l00085"></a>00085                 this.ExtremumSize1 = <span class="keyword">new</span> System.Windows.Forms.NumericUpDown();
+<a name="l00086"></a>00086                 this.label2 = <span class="keyword">new</span> System.Windows.Forms.Label();
+<a name="l00087"></a>00087                 this.label1 = <span class="keyword">new</span> System.Windows.Forms.Label();
+<a name="l00088"></a>00088                 this.tabControl1.SuspendLayout();
+<a name="l00089"></a>00089                 this.ColorsPage.SuspendLayout();
+<a name="l00090"></a>00090                 this.RulesPage.SuspendLayout();
+<a name="l00091"></a>00091                 this.panel2.SuspendLayout();
+<a name="l00092"></a>00092                 this.panel1.SuspendLayout();
+<a name="l00093"></a>00093                 ((System.ComponentModel.ISupportInitialize)(this.MDBSize2)).BeginInit();
+<a name="l00094"></a>00094                 ((System.ComponentModel.ISupportInitialize)(this.MDBSize1)).BeginInit();
+<a name="l00095"></a>00095                 ((System.ComponentModel.ISupportInitialize)(this.ExtremumSize5)).BeginInit();
+<a name="l00096"></a>00096                 ((System.ComponentModel.ISupportInitialize)(this.ExtremumSize4)).BeginInit();
+<a name="l00097"></a>00097                 ((System.ComponentModel.ISupportInitialize)(this.ExtremumSize3)).BeginInit();
+<a name="l00098"></a>00098                 ((System.ComponentModel.ISupportInitialize)(this.ExtremumSize2)).BeginInit();
+<a name="l00099"></a>00099                 ((System.ComponentModel.ISupportInitialize)(this.ExtremumSize1)).BeginInit();
+<a name="l00100"></a>00100                 this.SuspendLayout();
+<a name="l00101"></a>00101                 <span class="comment">// </span>
+<a name="l00102"></a>00102                 <span class="comment">// tabControl1</span>
+<a name="l00103"></a>00103                 <span class="comment">// </span>
+<a name="l00104"></a>00104                 this.tabControl1.Controls.Add(this.ColorsPage);
+<a name="l00105"></a>00105                 this.tabControl1.Controls.Add(this.RulesPage);
+<a name="l00106"></a>00106                 this.tabControl1.Location = <span class="keyword">new</span> System.Drawing.Point(-3, 0);
+<a name="l00107"></a>00107                 this.tabControl1.Name = <span class="stringliteral">&quot;tabControl1&quot;</span>;
+<a name="l00108"></a>00108                 this.tabControl1.SelectedIndex = 0;
+<a name="l00109"></a>00109                 this.tabControl1.Size = <span class="keyword">new</span> System.Drawing.Size(339, 292);
+<a name="l00110"></a>00110                 this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
+<a name="l00111"></a>00111                 this.tabControl1.TabIndex = 0;
+<a name="l00112"></a>00112                 <span class="comment">// </span>
+<a name="l00113"></a>00113                 <span class="comment">// ColorsPage</span>
+<a name="l00114"></a>00114                 <span class="comment">// </span>
+<a name="l00115"></a>00115                 this.ColorsPage.Controls.Add(this.ModelLbl11);
+<a name="l00116"></a>00116                 this.ColorsPage.Controls.Add(this.ModelLbl10);
+<a name="l00117"></a>00117                 this.ColorsPage.Controls.Add(this.ModelLbl9);
+<a name="l00118"></a>00118                 this.ColorsPage.Controls.Add(this.ModelLbl8);
+<a name="l00119"></a>00119                 this.ColorsPage.Controls.Add(this.ModelLbl7);
+<a name="l00120"></a>00120                 this.ColorsPage.Controls.Add(this.ModelLbl6);
+<a name="l00121"></a>00121                 this.ColorsPage.Controls.Add(this.ModelLbl5);
+<a name="l00122"></a>00122                 this.ColorsPage.Controls.Add(this.ModelLbl4);
+<a name="l00123"></a>00123                 this.ColorsPage.Controls.Add(this.ModelLbl3);
+<a name="l00124"></a>00124                 this.ColorsPage.Controls.Add(this.ModelLbl2);
+<a name="l00125"></a>00125                 this.ColorsPage.Controls.Add(this.ModelLbl1);
+<a name="l00126"></a>00126                 this.ColorsPage.Location = <span class="keyword">new</span> System.Drawing.Point(4, 22);
+<a name="l00127"></a>00127                 this.ColorsPage.Name = <span class="stringliteral">&quot;ColorsPage&quot;</span>;
+<a name="l00128"></a>00128                 this.ColorsPage.Padding = <span class="keyword">new</span> System.Windows.Forms.Padding(3);
+<a name="l00129"></a>00129                 this.ColorsPage.Size = <span class="keyword">new</span> System.Drawing.Size(331, 266);
+<a name="l00130"></a>00130                 this.ColorsPage.TabIndex = 0;
+<a name="l00131"></a>00131                 this.ColorsPage.Text = <span class="stringliteral">&quot;Colors&quot;</span>;
+<a name="l00132"></a>00132                 this.ColorsPage.UseVisualStyleBackColor = <span class="keyword">true</span>;
+<a name="l00133"></a>00133                 <span class="comment">// </span>
+<a name="l00134"></a>00134                 <span class="comment">// ModelLbl11</span>
+<a name="l00135"></a>00135                 <span class="comment">// </span>
+<a name="l00136"></a>00136                 this.ModelLbl11.AutoSize = <span class="keyword">true</span>;
+<a name="l00137"></a>00137                 this.ModelLbl11.Location = <span class="keyword">new</span> System.Drawing.Point(12, 241);
+<a name="l00138"></a>00138                 this.ModelLbl11.Name = <span class="stringliteral">&quot;ModelLbl11&quot;</span>;
+<a name="l00139"></a>00139                 this.ModelLbl11.Size = <span class="keyword">new</span> System.Drawing.Size(51, 13);
+<a name="l00140"></a>00140                 this.ModelLbl11.TabIndex = 10;
+<a name="l00141"></a>00141                 this.ModelLbl11.Text = <span class="stringliteral">&quot;Model 11&quot;</span>;
+<a name="l00142"></a>00142                 this.ModelLbl11.Click += <span class="keyword">new</span> System.EventHandler(this.ModelLbl1_Click);
+<a name="l00143"></a>00143                 <span class="comment">// </span>
+<a name="l00144"></a>00144                 <span class="comment">// ModelLbl10</span>
+<a name="l00145"></a>00145                 <span class="comment">// </span>
+<a name="l00146"></a>00146                 this.ModelLbl10.AutoSize = <span class="keyword">true</span>;
+<a name="l00147"></a>00147                 this.ModelLbl10.Location = <span class="keyword">new</span> System.Drawing.Point(11, 216);
+<a name="l00148"></a>00148                 this.ModelLbl10.Name = <span class="stringliteral">&quot;ModelLbl10&quot;</span>;
+<a name="l00149"></a>00149                 this.ModelLbl10.Size = <span class="keyword">new</span> System.Drawing.Size(51, 13);
+<a name="l00150"></a>00150                 this.ModelLbl10.TabIndex = 9;
+<a name="l00151"></a>00151                 this.ModelLbl10.Text = <span class="stringliteral">&quot;Model 10&quot;</span>;
+<a name="l00152"></a>00152                 this.ModelLbl10.Click += <span class="keyword">new</span> System.EventHandler(this.ModelLbl1_Click);
+<a name="l00153"></a>00153                 <span class="comment">// </span>
+<a name="l00154"></a>00154                 <span class="comment">// ModelLbl9</span>
+<a name="l00155"></a>00155                 <span class="comment">// </span>
+<a name="l00156"></a>00156                 this.ModelLbl9.AutoSize = <span class="keyword">true</span>;
+<a name="l00157"></a>00157                 this.ModelLbl9.Location = <span class="keyword">new</span> System.Drawing.Point(11, 194);
+<a name="l00158"></a>00158                 this.ModelLbl9.Name = <span class="stringliteral">&quot;ModelLbl9&quot;</span>;
+<a name="l00159"></a>00159                 this.ModelLbl9.Size = <span class="keyword">new</span> System.Drawing.Size(45, 13);
+<a name="l00160"></a>00160                 this.ModelLbl9.TabIndex = 8;
+<a name="l00161"></a>00161                 this.ModelLbl9.Text = <span class="stringliteral">&quot;Model 9&quot;</span>;
+<a name="l00162"></a>00162                 this.ModelLbl9.Click += <span class="keyword">new</span> System.EventHandler(this.ModelLbl1_Click);
+<a name="l00163"></a>00163                 <span class="comment">// </span>
+<a name="l00164"></a>00164                 <span class="comment">// ModelLbl8</span>
+<a name="l00165"></a>00165                 <span class="comment">// </span>
+<a name="l00166"></a>00166                 this.ModelLbl8.AutoSize = <span class="keyword">true</span>;
+<a name="l00167"></a>00167                 this.ModelLbl8.Location = <span class="keyword">new</span> System.Drawing.Point(11, 171);
+<a name="l00168"></a>00168                 this.ModelLbl8.Name = <span class="stringliteral">&quot;ModelLbl8&quot;</span>;
+<a name="l00169"></a>00169                 this.ModelLbl8.Size = <span class="keyword">new</span> System.Drawing.Size(45, 13);
+<a name="l00170"></a>00170                 this.ModelLbl8.TabIndex = 7;
+<a name="l00171"></a>00171                 this.ModelLbl8.Text = <span class="stringliteral">&quot;Model 8&quot;</span>;
+<a name="l00172"></a>00172                 this.ModelLbl8.Click += <span class="keyword">new</span> System.EventHandler(this.ModelLbl1_Click);
+<a name="l00173"></a>00173                 <span class="comment">// </span>
+<a name="l00174"></a>00174                 <span class="comment">// ModelLbl7</span>
+<a name="l00175"></a>00175                 <span class="comment">// </span>
+<a name="l00176"></a>00176                 this.ModelLbl7.AutoSize = <span class="keyword">true</span>;
+<a name="l00177"></a>00177                 this.ModelLbl7.Location = <span class="keyword">new</span> System.Drawing.Point(11, 149);
+<a name="l00178"></a>00178                 this.ModelLbl7.Name = <span class="stringliteral">&quot;ModelLbl7&quot;</span>;
+<a name="l00179"></a>00179                 this.ModelLbl7.Size = <span class="keyword">new</span> System.Drawing.Size(45, 13);
+<a name="l00180"></a>00180                 this.ModelLbl7.TabIndex = 6;
+<a name="l00181"></a>00181                 this.ModelLbl7.Text = <span class="stringliteral">&quot;Model 7&quot;</span>;
+<a name="l00182"></a>00182                 this.ModelLbl7.Click += <span class="keyword">new</span> System.EventHandler(this.ModelLbl1_Click);
+<a name="l00183"></a>00183                 <span class="comment">// </span>
+<a name="l00184"></a>00184                 <span class="comment">// ModelLbl6</span>
+<a name="l00185"></a>00185                 <span class="comment">// </span>
+<a name="l00186"></a>00186                 this.ModelLbl6.AutoSize = <span class="keyword">true</span>;
+<a name="l00187"></a>00187                 this.ModelLbl6.Location = <span class="keyword">new</span> System.Drawing.Point(11, 126);
+<a name="l00188"></a>00188                 this.ModelLbl6.Name = <span class="stringliteral">&quot;ModelLbl6&quot;</span>;
+<a name="l00189"></a>00189                 this.ModelLbl6.Size = <span class="keyword">new</span> System.Drawing.Size(45, 13);
+<a name="l00190"></a>00190                 this.ModelLbl6.TabIndex = 5;
+<a name="l00191"></a>00191                 this.ModelLbl6.Text = <span class="stringliteral">&quot;Model 6&quot;</span>;
+<a name="l00192"></a>00192                 this.ModelLbl6.Click += <span class="keyword">new</span> System.EventHandler(this.ModelLbl1_Click);
+<a name="l00193"></a>00193                 <span class="comment">// </span>
+<a name="l00194"></a>00194                 <span class="comment">// ModelLbl5</span>
+<a name="l00195"></a>00195                 <span class="comment">// </span>
+<a name="l00196"></a>00196                 this.ModelLbl5.AutoSize = <span class="keyword">true</span>;
+<a name="l00197"></a>00197                 this.ModelLbl5.Location = <span class="keyword">new</span> System.Drawing.Point(11, 104);
+<a name="l00198"></a>00198                 this.ModelLbl5.Name = <span class="stringliteral">&quot;ModelLbl5&quot;</span>;
+<a name="l00199"></a>00199                 this.ModelLbl5.Size = <span class="keyword">new</span> System.Drawing.Size(45, 13);
+<a name="l00200"></a>00200                 this.ModelLbl5.TabIndex = 4;
+<a name="l00201"></a>00201                 this.ModelLbl5.Text = <span class="stringliteral">&quot;Model 5&quot;</span>;
+<a name="l00202"></a>00202                 this.ModelLbl5.Click += <span class="keyword">new</span> System.EventHandler(this.ModelLbl1_Click);
+<a name="l00203"></a>00203                 <span class="comment">// </span>
+<a name="l00204"></a>00204                 <span class="comment">// ModelLbl4</span>
+<a name="l00205"></a>00205                 <span class="comment">// </span>
+<a name="l00206"></a>00206                 this.ModelLbl4.AutoSize = <span class="keyword">true</span>;
+<a name="l00207"></a>00207                 this.ModelLbl4.Location = <span class="keyword">new</span> System.Drawing.Point(11, 81);
+<a name="l00208"></a>00208                 this.ModelLbl4.Name = <span class="stringliteral">&quot;ModelLbl4&quot;</span>;
+<a name="l00209"></a>00209                 this.ModelLbl4.Size = <span class="keyword">new</span> System.Drawing.Size(45, 13);
+<a name="l00210"></a>00210                 this.ModelLbl4.TabIndex = 3;
+<a name="l00211"></a>00211                 this.ModelLbl4.Text = <span class="stringliteral">&quot;Model 4&quot;</span>;
+<a name="l00212"></a>00212                 this.ModelLbl4.Click += <span class="keyword">new</span> System.EventHandler(this.ModelLbl1_Click);
+<a name="l00213"></a>00213                 <span class="comment">// </span>
+<a name="l00214"></a>00214                 <span class="comment">// ModelLbl3</span>
+<a name="l00215"></a>00215                 <span class="comment">// </span>
+<a name="l00216"></a>00216                 this.ModelLbl3.AutoSize = <span class="keyword">true</span>;
+<a name="l00217"></a>00217                 this.ModelLbl3.Location = <span class="keyword">new</span> System.Drawing.Point(11, 56);
+<a name="l00218"></a>00218                 this.ModelLbl3.Name = <span class="stringliteral">&quot;ModelLbl3&quot;</span>;
+<a name="l00219"></a>00219                 this.ModelLbl3.Size = <span class="keyword">new</span> System.Drawing.Size(45, 13);
+<a name="l00220"></a>00220                 this.ModelLbl3.TabIndex = 2;
+<a name="l00221"></a>00221                 this.ModelLbl3.Text = <span class="stringliteral">&quot;Model 3&quot;</span>;
+<a name="l00222"></a>00222                 this.ModelLbl3.Click += <span class="keyword">new</span> System.EventHandler(this.ModelLbl1_Click);
+<a name="l00223"></a>00223                 <span class="comment">// </span>
+<a name="l00224"></a>00224                 <span class="comment">// ModelLbl2</span>
+<a name="l00225"></a>00225                 <span class="comment">// </span>
+<a name="l00226"></a>00226                 this.ModelLbl2.AutoSize = <span class="keyword">true</span>;
+<a name="l00227"></a>00227                 this.ModelLbl2.Location = <span class="keyword">new</span> System.Drawing.Point(11, 29);
+<a name="l00228"></a>00228                 this.ModelLbl2.Name = <span class="stringliteral">&quot;ModelLbl2&quot;</span>;
+<a name="l00229"></a>00229                 this.ModelLbl2.Size = <span class="keyword">new</span> System.Drawing.Size(45, 13);
+<a name="l00230"></a>00230                 this.ModelLbl2.TabIndex = 1;
+<a name="l00231"></a>00231                 this.ModelLbl2.Text = <span class="stringliteral">&quot;Model 2&quot;</span>;
+<a name="l00232"></a>00232                 this.ModelLbl2.Click += <span class="keyword">new</span> System.EventHandler(this.ModelLbl1_Click);
+<a name="l00233"></a>00233                 <span class="comment">// </span>
+<a name="l00234"></a>00234                 <span class="comment">// ModelLbl1</span>
+<a name="l00235"></a>00235                 <span class="comment">// </span>
+<a name="l00236"></a>00236                 this.ModelLbl1.AutoSize = <span class="keyword">true</span>;
+<a name="l00237"></a>00237                 this.ModelLbl1.Location = <span class="keyword">new</span> System.Drawing.Point(12, 7);
+<a name="l00238"></a>00238                 this.ModelLbl1.Name = <span class="stringliteral">&quot;ModelLbl1&quot;</span>;
+<a name="l00239"></a>00239                 this.ModelLbl1.Size = <span class="keyword">new</span> System.Drawing.Size(45, 13);
+<a name="l00240"></a>00240                 this.ModelLbl1.TabIndex = 0;
+<a name="l00241"></a>00241                 this.ModelLbl1.Text = <span class="stringliteral">&quot;Model 1&quot;</span>;
+<a name="l00242"></a>00242                 this.ModelLbl1.Click += <span class="keyword">new</span> System.EventHandler(this.ModelLbl1_Click);
+<a name="l00243"></a>00243                 <span class="comment">// </span>
+<a name="l00244"></a>00244                 <span class="comment">// RulesPage</span>
+<a name="l00245"></a>00245                 <span class="comment">// </span>
+<a name="l00246"></a>00246                 this.RulesPage.Controls.Add(this.panel2);
+<a name="l00247"></a>00247                 this.RulesPage.Controls.Add(this.panel1);
+<a name="l00248"></a>00248                 this.RulesPage.Location = <span class="keyword">new</span> System.Drawing.Point(4, 22);
+<a name="l00249"></a>00249                 this.RulesPage.Name = <span class="stringliteral">&quot;RulesPage&quot;</span>;
+<a name="l00250"></a>00250                 this.RulesPage.Padding = <span class="keyword">new</span> System.Windows.Forms.Padding(3);
+<a name="l00251"></a>00251                 this.RulesPage.Size = <span class="keyword">new</span> System.Drawing.Size(331, 266);
+<a name="l00252"></a>00252                 this.RulesPage.TabIndex = 1;
+<a name="l00253"></a>00253                 this.RulesPage.Text = <span class="stringliteral">&quot;Rules&quot;</span>;
+<a name="l00254"></a>00254                 this.RulesPage.UseVisualStyleBackColor = <span class="keyword">true</span>;
+<a name="l00255"></a>00255                 <span class="comment">// </span>
+<a name="l00256"></a>00256                 <span class="comment">// panel2</span>
+<a name="l00257"></a>00257                 <span class="comment">// </span>
+<a name="l00258"></a>00258                 this.panel2.Controls.Add(this.RulesBox);
+<a name="l00259"></a>00259                 this.panel2.Controls.Add(this.label7);
+<a name="l00260"></a>00260                 this.panel2.Location = <span class="keyword">new</span> System.Drawing.Point(3, 129);
+<a name="l00261"></a>00261                 this.panel2.Name = <span class="stringliteral">&quot;panel2&quot;</span>;
+<a name="l00262"></a>00262                 this.panel2.Size = <span class="keyword">new</span> System.Drawing.Size(325, 134);
+<a name="l00263"></a>00263                 this.panel2.TabIndex = 1;
+<a name="l00264"></a>00264                 <span class="comment">// </span>
+<a name="l00265"></a>00265                 <span class="comment">// RulesBox</span>
+<a name="l00266"></a>00266                 <span class="comment">// </span>
+<a name="l00267"></a>00267                 this.RulesBox.CheckOnClick = <span class="keyword">true</span>;
+<a name="l00268"></a>00268                 this.RulesBox.FormattingEnabled = <span class="keyword">true</span>;
+<a name="l00269"></a>00269                 this.RulesBox.Items.AddRange(<span class="keyword">new</span> <span class="keywordtype">object</span>[] {
+<a name="l00270"></a>00270             <span class="stringliteral">&quot;Extra points on trend line&quot;</span>,
+<a name="l00271"></a>00271             <span class="stringliteral">&quot;Extra points on target line&quot;</span>,
+<a name="l00272"></a>00272             <span class="stringliteral">&quot;Intersection of 1st and 3rd bar bodies for Atraction model&quot;</span>,
+<a name="l00273"></a>00273             <span class="stringliteral">&quot;Intersection of 2st and 4rd bar bodies for Atraction model&quot;</span>,
+<a name="l00274"></a>00274             <span class="stringliteral">&quot;Intersection of 2st and 5rd bar bodies&quot;</span>,
+<a name="l00275"></a>00275             <span class="stringliteral">&quot;Point 3 is not the global extremum&quot;</span>,
+<a name="l00276"></a>00276             <span class="stringliteral">&quot;Point 5 within the 4th point bar&quot;</span>,
+<a name="l00277"></a>00277             <span class="stringliteral">&quot;Point 3\&#39; out of the base&quot;</span>,
+<a name="l00278"></a>00278             <span class="stringliteral">&quot;Target line and the 1st point bar intersection&quot;</span>,
+<a name="l00279"></a>00279             <span class="stringliteral">&quot;Superposition of model levels&quot;</span>,
+<a name="l00280"></a>00280             <span class="stringliteral">&quot;Point 3 is not the global extremun between p2 and p3&quot;</span>,
+<a name="l00281"></a>00281             <span class="stringliteral">&quot;Point 3 is not the global extremum for Atraction model&quot;</span>,
+<a name="l00282"></a>00282             <span class="stringliteral">&quot;Intersection of 2nd and 5th bar bodies for Atraction model&quot;</span>,
+<a name="l00283"></a>00283             <span class="stringliteral">&quot;Point 5 within the base&quot;</span>});
+<a name="l00284"></a>00284                 this.RulesBox.Location = <span class="keyword">new</span> System.Drawing.Point(15, 22);
+<a name="l00285"></a>00285                 this.RulesBox.Name = <span class="stringliteral">&quot;RulesBox&quot;</span>;
+<a name="l00286"></a>00286                 this.RulesBox.Size = <span class="keyword">new</span> System.Drawing.Size(306, 109);
+<a name="l00287"></a>00287                 this.RulesBox.TabIndex = 1;
+<a name="l00288"></a>00288                 <span class="comment">// </span>
+<a name="l00289"></a>00289                 <span class="comment">// label7</span>
+<a name="l00290"></a>00290                 <span class="comment">// </span>
+<a name="l00291"></a>00291                 this.label7.AutoSize = <span class="keyword">true</span>;
+<a name="l00292"></a>00292                 this.label7.Location = <span class="keyword">new</span> System.Drawing.Point(15, 5);
+<a name="l00293"></a>00293                 this.label7.Name = <span class="stringliteral">&quot;label7&quot;</span>;
+<a name="l00294"></a>00294                 this.label7.Size = <span class="keyword">new</span> System.Drawing.Size(75, 13);
+<a name="l00295"></a>00295                 this.label7.TabIndex = 0;
+<a name="l00296"></a>00296                 this.label7.Text = <span class="stringliteral">&quot;Checked rules&quot;</span>;
+<a name="l00297"></a>00297                 <span class="comment">// </span>
+<a name="l00298"></a>00298                 <span class="comment">// panel1</span>
+<a name="l00299"></a>00299                 <span class="comment">// </span>
+<a name="l00300"></a>00300                 this.panel1.Controls.Add(this.MDBSize2);
+<a name="l00301"></a>00301                 this.panel1.Controls.Add(this.MDBSize1);
+<a name="l00302"></a>00302                 this.panel1.Controls.Add(this.label10);
+<a name="l00303"></a>00303                 this.panel1.Controls.Add(this.label9);
+<a name="l00304"></a>00304                 this.panel1.Controls.Add(this.label8);
+<a name="l00305"></a>00305                 this.panel1.Controls.Add(this.ExtremumSize5);
+<a name="l00306"></a>00306                 this.panel1.Controls.Add(this.label6);
+<a name="l00307"></a>00307                 this.panel1.Controls.Add(this.ExtremumSize4);
+<a name="l00308"></a>00308                 this.panel1.Controls.Add(this.label5);
+<a name="l00309"></a>00309                 this.panel1.Controls.Add(this.ExtremumSize3);
+<a name="l00310"></a>00310                 this.panel1.Controls.Add(this.label4);
+<a name="l00311"></a>00311                 this.panel1.Controls.Add(this.ExtremumSize2);
+<a name="l00312"></a>00312                 this.panel1.Controls.Add(this.label3);
+<a name="l00313"></a>00313                 this.panel1.Controls.Add(this.ExtremumSize1);
+<a name="l00314"></a>00314                 this.panel1.Controls.Add(this.label2);
+<a name="l00315"></a>00315                 this.panel1.Controls.Add(this.label1);
+<a name="l00316"></a>00316                 this.panel1.Location = <span class="keyword">new</span> System.Drawing.Point(3, 3);
+<a name="l00317"></a>00317                 this.panel1.Name = <span class="stringliteral">&quot;panel1&quot;</span>;
+<a name="l00318"></a>00318                 this.panel1.Size = <span class="keyword">new</span> System.Drawing.Size(328, 124);
+<a name="l00319"></a>00319                 this.panel1.TabIndex = 0;
+<a name="l00320"></a>00320                 <span class="comment">// </span>
+<a name="l00321"></a>00321                 <span class="comment">// MDBSize2</span>
+<a name="l00322"></a>00322                 <span class="comment">// </span>
+<a name="l00323"></a>00323                 this.MDBSize2.Location = <span class="keyword">new</span> System.Drawing.Point(262, 38);
+<a name="l00324"></a>00324                 this.MDBSize2.Minimum = <span class="keyword">new</span> decimal(<span class="keyword">new</span> <span class="keywordtype">int</span>[] {
+<a name="l00325"></a>00325             1,
+<a name="l00326"></a>00326             0,
+<a name="l00327"></a>00327             0,
+<a name="l00328"></a>00328             0});
+<a name="l00329"></a>00329                 this.MDBSize2.Name = <span class="stringliteral">&quot;MDBSize2&quot;</span>;
+<a name="l00330"></a>00330                 this.MDBSize2.Size = <span class="keyword">new</span> System.Drawing.Size(57, 20);
+<a name="l00331"></a>00331                 this.MDBSize2.TabIndex = 16;
+<a name="l00332"></a>00332                 this.MDBSize2.Value = <span class="keyword">new</span> decimal(<span class="keyword">new</span> <span class="keywordtype">int</span>[] {
+<a name="l00333"></a>00333             7,
+<a name="l00334"></a>00334             0,
+<a name="l00335"></a>00335             0,
+<a name="l00336"></a>00336             0});
+<a name="l00337"></a>00337                 <span class="comment">// </span>
+<a name="l00338"></a>00338                 <span class="comment">// MDBSize1</span>
+<a name="l00339"></a>00339                 <span class="comment">// </span>
+<a name="l00340"></a>00340                 this.MDBSize1.Location = <span class="keyword">new</span> System.Drawing.Point(262, 19);
+<a name="l00341"></a>00341                 this.MDBSize1.Minimum = <span class="keyword">new</span> decimal(<span class="keyword">new</span> <span class="keywordtype">int</span>[] {
+<a name="l00342"></a>00342             1,
+<a name="l00343"></a>00343             0,
+<a name="l00344"></a>00344             0,
+<a name="l00345"></a>00345             0});
+<a name="l00346"></a>00346                 this.MDBSize1.Name = <span class="stringliteral">&quot;MDBSize1&quot;</span>;
+<a name="l00347"></a>00347                 this.MDBSize1.Size = <span class="keyword">new</span> System.Drawing.Size(57, 20);
+<a name="l00348"></a>00348                 this.MDBSize1.TabIndex = 15;
+<a name="l00349"></a>00349                 this.MDBSize1.Value = <span class="keyword">new</span> decimal(<span class="keyword">new</span> <span class="keywordtype">int</span>[] {
+<a name="l00350"></a>00350             7,
+<a name="l00351"></a>00351             0,
+<a name="l00352"></a>00352             0,
+<a name="l00353"></a>00353             0});
+<a name="l00354"></a>00354                 <span class="comment">// </span>
+<a name="l00355"></a>00355                 <span class="comment">// label10</span>
+<a name="l00356"></a>00356                 <span class="comment">// </span>
+<a name="l00357"></a>00357                 this.label10.AutoSize = <span class="keyword">true</span>;
+<a name="l00358"></a>00358                 this.label10.Location = <span class="keyword">new</span> System.Drawing.Point(159, 38);
+<a name="l00359"></a>00359                 this.label10.Name = <span class="stringliteral">&quot;label10&quot;</span>;
+<a name="l00360"></a>00360                 this.label10.Size = <span class="keyword">new</span> System.Drawing.Size(97, 13);
+<a name="l00361"></a>00361                 this.label10.TabIndex = 14;
+<a name="l00362"></a>00362                 this.label10.Text = <span class="stringliteral">&quot;Atraction-&gt;Balance&quot;</span>;
+<a name="l00363"></a>00363                 <span class="comment">// </span>
+<a name="l00364"></a>00364                 <span class="comment">// label9</span>
+<a name="l00365"></a>00365                 <span class="comment">// </span>
+<a name="l00366"></a>00366                 this.label9.AutoSize = <span class="keyword">true</span>;
+<a name="l00367"></a>00367                 this.label9.Location = <span class="keyword">new</span> System.Drawing.Point(159, 21);
+<a name="l00368"></a>00368                 this.label9.Name = <span class="stringliteral">&quot;label9&quot;</span>;
+<a name="l00369"></a>00369                 this.label9.Size = <span class="keyword">new</span> System.Drawing.Size(104, 13);
+<a name="l00370"></a>00370                 this.label9.TabIndex = 13;
+<a name="l00371"></a>00371                 this.label9.Text = <span class="stringliteral">&quot;Expansion-&gt;Balance&quot;</span>;
+<a name="l00372"></a>00372                 <span class="comment">// </span>
+<a name="l00373"></a>00373                 <span class="comment">// label8</span>
+<a name="l00374"></a>00374                 <span class="comment">// </span>
+<a name="l00375"></a>00375                 this.label8.AutoSize = <span class="keyword">true</span>;
+<a name="l00376"></a>00376                 this.label8.Location = <span class="keyword">new</span> System.Drawing.Point(179, 3);
+<a name="l00377"></a>00377                 this.label8.Name = <span class="stringliteral">&quot;label8&quot;</span>;
+<a name="l00378"></a>00378                 this.label8.Size = <span class="keyword">new</span> System.Drawing.Size(106, 13);
+<a name="l00379"></a>00379                 this.label8.TabIndex = 12;
+<a name="l00380"></a>00380                 this.label8.Text = <span class="stringliteral">&quot;Transformation coefs&quot;</span>;
+<a name="l00381"></a>00381                 <span class="comment">// </span>
+<a name="l00382"></a>00382                 <span class="comment">// ExtremumSize5</span>
+<a name="l00383"></a>00383                 <span class="comment">// </span>
+<a name="l00384"></a>00384                 this.ExtremumSize5.Location = <span class="keyword">new</span> System.Drawing.Point(53, 100);
+<a name="l00385"></a>00385                 this.ExtremumSize5.Minimum = <span class="keyword">new</span> decimal(<span class="keyword">new</span> <span class="keywordtype">int</span>[] {
+<a name="l00386"></a>00386             1,
+<a name="l00387"></a>00387             0,
+<a name="l00388"></a>00388             0,
+<a name="l00389"></a>00389             0});
+<a name="l00390"></a>00390                 this.ExtremumSize5.Name = <span class="stringliteral">&quot;ExtremumSize5&quot;</span>;
+<a name="l00391"></a>00391                 this.ExtremumSize5.Size = <span class="keyword">new</span> System.Drawing.Size(57, 20);
+<a name="l00392"></a>00392                 this.ExtremumSize5.TabIndex = 11;
+<a name="l00393"></a>00393                 this.ExtremumSize5.Value = <span class="keyword">new</span> decimal(<span class="keyword">new</span> <span class="keywordtype">int</span>[] {
+<a name="l00394"></a>00394             1,
+<a name="l00395"></a>00395             0,
+<a name="l00396"></a>00396             0,
+<a name="l00397"></a>00397             0});
+<a name="l00398"></a>00398                 <span class="comment">// </span>
+<a name="l00399"></a>00399                 <span class="comment">// label6</span>
+<a name="l00400"></a>00400                 <span class="comment">// </span>
+<a name="l00401"></a>00401                 this.label6.Location = <span class="keyword">new</span> System.Drawing.Point(12, 102);
+<a name="l00402"></a>00402                 this.label6.Name = <span class="stringliteral">&quot;label6&quot;</span>;
+<a name="l00403"></a>00403                 this.label6.Size = <span class="keyword">new</span> System.Drawing.Size(98, 18);
+<a name="l00404"></a>00404                 this.label6.TabIndex = 10;
+<a name="l00405"></a>00405                 this.label6.Text = <span class="stringliteral">&quot;Point 5&quot;</span>;
+<a name="l00406"></a>00406                 <span class="comment">// </span>
+<a name="l00407"></a>00407                 <span class="comment">// ExtremumSize4</span>
+<a name="l00408"></a>00408                 <span class="comment">// </span>
+<a name="l00409"></a>00409                 this.ExtremumSize4.Location = <span class="keyword">new</span> System.Drawing.Point(53, 79);
+<a name="l00410"></a>00410                 this.ExtremumSize4.Minimum = <span class="keyword">new</span> decimal(<span class="keyword">new</span> <span class="keywordtype">int</span>[] {
+<a name="l00411"></a>00411             1,
+<a name="l00412"></a>00412             0,
+<a name="l00413"></a>00413             0,
+<a name="l00414"></a>00414             0});
+<a name="l00415"></a>00415                 this.ExtremumSize4.Name = <span class="stringliteral">&quot;ExtremumSize4&quot;</span>;
+<a name="l00416"></a>00416                 this.ExtremumSize4.Size = <span class="keyword">new</span> System.Drawing.Size(57, 20);
+<a name="l00417"></a>00417                 this.ExtremumSize4.TabIndex = 9;
+<a name="l00418"></a>00418                 this.ExtremumSize4.Value = <span class="keyword">new</span> decimal(<span class="keyword">new</span> <span class="keywordtype">int</span>[] {
+<a name="l00419"></a>00419             1,
+<a name="l00420"></a>00420             0,
+<a name="l00421"></a>00421             0,
+<a name="l00422"></a>00422             0});
+<a name="l00423"></a>00423                 <span class="comment">// </span>
+<a name="l00424"></a>00424                 <span class="comment">// label5</span>
+<a name="l00425"></a>00425                 <span class="comment">// </span>
+<a name="l00426"></a>00426                 this.label5.Location = <span class="keyword">new</span> System.Drawing.Point(12, 81);
+<a name="l00427"></a>00427                 this.label5.Name = <span class="stringliteral">&quot;label5&quot;</span>;
+<a name="l00428"></a>00428                 this.label5.Size = <span class="keyword">new</span> System.Drawing.Size(98, 18);
+<a name="l00429"></a>00429                 this.label5.TabIndex = 8;
+<a name="l00430"></a>00430                 this.label5.Text = <span class="stringliteral">&quot;Point 4&quot;</span>;
+<a name="l00431"></a>00431                 <span class="comment">// </span>
+<a name="l00432"></a>00432                 <span class="comment">// ExtremumSize3</span>
+<a name="l00433"></a>00433                 <span class="comment">// </span>
+<a name="l00434"></a>00434                 this.ExtremumSize3.Location = <span class="keyword">new</span> System.Drawing.Point(53, 58);
+<a name="l00435"></a>00435                 this.ExtremumSize3.Minimum = <span class="keyword">new</span> decimal(<span class="keyword">new</span> <span class="keywordtype">int</span>[] {
+<a name="l00436"></a>00436             1,
+<a name="l00437"></a>00437             0,
+<a name="l00438"></a>00438             0,
+<a name="l00439"></a>00439             0});
+<a name="l00440"></a>00440                 this.ExtremumSize3.Name = <span class="stringliteral">&quot;ExtremumSize3&quot;</span>;
+<a name="l00441"></a>00441                 this.ExtremumSize3.Size = <span class="keyword">new</span> System.Drawing.Size(57, 20);
+<a name="l00442"></a>00442                 this.ExtremumSize3.TabIndex = 7;
+<a name="l00443"></a>00443                 this.ExtremumSize3.Value = <span class="keyword">new</span> decimal(<span class="keyword">new</span> <span class="keywordtype">int</span>[] {
+<a name="l00444"></a>00444             1,
+<a name="l00445"></a>00445             0,
+<a name="l00446"></a>00446             0,
+<a name="l00447"></a>00447             0});
+<a name="l00448"></a>00448                 <span class="comment">// </span>
+<a name="l00449"></a>00449                 <span class="comment">// label4</span>
+<a name="l00450"></a>00450                 <span class="comment">// </span>
+<a name="l00451"></a>00451                 this.label4.Location = <span class="keyword">new</span> System.Drawing.Point(12, 60);
+<a name="l00452"></a>00452                 this.label4.Name = <span class="stringliteral">&quot;label4&quot;</span>;
+<a name="l00453"></a>00453                 this.label4.Size = <span class="keyword">new</span> System.Drawing.Size(98, 18);
+<a name="l00454"></a>00454                 this.label4.TabIndex = 6;
+<a name="l00455"></a>00455                 this.label4.Text = <span class="stringliteral">&quot;Point 3&quot;</span>;
+<a name="l00456"></a>00456                 <span class="comment">// </span>
+<a name="l00457"></a>00457                 <span class="comment">// ExtremumSize2</span>
+<a name="l00458"></a>00458                 <span class="comment">// </span>
+<a name="l00459"></a>00459                 this.ExtremumSize2.Location = <span class="keyword">new</span> System.Drawing.Point(53, 37);
+<a name="l00460"></a>00460                 this.ExtremumSize2.Minimum = <span class="keyword">new</span> decimal(<span class="keyword">new</span> <span class="keywordtype">int</span>[] {
+<a name="l00461"></a>00461             1,
+<a name="l00462"></a>00462             0,
+<a name="l00463"></a>00463             0,
+<a name="l00464"></a>00464             0});
+<a name="l00465"></a>00465                 this.ExtremumSize2.Name = <span class="stringliteral">&quot;ExtremumSize2&quot;</span>;
+<a name="l00466"></a>00466                 this.ExtremumSize2.Size = <span class="keyword">new</span> System.Drawing.Size(57, 20);
+<a name="l00467"></a>00467                 this.ExtremumSize2.TabIndex = 5;
+<a name="l00468"></a>00468                 this.ExtremumSize2.Value = <span class="keyword">new</span> decimal(<span class="keyword">new</span> <span class="keywordtype">int</span>[] {
+<a name="l00469"></a>00469             1,
+<a name="l00470"></a>00470             0,
+<a name="l00471"></a>00471             0,
+<a name="l00472"></a>00472             0});
+<a name="l00473"></a>00473                 <span class="comment">// </span>
+<a name="l00474"></a>00474                 <span class="comment">// label3</span>
+<a name="l00475"></a>00475                 <span class="comment">// </span>
+<a name="l00476"></a>00476                 this.label3.Location = <span class="keyword">new</span> System.Drawing.Point(12, 39);
+<a name="l00477"></a>00477                 this.label3.Name = <span class="stringliteral">&quot;label3&quot;</span>;
+<a name="l00478"></a>00478                 this.label3.Size = <span class="keyword">new</span> System.Drawing.Size(98, 18);
+<a name="l00479"></a>00479                 this.label3.TabIndex = 4;
+<a name="l00480"></a>00480                 this.label3.Text = <span class="stringliteral">&quot;Point 2&quot;</span>;
+<a name="l00481"></a>00481                 <span class="comment">// </span>
+<a name="l00482"></a>00482                 <span class="comment">// ExtremumSize1</span>
+<a name="l00483"></a>00483                 <span class="comment">// </span>
+<a name="l00484"></a>00484                 this.ExtremumSize1.Location = <span class="keyword">new</span> System.Drawing.Point(53, 19);
+<a name="l00485"></a>00485                 this.ExtremumSize1.Minimum = <span class="keyword">new</span> decimal(<span class="keyword">new</span> <span class="keywordtype">int</span>[] {
+<a name="l00486"></a>00486             1,
+<a name="l00487"></a>00487             0,
+<a name="l00488"></a>00488             0,
+<a name="l00489"></a>00489             0});
+<a name="l00490"></a>00490                 this.ExtremumSize1.Name = <span class="stringliteral">&quot;ExtremumSize1&quot;</span>;
+<a name="l00491"></a>00491                 this.ExtremumSize1.Size = <span class="keyword">new</span> System.Drawing.Size(57, 20);
+<a name="l00492"></a>00492                 this.ExtremumSize1.TabIndex = 3;
+<a name="l00493"></a>00493                 this.ExtremumSize1.Value = <span class="keyword">new</span> decimal(<span class="keyword">new</span> <span class="keywordtype">int</span>[] {
+<a name="l00494"></a>00494             1,
+<a name="l00495"></a>00495             0,
+<a name="l00496"></a>00496             0,
+<a name="l00497"></a>00497             0});
+<a name="l00498"></a>00498                 <span class="comment">// </span>
+<a name="l00499"></a>00499                 <span class="comment">// label2</span>
+<a name="l00500"></a>00500                 <span class="comment">// </span>
+<a name="l00501"></a>00501                 this.label2.Location = <span class="keyword">new</span> System.Drawing.Point(12, 21);
+<a name="l00502"></a>00502                 this.label2.Name = <span class="stringliteral">&quot;label2&quot;</span>;
+<a name="l00503"></a>00503                 this.label2.Size = <span class="keyword">new</span> System.Drawing.Size(98, 18);
+<a name="l00504"></a>00504                 this.label2.TabIndex = 1;
+<a name="l00505"></a>00505                 this.label2.Text = <span class="stringliteral">&quot;Point 1&quot;</span>;
+<a name="l00506"></a>00506                 <span class="comment">// </span>
+<a name="l00507"></a>00507                 <span class="comment">// label1</span>
+<a name="l00508"></a>00508                 <span class="comment">// </span>
+<a name="l00509"></a>00509                 this.label1.AutoSize = <span class="keyword">true</span>;
+<a name="l00510"></a>00510                 this.label1.Location = <span class="keyword">new</span> System.Drawing.Point(9, 4);
+<a name="l00511"></a>00511                 this.label1.Name = <span class="stringliteral">&quot;label1&quot;</span>;
+<a name="l00512"></a>00512                 this.label1.Size = <span class="keyword">new</span> System.Drawing.Size(125, 13);
+<a name="l00513"></a>00513                 this.label1.TabIndex = 0;
+<a name="l00514"></a>00514                 this.label1.Text = <span class="stringliteral">&quot;Extremum sizes for points&quot;</span>;
+<a name="l00515"></a>00515                 <span class="comment">// </span>
+<a name="l00516"></a>00516                 <span class="comment">// OptionsForm</span>
+<a name="l00517"></a>00517                 <span class="comment">// </span>
+<a name="l00518"></a>00518                 this.AutoScaleDimensions = <span class="keyword">new</span> System.Drawing.SizeF(6F, 13F);
+<a name="l00519"></a>00519                 this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<a name="l00520"></a>00520                 this.ClientSize = <span class="keyword">new</span> System.Drawing.Size(337, 293);
+<a name="l00521"></a>00521                 this.Controls.Add(this.tabControl1);
+<a name="l00522"></a>00522                 this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+<a name="l00523"></a>00523                 this.MaximizeBox = <span class="keyword">false</span>;
+<a name="l00524"></a>00524                 this.MinimizeBox = <span class="keyword">false</span>;
+<a name="l00525"></a>00525                 this.Name = <span class="stringliteral">&quot;OptionsForm&quot;</span>;
+<a name="l00526"></a>00526                 this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+<a name="l00527"></a>00527                 this.Text = <span class="stringliteral">&quot;Options&quot;</span>;
+<a name="l00528"></a>00528                 this.Shown += <span class="keyword">new</span> System.EventHandler(this.OptionsForm_Shown);
+<a name="l00529"></a>00529                 this.FormClosing += <span class="keyword">new</span> System.Windows.Forms.FormClosingEventHandler(this.OptionsForm_FormClosing);
+<a name="l00530"></a>00530                 this.tabControl1.ResumeLayout(<span class="keyword">false</span>);
+<a name="l00531"></a>00531                 this.ColorsPage.ResumeLayout(<span class="keyword">false</span>);
+<a name="l00532"></a>00532                 this.ColorsPage.PerformLayout();
+<a name="l00533"></a>00533                 this.RulesPage.ResumeLayout(<span class="keyword">false</span>);
+<a name="l00534"></a>00534                 this.panel2.ResumeLayout(<span class="keyword">false</span>);
+<a name="l00535"></a>00535                 this.panel2.PerformLayout();
+<a name="l00536"></a>00536                 this.panel1.ResumeLayout(<span class="keyword">false</span>);
+<a name="l00537"></a>00537                 this.panel1.PerformLayout();
+<a name="l00538"></a>00538                 ((System.ComponentModel.ISupportInitialize)(this.MDBSize2)).EndInit();
+<a name="l00539"></a>00539                 ((System.ComponentModel.ISupportInitialize)(this.MDBSize1)).EndInit();
+<a name="l00540"></a>00540                 ((System.ComponentModel.ISupportInitialize)(this.ExtremumSize5)).EndInit();
+<a name="l00541"></a>00541                 ((System.ComponentModel.ISupportInitialize)(this.ExtremumSize4)).EndInit();
+<a name="l00542"></a>00542                 ((System.ComponentModel.ISupportInitialize)(this.ExtremumSize3)).EndInit();
+<a name="l00543"></a>00543                 ((System.ComponentModel.ISupportInitialize)(this.ExtremumSize2)).EndInit();
+<a name="l00544"></a>00544                 ((System.ComponentModel.ISupportInitialize)(this.ExtremumSize1)).EndInit();
+<a name="l00545"></a>00545                 this.ResumeLayout(<span class="keyword">false</span>);
+<a name="l00546"></a>00546 
+<a name="l00547"></a>00547             }
+<a name="l00548"></a>00548 
+<a name="l00549"></a>00549 <span class="preprocessor">        #endregion</span>
+<a name="l00550"></a>00550 <span class="preprocessor"></span>
+<a name="l00551"></a>00551         <span class="keyword">private</span> System.Windows.Forms.ColorDialog colorDialog;
+<a name="l00552"></a>00552         <span class="keyword">private</span> System.Windows.Forms.TabControl tabControl1;
+<a name="l00553"></a>00553         <span class="keyword">private</span> System.Windows.Forms.TabPage ColorsPage;
+<a name="l00554"></a>00554         <span class="keyword">private</span> System.Windows.Forms.TabPage RulesPage;
+<a name="l00555"></a>00555         <span class="keyword">private</span> System.Windows.Forms.Label ModelLbl10;
+<a name="l00556"></a>00556         <span class="keyword">private</span> System.Windows.Forms.Label ModelLbl9;
+<a name="l00557"></a>00557         <span class="keyword">private</span> System.Windows.Forms.Label ModelLbl8;
+<a name="l00558"></a>00558         <span class="keyword">private</span> System.Windows.Forms.Label ModelLbl7;
+<a name="l00559"></a>00559         <span class="keyword">private</span> System.Windows.Forms.Label ModelLbl6;
+<a name="l00560"></a>00560         <span class="keyword">private</span> System.Windows.Forms.Label ModelLbl5;
+<a name="l00561"></a>00561         <span class="keyword">private</span> System.Windows.Forms.Label ModelLbl4;
+<a name="l00562"></a>00562         <span class="keyword">private</span> System.Windows.Forms.Label ModelLbl3;
+<a name="l00563"></a>00563         <span class="keyword">private</span> System.Windows.Forms.Label ModelLbl2;
+<a name="l00564"></a>00564         <span class="keyword">private</span> System.Windows.Forms.Label ModelLbl1;
+<a name="l00565"></a>00565         <span class="keyword">private</span> System.Windows.Forms.Label ModelLbl11;
+<a name="l00566"></a>00566         <span class="keyword">private</span> System.Windows.Forms.Panel panel2;
+<a name="l00567"></a>00567         <span class="keyword">private</span> System.Windows.Forms.Panel panel1;
+<a name="l00568"></a>00568         <span class="keyword">private</span> System.Windows.Forms.NumericUpDown ExtremumSize4;
+<a name="l00569"></a>00569         <span class="keyword">private</span> System.Windows.Forms.Label label5;
+<a name="l00570"></a>00570         <span class="keyword">private</span> System.Windows.Forms.NumericUpDown ExtremumSize3;
+<a name="l00571"></a>00571         <span class="keyword">private</span> System.Windows.Forms.Label label4;
+<a name="l00572"></a>00572         <span class="keyword">private</span> System.Windows.Forms.NumericUpDown ExtremumSize2;
+<a name="l00573"></a>00573         <span class="keyword">private</span> System.Windows.Forms.Label label3;
+<a name="l00574"></a>00574         <span class="keyword">private</span> System.Windows.Forms.NumericUpDown ExtremumSize1;
+<a name="l00575"></a>00575         <span class="keyword">private</span> System.Windows.Forms.Label label2;
+<a name="l00576"></a>00576         <span class="keyword">private</span> System.Windows.Forms.Label label1;
+<a name="l00577"></a>00577         <span class="keyword">private</span> System.Windows.Forms.NumericUpDown ExtremumSize5;
+<a name="l00578"></a>00578         <span class="keyword">private</span> System.Windows.Forms.Label label6;
+<a name="l00579"></a>00579         <span class="keyword">private</span> System.Windows.Forms.Label label7;
+<a name="l00580"></a>00580         <span class="keyword">private</span> System.Windows.Forms.CheckedListBox RulesBox;
+<a name="l00581"></a>00581         <span class="keyword">private</span> System.Windows.Forms.Label label8;
+<a name="l00582"></a>00582         <span class="keyword">private</span> System.Windows.Forms.Label label9;
+<a name="l00583"></a>00583         <span class="keyword">private</span> System.Windows.Forms.NumericUpDown MDBSize2;
+<a name="l00584"></a>00584         <span class="keyword">private</span> System.Windows.Forms.NumericUpDown MDBSize1;
+<a name="l00585"></a>00585         <span class="keyword">private</span> System.Windows.Forms.Label label10;
+<a name="l00586"></a>00586         }
+<a name="l00587"></a>00587     }
+</pre></div></div>
+</div>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Перечисления</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&nbsp;</span>Свойства</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&nbsp;</span>События</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

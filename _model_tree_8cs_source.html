@@ -1,0 +1,546 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Skilful: Исходный файл Skilful/ModelManager/ModelTree.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javaScript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Создано системой Doxygen 1.7.1 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+--></script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пакеты</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="dirs.html"><span>Алфавитный&nbsp;указатель&nbsp;директорий</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath">
+    <ul>
+      <li><a class="el" href="dir_7adcdc1edff7620168fbc20357cad448.html">Skilful</a>      </li>
+      <li><a class="el" href="dir_8e052a94863dc7a11bfb5f889b064ec6.html">ModelManager</a>      </li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<h1>ModelTree.cs</h1>  </div>
+</div>
+<div class="contents">
+<a href="_model_tree_8cs.html">См. документацию.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">//---------------------------------------------------------------------------------------------------------------</span>
+<a name="l00002"></a>00002 <span class="comment">// Skilful. Tactica Adversa graphic and analysis tool.</span>
+<a name="l00003"></a>00003 <span class="comment">// Copyright (C) 2010 &quot;...&quot;, Andrey Zyablitsev (skat)</span>
+<a name="l00004"></a>00004 <span class="comment">//</span>
+<a name="l00005"></a>00005 <span class="comment">// This program is free software; you can redistribute it and/or</span>
+<a name="l00006"></a>00006 <span class="comment">// modify it under the terms of the GNU General Public License</span>
+<a name="l00007"></a>00007 <span class="comment">// as published by the Free Software Foundation; either version 2</span>
+<a name="l00008"></a>00008 <span class="comment">// of the License, or (at your option) any later version.</span>
+<a name="l00009"></a>00009 <span class="comment">//</span>
+<a name="l00010"></a>00010 <span class="comment">// This program is distributed in the hope that it will be useful,</span>
+<a name="l00011"></a>00011 <span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<a name="l00012"></a>00012 <span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<a name="l00013"></a>00013 <span class="comment">// GNU General Public License for more details.</span>
+<a name="l00014"></a>00014 <span class="comment">//</span>
+<a name="l00015"></a>00015 <span class="comment">// You should have received a copy of the GNU General Public License</span>
+<a name="l00016"></a>00016 <span class="comment">// along with this program; if not, write to the Free Software</span>
+<a name="l00017"></a>00017 <span class="comment">// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</span>
+<a name="l00018"></a>00018 <span class="comment">//</span>
+<a name="l00019"></a>00019 <span class="comment">// mail: support@protoforma.com </span>
+<a name="l00020"></a>00020 <span class="comment">//---------------------------------------------------------------------------------------------------------------</span>
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022 
+<a name="l00023"></a>00023 <span class="keyword">using</span> System;
+<a name="l00024"></a>00024 <span class="keyword">using</span> System.Collections.Generic;
+<a name="l00025"></a>00025 <span class="keyword">using</span> System.Linq;
+<a name="l00026"></a>00026 <span class="keyword">using</span> System.Text;
+<a name="l00027"></a>00027 <span class="keyword">using</span> ChartV2;
+<a name="l00028"></a>00028 <span class="keyword">using</span> Skilful.QuotesManager;
+<a name="l00029"></a>00029 <span class="keyword">using</span> System.Windows.Forms;
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031 <span class="keyword">namespace </span>Skilful.ModelManager
+<a name="l00032"></a>00032 {
+<a name="l00033"></a><a class="code" href="class_skilful_1_1_model_manager_1_1_stick.html">00033</a>     <span class="keyword">class </span><a class="code" href="class_skilful_1_1_model_manager_1_1_stick.html">Stick</a> <span class="comment">//класс описываает один уровень -- один план</span>
+<a name="l00034"></a>00034     {
+<a name="l00035"></a>00035         <a class="code" href="class_skilful_1_1_model_manager_1_1_node.html">Node</a>[] stick;
+<a name="l00036"></a><a class="code" href="class_skilful_1_1_model_manager_1_1_stick.html#a201652dd7e30f273f01c004c55bf7f96">00036</a>         <span class="keyword">public</span> uint[] points;  <span class="comment">//это список всех точек моделей данного уровня, включая их пересечения (см. ModelManager::CountPointsByStatus)</span>
+<a name="l00037"></a><a class="code" href="class_skilful_1_1_model_manager_1_1_stick.html#ac57cf5f75a3b0430d6d31261e519755c">00037</a>         <span class="keyword">public</span> List&lt;TModel&gt; mlist;
+<a name="l00038"></a>00038 
+<a name="l00039"></a>00039         <span class="keyword">public</span> <a class="code" href="class_skilful_1_1_model_manager_1_1_node.html">Node</a> <span class="keyword">this</span> [<span class="keywordtype">int</span> i]
+<a name="l00040"></a><a class="code" href="class_skilful_1_1_model_manager_1_1_stick.html#a6cafd23992df212fa4ac69e4bf071319">00040</a>         {
+<a name="l00041"></a>00041             <span class="keyword">get</span>
+<a name="l00042"></a>00042             {
+<a name="l00043"></a>00043                 <span class="keywordflow">return</span> stick[i];
+<a name="l00044"></a>00044             }
+<a name="l00045"></a>00045             <span class="keyword">set</span>
+<a name="l00046"></a>00046             {
+<a name="l00047"></a>00047                 stick[i] = value;
+<a name="l00048"></a>00048             }
+<a name="l00049"></a>00049         }
+<a name="l00050"></a><a class="code" href="class_skilful_1_1_model_manager_1_1_stick.html#a9aa4d939f102f6b09aadfeb6ebb6fb64">00050</a>         <span class="keyword">public</span> <a class="code" href="class_skilful_1_1_model_manager_1_1_stick.html">Stick</a>(<a class="code" href="class_skilful_1_1_quotes_manager_1_1_t_quotes.html" title="Класс хранит массив которивок для заданного фрейма также массивы моделей, протоформ и некоторые допол...">TQuotes</a> q)
+<a name="l00051"></a>00051         {
+<a name="l00052"></a>00052             mlist = q.<a class="code" href="class_skilful_1_1_quotes_manager_1_1_t_quotes.html#af868bed0c00863792d21c4ff268d90bd" title="доступ к массиву моделей.">MM</a>.<a class="code" href="class_skilful_1_1_model_manager_1_1_models_manager.html#ad548392c83a55eeb45ed7fc66f632bde" title="Список моделей.">Models</a>;
+<a name="l00053"></a>00053             points = q.<a class="code" href="class_skilful_1_1_quotes_manager_1_1_t_quotes.html#af868bed0c00863792d21c4ff268d90bd" title="доступ к массиву моделей.">MM</a>.<a class="code" href="class_skilful_1_1_model_manager_1_1_models_manager.html#afd74f00d64afc9b4087a0e342e2b6bd9">points</a>;
+<a name="l00054"></a>00054             stick = <span class="keyword">new</span> <a class="code" href="class_skilful_1_1_model_manager_1_1_node.html">Node</a>[mlist.Count];
+<a name="l00055"></a>00055             <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i =0; i&lt;stick.Length; i++) stick[i] = <span class="keyword">new</span> <a class="code" href="class_skilful_1_1_model_manager_1_1_node.html">Node</a>();
+<a name="l00056"></a>00056         }
+<a name="l00057"></a>00057         <span class="keyword">public</span> <span class="keywordtype">int</span> length
+<a name="l00058"></a><a class="code" href="class_skilful_1_1_model_manager_1_1_stick.html#a93cba254711606d61c84fb77f2be25a9">00058</a>         {
+<a name="l00059"></a>00059             <span class="keyword">get</span>
+<a name="l00060"></a>00060             {
+<a name="l00061"></a>00061                 <span class="keywordflow">return</span> mlist.Count;
+<a name="l00062"></a>00062             }
+<a name="l00063"></a>00063         }
+<a name="l00064"></a>00064         <span class="keyword">public</span> <span class="keywordtype">int</span> lastIndex
+<a name="l00065"></a><a class="code" href="class_skilful_1_1_model_manager_1_1_stick.html#a4597dbb92d23255ff0de949a2ab8728d">00065</a>         {
+<a name="l00066"></a>00066             <span class="keyword">get</span>
+<a name="l00067"></a>00067             {
+<a name="l00068"></a>00068                 <span class="keywordflow">return</span> mlist.Count - 1;
+<a name="l00069"></a>00069             }
+<a name="l00070"></a>00070         }
+<a name="l00071"></a>00071     }
+<a name="l00072"></a>00072 
+<a name="l00073"></a><a class="code" href="class_skilful_1_1_model_manager_1_1_model_tree.html">00073</a>     <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_skilful_1_1_model_manager_1_1_model_tree.html">ModelTree</a>
+<a name="l00074"></a>00074     {
+<a name="l00075"></a>00075         <span class="comment">//текущий узел</span>
+<a name="l00076"></a><a class="code" href="class_skilful_1_1_model_manager_1_1_model_tree.html#add2862e6a59e168d81cb9fbfea16ba29">00076</a>         <span class="keyword">public</span> <a class="code" href="class_skilful_1_1_model_manager_1_1_node.html">Node</a> cr{
+<a name="l00077"></a>00077             <span class="keyword">get</span>{ <span class="keywordflow">return</span> map[l][i]; }
+<a name="l00078"></a>00078         }
+<a name="l00079"></a>00079         <span class="comment">//</span>
+<a name="l00080"></a>00080         <span class="keywordtype">int</span> l=0, i;       <span class="comment">//указатели l = level по вертикали; i = index по горизонтали</span>
+<a name="l00081"></a>00081         <span class="keywordtype">int</span> rootFrame;       <span class="comment">//TF верхнего яруса</span>
+<a name="l00082"></a>00082         <a class="code" href="class_skilful_1_1_quotes_manager_1_1_t_symbol.html">TSymbol</a> symbol; 
+<a name="l00083"></a>00083         <a class="code" href="class_skilful_1_1_model_manager_1_1_stick.html">Stick</a>[] map;
+<a name="l00084"></a>00084         <span class="keywordtype">int</span> level(<a class="code" href="namespace_skilful_1_1_quotes_manager.html#a5c84c6ba01636871f8f98492b465c315">TF</a> frame)
+<a name="l00085"></a>00085         {
+<a name="l00086"></a>00086             <span class="keywordflow">return</span> rootFrame - (int)frame;
+<a name="l00087"></a>00087         }
+<a name="l00088"></a>00088         <a class="code" href="namespace_skilful_1_1_quotes_manager.html#a5c84c6ba01636871f8f98492b465c315">TF</a>  frame(<span class="keywordtype">int</span> level)
+<a name="l00089"></a>00089         {
+<a name="l00090"></a>00090             <span class="keywordflow">return</span> (<a class="code" href="namespace_skilful_1_1_quotes_manager.html#a5c84c6ba01636871f8f98492b465c315">TF</a>)(rootFrame - level);
+<a name="l00091"></a>00091         }
+<a name="l00092"></a>00092         <span class="comment">//</span>
+<a name="l00093"></a>00093         <span class="keywordtype">int</span>[] parentID;   <span class="comment">//список счетчиков моделей старших планов где т1 ~ т1 текущей модели</span>
+<a name="l00094"></a>00094         <span class="keywordtype">void</span> initParentID()
+<a name="l00095"></a>00095         {
+<a name="l00096"></a>00096             <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; parentID.Length; i++) parentID[i] = 0;
+<a name="l00097"></a>00097         }
+<a name="l00098"></a>00098 
+<a name="l00099"></a>00099         <span class="comment">//</span>
+<a name="l00100"></a><a class="code" href="class_skilful_1_1_model_manager_1_1_model_tree.html#a6d271e78f0cdd21cbf8612d465ce9d36">00100</a>         <span class="keyword">public</span> <a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html">TModel</a> GetModel(<a class="code" href="namespace_skilful_1_1_quotes_manager.html#a5c84c6ba01636871f8f98492b465c315">TF</a> tf, <span class="keywordtype">int</span> <span class="keywordtype">id</span>)
+<a name="l00101"></a>00101         {
+<a name="l00102"></a>00102             <a class="code" href="class_skilful_1_1_model_manager_1_1_stick.html">Stick</a> stick = map[level(tf)];
+<a name="l00103"></a>00103             <span class="keywordflow">return</span> stick.<a class="code" href="class_skilful_1_1_model_manager_1_1_stick.html#ac57cf5f75a3b0430d6d31261e519755c">mlist</a>[id];
+<a name="l00104"></a>00104         }
+<a name="l00105"></a>00105 
+<a name="l00112"></a><a class="code" href="class_skilful_1_1_model_manager_1_1_model_tree.html#ac6953ff37b6426acdfc75390b4656af9">00112</a>         <span class="keyword">public</span> <a class="code" href="class_skilful_1_1_model_manager_1_1_model_tree.html">ModelTree</a>(<span class="keywordtype">int</span> rootFrame, <span class="keywordtype">int</span> cnt, <a class="code" href="class_skilful_1_1_quotes_manager_1_1_t_symbol.html">TSymbol</a> sym) <span class="comment">//int cnt - количество фреймов в дереве</span>
+<a name="l00113"></a>00113         {
+<a name="l00114"></a>00114             symbol = sym;
+<a name="l00115"></a>00115             map = <span class="keyword">new</span> <a class="code" href="class_skilful_1_1_model_manager_1_1_stick.html">Stick</a>[cnt];
+<a name="l00116"></a>00116             this.rootFrame = rootFrame;
+<a name="l00117"></a>00117             parentID = <span class="keyword">new</span> <span class="keywordtype">int</span>[cnt];
+<a name="l00118"></a>00118         }
+<a name="l00119"></a>00119 
+<a name="l00120"></a>00120         <a class="code" href="class_skilful_1_1_model_manager_1_1_node.html">Node</a> next()
+<a name="l00121"></a>00121         {
+<a name="l00122"></a>00122             <span class="keywordflow">return</span> i &lt; map[l].lastIndex ? map[l][i+1] : (<a class="code" href="class_skilful_1_1_model_manager_1_1_node.html">Node</a>)null;
+<a name="l00123"></a>00123         }
+<a name="l00124"></a>00124         Node prev()
+<a name="l00125"></a>00125         {
+<a name="l00126"></a>00126             <span class="keywordflow">return</span> i &gt; 0 ? map[l][i-1] : (Node)null;
+<a name="l00127"></a>00127         }
+<a name="l00128"></a>00128         Node parent()
+<a name="l00129"></a>00129         {
+<a name="l00130"></a>00130             <span class="keywordflow">return</span> l &gt; 0 ? map[l-1][ map[l][i].parent ] : (Node)null;
+<a name="l00131"></a>00131         }
+<a name="l00132"></a>00132         Node child()
+<a name="l00133"></a>00133         {
+<a name="l00134"></a>00134             <span class="keywordflow">return</span> l &lt; (map.Length-1) ? map[l+1][ map[l][i].child ] : (Node)null;
+<a name="l00135"></a>00135         }
+<a name="l00136"></a>00136 
+<a name="l00144"></a><a class="code" href="class_skilful_1_1_model_manager_1_1_model_tree.html#a3809fd5ee999f05d572d98683e64b943">00144</a>         public <span class="keywordtype">int</span> SearchParentModel(<a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html">TModel</a> m)
+<a name="l00145"></a>00145         {
+<a name="l00146"></a>00146             <span class="keywordflow">try</span>
+<a name="l00147"></a>00147             {
+<a name="l00148"></a>00148                 <span class="comment">//if (m.Quotes.tf == TF.m240 &amp;&amp; (int)m.Point1.Bar == 812)</span>
+<a name="l00149"></a>00149                 <span class="comment">//{</span>
+<a name="l00150"></a>00150                 <span class="comment">//    int a = 1;</span>
+<a name="l00151"></a>00151                 <span class="comment">//}</span>
+<a name="l00152"></a>00152 
+<a name="l00153"></a>00153                 <span class="keywordtype">int</span> l = level(m.Quotes.tf + 1);
+<a name="l00154"></a>00154                 <span class="keywordflow">if</span> (l &gt;= 0)
+<a name="l00155"></a>00155                 {
+<a name="l00156"></a>00156                     <span class="keywordflow">for</span> (<span class="keywordtype">int</span> p = 0; p &lt;= l; p++)
+<a name="l00157"></a>00157                     {
+<a name="l00158"></a>00158                         <a class="code" href="namespace_skilful_1_1_quotes_manager.html#a5c84c6ba01636871f8f98492b465c315">TF</a> tf = frame(p);
+<a name="l00159"></a>00159                         <a class="code" href="class_skilful_1_1_model_manager_1_1_stick.html">Stick</a> stick = map[p];  <span class="comment">//ветка узлов старшего плана</span>
+<a name="l00160"></a>00160                         <span class="keywordtype">int</span> pID = parentID[p];
+<a name="l00161"></a>00161                         <span class="keywordflow">if</span> (pID &gt;= 0 &amp;&amp; pID &lt; stick.<a class="code" href="class_skilful_1_1_model_manager_1_1_stick.html#a93cba254711606d61c84fb77f2be25a9">length</a>)
+<a name="l00162"></a>00162                         {
+<a name="l00163"></a>00163                             <span class="keywordflow">while</span> (pID &lt; stick.<a class="code" href="class_skilful_1_1_model_manager_1_1_stick.html#a93cba254711606d61c84fb77f2be25a9">length</a>)
+<a name="l00164"></a>00164                             {
+<a name="l00165"></a>00165                                 <span class="keywordflow">if</span> (m.Point1.Bar &lt; stick[pID].pointsOnChildTF[l, 1]
+<a name="l00166"></a>00166                                  || m.Point1.Bar == stick[pID].pointsOnChildTF[l, 1]
+<a name="l00167"></a>00167                                  &amp;&amp; m.Point4.Bar &lt; stick[pID].pointsOnChildTF[l, 4]) <span class="keywordflow">break</span>;
+<a name="l00168"></a>00168 
+<a name="l00169"></a>00169                                 <span class="keywordflow">if</span> (m.Point1.Bar == stick[pID].pointsOnChildTF[l, 1]
+<a name="l00170"></a>00170                                  &amp;&amp; m.Point2.Bar == stick[pID].pointsOnChildTF[l, 2]
+<a name="l00171"></a>00171                                  &amp;&amp; m.Point3.Bar == stick[pID].pointsOnChildTF[l, 3]
+<a name="l00172"></a>00172                                  &amp;&amp; m.Point4.Bar == stick[pID].pointsOnChildTF[l, 4])
+<a name="l00173"></a>00173                                 {
+<a name="l00174"></a>00174                                     m.TimeFrame = tf;
+<a name="l00175"></a>00175                                     m.IDonBaseTF = pID;
+<a name="l00176"></a>00176                                     <span class="keywordflow">return</span> pID;
+<a name="l00177"></a>00177                                 }
+<a name="l00178"></a>00178 
+<a name="l00179"></a>00179                                 pID++;
+<a name="l00180"></a>00180                             }
+<a name="l00181"></a>00181                             parentID[p] = pID &gt; 0 ? --pID : 0;
+<a name="l00182"></a>00182                         }
+<a name="l00183"></a>00183                     }
+<a name="l00184"></a>00184                 }
+<a name="l00185"></a>00185             }
+<a name="l00186"></a>00186             <span class="keywordflow">catch</span> (Exception e)
+<a name="l00187"></a>00187             {
+<a name="l00188"></a>00188                 MessageBox.Show(<span class="stringliteral">&quot;SearchParentModel exception:&quot;</span> + m.Quotes.Symbol.Name + m.Quotes.tf + e.Message);
+<a name="l00189"></a>00189             }
+<a name="l00190"></a>00190 
+<a name="l00191"></a>00191             <span class="keywordflow">return</span> -1;
+<a name="l00192"></a>00192         }
+<a name="l00193"></a>00193 
+<a name="l00194"></a>00194         <span class="comment">/*</span>
+<a name="l00195"></a>00195 <span class="comment">         * </span>
+<a name="l00196"></a>00196 <span class="comment">         * при инициализации нам нужно - </span>
+<a name="l00197"></a>00197 <span class="comment">         * ^1. проинитить точки на младшем фрейме</span>
+<a name="l00198"></a>00198 <span class="comment">         * 2. определить родительскую модель (индекс)</span>
+<a name="l00199"></a>00199 <span class="comment">         * 2.а определить точку родительской модели</span>
+<a name="l00200"></a>00200 <span class="comment">         * 2.б определить точку глобальной модели</span>
+<a name="l00201"></a>00201 <span class="comment">         * 3. определить глобальную модель (индекс), если данная модель является глобальной то индекс равен индексу данной модели</span>
+<a name="l00202"></a>00202 <span class="comment">         * 4. определить индекс следующей глобальной модели</span>
+<a name="l00203"></a>00203 <span class="comment">         *  (глобальной моделью являетя модель находящаяся за пределами линий тренда и целей предыдущих моделей данного плана)</span>
+<a name="l00204"></a>00204 <span class="comment">         * 5. сохранить свой индекс в родительском ноде в качестве чилда</span>
+<a name="l00205"></a>00205 <span class="comment">         * ^6. проверить существование модели на старшем фрейме</span>
+<a name="l00206"></a>00206 <span class="comment">         * </span>
+<a name="l00207"></a>00207 <span class="comment">         */</span>
+<a name="l00208"></a>00208 
+<a name="l00209"></a><a class="code" href="class_skilful_1_1_model_manager_1_1_model_tree.html#a19fbeb1ae64a1926aa51f4ab9b015266">00209</a>         <span class="keyword">public</span> <span class="keywordtype">int</span> nextGlobalModel(<span class="keywordtype">int</span> srcID, <a class="code" href="namespace_skilful_1_1_quotes_manager.html#a5c84c6ba01636871f8f98492b465c315">TF</a> tf)
+<a name="l00210"></a>00210         {
+<a name="l00211"></a>00211             <span class="keywordflow">return</span> -1;
+<a name="l00212"></a>00212         }
+<a name="l00213"></a>00213 
+<a name="l00220"></a><a class="code" href="class_skilful_1_1_model_manager_1_1_model_tree.html#a12038bca70b2e1d6467db5a20b49fb01">00220</a>         <span class="keyword">public</span> <span class="keywordtype">bool</span> isGlobalTrendModel(<a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html">TModel</a> m, uint[] points)
+<a name="l00221"></a>00221         {
+<a name="l00224"></a>00224             <span class="comment">// модель является последней(по 3 и 4&#39;) в веере от этой т1</span>
+<a name="l00225"></a>00225             <span class="comment">// &amp;&amp;</span>
+<a name="l00226"></a>00226             <span class="comment">// данная точка 1 не пересекается с точками других моделей кроме 6</span>
+<a name="l00227"></a>00227             <span class="comment">// &amp;&amp;</span>
+<a name="l00228"></a>00228             <span class="comment">// также точка не должна быть свободно плавающей моделью по тренду на данном плане,</span>
+<a name="l00229"></a>00229             <span class="comment">// но такие модели должны фильтроваться менеджером моделей,</span>
+<a name="l00230"></a>00230             <span class="comment">// либо менеджер может отметить их например в Model.Stat (напр установить MStat.GlobalTrend)</span>
+<a name="l00231"></a>00231             <span class="keywordflow">return</span> (m.<a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html#ac8462e041917ace9498c0da1b592a743" title="флаги глобальности модели от т1 и для тренда на данном плане.">Stat</a> &amp; (uint)<a class="code" href="namespace_skilful_1_1_model_manager.html#a238948e4011e725bfc0dd065c04efbe9" title="AS: различные флаги для TModel.Stat.">MStat</a>.GlobalP1) != 0
+<a name="l00232"></a>00232                 &amp;&amp; (points[(int)m.<a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html#a315d9b88024ae82d1ebbf2aecd0015e7" title="&amp;lt; Точка 1">Point1</a>.<a class="code" href="struct_skilful_1_1_model_manager_1_1_t_point.html#a029570973a09539be6ab5a8f67d7751c">Bar</a>] &amp; 0x011110) == 0
+<a name="l00233"></a>00233                 ;
+<a name="l00234"></a>00234 
+<a name="l00235"></a>00235         }
+<a name="l00236"></a>00236 
+<a name="l00243"></a><a class="code" href="class_skilful_1_1_model_manager_1_1_model_tree.html#a93adc0ef92be68b7a08b473c61ad8ad3">00243</a>         <span class="keyword">public</span> <span class="keywordtype">int</span> prevGlobalModel(<span class="keywordtype">int</span> srcID, <a class="code" href="namespace_skilful_1_1_quotes_manager.html#a5c84c6ba01636871f8f98492b465c315">TF</a> tf)
+<a name="l00244"></a>00244         {
+<a name="l00245"></a>00245             <span class="keywordflow">if</span> (srcID &lt;= 0) <span class="keywordflow">return</span> -1;
+<a name="l00246"></a>00246 
+<a name="l00247"></a>00247             <a class="code" href="class_skilful_1_1_model_manager_1_1_stick.html">Stick</a> stick = map[level(tf)];
+<a name="l00248"></a>00248             <a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html">TModel</a> msrc = stick.<a class="code" href="class_skilful_1_1_model_manager_1_1_stick.html#ac57cf5f75a3b0430d6d31261e519755c">mlist</a>[srcID];
+<a name="l00249"></a>00249             <span class="keywordtype">int</span> srcP1 = msrc.<a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html#a315d9b88024ae82d1ebbf2aecd0015e7" title="&amp;lt; Точка 1">Point1</a>.<a class="code" href="struct_skilful_1_1_model_manager_1_1_t_point.html#a635b7d5f07c3738205d5b7e8c1161845">iBar</a>;
+<a name="l00250"></a>00250             <a class="code" href="namespace_skilful_1_1_quotes_manager.html#af9cbe6885b602a94a009a5a9a08ebedf" title="&amp;lt; Типы экстремумов">TDirection</a> currentDir = stick.<a class="code" href="class_skilful_1_1_model_manager_1_1_stick.html#ac57cf5f75a3b0430d6d31261e519755c">mlist</a>[srcID].ModelDir;
+<a name="l00251"></a>00251             <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = srcID-1; i &gt;= 0; i--)
+<a name="l00252"></a>00252             {
+<a name="l00253"></a>00253                 <a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html">TModel</a> m = stick.<a class="code" href="class_skilful_1_1_model_manager_1_1_stick.html#ac57cf5f75a3b0430d6d31261e519755c">mlist</a>[i];
+<a name="l00254"></a>00254                 <span class="keywordflow">if</span> (
+<a name="l00255"></a>00255                     m.<a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html#a5de47c7b1494f007d7e6d52e1b2593bf">TimeFrame</a> == tf     <span class="comment">//модель принадлежит данному плану</span>
+<a name="l00256"></a>00256                     &amp;&amp;
+<a name="l00257"></a>00257                     m.<a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html#a315d9b88024ae82d1ebbf2aecd0015e7" title="&amp;lt; Точка 1">Point1</a>.<a class="code" href="struct_skilful_1_1_model_manager_1_1_t_point.html#a029570973a09539be6ab5a8f67d7751c">Bar</a> &lt; srcP1) <span class="comment">//т1 испытуемой левее текущей т1</span>
+<a name="l00258"></a>00258                 {
+<a name="l00259"></a>00259 
+<a name="l00260"></a>00260 
+<a name="l00262"></a>00262                     <span class="comment">//if (</span>
+<a name="l00263"></a>00263                     <span class="comment">//    isGlobalTrendModel(stick.mlist[i], stick.points)</span>
+<a name="l00264"></a>00264                     <span class="comment">//    //&amp;&amp; stick.mlist[i].ModelDir != currentDir  //должна быть непременно противоположно направлена</span>
+<a name="l00265"></a>00265                     <span class="comment">//    ) return i;</span>
+<a name="l00266"></a>00266 
+<a name="l00267"></a>00267                     <span class="comment">//если модель является коррекционной либо по тренду (т1==т2|3|4) то предыдущая модель - не глобальная а ближайшая к данной</span>
+<a name="l00268"></a>00268                     <span class="keywordflow">if</span> ((stick.<a class="code" href="class_skilful_1_1_model_manager_1_1_stick.html#a201652dd7e30f273f01c004c55bf7f96">points</a>[msrc.<a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html#a315d9b88024ae82d1ebbf2aecd0015e7" title="&amp;lt; Точка 1">Point1</a>.<a class="code" href="struct_skilful_1_1_model_manager_1_1_t_point.html#a635b7d5f07c3738205d5b7e8c1161845">iBar</a>] &amp; 0x001110) != 0 &amp;&amp; (m.<a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html#ac8462e041917ace9498c0da1b592a743" title="флаги глобальности модели от т1 и для тренда на данном плане.">Stat</a> &amp; (uint)<a class="code" href="namespace_skilful_1_1_model_manager.html#a238948e4011e725bfc0dd065c04efbe9" title="AS: различные флаги для TModel.Stat.">MStat</a>.GlobalTrend) != 0) <span class="keywordflow">return</span> i;
+<a name="l00269"></a>00269 
+<a name="l00270"></a>00270                     <span class="comment">//если модель является разворотной (т1==т6) то предыдущая та, с 6 которой она пересеклась</span>
+<a name="l00271"></a>00271                     <span class="keywordflow">if</span> ((stick.<a class="code" href="class_skilful_1_1_model_manager_1_1_stick.html#a201652dd7e30f273f01c004c55bf7f96">points</a>[msrc.<a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html#a315d9b88024ae82d1ebbf2aecd0015e7" title="&amp;lt; Точка 1">Point1</a>.<a class="code" href="struct_skilful_1_1_model_manager_1_1_t_point.html#a635b7d5f07c3738205d5b7e8c1161845">iBar</a>] &amp; (1 &lt;&lt; 6)) != 0 &amp;&amp; (m.<a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html#ac8462e041917ace9498c0da1b592a743" title="флаги глобальности модели от т1 и для тренда на данном плане.">Stat</a> &amp; (uint)<a class="code" href="namespace_skilful_1_1_model_manager.html#a238948e4011e725bfc0dd065c04efbe9" title="AS: различные флаги для TModel.Stat.">MStat</a>.GlobalTrend) != 0 &amp;&amp; msrc.<a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html#a315d9b88024ae82d1ebbf2aecd0015e7" title="&amp;lt; Точка 1">Point1</a>.<a class="code" href="struct_skilful_1_1_model_manager_1_1_t_point.html#a029570973a09539be6ab5a8f67d7751c">Bar</a> == m.<a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html#a82a88043f7e786ceebdc8bd7dd63252e" title="Точка 6.">Point6</a>.<a class="code" href="struct_skilful_1_1_model_manager_1_1_t_point.html#a029570973a09539be6ab5a8f67d7751c">Bar</a>) <span class="keywordflow">return</span> i;
+<a name="l00272"></a>00272                     
+<a name="l00273"></a>00273                     <span class="comment">//в остальных случаях берем предыдущую глобальную модель</span>
+<a name="l00274"></a>00274                     <span class="keywordflow">if</span> ((stick.<a class="code" href="class_skilful_1_1_model_manager_1_1_stick.html#a201652dd7e30f273f01c004c55bf7f96">points</a>[msrc.<a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html#a315d9b88024ae82d1ebbf2aecd0015e7" title="&amp;lt; Точка 1">Point1</a>.<a class="code" href="struct_skilful_1_1_model_manager_1_1_t_point.html#a635b7d5f07c3738205d5b7e8c1161845">iBar</a>] &amp; 0x111110) == 0 &amp;&amp; (m.<a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html#ac8462e041917ace9498c0da1b592a743" title="флаги глобальности модели от т1 и для тренда на данном плане.">Stat</a> &amp; (uint)<a class="code" href="namespace_skilful_1_1_model_manager.html#a238948e4011e725bfc0dd065c04efbe9" title="AS: различные флаги для TModel.Stat.">MStat</a>.GlobalP1) != 0 &amp;&amp; (m.<a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html#ac8462e041917ace9498c0da1b592a743" title="флаги глобальности модели от т1 и для тренда на данном плане.">Stat</a> &amp; (uint)<a class="code" href="namespace_skilful_1_1_model_manager.html#a238948e4011e725bfc0dd065c04efbe9" title="AS: различные флаги для TModel.Stat.">MStat</a>.GlobalTrend) != 0) <span class="keywordflow">return</span> i;
+<a name="l00275"></a>00275                 }
+<a name="l00276"></a>00276             }
+<a name="l00277"></a>00277             <span class="keywordflow">return</span> -1;
+<a name="l00278"></a>00278         }
+<a name="l00279"></a>00279 
+<a name="l00286"></a><a class="code" href="class_skilful_1_1_model_manager_1_1_model_tree.html#a1ac3b56bf51ff05fb4ebca2432f04825">00286</a>         <span class="keyword">public</span> <span class="keywordtype">void</span> initFrame(<a class="code" href="class_skilful_1_1_quotes_manager_1_1_t_quotes.html" title="Класс хранит массив которивок для заданного фрейма также массивы моделей, протоформ и некоторые допол...">TQuotes</a> q)
+<a name="l00287"></a>00287         {
+<a name="l00288"></a>00288             <span class="keywordflow">try</span>
+<a name="l00289"></a>00289             {
+<a name="l00290"></a>00290                 initParentID();
+<a name="l00291"></a>00291                 <span class="keywordtype">int</span> lcur = level(q.<a class="code" href="class_skilful_1_1_quotes_manager_1_1_t_quotes.html#ac3f6ce550ca2cc3aad5799d551e95a00">tf</a>);
+<a name="l00292"></a>00292                 map[lcur] = <span class="keyword">new</span> <a class="code" href="class_skilful_1_1_model_manager_1_1_stick.html">Stick</a>(q);
+<a name="l00293"></a>00293 
+<a name="l00294"></a>00294                 <span class="comment">//if (q.tf == TF.Day)</span>
+<a name="l00295"></a>00295                 <span class="comment">//{</span>
+<a name="l00296"></a>00296                 <span class="comment">//    int a = 15;</span>
+<a name="l00297"></a>00297                 <span class="comment">//}</span>
+<a name="l00298"></a>00298 
+<a name="l00299"></a>00299 
+<a name="l00300"></a>00300                 <span class="keywordflow">if</span> (q.<a class="code" href="class_skilful_1_1_quotes_manager_1_1_t_quotes.html#ac3f6ce550ca2cc3aad5799d551e95a00">tf</a> &gt; 0<span class="comment">/*TF.m60*/</span>)
+<a name="l00301"></a>00301                 {
+<a name="l00302"></a>00302                     <a class="code" href="class_skilful_1_1_quotes_manager_1_1_t_quotes.html" title="Класс хранит массив которивок для заданного фрейма также массивы моделей, протоформ и некоторые допол...">TQuotes</a> cq = symbol.Frames[(int)q.<a class="code" href="class_skilful_1_1_quotes_manager_1_1_t_quotes.html#aff44d831e8ece784f08029c44e44b1e8">chartType</a>, (<span class="keywordtype">int</span>)q.<a class="code" href="class_skilful_1_1_quotes_manager_1_1_t_quotes.html#ac3f6ce550ca2cc3aad5799d551e95a00">tf</a> - 1]; <span class="comment">//child quotes</span>
+<a name="l00303"></a>00303 
+<a name="l00304"></a>00304                     <span class="keywordflow">for</span> (<span class="keywordtype">int</span> l = 0; l &lt;= lcur; l++)<span class="comment">//перебор фреймов от корневого(старшего) до текущего</span>
+<a name="l00305"></a>00305                     {
+<a name="l00306"></a>00306                         <a class="code" href="class_skilful_1_1_model_manager_1_1_stick.html">Stick</a> stick = map[l];
+<a name="l00307"></a>00307                         <span class="comment">//1. установка индексов точек соответствующих точкам моделей на данном плане для массива quotes младшего фрейма</span>
+<a name="l00308"></a>00308                         <span class="keywordtype">int</span> mi = 0; <span class="comment">//индекс дочернего quotes сq, указывает на т1 последней индексируемой модели</span>
+<a name="l00309"></a>00309 
+<a name="l00310"></a>00310                         <span class="comment">//перебор моделей</span>
+<a name="l00311"></a>00311                         <span class="comment">//foreach(TModel m in stick.mlist)</span>
+<a name="l00312"></a>00312                         <span class="keywordflow">for</span> (i = 0; i &lt; stick.<a class="code" href="class_skilful_1_1_model_manager_1_1_stick.html#a93cba254711606d61c84fb77f2be25a9">length</a>; i++)
+<a name="l00313"></a>00313                         {
+<a name="l00314"></a>00314                             <a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html">TModel</a> m = stick.<a class="code" href="class_skilful_1_1_model_manager_1_1_stick.html#ac57cf5f75a3b0430d6d31261e519755c">mlist</a>[i];
+<a name="l00315"></a>00315                             <a class="code" href="class_skilful_1_1_model_manager_1_1_node.html">Node</a> node = stick[i];<span class="comment">// = new Node(m);</span>
+<a name="l00316"></a>00316 
+<a name="l00317"></a>00317                             <span class="comment">//if (m.Quotes.tf == TF.Day &amp;&amp; (int)m.Point1.Bar == 2093)</span>
+<a name="l00318"></a>00318                             <span class="comment">//{</span>
+<a name="l00319"></a>00319                             <span class="comment">//    int a = 1234;</span>
+<a name="l00320"></a>00320                             <span class="comment">//}</span>
+<a name="l00321"></a>00321 
+<a name="l00322"></a>00322                             <span class="keywordtype">int</span> ci = mi;    <span class="comment">//индекс дочернего quotes сq, указывает на текущую точку индексируемой модели</span>
+<a name="l00323"></a>00323                             
+<a name="l00324"></a>00324                             <span class="comment">//перебор точек моделей</span>
+<a name="l00325"></a>00325                             <span class="keywordtype">int</span> cnt = m.<a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html#a82a88043f7e786ceebdc8bd7dd63252e" title="Точка 6.">Point6</a>.<a class="code" href="struct_skilful_1_1_model_manager_1_1_t_point.html#a029570973a09539be6ab5a8f67d7751c">Bar</a> == m.<a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html#aede32bbd73348e3fafb8b6eb80a37e55" title="Точка 4.">Point4</a>.<a class="code" href="struct_skilful_1_1_model_manager_1_1_t_point.html#a029570973a09539be6ab5a8f67d7751c">Bar</a> ? 4 : 6; <span class="comment">//включая СТ и НР точек может и 8</span>
+<a name="l00326"></a>00326                             <span class="keywordflow">for</span> (<span class="keywordtype">int</span> pi = 1; pi &lt;= cnt; pi++)
+<a name="l00327"></a>00327                             {
+<a name="l00328"></a>00328                                 <span class="comment">//позиционирование индекса дочернего массива по времени точки</span>
+<a name="l00329"></a>00329                                 <span class="comment">//int idx = mpoint(m, pi);         //индекс точки</span>
+<a name="l00330"></a>00330                                 <span class="keywordtype">int</span> idx = l == lcur ? mpoint(m, pi) : mpointonchild(i, pi, l, lcur - 1);
+<a name="l00331"></a>00331 
+<a name="l00332"></a>00332                                 <span class="comment">//TODO сопоставить корректно месяцы и недели -- установил что края недель могут выступать за края месяца, при этом точнсть расчетов не пострадает</span>
+<a name="l00333"></a>00333                                 <span class="keywordflow">while</span> (cq[ci].DT &lt; q[idx].DT) ci++;
+<a name="l00334"></a>00334                                 <span class="keywordflow">while</span> (ci &gt; 0 &amp;&amp; cq[ci].DT &gt; q[idx].DT) ci--; <span class="comment">//на случай перелета</span>
+<a name="l00335"></a>00335 
+<a name="l00336"></a>00336                                 <span class="keywordflow">if</span> (pi == 1) mi = ci;              <span class="comment">//сдвинуть указатель на т1 индексируемой модели</span>
+<a name="l00337"></a>00337 
+<a name="l00338"></a>00338                                 <span class="comment">//поиск экстремума на дочернем массиве котировок</span>
+<a name="l00339"></a>00339                                 <span class="keywordtype">double</span> prc = cq[ci].Open;          <span class="comment">//тут годится любая цена данной свечи Low&lt;prc&lt;High</span>
+<a name="l00340"></a>00340                                 DateTime nextDT = q.<a class="code" href="class_skilful_1_1_quotes_manager_1_1_t_quotes.html#a69e86cf05b4e50c62e5dc0bb012de9b2">lastindex</a> &gt; idx ? q[idx + 1].DT : Gen.incTime(q[idx].DT, q.<a class="code" href="class_skilful_1_1_quotes_manager_1_1_t_quotes.html#ac3f6ce550ca2cc3aad5799d551e95a00">tf</a>);
+<a name="l00341"></a>00341                                 <span class="keywordflow">while</span> (ci &lt; cq.<a class="code" href="class_skilful_1_1_quotes_manager_1_1_t_quotes.html#ae7fcb1fc9c52a4305eb64057d1b10e4c" title="Получение кол-ва баров в массиве исходных котировок.">GetCount</a>() &amp;&amp; cq[ci].DT &lt; nextDT)
+<a name="l00342"></a>00342                                 {
+<a name="l00343"></a>00343                                     <span class="keywordflow">if</span> ((m.<a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html#afc226df2d6f3e2dea5f81599211f7f06" title="Направление модели.">ModelDir</a> == <a class="code" href="namespace_skilful_1_1_quotes_manager.html#af9cbe6885b602a94a009a5a9a08ebedf" title="&amp;lt; Типы экстремумов">TDirection</a>.dtUp &amp;&amp; (pi % 2) == 0) || (m.<a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html#afc226df2d6f3e2dea5f81599211f7f06" title="Направление модели.">ModelDir</a> == <a class="code" href="namespace_skilful_1_1_quotes_manager.html#af9cbe6885b602a94a009a5a9a08ebedf" title="&amp;lt; Типы экстремумов">TDirection</a>.dtDn &amp;&amp; (pi % 2) != 0))
+<a name="l00344"></a>00344                                     {
+<a name="l00345"></a>00345                                         <span class="keywordflow">if</span> (prc &lt; cq[ci].High)
+<a name="l00346"></a>00346                                         {
+<a name="l00347"></a>00347                                             prc = cq[ci].High;
+<a name="l00348"></a>00348                                             node.<a class="code" href="class_skilful_1_1_model_manager_1_1_node.html#a7d94d534c334cc6c3fb668161f9ee511">pointsOnChildTF</a>[lcur, pi] = ci;
+<a name="l00349"></a>00349                                         }
+<a name="l00350"></a>00350                                     }
+<a name="l00351"></a>00351                                     <span class="keywordflow">else</span>
+<a name="l00352"></a>00352                                     {
+<a name="l00353"></a>00353                                         <span class="keywordflow">if</span> (prc &gt; cq[ci].Low)
+<a name="l00354"></a>00354                                         {
+<a name="l00355"></a>00355                                             prc = cq[ci].Low;
+<a name="l00356"></a>00356                                             node.<a class="code" href="class_skilful_1_1_model_manager_1_1_node.html#a7d94d534c334cc6c3fb668161f9ee511">pointsOnChildTF</a>[lcur, pi] = ci;
+<a name="l00357"></a>00357                                         }
+<a name="l00358"></a>00358                                     }
+<a name="l00359"></a>00359                                     ci++;
+<a name="l00360"></a>00360                                 }
+<a name="l00361"></a>00361                             }
+<a name="l00362"></a>00362                         }
+<a name="l00363"></a>00363                     }
+<a name="l00364"></a>00364 
+<a name="l00365"></a>00365                     <span class="comment">//проверка вложенности моделей</span>
+<a name="l00366"></a>00366                     <span class="comment">//для каждой модели проверяются</span>
+<a name="l00367"></a>00367                     <span class="comment">//for(active_models) //это модели пересекающие текущий бар</span>
+<a name="l00368"></a>00368                     <span class="comment">//for(p1..lifetime)</span>
+<a name="l00369"></a>00369                     <span class="comment">//for(m_cur_id..m_last_in_id) //это все модели 1-е точки которых лежат в диапазоне</span>
+<a name="l00370"></a>00370 
+<a name="l00371"></a>00371 
+<a name="l00372"></a>00372 
+<a name="l00373"></a>00373                     <span class="comment">//идентификация моделей по тренду или от начала тренда для своего Плана или коррекционных.</span>
+<a name="l00374"></a>00374                     <span class="comment">//1. изначально все модели лежат правее текущей точки</span>
+<a name="l00375"></a>00375                     <span class="comment">//List&lt;mTModel&gt; mactive = new List&lt;mTModel&gt;();</span>
+<a name="l00376"></a>00376                     <span class="comment">//Stick stick = map[lcur];</span>
+<a name="l00377"></a>00377                     <span class="comment">//for (int qi = 0, mi = 0; qi &lt; q.GetCount(); qi++)</span>
+<a name="l00378"></a>00378                     <span class="comment">//{</span>
+<a name="l00379"></a>00379                     <span class="comment">//    while (stick.mlist[mi].Point1.iBar &lt; qi) mi++;</span>
+<a name="l00380"></a>00380 
+<a name="l00381"></a>00381                     <span class="comment">//    //3. лайфтафм активной модели равен текущей точке -- конец цикла для данной модели</span>
+<a name="l00382"></a>00382                     <span class="comment">//    foreach (mTModel m in mactive)</span>
+<a name="l00383"></a>00383                     <span class="comment">//        if (m.LifeTime &lt; qi) mactive.Remove(m);</span>
+<a name="l00384"></a>00384                     <span class="comment">//        //иначе продвигаем уровни линий тренда и целей на текущий бар =&gt; //4. для активных моделей вычисление уровней ЛЦ и ЛТ</span>
+<a name="l00385"></a>00385                     <span class="comment">//        else m.incpoint();</span>
+<a name="l00386"></a>00386                         
+<a name="l00387"></a>00387                     <span class="comment">//    //2. затем часть моделей включаются в список активных </span>
+<a name="l00388"></a>00388                     <span class="comment">//    // -- 1 точка равно текущей. -- начало цикла для данных моделей</span>
+<a name="l00389"></a>00389                     <span class="comment">//    while (stick.mlist[mi].Point1.iBar == qi)</span>
+<a name="l00390"></a>00390                     <span class="comment">//    {</span>
+<a name="l00391"></a>00391                     <span class="comment">//        TModel mc = stick.mlist[mi];</span>
+<a name="l00392"></a>00392                     <span class="comment">//        if (mc.TimeFrame == q.tf)        //учитываем только модели текущего плана</span>
+<a name="l00393"></a>00393                     <span class="comment">//        {</span>
+<a name="l00394"></a>00394                     <span class="comment">//            //5. собссна проверка вложенности для активных моделей</span>
+<a name="l00395"></a>00395                     <span class="comment">//            foreach (mTModel m in mactive)</span>
+<a name="l00396"></a>00396                     <span class="comment">//            {</span>
+<a name="l00397"></a>00397                     <span class="comment">//                if(m.model.Point1.iBar == mc.Point1.iBar) break;</span>
+<a name="l00398"></a>00398                     <span class="comment">//                if (m.resistence &gt;= mc.Point1.Price &amp;&amp; m.support &lt;= mc.Point1.Price) //допускается касание линий, this.t1==owner.t3 for example</span>
+<a name="l00399"></a>00399                     <span class="comment">//                {</span>
+<a name="l00400"></a>00400                     <span class="comment">//                    if (m.model.ModelDir == mc.ModelDir)    //модель по тренду если сонаправлена и расположена в любом месте от т1 до 1-4х4</span>
+<a name="l00401"></a>00401                     <span class="comment">//                        mc.isBytrendOfID = m.model.ModelID;</span>
+<a name="l00402"></a>00402                     <span class="comment">//                    else if (mc.Point1.Bar &lt; m.model.Point6 || m.model.BreakTrendLine.Bar == 0) //модель коррекционная если расположена до появления т6 либо т6 не зафиксирована пробоем трендовой</span>
+<a name="l00403"></a>00403                     <span class="comment">//                        mc.isCorrectionOfID = m.model.ModelID;</span>
+<a name="l00404"></a>00404                     <span class="comment">//                }</span>
+<a name="l00405"></a>00405                     <span class="comment">//            }</span>
+<a name="l00406"></a>00406 
+<a name="l00407"></a>00407                     <span class="comment">//            mactive.Add(new mTModel(stick.mlist[mi]));</span>
+<a name="l00408"></a>00408                     <span class="comment">//        }</span>
+<a name="l00409"></a>00409                     <span class="comment">//        mi++;</span>
+<a name="l00410"></a>00410                     <span class="comment">//    }</span>
+<a name="l00411"></a>00411                     <span class="comment">//}</span>
+<a name="l00413"></a>00413 <span class="comment"></span>                }
+<a name="l00414"></a>00414             }
+<a name="l00415"></a>00415             <span class="keywordflow">catch</span> (Exception e)
+<a name="l00416"></a>00416             {
+<a name="l00417"></a>00417                 MessageBox.Show(<span class="stringliteral">&quot;initFrame exception:&quot;</span>+q.<a class="code" href="class_skilful_1_1_quotes_manager_1_1_t_quotes.html#adb784e02d977eb6ca9ac27555e7bcca6">Symbol</a>.<a class="code" href="class_skilful_1_1_quotes_manager_1_1_t_symbol.html#a8819d874656f3799a3e08da562d127bd" title="Название символа.">Name</a>+q.<a class="code" href="class_skilful_1_1_quotes_manager_1_1_t_quotes.html#ac3f6ce550ca2cc3aad5799d551e95a00">tf</a>+e.Message);
+<a name="l00418"></a>00418             }
+<a name="l00419"></a>00419         }
+<a name="l00420"></a>00420 
+<a name="l00421"></a><a class="code" href="class_skilful_1_1_model_manager_1_1_model_tree.html#a77b363b82d73014c98b166a9dc98e5af">00421</a>         <span class="keyword">public</span> <span class="keywordtype">int</span> mpoint(<a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html">TModel</a> m, <span class="keywordtype">int</span> i) <span class="comment">// доступ к индексам точек модели (только для чтения)</span>
+<a name="l00422"></a>00422         {
+<a name="l00423"></a>00423             <span class="keywordflow">switch</span> (i)
+<a name="l00424"></a>00424             {
+<a name="l00425"></a>00425                 <span class="keywordflow">case</span> 1: <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)m.<a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html#a315d9b88024ae82d1ebbf2aecd0015e7" title="&amp;lt; Точка 1">Point1</a>.<a class="code" href="struct_skilful_1_1_model_manager_1_1_t_point.html#a029570973a09539be6ab5a8f67d7751c">Bar</a>;
+<a name="l00426"></a>00426                 <span class="keywordflow">case</span> 2: <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)m.<a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html#a26da7f4ee28c8bd935cd5df47a33770e" title="Точки 2 глобальный экстремум.">Point2</a>.<a class="code" href="struct_skilful_1_1_model_manager_1_1_t_point.html#a029570973a09539be6ab5a8f67d7751c">Bar</a>;
+<a name="l00427"></a>00427                 <span class="keywordflow">case</span> 3: <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)m.<a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html#a86dc9b25163dea55573840c8fe8f8249" title="точка 3.">Point3</a>.<a class="code" href="struct_skilful_1_1_model_manager_1_1_t_point.html#a029570973a09539be6ab5a8f67d7751c">Bar</a>;
+<a name="l00428"></a>00428                 <span class="keywordflow">case</span> 4: <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)m.<a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html#aede32bbd73348e3fafb8b6eb80a37e55" title="Точка 4.">Point4</a>.<a class="code" href="struct_skilful_1_1_model_manager_1_1_t_point.html#a029570973a09539be6ab5a8f67d7751c">Bar</a>;
+<a name="l00429"></a>00429                 <span class="keywordflow">case</span> 5: <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)m.<a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html#aae3fa8c3ad4c1d5e958362a95f948d44" title="Точка 5.">Point5</a>.<a class="code" href="struct_skilful_1_1_model_manager_1_1_t_point.html#a029570973a09539be6ab5a8f67d7751c">Bar</a>;
+<a name="l00430"></a>00430                 <span class="keywordflow">case</span> 6: <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)m.<a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html#a82a88043f7e786ceebdc8bd7dd63252e" title="Точка 6.">Point6</a>.<a class="code" href="struct_skilful_1_1_model_manager_1_1_t_point.html#a029570973a09539be6ab5a8f67d7751c">Bar</a>;
+<a name="l00431"></a>00431             }
+<a name="l00432"></a>00432             <span class="keywordflow">return</span> -1;
+<a name="l00433"></a>00433         }
+<a name="l00434"></a>00434 
+<a name="l00435"></a><a class="code" href="class_skilful_1_1_model_manager_1_1_model_tree.html#a260b03be816542e634a54e60a3daca9c">00435</a>         <span class="keyword">public</span> <span class="keywordtype">int</span> mpointonchild(<span class="keywordtype">int</span> imodel, <span class="keywordtype">int</span> ipoint, <span class="keywordtype">int</span> lparent, <span class="keywordtype">int</span> lchild) <span class="comment">// доступ к индексам точек модели (только для чтения)</span>
+<a name="l00436"></a>00436         {
+<a name="l00437"></a>00437             <span class="keywordflow">return</span> map[lparent][imodel].pointsOnChildTF[lchild, ipoint];
+<a name="l00438"></a>00438         }
+<a name="l00439"></a>00439 
+<a name="l00440"></a>00440         <span class="comment">//в данной версии за следующую глобальную принимается ближайшая новая т1, причем модель берется последняя из списка с данной т1</span>
+<a name="l00441"></a>00441         <span class="comment">//в TODO -- нужно искать по списку точек</span>
+<a name="l00442"></a>00442         <span class="comment">//public Node NextGlobalNode(Node cr)</span>
+<a name="l00443"></a>00443         <span class="comment">//{</span>
+<a name="l00444"></a>00444         <span class="comment">//    while ((points[(int)cr.model.Point1.Bar] &amp; 0x0FFFF0) != 0 &amp;&amp; cr != null) cr = cr.next; //бар включает точки кроме 1 и 6</span>
+<a name="l00445"></a>00445         <span class="comment">//    return cr==null ? null : cr.model.Point1.Bar;</span>
+<a name="l00446"></a>00446         <span class="comment">//}</span>
+<a name="l00447"></a>00447     }
+<a name="l00448"></a>00448 
+<a name="l00449"></a><a class="code" href="class_skilful_1_1_model_manager_1_1_node.html">00449</a>     <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_skilful_1_1_model_manager_1_1_node.html">Node</a>
+<a name="l00450"></a>00450     {
+<a name="l00451"></a><a class="code" href="class_skilful_1_1_model_manager_1_1_node.html#abce6d48d2ac416c205470a57fb72c92c">00451</a>         <span class="keyword">public</span>  <span class="keywordtype">int</span> parent, <span class="comment">//индекс родительской модели (старшего плана)</span>
+<a name="l00452"></a>00452                     owner,  <span class="comment">//индекс модели данного плана для которой данная модель является вложенной или коррекционной</span>
+<a name="l00453"></a>00453                     child,
+<a name="l00454"></a>00454                     id;
+<a name="l00455"></a>00455 
+<a name="l00456"></a>00456 
+<a name="l00457"></a><a class="code" href="class_skilful_1_1_model_manager_1_1_node.html#a1bb664f7ebcef3d08636b56354e1b9c5">00457</a>         <span class="keyword">public</span> <span class="keywordtype">int</span> ParentPoint,<span class="comment">//номер точки родительской модели от которой берет начало данная модель</span>
+<a name="l00458"></a>00458             ParentRange;<span class="comment">//если нет точного совпадения с точкой модели, то в диапазоне после какой точки появилась 1-я данной</span>
+<a name="l00459"></a>00459 
+<a name="l00460"></a><a class="code" href="class_skilful_1_1_model_manager_1_1_node.html#a7d94d534c334cc6c3fb668161f9ee511">00460</a>         <span class="keyword">public</span> <span class="keywordtype">int</span>[,] pointsOnChildTF = <span class="keyword">new</span> <span class="keywordtype">int</span>[(int)<a class="code" href="namespace_skilful_1_1_quotes_manager.html#a5c84c6ba01636871f8f98492b465c315">TF</a>.count, 8]; <span class="comment">//всего 8 точек(макс) от СТ=0 до НР=7</span>
+<a name="l00461"></a><a class="code" href="class_skilful_1_1_model_manager_1_1_node.html#ad7591458307b0a0dd20f659769e17f8c">00461</a>         <span class="keyword">public</span> <a class="code" href="namespace_skilful_1_1_quotes_manager.html#a5c84c6ba01636871f8f98492b465c315">TF</a> baseTF;
+<a name="l00462"></a><a class="code" href="class_skilful_1_1_model_manager_1_1_node.html#a496dda7b60bfac31cd8670785dba12e0">00462</a>         <span class="keyword">public</span> <span class="keywordtype">int</span> baseID;
+<a name="l00463"></a>00463     }
+<a name="l00464"></a>00464 
+<a name="l00470"></a><a class="code" href="class_skilful_1_1_model_manager_1_1m_t_model.html">00470</a>     <span class="keyword">class </span><a class="code" href="class_skilful_1_1_model_manager_1_1m_t_model.html" title="вспомогательный класс лна базе TModel для быстрого доступа к уровням поддержки/сопротивления (ЛЦ/ЛТ в...">mTModel</a>
+<a name="l00471"></a>00471     {
+<a name="l00472"></a><a class="code" href="class_skilful_1_1_model_manager_1_1m_t_model.html#a8df140e944d670ff3edf7d3a809c5106">00472</a>         <span class="keyword">public</span> <a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html">TModel</a> model;
+<a name="l00473"></a><a class="code" href="class_skilful_1_1_model_manager_1_1m_t_model.html#a30b7f49da10d46da7b4ad4e48ec13df5">00473</a>         <span class="keyword">public</span> <span class="keywordtype">double</span> trendK { <span class="keyword">get</span> { <span class="keywordflow">return</span> model.TrendLine.Angle; } }
+<a name="l00474"></a><a class="code" href="class_skilful_1_1_model_manager_1_1m_t_model.html#ab17da2b5078d5ba0a8085e99abdf56d8">00474</a>         <span class="keyword">public</span> <span class="keywordtype">double</span> targetK { <span class="keyword">get</span> { <span class="keywordflow">return</span> model.TargetLineCorrected.Angle; } }
+<a name="l00475"></a><a class="code" href="class_skilful_1_1_model_manager_1_1m_t_model.html#af9e27799c99ba20414861e444b42356c">00475</a>         <span class="keyword">public</span> <span class="keywordtype">int</span> LifeTime { <span class="keyword">get</span> { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)model.MaxProcessBar; } }
+<a name="l00476"></a>00476         
+<a name="l00477"></a><a class="code" href="class_skilful_1_1_model_manager_1_1m_t_model.html#a8d1ad969b0799cbf9ba7e113cc50e8db">00477</a>         <span class="keyword">public</span> <span class="keywordtype">double</span> trendPoint, targetPoint, resistence, support;
+<a name="l00478"></a>00478         
+<a name="l00479"></a><a class="code" href="class_skilful_1_1_model_manager_1_1m_t_model.html#a676e1f4672c55731eb29058a62305f8c">00479</a>         <span class="keyword">public</span> <a class="code" href="class_skilful_1_1_model_manager_1_1m_t_model.html" title="вспомогательный класс лна базе TModel для быстрого доступа к уровням поддержки/сопротивления (ЛЦ/ЛТ в...">mTModel</a>(<a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html">TModel</a> m)
+<a name="l00480"></a>00480         {
+<a name="l00481"></a>00481             model = m;
+<a name="l00482"></a>00482             trendPoint = m.<a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html#a315d9b88024ae82d1ebbf2aecd0015e7" title="&amp;lt; Точка 1">Point1</a>.<a class="code" href="struct_skilful_1_1_model_manager_1_1_t_point.html#a2dc5ea32a14a104922d7f25201c08ff3">Price</a>;<span class="comment">//   m.ModelDir == TDirection.dtUp ? q[(int)m.Point1.Bar].Low : q[(int)m.Point1.Bar].High;</span>
+<a name="l00483"></a>00483             targetPoint = <a class="code" href="struct_skilful_1_1_model_manager_1_1_common.html">Common</a>.CalcLineValue(m.<a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html#a0e732b7e87ca40c01e15bb5be34b6f82" title="Целевая линия по касательной т2.">TargetLineCorrected</a>, m.<a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html#a315d9b88024ae82d1ebbf2aecd0015e7" title="&amp;lt; Точка 1">Point1</a>.<a class="code" href="struct_skilful_1_1_model_manager_1_1_t_point.html#a029570973a09539be6ab5a8f67d7751c">Bar</a>);
+<a name="l00484"></a>00484         }
+<a name="l00485"></a>00485 
+<a name="l00486"></a><a class="code" href="class_skilful_1_1_model_manager_1_1m_t_model.html#abd1eff97ab5587836d141227887f4d7a">00486</a>         <span class="keyword">public</span> <span class="keywordtype">void</span> incpoint()
+<a name="l00487"></a>00487         {
+<a name="l00488"></a>00488             trendPoint += trendK;
+<a name="l00489"></a>00489             targetPoint += targetK;
+<a name="l00490"></a>00490             <span class="keywordflow">if</span> (model.ModelDir == <a class="code" href="namespace_skilful_1_1_quotes_manager.html#af9cbe6885b602a94a009a5a9a08ebedf" title="&amp;lt; Типы экстремумов">TDirection</a>.dtUp)
+<a name="l00491"></a>00491             {
+<a name="l00492"></a>00492                 resistence = targetPoint;
+<a name="l00493"></a>00493                 support = trendPoint;
+<a name="l00494"></a>00494             }
+<a name="l00495"></a>00495             <span class="keywordflow">else</span>
+<a name="l00496"></a>00496             {
+<a name="l00497"></a>00497                 resistence = trendPoint;
+<a name="l00498"></a>00498                 support = targetPoint;
+<a name="l00499"></a>00499             }
+<a name="l00500"></a>00500         }
+<a name="l00501"></a>00501     }
+<a name="l00502"></a>00502 }
+<a name="l00503"></a>00503 <span class="comment">/*</span>
+<a name="l00504"></a>00504 <span class="comment"> * всего понадобится по ветке stick на каждый фрейм</span>
+<a name="l00505"></a>00505 <span class="comment"> * + по массиву точек с указанием пересечений для данного фрейма</span>
+<a name="l00506"></a>00506 <span class="comment"> * + массив индексов моделей (и их точек) данного фрейма на фрейме меньшем</span>
+<a name="l00507"></a>00507 <span class="comment">*/</span>
+</pre></div></div>
+</div>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Перечисления</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&nbsp;</span>Свойства</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&nbsp;</span>События</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

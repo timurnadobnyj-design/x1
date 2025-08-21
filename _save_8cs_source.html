@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Skilful: Исходный файл Skilful/Save.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javaScript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Создано системой Doxygen 1.7.1 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+--></script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пакеты</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="dirs.html"><span>Алфавитный&nbsp;указатель&nbsp;директорий</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath">
+    <ul>
+      <li><a class="el" href="dir_7adcdc1edff7620168fbc20357cad448.html">Skilful</a>      </li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<h1>Save.cs</h1>  </div>
+</div>
+<div class="contents">
+<a href="_save_8cs.html">См. документацию.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 ﻿<span class="comment">//---------------------------------------------------------------------------------------------------------------</span>
+<a name="l00002"></a>00002 <span class="comment">// Skilful. Tactica Adversa graphic and analysis tool.</span>
+<a name="l00003"></a>00003 <span class="comment">// Copyright (C) 2010 &quot;...&quot;, Eugeniy Bazarov(obolon)</span>
+<a name="l00004"></a>00004 <span class="comment">//</span>
+<a name="l00005"></a>00005 <span class="comment">// This program is free software; you can redistribute it and/or</span>
+<a name="l00006"></a>00006 <span class="comment">// modify it under the terms of the GNU General Public License</span>
+<a name="l00007"></a>00007 <span class="comment">// as published by the Free Software Foundation; either version 2</span>
+<a name="l00008"></a>00008 <span class="comment">// of the License, or (at your option) any later version.</span>
+<a name="l00009"></a>00009 <span class="comment">//</span>
+<a name="l00010"></a>00010 <span class="comment">// This program is distributed in the hope that it will be useful,</span>
+<a name="l00011"></a>00011 <span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<a name="l00012"></a>00012 <span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<a name="l00013"></a>00013 <span class="comment">// GNU General Public License for more details.</span>
+<a name="l00014"></a>00014 <span class="comment">//</span>
+<a name="l00015"></a>00015 <span class="comment">// You should have received a copy of the GNU General Public License</span>
+<a name="l00016"></a>00016 <span class="comment">// along with this program; if not, write to the Free Software</span>
+<a name="l00017"></a>00017 <span class="comment">// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</span>
+<a name="l00018"></a>00018 <span class="comment">//</span>
+<a name="l00019"></a>00019 <span class="comment">// mail: support@protoforma.com </span>
+<a name="l00020"></a>00020 <span class="comment">//---------------------------------------------------------------------------------------------------------------</span>
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022 <span class="keyword">using</span> System.Linq;
+<a name="l00023"></a>00023 <span class="keyword">using</span> System.Text;
+<a name="l00024"></a>00024 <span class="keyword">using</span> System.Windows.Forms;
+<a name="l00025"></a>00025 <span class="keyword">using</span> System.ComponentModel;
+<a name="l00026"></a>00026 <span class="keyword">using</span> System.IO;
+<a name="l00027"></a>00027 <span class="keyword">using</span> System.Drawing;
+<a name="l00028"></a>00028 <span class="keyword">using</span> Skilful.Data;
+<a name="l00029"></a>00029 <span class="keyword">using</span> Skilful.QuotesManager;
+<a name="l00030"></a>00030 <span class="keyword">using</span> ChartV2;
+<a name="l00031"></a>00031 <span class="keyword">using</span> System.Collections.Generic;
+<a name="l00032"></a>00032 <span class="keyword">using</span> ChartV2.Styles;
+<a name="l00033"></a>00033 <span class="keyword">using</span> <a class="code" href="class_grid_splitter_1_1_grid_splitter.html">GridSplitter</a>;
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035 <span class="keyword">namespace </span>Skilful
+<a name="l00036"></a>00036 {
+<a name="l00037"></a>00037     [System.Serializable]
+<a name="l00038"></a><a class="code" href="struct_skilful_1_1_grafic__elements.html">00038</a>     <span class="keyword">public</span> <span class="keyword">struct </span><a class="code" href="struct_skilful_1_1_grafic__elements.html">Grafic_elements</a>
+<a name="l00039"></a>00039     {
+<a name="l00040"></a><a class="code" href="struct_skilful_1_1_grafic__elements.html#a91b6494a1d4c05fbc4dabe14e69f42b8">00040</a>         <span class="keyword">public</span> <a class="code" href="namespace_chart_v2.html#a3016ec0960f22b0b8806b6cab3839e48">DrawingTool</a> <a class="code" href="struct_skilful_1_1_grafic__elements.html#a91b6494a1d4c05fbc4dabe14e69f42b8">dt</a>;
+<a name="l00041"></a><a class="code" href="struct_skilful_1_1_grafic__elements.html#a5f1ffff763ea332f2aebf5a4a116b686">00041</a>         <span class="keyword">public</span> PointF <a class="code" href="struct_skilful_1_1_grafic__elements.html#addffccdf3774fdb9a9fb9677c4f3429d">pf1</a>, <a class="code" href="struct_skilful_1_1_grafic__elements.html#a9bf642e627ad1da378a2e42a8c390339">pf2</a>, <a class="code" href="struct_skilful_1_1_grafic__elements.html#a479d8ff771455b659f488bbe6221addf">pf3</a>, <a class="code" href="struct_skilful_1_1_grafic__elements.html#a5f1ffff763ea332f2aebf5a4a116b686">pf4</a>;
+<a name="l00042"></a><a class="code" href="struct_skilful_1_1_grafic__elements.html#a82f92d83e7570bb9b53748c1141aade1">00042</a>         <span class="keyword">public</span> <a class="code" href="namespace_chart_v2_1_1_styles.html#ab7ef5de90b15d38094d4eb6a899df4a3">ExtensionType</a> <a class="code" href="struct_skilful_1_1_grafic__elements.html#a82f92d83e7570bb9b53748c1141aade1">Ext</a>;
+<a name="l00043"></a><a class="code" href="struct_skilful_1_1_grafic__elements.html#aee41e4f883f58b7d85946f67cc0f2780">00043</a>         <span class="keyword">public</span> PointF <a class="code" href="struct_skilful_1_1_grafic__elements.html#a9f933c4d69051547a0b4723d9c426eb1">IntPt1</a>, <a class="code" href="struct_skilful_1_1_grafic__elements.html#aee41e4f883f58b7d85946f67cc0f2780">IntPt2</a>;
+<a name="l00044"></a><a class="code" href="struct_skilful_1_1_grafic__elements.html#a9d8309687678e6fd63e0ca6253cf5df5">00044</a>         <span class="keyword">public</span> Color <a class="code" href="struct_skilful_1_1_grafic__elements.html#a9d8309687678e6fd63e0ca6253cf5df5">penstr</a>;
+<a name="l00045"></a>00045     }
+<a name="l00046"></a>00046     [System.Serializable]
+<a name="l00047"></a><a class="code" href="class_skilful_1_1_save.html">00047</a>     <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_skilful_1_1_save.html">Save</a>
+<a name="l00048"></a>00048     {
+<a name="l00049"></a><a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">00049</a>         <span class="keyword">public</span> <a class="code" href="struct_skilful_1_1_grafic__elements.html">Grafic_elements</a> <a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">ge</a>;
+<a name="l00050"></a><a class="code" href="class_skilful_1_1_save.html#a3c7e0f45741c77ac0ae8e1452e0bb896">00050</a>         <span class="keyword">public</span> List&lt;Grafic_elements&gt; <a class="code" href="class_skilful_1_1_save.html#a3c7e0f45741c77ac0ae8e1452e0bb896">lse</a> = <span class="keyword">new</span> List&lt;Grafic_elements&gt;();
+<a name="l00051"></a><a class="code" href="class_skilful_1_1_save.html#a4cea358ab6c9112f848b122ba042f09c">00051</a>         <span class="keyword">static</span> <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_skilful_1_1_save.html#a4cea358ab6c9112f848b122ba042f09c">save_</a> = <span class="keyword">false</span>;
+<a name="l00052"></a><a class="code" href="class_skilful_1_1_save.html#aa87193531f04ef47f4e66c9aa12ddfb9">00052</a>         <span class="keyword">public</span> List&lt;TF&gt; <a class="code" href="class_skilful_1_1_save.html#aa87193531f04ef47f4e66c9aa12ddfb9">Active_Chart_TF</a> = <span class="keyword">new</span> List&lt;TF&gt;();
+<a name="l00053"></a><a class="code" href="class_skilful_1_1_save.html#acb03954700cb406ae4af428de8198415">00053</a>         <span class="keyword">public</span> List&lt;int[]&gt; <a class="code" href="class_skilful_1_1_save.html#acb03954700cb406ae4af428de8198415">Chart_selectedModelIndexes</a> = <span class="keyword">new</span> List&lt;int[]&gt;();
+<a name="l00054"></a><a class="code" href="class_skilful_1_1_save.html#a6230e4befa16956c7a1fd0eb01a8001f">00054</a>         <span class="keyword">public</span> List&lt;bool&gt; <a class="code" href="class_skilful_1_1_save.html#a6230e4befa16956c7a1fd0eb01a8001f">workingForm_flagSerch</a> = <span class="keyword">new</span> List&lt;bool&gt;();
+<a name="l00055"></a><a class="code" href="class_skilful_1_1_save.html#a7e900ed905a5c6faefc538e65e8de607">00055</a>         <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_skilful_1_1_save.html#a7e900ed905a5c6faefc538e65e8de607">Current_workingChart</a>;
+<a name="l00056"></a><a class="code" href="class_skilful_1_1_save.html#ad09212346dbd2c5d1fc508e87580df2b">00056</a>         <span class="keyword">public</span> <a class="code" href="namespace_chart_v2.html#a813b22baa4da3db343ab2ee8f39c442b">ChartType</a> <a class="code" href="class_skilful_1_1_save.html#ad09212346dbd2c5d1fc508e87580df2b">workingForm_ChartType</a>;
+<a name="l00057"></a><a class="code" href="class_skilful_1_1_save.html#af8a24f59551b9dd7e466f9887cdf781a">00057</a>         <span class="keyword">public</span> Size <a class="code" href="class_skilful_1_1_save.html#af8a24f59551b9dd7e466f9887cdf781a">workingForm_Size</a>;
+<a name="l00058"></a><a class="code" href="class_skilful_1_1_save.html#a9c939bb3c6089068423a2f91b6f31224">00058</a>         <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_skilful_1_1_save.html#a9c939bb3c6089068423a2f91b6f31224">workingForm_Text</a>;
+<a name="l00059"></a><a class="code" href="class_skilful_1_1_save.html#aad68d6fc0886dc58b5d08cb74b9c1492">00059</a>         <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_skilful_1_1_save.html#aad68d6fc0886dc58b5d08cb74b9c1492">workingForm_Left</a>;
+<a name="l00060"></a><a class="code" href="class_skilful_1_1_save.html#a88c99bc2bab33b4c3a85bb83a6c58107">00060</a>         <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_skilful_1_1_save.html#a88c99bc2bab33b4c3a85bb83a6c58107">workingForm_Top</a>;
+<a name="l00061"></a><a class="code" href="class_skilful_1_1_save.html#a60a9615f2760ff15588a7dc07bad4af7">00061</a>         <span class="keyword">public</span> FormWindowState <a class="code" href="class_skilful_1_1_save.html#a60a9615f2760ff15588a7dc07bad4af7">workingForm_WindowState</a>;
+<a name="l00062"></a><a class="code" href="class_skilful_1_1_save.html#a02f1e822de523f04197c108210c951ff">00062</a>         <span class="keyword">public</span> <a class="code" href="namespace_skilful_1_1_quotes_manager.html#a5c84c6ba01636871f8f98492b465c315">TF</a> <a class="code" href="class_skilful_1_1_save.html#a02f1e822de523f04197c108210c951ff">workingForm_Active_Chart_TF</a>, <a class="code" href="class_skilful_1_1_save.html#acea105d6234de9fe909c714dfd2ebab5">Current_Active_Chart_TF</a>;
+<a name="l00063"></a><a class="code" href="class_skilful_1_1_save.html#ab94180c0a01ccb0cd506ce7b9c88ceab">00063</a>         <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_skilful_1_1_save.html#ab94180c0a01ccb0cd506ce7b9c88ceab">workingForm_Node_Text</a>, <a class="code" href="class_skilful_1_1_save.html#a81806c7ceeb769db0e3a6be28d6a6f7f">workingForm_Node_Parent_Text</a>;
+<a name="l00064"></a><a class="code" href="class_skilful_1_1_save.html#a1c0183634e63b6419aad2d1eca93e1b9">00064</a>         <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_skilful_1_1_save.html#a1c0183634e63b6419aad2d1eca93e1b9">SymbolTreeView_Width</a>,
+<a name="l00065"></a>00065                     <a class="code" href="class_skilful_1_1_save.html#a9672b7f8efa771852bd244501a00713c">SymbolTreeView_Node</a>;
+<a name="l00066"></a><a class="code" href="class_skilful_1_1_save.html#a44fd92cedb6fc5eeb9ad31c68093e760">00066</a>         <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_skilful_1_1_save.html#a44fd92cedb6fc5eeb9ad31c68093e760">SymbolTreeView_Node_expanded</a>;
+<a name="l00067"></a>00067       <span class="comment">/*  public List&lt;Color&gt; Chart_backColor = new List&lt;Color&gt;();</span>
+<a name="l00068"></a>00068 <span class="comment">        public List&lt;Color&gt; Grid_Color = new List&lt;Color&gt;();</span>
+<a name="l00069"></a>00069 <span class="comment">        public List&lt;bool&gt; GridSplitter_IsGridVisible = new List&lt;bool&gt;();</span>
+<a name="l00070"></a>00070 <span class="comment">        </span>
+<a name="l00071"></a>00071 <span class="comment">        public List&lt;bool&gt; Grid_IsVisible = new List&lt;bool&gt;();</span>
+<a name="l00072"></a>00072 <span class="comment">        public List&lt;Font&gt; AxisStyleRight = new List&lt;Font&gt;();*/</span>
+<a name="l00073"></a>00073  
+<a name="l00074"></a><a class="code" href="class_skilful_1_1_save.html#a99f365e2e9a157ce381d353a44cc4387">00074</a>         <span class="keyword">public</span> <a class="code" href="class_skilful_1_1_save.html#a99f365e2e9a157ce381d353a44cc4387">Save</a>() { }
+<a name="l00075"></a><a class="code" href="class_skilful_1_1_save.html#a5a9f05728dccfcaf845a98b945bfb00e">00075</a>         <span class="keyword">public</span> <a class="code" href="class_skilful_1_1_save.html#a99f365e2e9a157ce381d353a44cc4387">Save</a>(Form f)
+<a name="l00076"></a>00076         {
+<a name="l00077"></a>00077 
+<a name="l00078"></a>00078             List&lt;int&gt; ch = <span class="keyword">new</span> List&lt;int&gt;();
+<a name="l00079"></a>00079             <span class="keywordtype">int</span>[] ch_;
+<a name="l00080"></a>00080             <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; f.Controls.Count; k++)
+<a name="l00081"></a>00081             {                
+<a name="l00082"></a>00082                 
+<a name="l00083"></a>00083                 <span class="keywordflow">if</span> (f.Controls[k].ToString() != <span class="stringliteral">&quot;ChartV2.Control&quot;</span>) <span class="keywordflow">continue</span>;
+<a name="l00084"></a>00084                 ChartV2.Control c = (ChartV2.Control)f.Controls[k];
+<a name="l00085"></a>00085                 <a class="code" href="class_skilful_1_1_save.html#a6230e4befa16956c7a1fd0eb01a8001f">workingForm_flagSerch</a>.Add(c.ModelListExist);
+<a name="l00086"></a>00086                 <a class="code" href="class_skilful_1_1_save.html#aa87193531f04ef47f4e66c9aa12ddfb9">Active_Chart_TF</a>.Add(c.seriesList[0].legend.frame);
+<a name="l00087"></a>00087               <span class="comment">//  Chart_backColor.Add(c.plot.style.backColor);</span>
+<a name="l00088"></a>00088              <span class="comment">//   Grid_IsVisible.Add(c.plot.grid.IsVisible);</span>
+<a name="l00089"></a>00089              <span class="comment">//   AxisStyleRight.Add(c.leftAxis.style.magorTickFont);</span>
+<a name="l00090"></a>00090             <span class="comment">//    AxisStyleColorRight.Add(c.leftAxis.style.magorFontBrush);</span>
+<a name="l00091"></a>00091             <span class="comment">//    Grid_Color.Add(c.plot.grid.style.minorVerticalPen.Color);</span>
+<a name="l00092"></a>00092             <span class="comment">//    GridSplitter_IsGridVisible.Add(c.gridSplitter.IsGridVisible);</span>
+<a name="l00093"></a>00093              <span class="comment">//   workingForm_ChartType = c.seriesList[0].legend.chartType;</span>
+<a name="l00094"></a>00094                 <span class="keywordflow">if</span> (c.plot.graphToolsToDrawList != null)
+<a name="l00095"></a>00095                     <span class="keywordflow">for</span> (<span class="keywordtype">int</span> d = 0; d &lt; c.plot.graphToolsToDrawList.Count; d++)
+<a name="l00096"></a>00096                         <span class="keywordflow">switch</span> (c.plot.graphToolsToDrawList[d].type)
+<a name="l00097"></a>00097                         {
+<a name="l00098"></a>00098                             <span class="keywordflow">case</span> <a class="code" href="namespace_chart_v2.html#a3016ec0960f22b0b8806b6cab3839e48">DrawingTool</a>.HorizontalLine:
+<a name="l00099"></a>00099                                 <a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">ge</a>.<a class="code" href="struct_skilful_1_1_grafic__elements.html#a91b6494a1d4c05fbc4dabe14e69f42b8">dt</a> = <a class="code" href="namespace_chart_v2.html#a3016ec0960f22b0b8806b6cab3839e48">DrawingTool</a>.HorizontalLine;
+<a name="l00100"></a>00100                                 <a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">ge</a>.<a class="code" href="struct_skilful_1_1_grafic__elements.html#addffccdf3774fdb9a9fb9677c4f3429d">pf1</a> = c.plot.graphToolsToDrawList[d].pt1;
+<a name="l00101"></a>00101                                 <a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">ge</a>.<a class="code" href="struct_skilful_1_1_grafic__elements.html#a9bf642e627ad1da378a2e42a8c390339">pf2</a> = c.plot.graphToolsToDrawList[d].pt2;
+<a name="l00102"></a>00102                                 <a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">ge</a>.<a class="code" href="struct_skilful_1_1_grafic__elements.html#a9d8309687678e6fd63e0ca6253cf5df5">penstr</a> = c.plot.graphToolsToDrawList[d].style.pen.Color;
+<a name="l00103"></a>00103                                 <a class="code" href="class_skilful_1_1_save.html#a3c7e0f45741c77ac0ae8e1452e0bb896">lse</a>.Add(<a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">ge</a>);
+<a name="l00104"></a>00104                                 <span class="keywordflow">break</span>;
+<a name="l00105"></a>00105                             <span class="keywordflow">case</span> <a class="code" href="namespace_chart_v2.html#a3016ec0960f22b0b8806b6cab3839e48">DrawingTool</a>.VerticalLine:
+<a name="l00106"></a>00106                                 <a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">ge</a>.<a class="code" href="struct_skilful_1_1_grafic__elements.html#a91b6494a1d4c05fbc4dabe14e69f42b8">dt</a> = <a class="code" href="namespace_chart_v2.html#a3016ec0960f22b0b8806b6cab3839e48">DrawingTool</a>.VerticalLine;
+<a name="l00107"></a>00107                                 <a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">ge</a>.<a class="code" href="struct_skilful_1_1_grafic__elements.html#a9f933c4d69051547a0b4723d9c426eb1">IntPt1</a> = c.plot.graphToolsToDrawList[d].IntPt1;
+<a name="l00108"></a>00108                                 <a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">ge</a>.<a class="code" href="struct_skilful_1_1_grafic__elements.html#aee41e4f883f58b7d85946f67cc0f2780">IntPt2</a> = c.plot.graphToolsToDrawList[d].IntPt2;
+<a name="l00109"></a>00109                                 <a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">ge</a>.<a class="code" href="struct_skilful_1_1_grafic__elements.html#a9d8309687678e6fd63e0ca6253cf5df5">penstr</a> = c.plot.graphToolsToDrawList[d].style.pen.Color;
+<a name="l00110"></a>00110                                 <a class="code" href="class_skilful_1_1_save.html#a3c7e0f45741c77ac0ae8e1452e0bb896">lse</a>.Add(<a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">ge</a>);
+<a name="l00111"></a>00111                                 <span class="keywordflow">break</span>;
+<a name="l00112"></a>00112                             <span class="keywordflow">case</span> <a class="code" href="namespace_chart_v2.html#a3016ec0960f22b0b8806b6cab3839e48">DrawingTool</a>.FreeLine:
+<a name="l00113"></a>00113                                 <a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">ge</a>.<a class="code" href="struct_skilful_1_1_grafic__elements.html#a91b6494a1d4c05fbc4dabe14e69f42b8">dt</a> = <a class="code" href="namespace_chart_v2.html#a3016ec0960f22b0b8806b6cab3839e48">DrawingTool</a>.FreeLine;
+<a name="l00114"></a>00114                                 <a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">ge</a>.<a class="code" href="struct_skilful_1_1_grafic__elements.html#addffccdf3774fdb9a9fb9677c4f3429d">pf1</a> = c.plot.graphToolsToDrawList[d].pt1;
+<a name="l00115"></a>00115                                 <a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">ge</a>.<a class="code" href="struct_skilful_1_1_grafic__elements.html#a9bf642e627ad1da378a2e42a8c390339">pf2</a> = c.plot.graphToolsToDrawList[d].pt2;
+<a name="l00116"></a>00116                                 <a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">ge</a>.<a class="code" href="struct_skilful_1_1_grafic__elements.html#a82f92d83e7570bb9b53748c1141aade1">Ext</a> = c.plot.graphToolsToDrawList[d].style.extensionType;
+<a name="l00117"></a>00117                                 <a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">ge</a>.<a class="code" href="struct_skilful_1_1_grafic__elements.html#a9d8309687678e6fd63e0ca6253cf5df5">penstr</a> = c.plot.graphToolsToDrawList[d].style.pen.Color;
+<a name="l00118"></a>00118                                 <a class="code" href="class_skilful_1_1_save.html#a3c7e0f45741c77ac0ae8e1452e0bb896">lse</a>.Add(<a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">ge</a>);
+<a name="l00119"></a>00119                                 <span class="keywordflow">break</span>;
+<a name="l00120"></a>00120                             <span class="keywordflow">case</span> <a class="code" href="namespace_chart_v2.html#a3016ec0960f22b0b8806b6cab3839e48">DrawingTool</a>.Cycles:
+<a name="l00121"></a>00121                                 <a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">ge</a>.<a class="code" href="struct_skilful_1_1_grafic__elements.html#a91b6494a1d4c05fbc4dabe14e69f42b8">dt</a> = <a class="code" href="namespace_chart_v2.html#a3016ec0960f22b0b8806b6cab3839e48">DrawingTool</a>.Cycles;
+<a name="l00122"></a>00122                                 <a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">ge</a>.<a class="code" href="struct_skilful_1_1_grafic__elements.html#addffccdf3774fdb9a9fb9677c4f3429d">pf1</a> = c.plot.graphToolsToDrawList[d].pt1;
+<a name="l00123"></a>00123                                 <a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">ge</a>.<a class="code" href="struct_skilful_1_1_grafic__elements.html#a9bf642e627ad1da378a2e42a8c390339">pf2</a> = c.plot.graphToolsToDrawList[d].pt2;
+<a name="l00124"></a>00124                                 <a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">ge</a>.<a class="code" href="struct_skilful_1_1_grafic__elements.html#a9d8309687678e6fd63e0ca6253cf5df5">penstr</a> = c.plot.graphToolsToDrawList[d].style.pen.Color;
+<a name="l00125"></a>00125                                 <a class="code" href="class_skilful_1_1_save.html#a3c7e0f45741c77ac0ae8e1452e0bb896">lse</a>.Add(<a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">ge</a>);
+<a name="l00126"></a>00126                                 <span class="keywordflow">break</span>;
+<a name="l00127"></a>00127                             <span class="keywordflow">case</span> <a class="code" href="namespace_chart_v2.html#a3016ec0960f22b0b8806b6cab3839e48">DrawingTool</a>.Circle:
+<a name="l00128"></a>00128                                 <a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">ge</a>.<a class="code" href="struct_skilful_1_1_grafic__elements.html#a91b6494a1d4c05fbc4dabe14e69f42b8">dt</a> = <a class="code" href="namespace_chart_v2.html#a3016ec0960f22b0b8806b6cab3839e48">DrawingTool</a>.Circle;
+<a name="l00129"></a>00129                                 <a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">ge</a>.<a class="code" href="struct_skilful_1_1_grafic__elements.html#addffccdf3774fdb9a9fb9677c4f3429d">pf1</a> = c.plot.graphToolsToDrawList[d].pt1;
+<a name="l00130"></a>00130                                 <a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">ge</a>.<a class="code" href="struct_skilful_1_1_grafic__elements.html#a9bf642e627ad1da378a2e42a8c390339">pf2</a> = c.plot.graphToolsToDrawList[d].pt2;
+<a name="l00131"></a>00131                                 <a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">ge</a>.<a class="code" href="struct_skilful_1_1_grafic__elements.html#a479d8ff771455b659f488bbe6221addf">pf3</a> = c.plot.graphToolsToDrawList[d].pt3;
+<a name="l00132"></a>00132                                 <a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">ge</a>.<a class="code" href="struct_skilful_1_1_grafic__elements.html#a5f1ffff763ea332f2aebf5a4a116b686">pf4</a> = c.plot.graphToolsToDrawList[d].pt4;
+<a name="l00133"></a>00133                                 <a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">ge</a>.<a class="code" href="struct_skilful_1_1_grafic__elements.html#a9d8309687678e6fd63e0ca6253cf5df5">penstr</a> = c.plot.graphToolsToDrawList[d].style.pen.Color;
+<a name="l00134"></a>00134                                 <a class="code" href="class_skilful_1_1_save.html#a3c7e0f45741c77ac0ae8e1452e0bb896">lse</a>.Add(<a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">ge</a>);
+<a name="l00135"></a>00135                                 <span class="keywordflow">break</span>;
+<a name="l00136"></a>00136                             <span class="keywordflow">case</span> <a class="code" href="namespace_chart_v2.html#a3016ec0960f22b0b8806b6cab3839e48">DrawingTool</a>.Arc:
+<a name="l00137"></a>00137                                 <a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">ge</a>.<a class="code" href="struct_skilful_1_1_grafic__elements.html#a91b6494a1d4c05fbc4dabe14e69f42b8">dt</a> = <a class="code" href="namespace_chart_v2.html#a3016ec0960f22b0b8806b6cab3839e48">DrawingTool</a>.Arc;
+<a name="l00138"></a>00138                                 <a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">ge</a>.<a class="code" href="struct_skilful_1_1_grafic__elements.html#addffccdf3774fdb9a9fb9677c4f3429d">pf1</a> = c.plot.graphToolsToDrawList[d].pt1;
+<a name="l00139"></a>00139                                 <a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">ge</a>.<a class="code" href="struct_skilful_1_1_grafic__elements.html#a9bf642e627ad1da378a2e42a8c390339">pf2</a> = c.plot.graphToolsToDrawList[d].pt2;
+<a name="l00140"></a>00140                                 <a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">ge</a>.<a class="code" href="struct_skilful_1_1_grafic__elements.html#a479d8ff771455b659f488bbe6221addf">pf3</a> = c.plot.graphToolsToDrawList[d].pt3;
+<a name="l00141"></a>00141                                 <a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">ge</a>.<a class="code" href="struct_skilful_1_1_grafic__elements.html#a5f1ffff763ea332f2aebf5a4a116b686">pf4</a> = c.plot.graphToolsToDrawList[d].pt4;
+<a name="l00142"></a>00142                                 <a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">ge</a>.<a class="code" href="struct_skilful_1_1_grafic__elements.html#a9d8309687678e6fd63e0ca6253cf5df5">penstr</a> = c.plot.graphToolsToDrawList[d].style.pen.Color;
+<a name="l00143"></a>00143                                 <a class="code" href="class_skilful_1_1_save.html#a3c7e0f45741c77ac0ae8e1452e0bb896">lse</a>.Add(<a class="code" href="class_skilful_1_1_save.html#aa0623aa5e6bb2220755cf2ae0f02f04f">ge</a>);
+<a name="l00144"></a>00144                                 <span class="keywordflow">break</span>;
+<a name="l00145"></a>00145 
+<a name="l00146"></a>00146                         }
+<a name="l00147"></a>00147                 <span class="keywordflow">if</span> (!c.ModelListExist) { <a class="code" href="class_skilful_1_1_save.html#acb03954700cb406ae4af428de8198415">Chart_selectedModelIndexes</a>.Add(<span class="keyword">new</span> <span class="keywordtype">int</span>[1]{ -1 }); <span class="keywordflow">continue</span>; }
+<a name="l00148"></a>00148                 <span class="keywordflow">for</span> (<span class="keywordtype">int</span> b = 0; b &lt; c.plot.modelsToDrawList.Count; b++)
+<a name="l00149"></a>00149                    <span class="keywordflow">if</span> (c.plot.modelsToDrawList[b].IsSelected)
+<a name="l00150"></a>00150                            ch.Add(b);
+<a name="l00151"></a>00151                 <span class="keywordflow">if</span> (ch.Count == 0) { <a class="code" href="class_skilful_1_1_save.html#acb03954700cb406ae4af428de8198415">Chart_selectedModelIndexes</a>.Add(<span class="keyword">new</span> <span class="keywordtype">int</span>[1] { -1 }); <span class="keywordflow">continue</span>; }
+<a name="l00152"></a>00152                 ch_ = <span class="keyword">new</span> <span class="keywordtype">int</span> [ch.Count];
+<a name="l00153"></a>00153                 <span class="keywordflow">for</span> (<span class="keywordtype">int</span> a = 0; a &lt; ch.Count; a++)
+<a name="l00154"></a>00154                     ch_[a] = ch[a];
+<a name="l00155"></a>00155                 <a class="code" href="class_skilful_1_1_save.html#acb03954700cb406ae4af428de8198415">Chart_selectedModelIndexes</a>.Add(ch_);
+<a name="l00156"></a>00156                 ch.Clear();
+<a name="l00157"></a>00157              
+<a name="l00158"></a>00158              }
+<a name="l00159"></a>00159         }
+<a name="l00160"></a>00160     }
+<a name="l00161"></a>00161 }
+</pre></div></div>
+</div>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Перечисления</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&nbsp;</span>Свойства</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&nbsp;</span>События</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

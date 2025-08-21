@@ -1,0 +1,501 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Skilful: Исходный файл Skilful/Data/DataSourceLibraries/mt4proxy/mt4prx.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javaScript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Создано системой Doxygen 1.7.1 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+--></script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пакеты</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="dirs.html"><span>Алфавитный&nbsp;указатель&nbsp;директорий</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath">
+    <ul>
+      <li><a class="el" href="dir_7adcdc1edff7620168fbc20357cad448.html">Skilful</a>      </li>
+      <li><a class="el" href="dir_c777626736fbbff11bce263deda591b3.html">Data</a>      </li>
+      <li><a class="el" href="dir_647839cbd444298f9ebd82118acdfd67.html">DataSourceLibraries</a>      </li>
+      <li><a class="el" href="dir_15d5f780d910b0e2f937f877c0ea9453.html">mt4proxy</a>      </li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<h1>mt4prx.cs</h1>  </div>
+</div>
+<div class="contents">
+<a href="mt4prx_8cs.html">См. документацию.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 ﻿<span class="comment">//---------------------------------------------------------------------------------------------------------------</span>
+<a name="l00002"></a>00002 <span class="comment">// Skilful. Tactica Adversa graphic and analysis tool.</span>
+<a name="l00003"></a>00003 <span class="comment">// Copyright (C) 2010 &quot;...&quot;, Andrey Zyablitsev (skat)</span>
+<a name="l00004"></a>00004 <span class="comment">//</span>
+<a name="l00005"></a>00005 <span class="comment">// This program is free software; you can redistribute it and/or</span>
+<a name="l00006"></a>00006 <span class="comment">// modify it under the terms of the GNU General Public License</span>
+<a name="l00007"></a>00007 <span class="comment">// as published by the Free Software Foundation; either version 2</span>
+<a name="l00008"></a>00008 <span class="comment">// of the License, or (at your option) any later version.</span>
+<a name="l00009"></a>00009 <span class="comment">//</span>
+<a name="l00010"></a>00010 <span class="comment">// This program is distributed in the hope that it will be useful,</span>
+<a name="l00011"></a>00011 <span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<a name="l00012"></a>00012 <span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<a name="l00013"></a>00013 <span class="comment">// GNU General Public License for more details.</span>
+<a name="l00014"></a>00014 <span class="comment">//</span>
+<a name="l00015"></a>00015 <span class="comment">// You should have received a copy of the GNU General Public License</span>
+<a name="l00016"></a>00016 <span class="comment">// along with this program; if not, write to the Free Software</span>
+<a name="l00017"></a>00017 <span class="comment">// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</span>
+<a name="l00018"></a>00018 <span class="comment">//</span>
+<a name="l00019"></a>00019 <span class="comment">// mail: support@protoforma.com </span>
+<a name="l00020"></a>00020 <span class="comment">//---------------------------------------------------------------------------------------------------------------</span>
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022 
+<a name="l00023"></a>00023 <span class="keyword">using</span> System;
+<a name="l00024"></a>00024 <span class="keyword">using</span> System.IO;
+<a name="l00025"></a>00025 <span class="keyword">using</span> System.Collections;
+<a name="l00026"></a>00026 <span class="keyword">using</span> System.Collections.Generic;
+<a name="l00027"></a>00027 <span class="keyword">using</span> System.Text;
+<a name="l00028"></a>00028 <span class="keyword">using</span> System.Reflection;
+<a name="l00029"></a>00029 <span class="keyword">using</span> System.Threading;
+<a name="l00030"></a>00030 <span class="keyword">using</span> System.ComponentModel;
+<a name="l00031"></a>00031 <span class="keyword">using</span> Microsoft.Win32;
+<a name="l00032"></a>00032 
+<a name="l00033"></a>00033 <span class="keyword">namespace </span>Skilful.Data
+<a name="l00034"></a>00034 {
+<a name="l00035"></a><a class="code" href="namespace_skilful_1_1_data.html#a8184817815af475bdb725292d9eb7c51">00035</a>     <span class="keyword">enum</span> <a class="code" href="namespace_skilful_1_1_data.html#a8184817815af475bdb725292d9eb7c51">LoginType</a> { SelectFile, SelectFolder, SetIPLoginPassword, UserDefined }
+<a name="l00036"></a>00036     <span class="keyword">public</span> <span class="keyword">class </span>DataSourceClass
+<a name="l00037"></a>00037     {
+<a name="l00038"></a>00038         <span class="keyword">const</span> <span class="keywordtype">string</span> ModuleName = <span class="stringliteral">&quot;MT4&quot;</span>;
+<a name="l00039"></a>00039         <span class="comment">//загрузка информации о модуле</span>
+<a name="l00040"></a><a class="code" href="class_skilful_1_1_data_1_1_data_source_class.html#a39ecd4f9e2b7604d6fae72f08b0c842a">00040</a>         <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> init(<span class="keywordtype">char</span>[] module_name, <span class="keywordtype">char</span>[] prompt, <span class="keywordtype">char</span>[] description, <span class="keywordtype">int</span>[] login_type)
+<a name="l00041"></a>00041         {
+<a name="l00042"></a>00042             strcpy(ModuleName, module_name);
+<a name="l00043"></a>00043             strcpy(<span class="stringliteral">&quot;Select MT4 csv-output folder&quot;</span>, prompt);
+<a name="l00044"></a>00044             <span class="comment">//using this string as file mask</span>
+<a name="l00045"></a>00045             strcpy(<span class="stringliteral">&quot;MT4 text files (*60.csv; *60.prn)|*_60_history.prn;*60.prn;*60.csv|MT4 text files (*60.csv)|*60.csv|MT4 text files (*60.prn)|*60.prn&quot;</span>, description);
+<a name="l00046"></a>00046             login_type[0] = (int) <a class="code" href="namespace_skilful_1_1_data.html#a8184817815af475bdb725292d9eb7c51">LoginType</a>.SelectFolder;
+<a name="l00047"></a>00047         }
+<a name="l00048"></a>00048         <span class="comment">//преобразование строки содержащей значение типа double в число double</span>
+<a name="l00049"></a>00049         <span class="keyword">static</span> <span class="keywordtype">double</span> a2f(<span class="keywordtype">string</span> s)
+<a name="l00050"></a>00050         {
+<a name="l00051"></a>00051             <span class="keywordtype">string</span>[] dbl = s.Split(<span class="charliteral">&#39;.&#39;</span>);
+<a name="l00052"></a>00052             <span class="keywordtype">double</span> val = <span class="keywordtype">int</span>.Parse(dbl[0]);
+<a name="l00053"></a>00053             <span class="keywordflow">if</span> (dbl.Length == 2) val += <span class="keywordtype">int</span>.Parse(dbl[1]) / Math.Pow(10, dbl[1].Length);
+<a name="l00054"></a>00054             <span class="keywordflow">return</span> val;
+<a name="l00055"></a>00055         }
+<a name="l00056"></a><a class="code" href="class_skilful_1_1_data_1_1_data_source_class.html#af8a1cf3a03f1a5a2fd7e138acc3e977b">00056</a>         <span class="keyword">public</span> <span class="keyword">enum</span> <a class="code" href="class_skilful_1_1_data_1_1_data_source_class.html#af8a1cf3a03f1a5a2fd7e138acc3e977b">colname</a> { ticker, date, time, open, high, low, close, count };
+<a name="l00057"></a><a class="code" href="class_skilful_1_1_data_1_1_data_source_class.html#a241fc9d8f089b9cf41d18ac8bc9294f1">00057</a>         <span class="keyword">public</span> <span class="keyword">enum</span> <a class="code" href="class_skilful_1_1_data_1_1_data_source_class.html#a241fc9d8f089b9cf41d18ac8bc9294f1">Q</a> { T, O, H, L, C };
+<a name="l00058"></a>00058         <span class="comment">//enum TF { m1, m5, m15, m30, m60, m240, Day, Week, Month, Quarter, Year };</span>
+<a name="l00059"></a>00059         <span class="keyword">enum</span> <a class="code" href="namespacertservice.html#aba4d693ff4feace372fd12fcec2bda3b">TF</a> {m60, m240, Day, Week, Month, Quarter, Year };
+<a name="l00060"></a>00060         <span class="keyword">static</span> <span class="keywordtype">string</span> tf2str(<span class="keywordtype">int</span> tf)
+<a name="l00061"></a>00061         {
+<a name="l00062"></a>00062             <span class="comment">//return string.Format(&quot;{0:d}&quot;, tf2i(tf));</span>
+<a name="l00063"></a>00063             <span class="keywordflow">return</span> tf2i(tf).ToString();
+<a name="l00064"></a>00064         }
+<a name="l00065"></a>00065         <span class="keyword">static</span> <span class="keywordtype">int</span> tf2i(<span class="keywordtype">int</span> tf)
+<a name="l00066"></a>00066         {
+<a name="l00067"></a>00067             <span class="keywordflow">switch</span> ((<a class="code" href="namespacertservice.html#aba4d693ff4feace372fd12fcec2bda3b">TF</a>)tf)
+<a name="l00068"></a>00068             {
+<a name="l00069"></a>00069                 <span class="keywordflow">case</span> <a class="code" href="namespacertservice.html#aba4d693ff4feace372fd12fcec2bda3b">TF</a>.m60: <span class="keywordflow">return</span> 60;
+<a name="l00070"></a>00070                 <span class="keywordflow">case</span> <a class="code" href="namespacertservice.html#aba4d693ff4feace372fd12fcec2bda3b">TF</a>.m240: <span class="keywordflow">return</span> 240;
+<a name="l00071"></a>00071                 <span class="keywordflow">case</span> <a class="code" href="namespacertservice.html#aba4d693ff4feace372fd12fcec2bda3b">TF</a>.Day: <span class="keywordflow">return</span> 1440;
+<a name="l00072"></a>00072                 <span class="keywordflow">case</span> <a class="code" href="namespacertservice.html#aba4d693ff4feace372fd12fcec2bda3b">TF</a>.Week: <span class="keywordflow">return</span> 10080;
+<a name="l00073"></a>00073                 <span class="keywordflow">case</span> <a class="code" href="namespacertservice.html#aba4d693ff4feace372fd12fcec2bda3b">TF</a>.Month: <span class="keywordflow">return</span> 43200;
+<a name="l00074"></a>00074                 <span class="keywordflow">default</span>: <span class="keywordflow">return</span> 60;
+<a name="l00075"></a>00075             }
+<a name="l00076"></a>00076         }
+<a name="l00077"></a>00077         <span class="comment">//путь по умолчанию для локальной БД</span>
+<a name="l00078"></a>00078         <span class="comment">//static string StoragePath = &quot;&quot;;</span>
+<a name="l00079"></a><a class="code" href="class_skilful_1_1_data_1_1_data_source_class.html#a2976386ad56013c462530e23408bd7f1">00079</a>         <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> storagePath(<span class="keywordtype">char</span>[] path)
+<a name="l00080"></a>00080         {
+<a name="l00081"></a>00081             <span class="comment">//временно отключено, пока не будет готова опциональное отключение</span>
+<a name="l00082"></a>00082             <span class="keywordflow">return</span>;
+<a name="l00083"></a>00083 
+<a name="l00084"></a>00084             <span class="comment">//if (path[0] == &#39;\0&#39;) //get</span>
+<a name="l00085"></a>00085             <span class="comment">//{</span>
+<a name="l00086"></a>00086             <span class="comment">//    strcpy(StoragePath, path);</span>
+<a name="l00087"></a>00087             <span class="comment">//}</span>
+<a name="l00088"></a>00088             <span class="comment">//else //set</span>
+<a name="l00089"></a>00089             <span class="comment">//{</span>
+<a name="l00090"></a>00090             <span class="comment">//    StoragePath = new string(path, 0, path.Length);</span>
+<a name="l00091"></a>00091             <span class="comment">//}</span>
+<a name="l00092"></a>00092         }
+<a name="l00093"></a>00093 
+<a name="l00094"></a>00094         <span class="keyword">static</span> <span class="keywordtype">string</span> suffix = <span class="keyword">new</span> string(<span class="charliteral">&#39; &#39;</span>, 60), folder_path;
+<a name="l00096"></a>00096         MethodInfo ticksreceiver, barsreceiver;
+<a name="l00097"></a>00097         BackgroundWorker bglistener = null;
+<a name="l00098"></a>00098         <span class="comment">//System.Diagnostics.Process rtserver;</span>
+<a name="l00099"></a>00099         <span class="comment">//frcvr rcvr;</span>
+<a name="l00100"></a>00100 
+<a name="l00101"></a><a class="code" href="class_skilful_1_1_data_1_1_data_source_class.html#a113aeeb30a2d4e1979358f1b31ca343e">00101</a>         <span class="keyword">public</span> <span class="keywordtype">void</span> SetTickHandler(<span class="keywordtype">string</span> sym<span class="comment">/*frcvr rcvr*/</span>)
+<a name="l00102"></a>00102 
+<a name="l00103"></a>00103         {
+<a name="l00104"></a>00104             <span class="keywordflow">if</span> (bglistener == null)
+<a name="l00105"></a>00105             {
+<a name="l00106"></a>00106                 <span class="keywordflow">try</span>
+<a name="l00107"></a>00107                 {
+<a name="l00108"></a>00108                     ticksreceiver = Assembly.LoadFrom(<span class="stringliteral">&quot;Skilful.exe&quot;</span>).GetType(<span class="stringliteral">&quot;Skilful.QuotesManager.MDataManager&quot;</span>).GetMethod(<span class="stringliteral">&quot;RecieveNewTick&quot;</span>);
+<a name="l00109"></a>00109                     barsreceiver = Assembly.LoadFrom(<span class="stringliteral">&quot;Skilful.exe&quot;</span>).GetType(<span class="stringliteral">&quot;Skilful.QuotesManager.MDataManager&quot;</span>).GetMethod(<span class="stringliteral">&quot;RecieveNewBar&quot;</span>);
+<a name="l00110"></a>00110                 }
+<a name="l00111"></a>00111                 <span class="keywordflow">catch</span> (Exception e)
+<a name="l00112"></a>00112                 {
+<a name="l00113"></a>00113                     Console.WriteLine(<span class="stringliteral">&quot;mt4txt.SetTickHandler: can not load Skilful.exe&quot;</span>);
+<a name="l00114"></a>00114                     Console.WriteLine(e.Message);
+<a name="l00115"></a>00115                 }
+<a name="l00116"></a>00116             }
+<a name="l00117"></a>00117         }
+<a name="l00119"></a>00119 
+<a name="l00121"></a><a class="code" href="class_skilful_1_1_data_1_1_data_source_class.html#a18f860c3932316d8a398be2098b71509">00121</a>         <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <span class="keyword">import</span>(<span class="keywordtype">string</span> symbol_name, <span class="keywordtype">int</span> period, <span class="keywordtype">int</span> shift, <span class="keywordtype">int</span>[] _len, <span class="keywordtype">double</span>[] quotes)
+<a name="l00122"></a>00122         {
+<a name="l00123"></a>00123             <span class="keywordtype">int</span> len = _len[0];
+<a name="l00124"></a>00124             <span class="keywordtype">string</span> filepath = folder_path + <span class="stringliteral">&quot;\\&quot;</span> + symbol_name + tf2str(period) + suffix.Substring(suffix.IndexOf(<span class="stringliteral">&quot;.&quot;</span>));
+<a name="l00125"></a>00125             <span class="keywordtype">int</span> startdate = 0;
+<a name="l00126"></a>00126             <span class="keywordflow">if</span>(shift &gt; 10000000)
+<a name="l00127"></a>00127             {
+<a name="l00128"></a>00128                 startdate = shift;
+<a name="l00129"></a>00129                 shift=0;
+<a name="l00130"></a>00130             }
+<a name="l00131"></a>00131 
+<a name="l00132"></a>00132             StreamReader sr;
+<a name="l00133"></a>00133             <span class="keywordflow">try</span> { sr = File.OpenText(filepath); }
+<a name="l00134"></a>00134             <span class="keywordflow">catch</span> {
+<a name="l00135"></a>00135                 Console.WriteLine(<span class="stringliteral">&quot;mt4txt.import: can not load&quot;</span>+filepath);
+<a name="l00136"></a>00136                 <span class="keywordflow">return</span>;
+<a name="l00137"></a>00137             }
+<a name="l00138"></a>00138 
+<a name="l00139"></a>00139             <span class="keywordflow">if</span> (suffix.IndexOf(<span class="stringliteral">&quot;.prn&quot;</span>) &gt; 0)
+<a name="l00140"></a>00140             {
+<a name="l00141"></a>00141 
+<a name="l00142"></a>00142                 <span class="keywordtype">string</span> s = sr.ReadLine(); <span class="comment">//ignore first line with headers</span>
+<a name="l00143"></a>00143                 <span class="keywordflow">if</span>(s==null) <span class="keywordflow">return</span>;
+<a name="l00144"></a>00144 
+<a name="l00145"></a>00145                 <span class="comment">//forexite daily format</span>
+<a name="l00146"></a>00146                 <span class="keywordflow">if</span> (s.IndexOf(<span class="stringliteral">&quot;&lt;DT&quot;</span>) &gt;= 0    <span class="comment">// check for existings of all needed header values</span>
+<a name="l00147"></a>00147                 &amp;&amp; s.IndexOf(<span class="stringliteral">&quot;&lt;TIME&gt;&quot;</span>) &gt;= 0
+<a name="l00148"></a>00148                 &amp;&amp; s.IndexOf(<span class="stringliteral">&quot;&lt;OPEN&gt;&quot;</span>) &gt;= 0
+<a name="l00149"></a>00149                 &amp;&amp; s.IndexOf(<span class="stringliteral">&quot;&lt;HIGH&gt;&quot;</span>) &gt;= 0
+<a name="l00150"></a>00150                 &amp;&amp; s.IndexOf(<span class="stringliteral">&quot;&lt;LOW&gt;&quot;</span>) &gt;= 0
+<a name="l00151"></a>00151                 &amp;&amp; s.IndexOf(<span class="stringliteral">&quot;&lt;CLOSE&gt;&quot;</span>) &gt;= 0
+<a name="l00152"></a>00152                 &amp;&amp; s.IndexOf(<span class="stringliteral">&quot;&gt;,&lt;&quot;</span>) &gt;= 0) <span class="comment">// check for column delimiter &quot;,&quot;</span>
+<a name="l00153"></a>00153                 {
+<a name="l00154"></a>00154                     <span class="comment">//date parse</span>
+<a name="l00155"></a>00155                     <span class="keywordtype">int</span> start = s.IndexOf(<span class="stringliteral">&quot;&lt;DT&quot;</span>);
+<a name="l00156"></a>00156                     <span class="keywordtype">string</span> adate = s.Substring(start, s.IndexOf(<span class="charliteral">&#39;,&#39;</span>, start) - start);
+<a name="l00157"></a>00157                     s = s.Replace(adate, <span class="stringliteral">&quot;&lt;DATE&gt;&quot;</span>);
+<a name="l00158"></a>00158                     <span class="comment">//adate = adate.Substring(2); //get adate without &quot;DT&quot; prefix</span>
+<a name="l00159"></a>00159                     <span class="comment">//cols[colname.adate]</span>
+<a name="l00160"></a>00160                     <span class="keywordtype">int</span> i_year = adate.IndexOf(<span class="stringliteral">&quot;YYYY&quot;</span>) - 3; <span class="comment">//-3 == &#39;&lt;DT&#39;</span>
+<a name="l00161"></a>00161                     <span class="keywordtype">int</span> i_year_format = 4; <span class="comment">//long</span>
+<a name="l00162"></a>00162                     <span class="keywordflow">if</span> (i_year == -1)
+<a name="l00163"></a>00163                     {
+<a name="l00164"></a>00164                         i_year = adate.IndexOf(<span class="stringliteral">&quot;YY&quot;</span>) - 3;
+<a name="l00165"></a>00165                         i_year_format = 2; <span class="comment">//short</span>
+<a name="l00166"></a>00166                     }
+<a name="l00167"></a>00167                     <span class="keywordtype">int</span> i_day = adate.IndexOf(<span class="stringliteral">&quot;DD&quot;</span>) - 3;
+<a name="l00168"></a>00168                     <span class="keywordtype">int</span> i_month = adate.IndexOf(<span class="stringliteral">&quot;MM&quot;</span>) - 3;
+<a name="l00169"></a>00169                     <span class="comment">//default quotes can be without ticker specified</span>
+<a name="l00170"></a>00170                     <span class="keywordtype">int</span> date = 0, time = 0, open = 0, high = 0, low = 0, close = 0;
+<a name="l00171"></a>00171                     <span class="comment">//get hash of column indexes by headers</span>
+<a name="l00172"></a>00172                     <span class="keywordtype">string</span>[] cols = s.Split(<span class="charliteral">&#39;,&#39;</span>);
+<a name="l00173"></a>00173                     <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; cols.Length; i++)
+<a name="l00174"></a>00174                     {
+<a name="l00175"></a>00175                         <span class="keywordflow">switch</span> (cols[i])
+<a name="l00176"></a>00176                         {
+<a name="l00177"></a>00177                             <span class="keywordflow">case</span> <span class="stringliteral">&quot;&lt;DATE&gt;&quot;</span>: date = i; <span class="keywordflow">break</span>;
+<a name="l00178"></a>00178                             <span class="keywordflow">case</span> <span class="stringliteral">&quot;&lt;TIME&gt;&quot;</span>: time = i; <span class="keywordflow">break</span>;
+<a name="l00179"></a>00179                             <span class="keywordflow">case</span> <span class="stringliteral">&quot;&lt;OPEN&gt;&quot;</span>: open = i; <span class="keywordflow">break</span>;
+<a name="l00180"></a>00180                             <span class="keywordflow">case</span> <span class="stringliteral">&quot;&lt;HIGH&gt;&quot;</span>: high = i; <span class="keywordflow">break</span>;
+<a name="l00181"></a>00181                             <span class="keywordflow">case</span> <span class="stringliteral">&quot;&lt;LOW&gt;&quot;</span>: low = i; <span class="keywordflow">break</span>;
+<a name="l00182"></a>00182                             <span class="keywordflow">case</span> <span class="stringliteral">&quot;&lt;CLOSE&gt;&quot;</span>: close = i; <span class="keywordflow">break</span>;
+<a name="l00183"></a>00183                         }
+<a name="l00184"></a>00184                     }
+<a name="l00185"></a>00185                     <span class="keywordtype">int</span> qi = 0, cnt = 0;
+<a name="l00186"></a>00186                     <span class="keywordtype">string</span> line;
+<a name="l00187"></a>00187                     <span class="keywordflow">while</span> ((line = sr.ReadLine()) != null)
+<a name="l00188"></a>00188                     {
+<a name="l00189"></a>00189                         <span class="comment">//проверка переполнения выходного массива</span>
+<a name="l00190"></a>00190                         <span class="keywordflow">if</span> ((qi + 5) &gt; quotes.Length) <span class="keywordflow">break</span>;
+<a name="l00191"></a>00191                         <span class="comment">//проверка диапазона</span>
+<a name="l00192"></a>00192                         <span class="keywordflow">if</span> (shift &gt; 0 &amp;&amp; shift &gt; cnt++) <span class="keywordflow">continue</span>;
+<a name="l00193"></a>00193                         <span class="keywordflow">if</span> (len &gt; 0 &amp;&amp; len + shift &lt; cnt) <span class="keywordflow">break</span>;
+<a name="l00197"></a>00197 
+<a name="l00198"></a>00198                         <span class="comment">//сборка бара</span>
+<a name="l00199"></a>00199                         cols = line.Split(<span class="charliteral">&#39;,&#39;</span>);
+<a name="l00200"></a>00200                         <span class="keywordflow">if</span> (cols.Length &lt; 6) <span class="keywordflow">continue</span>;
+<a name="l00201"></a>00201 
+<a name="l00202"></a>00202                         <span class="comment">//date</span>
+<a name="l00203"></a>00203                         <span class="keywordtype">int</span> year = <span class="keywordtype">int</span>.Parse(cols[date].Substring(i_year, i_year_format));
+<a name="l00204"></a>00204                         <span class="keywordtype">int</span> month = <span class="keywordtype">int</span>.Parse(cols[date].Substring(i_month, 2));
+<a name="l00205"></a>00205                         <span class="keywordtype">int</span> day = <span class="keywordtype">int</span>.Parse(cols[date].Substring(i_day, 2));
+<a name="l00206"></a>00206                         <span class="comment">//time</span>
+<a name="l00207"></a>00207                         <span class="keywordtype">int</span> hour = <span class="keywordtype">int</span>.Parse(cols[time].Substring(0, 2)) * 60 * 60;
+<a name="l00208"></a>00208                         <span class="keywordtype">int</span> minute = <span class="keywordtype">int</span>.Parse(cols[time].Substring(2, 2)) * 60;
+<a name="l00209"></a>00209                         <span class="keywordtype">int</span> second = <span class="keywordtype">int</span>.Parse(cols[time].Substring(4, 2));
+<a name="l00210"></a>00210                         DateTime cdate = <span class="keyword">new</span> DateTime(year, month, day);
+<a name="l00211"></a>00211                         DateTime nuldate = <span class="keyword">new</span> DateTime(1970, 01, 01);
+<a name="l00212"></a>00212                         TimeSpan ts = cdate - nuldate;
+<a name="l00213"></a>00213                         <span class="keywordtype">int</span> ttime = ts.Days * 24 * 60 * 60 + hour + minute + second;
+<a name="l00214"></a>00214                         <span class="comment">//if (startdate &gt; ttime) continue;</span>
+<a name="l00215"></a>00215 
+<a name="l00216"></a>00216                         quotes[qi++] = ttime;
+<a name="l00217"></a>00217                         quotes[qi++] = a2f(cols[open]);
+<a name="l00218"></a>00218                         quotes[qi++] = a2f(cols[high]);
+<a name="l00219"></a>00219                         quotes[qi++] = a2f(cols[low]);
+<a name="l00220"></a>00220                         quotes[qi++] = a2f(cols[close]);
+<a name="l00221"></a>00221                     }
+<a name="l00222"></a>00222                 }
+<a name="l00223"></a>00223                 sr.Close();
+<a name="l00224"></a>00224             }
+<a name="l00225"></a>00225             <span class="keywordflow">else</span> <span class="keywordflow">if</span> (suffix.IndexOf(<span class="stringliteral">&quot;.csv&quot;</span>) &gt; 0)
+<a name="l00226"></a>00226             {
+<a name="l00227"></a>00227                 <span class="comment">//.csv format have not header line</span>
+<a name="l00228"></a>00228                 <span class="comment">//read first line</span>
+<a name="l00229"></a>00229                 <span class="keywordtype">int</span> i_year = 0;
+<a name="l00230"></a>00230                 <span class="keywordtype">int</span> i_year_format = 4; <span class="comment">//long</span>
+<a name="l00231"></a>00231                 <span class="keywordtype">int</span> i_day = 8;
+<a name="l00232"></a>00232                 <span class="keywordtype">int</span> i_month = 5;
+<a name="l00233"></a>00233                 <span class="keywordtype">int</span> date = 0, time = 1, open = 2, high = 3, low = 4, close = 5;
+<a name="l00234"></a>00234                 <span class="keywordtype">int</span> qi = 0, cnt = 0;
+<a name="l00235"></a>00235                 <span class="keywordtype">string</span> line;
+<a name="l00236"></a>00236                 <span class="keywordflow">while</span> ((line = sr.ReadLine()) != null)
+<a name="l00237"></a>00237                 {
+<a name="l00238"></a>00238                     <span class="comment">//проверка переполнения выходного массива</span>
+<a name="l00239"></a>00239                     <span class="keywordflow">if</span> ((qi + 5) &gt; quotes.Length) <span class="keywordflow">break</span>;
+<a name="l00240"></a>00240                     <span class="comment">//проверка диапазона</span>
+<a name="l00241"></a>00241                     <span class="keywordflow">if</span> (shift &gt; 0 &amp;&amp; shift &gt; cnt++) <span class="keywordflow">continue</span>;
+<a name="l00242"></a>00242                     <span class="keywordflow">if</span> (len &gt; 0 &amp;&amp; (len + shift) &lt; cnt) <span class="keywordflow">break</span>;
+<a name="l00246"></a>00246 
+<a name="l00247"></a>00247                     <span class="comment">//сборка бара</span>
+<a name="l00248"></a>00248                     <span class="keywordtype">string</span>[] cols = line.Split(<span class="charliteral">&#39;,&#39;</span>);
+<a name="l00249"></a>00249                     <span class="keywordflow">if</span> (cols.Length &lt; 6) <span class="keywordflow">continue</span>;
+<a name="l00250"></a>00250 
+<a name="l00251"></a>00251                     <span class="comment">//date</span>
+<a name="l00252"></a>00252                     <span class="keywordtype">int</span> year = <span class="keywordtype">int</span>.Parse(cols[date].Substring(i_year, i_year_format));
+<a name="l00253"></a>00253                     <span class="keywordtype">int</span> month = <span class="keywordtype">int</span>.Parse(cols[date].Substring(i_month, 2));
+<a name="l00254"></a>00254                     <span class="keywordtype">int</span> day = <span class="keywordtype">int</span>.Parse(cols[date].Substring(i_day, 2));
+<a name="l00255"></a>00255                     <span class="comment">//time</span>
+<a name="l00256"></a>00256                     <span class="keywordtype">int</span> hour = <span class="keywordtype">int</span>.Parse(cols[time].Substring(0, 2)) * 60 * 60;
+<a name="l00257"></a>00257                     <span class="keywordtype">int</span> minute = <span class="keywordtype">int</span>.Parse(cols[time].Substring(3, 2)) * 60;
+<a name="l00258"></a>00258                     DateTime cdate = <span class="keyword">new</span> DateTime(year, month, day);
+<a name="l00259"></a>00259                     DateTime nuldate = <span class="keyword">new</span> DateTime(1970, 01, 01);
+<a name="l00260"></a>00260                     TimeSpan ts = cdate - nuldate;
+<a name="l00261"></a>00261                     <span class="keywordtype">int</span> ttime = ts.Days * 24 * 60 * 60 + hour + minute;
+<a name="l00262"></a>00262                     <span class="keywordflow">if</span> (startdate &gt; ttime) <span class="keywordflow">continue</span>;
+<a name="l00263"></a>00263 
+<a name="l00264"></a>00264                     quotes[qi++] = ttime;
+<a name="l00265"></a>00265                     quotes[qi++] = a2f(cols[open]);
+<a name="l00266"></a>00266                     quotes[qi++] = a2f(cols[high]);
+<a name="l00267"></a>00267                     quotes[qi++] = a2f(cols[low]);
+<a name="l00268"></a>00268                     quotes[qi++] = a2f(cols[close]);
+<a name="l00269"></a>00269                 }
+<a name="l00270"></a>00270                 sr.Close();
+<a name="l00271"></a>00271                 sr.Dispose();
+<a name="l00272"></a>00272             }
+<a name="l00273"></a>00273         }
+<a name="l00274"></a>00274         <span class="keyword">static</span> <span class="keywordtype">void</span> strcpy(<span class="keywordtype">string</span> s, <span class="keywordtype">char</span>[] d)
+<a name="l00275"></a>00275         {
+<a name="l00276"></a>00276             <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; s.Length; i++)
+<a name="l00277"></a>00277             {
+<a name="l00278"></a>00278                 d[i] = s[i];
+<a name="l00279"></a>00279             }
+<a name="l00280"></a>00280             d[s.Length] = <span class="charliteral">&#39;\0&#39;</span>;
+<a name="l00281"></a>00281         }
+<a name="l00282"></a>00282 
+<a name="l00283"></a>00283         <span class="comment">//get list of symbol name, his period and length of quote_arrays for each symbol</span>
+<a name="l00284"></a><a class="code" href="class_skilful_1_1_data_1_1_data_source_class.html#a9bc03133f84d558ccc68194b1b0645c9">00284</a>         <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> get_symbol_list(<span class="keywordtype">string</span>[] symbols, <span class="keywordtype">int</span>[] period, <span class="keywordtype">int</span>[] len)
+<a name="l00285"></a>00285         {
+<a name="l00286"></a>00286             <span class="comment">//folder_path = folder_path.Substring(0, folder_path.LastIndexOf(&quot;\\&quot;));</span>
+<a name="l00287"></a>00287 
+<a name="l00288"></a>00288             <span class="keywordflow">try</span>
+<a name="l00289"></a>00289             {
+<a name="l00290"></a>00290                 DirectoryInfo di = <span class="keyword">new</span> DirectoryInfo(folder_path);
+<a name="l00291"></a>00291                 <span class="keywordflow">if</span> (di.Exists)
+<a name="l00292"></a>00292                 {
+<a name="l00293"></a>00293                     <span class="comment">//by default reads only hourly quotes</span>
+<a name="l00294"></a>00294                     FileInfo[] filelist = di.GetFiles(<span class="stringliteral">&quot;?*&quot;</span> + suffix);
+<a name="l00295"></a>00295                     
+<a name="l00296"></a>00296                     <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0, j=0; i&lt;filelist.Length; i++ )
+<a name="l00297"></a>00297                     {
+<a name="l00298"></a>00298                         <span class="keywordtype">string</span> filename = filelist[i].Name;
+<a name="l00299"></a>00299                         <span class="comment">//get symbol name</span>
+<a name="l00300"></a>00300                         symbols[j] = filename.Substring(0, filename.ToLower().IndexOf(suffix));
+<a name="l00301"></a>00301                         <span class="comment">//get symbol`s data length</span>
+<a name="l00302"></a>00302                         StreamReader sr;
+<a name="l00303"></a>00303                         <span class="keywordflow">try</span> {
+<a name="l00304"></a>00304                             sr = File.OpenText(filelist[i].FullName);
+<a name="l00305"></a>00305                             len[j] = suffix.IndexOf(<span class="stringliteral">&quot;.csv&quot;</span>) &gt;= 0 ? 0 : -1;<span class="comment">//one first line is extra, ///also one last line is extra -- it`s not full bar</span>
+<a name="l00306"></a>00306                             <span class="keywordtype">string</span> s;
+<a name="l00307"></a>00307                             <span class="keywordflow">while</span> ((s = sr.ReadLine()) != null) <span class="keywordflow">if</span> (s.Length &gt; 0) len[j]++;
+<a name="l00308"></a>00308                             <span class="comment">//set symbol frame</span>
+<a name="l00309"></a>00309                             period[j++] = 60;
+<a name="l00310"></a>00310                             sr.Close();
+<a name="l00311"></a>00311                         }
+<a name="l00312"></a>00312                         <span class="keywordflow">catch</span>(Exception e) {
+<a name="l00313"></a>00313                             Console.WriteLine(<span class="stringliteral">&quot;mt4txt.get_symbol_list: can not load&quot;</span> + filelist[i].FullName);
+<a name="l00314"></a>00314                                 Console.WriteLine(<span class="stringliteral">&quot;The process failed: {0}&quot;</span>, e.ToString());
+<a name="l00315"></a>00315                         }
+<a name="l00316"></a>00316                     }
+<a name="l00317"></a>00317                 }
+<a name="l00318"></a>00318             }
+<a name="l00319"></a>00319             <span class="keywordflow">catch</span> (Exception e)
+<a name="l00320"></a>00320             {
+<a name="l00321"></a>00321                 Console.WriteLine(<span class="stringliteral">&quot;The process failed: {0}&quot;</span>, e.ToString());
+<a name="l00322"></a>00322             }
+<a name="l00323"></a>00323             <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; len.Length; i++) <span class="keywordflow">if</span> (len[i] &lt; 0) len[i] = 0;
+<a name="l00324"></a>00324         }
+<a name="l00325"></a>00325 
+<a name="l00326"></a>00326         <span class="comment">//get list of symbol name, his period and length of quote_arrays for each symbol</span>
+<a name="l00327"></a><a class="code" href="class_skilful_1_1_data_1_1_data_source_class.html#aa31f28cf49c2418aab11f0bd84e3bb7d">00327</a>         <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> get_history_length(<span class="keywordtype">string</span> symbol, <span class="keywordtype">int</span> period, <span class="keywordtype">int</span>[] len)
+<a name="l00328"></a>00328         {
+<a name="l00329"></a>00329             <span class="keywordtype">string</span> filepath = folder_path + <span class="stringliteral">&quot;\\&quot;</span> + symbol + tf2str(period) + suffix.Substring(suffix.IndexOf(<span class="stringliteral">&quot;.&quot;</span>));
+<a name="l00330"></a>00330             len[0] = 0;
+<a name="l00331"></a>00331             <span class="keywordflow">if</span> (File.Exists(filepath))
+<a name="l00332"></a>00332             {
+<a name="l00333"></a>00333                 <span class="keywordflow">try</span>
+<a name="l00334"></a>00334                 {
+<a name="l00335"></a>00335                     StreamReader sr = File.OpenText(filepath);
+<a name="l00336"></a>00336                     
+<a name="l00337"></a>00337                     len[0] = suffix.IndexOf(<span class="stringliteral">&quot;.csv&quot;</span>)&gt;=0 ? 0 : -1;<span class="comment">//one first line is extra///, also one last line is extra -- it`s not full bar</span>
+<a name="l00338"></a>00338                     <span class="keywordtype">string</span> s;
+<a name="l00339"></a>00339                     <span class="keywordflow">while</span> ((s = sr.ReadLine()) != null) <span class="keywordflow">if</span> (s.Length &gt; 0) len[0]++;
+<a name="l00340"></a>00340                     sr.Close();
+<a name="l00341"></a>00341                 }
+<a name="l00342"></a>00342                 <span class="keywordflow">catch</span> (Exception e)
+<a name="l00343"></a>00343                 {
+<a name="l00344"></a>00344                     Console.WriteLine(<span class="stringliteral">&quot;mt4txt.get_history_length: can not load&quot;</span> + filepath);
+<a name="l00345"></a>00345                     Console.WriteLine(<span class="stringliteral">&quot;The process failed: {0}&quot;</span>, e.ToString());
+<a name="l00346"></a>00346                 }
+<a name="l00347"></a>00347             }
+<a name="l00348"></a>00348             <span class="keywordflow">if</span> (len[0] &lt; 0) len[0] = 0;
+<a name="l00349"></a>00349         }
+<a name="l00350"></a>00350 
+<a name="l00351"></a>00351         <span class="comment">//get count of existing symbols</span>
+<a name="l00352"></a><a class="code" href="class_skilful_1_1_data_1_1_data_source_class.html#ad36947c1e86ea892f312d0c89f3eb56b">00352</a>         <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> get_symbol_count(<span class="keywordtype">string</span> folderpath, <span class="keywordtype">int</span>[] count<span class="comment">/*, int period*/</span>)
+<a name="l00353"></a>00353         {
+<a name="l00354"></a>00354             folder_path = folderpath;
+<a name="l00355"></a>00355             <span class="keywordtype">string</span> tf = <span class="stringliteral">&quot;60&quot;</span>;
+<a name="l00356"></a>00356             count[0] = 0;
+<a name="l00357"></a>00357             <span class="keywordflow">try</span>
+<a name="l00358"></a>00358             {
+<a name="l00359"></a>00359                 DirectoryInfo di = <span class="keyword">new</span> DirectoryInfo(folder_path);
+<a name="l00360"></a>00360                 <span class="keywordflow">if</span> (di.Exists)
+<a name="l00361"></a>00361                 <span class="comment">//{</span>
+<a name="l00362"></a>00362                     <span class="comment">//by default reads only hourly quotes</span>
+<a name="l00363"></a>00363                     suffix = tf + (string)<span class="stringliteral">&quot;.csv&quot;</span>;
+<a name="l00364"></a>00364                     count[0] = di.GetFiles(<span class="stringliteral">&quot;?*&quot;</span> + suffix).Length;
+<a name="l00365"></a>00365                     <span class="keywordflow">if</span> (count[0] == 0)
+<a name="l00366"></a>00366                     {
+<a name="l00367"></a>00367                         suffix = <span class="stringliteral">&quot;_&quot;</span> + tf + <span class="stringliteral">&quot;_history.prn&quot;</span>;
+<a name="l00368"></a>00368                         count[0] = di.GetFiles(<span class="stringliteral">&quot;?*&quot;</span> + suffix).Length;
+<a name="l00369"></a>00369                     }
+<a name="l00370"></a>00370                     <span class="keywordflow">if</span> (count[0] == 0){
+<a name="l00371"></a>00371                         suffix = tf+<span class="stringliteral">&quot;.prn&quot;</span>;
+<a name="l00372"></a>00372                         count[0] = di.GetFiles(<span class="stringliteral">&quot;?*&quot;</span> + suffix).Length;
+<a name="l00373"></a>00373                     }
+<a name="l00374"></a>00374                 <span class="comment">//}</span>
+<a name="l00375"></a>00375             }
+<a name="l00376"></a>00376             <span class="keywordflow">catch</span> (Exception e)
+<a name="l00377"></a>00377             {
+<a name="l00378"></a>00378                 Console.WriteLine(<span class="stringliteral">&quot;The process failed: {0}&quot;</span>, e.ToString());
+<a name="l00379"></a>00379             } 
+<a name="l00380"></a>00380         }
+<a name="l00381"></a>00381 
+<a name="l00382"></a><a class="code" href="class_skilful_1_1_data_1_1_data_source_class.html#a307e809f5682031a668cbaace624c66d">00382</a>         <span class="keyword">public</span> <span class="keywordtype">void</span> get_tick(<span class="keywordtype">string</span> sym, <span class="keywordtype">double</span> tick)
+<a name="l00383"></a>00383         {
+<a name="l00384"></a>00384         }
+<a name="l00385"></a><a class="code" href="class_skilful_1_1_data_1_1_data_source_class.html#a0ea5016a0eba8ad6f5bc206a353638fb">00385</a>         <span class="keyword">public</span> <span class="keywordtype">void</span> get_bar(<span class="keywordtype">string</span> sym, <span class="keywordtype">int</span> frame, DateTime lastTime, <span class="keywordtype">int</span> lastPosition)
+<a name="l00386"></a>00386         {
+<a name="l00387"></a>00387             <span class="keywordflow">if</span> (barsreceiver != null)
+<a name="l00388"></a>00388             {
+<a name="l00389"></a>00389                 <span class="keywordtype">string</span> filepath = folder_path + <span class="stringliteral">&quot;\\&quot;</span> + sym + tf2i(frame) + suffix.Substring(suffix.IndexOf(<span class="stringliteral">&quot;.&quot;</span>));
+<a name="l00390"></a>00390 
+<a name="l00391"></a>00391                 StreamReader sr;
+<a name="l00392"></a>00392                 <span class="keywordflow">try</span> { sr = File.OpenText(filepath); }
+<a name="l00393"></a>00393                 <span class="keywordflow">catch</span> {
+<a name="l00394"></a>00394                     Console.WriteLine(<span class="stringliteral">&quot;mt4txt.get_bar: can not load &quot;</span> + filepath);
+<a name="l00395"></a>00395                     <span class="keywordflow">return</span>;
+<a name="l00396"></a>00396                 }
+<a name="l00397"></a>00397                 <span class="keywordtype">string</span> dateformat = suffix.IndexOf(<span class="stringliteral">&quot;.csv&quot;</span>) &gt; 0 ? <span class="comment">/*csv*/</span><span class="stringliteral">&quot;yyyy.MM.dd,HH:mm&quot;</span> : <span class="comment">/*prn*/</span><span class="stringliteral">&quot;yyyyMMdd,HHmmss&quot;</span>;
+<a name="l00398"></a>00398 
+<a name="l00399"></a>00399                 <span class="keywordtype">string</span> line = sr.ReadLine(); <span class="comment">//ignore first line with headers</span>
+<a name="l00400"></a>00400                 <span class="comment">//skiping already existing data</span>
+<a name="l00402"></a>00402 <span class="comment"></span>
+<a name="l00403"></a>00403                 <span class="keywordflow">while</span> ((line = sr.ReadLine()) != null)
+<a name="l00404"></a>00404                 {
+<a name="l00405"></a>00405                     <span class="keywordtype">bool</span> completed = <span class="keyword">true</span>;
+<a name="l00406"></a>00406                     <span class="keywordflow">if</span> (sr.Peek() == -1)
+<a name="l00407"></a>00407                     {
+<a name="l00408"></a>00408                         completed = <span class="keyword">false</span>;
+<a name="l00409"></a>00409                         <span class="comment">//break;//ignore last bar</span>
+<a name="l00410"></a>00410                     }
+<a name="l00411"></a>00411 
+<a name="l00412"></a>00412                     <span class="keywordtype">string</span>[] cols = line.Split(<span class="charliteral">&#39;,&#39;</span>);
+<a name="l00413"></a>00413                     <span class="keywordflow">if</span> (cols.Length &lt; 6) <span class="keywordflow">continue</span>;
+<a name="l00414"></a>00414                     DateTime ctime = DateTime.ParseExact(cols[0] + <span class="stringliteral">&quot;,&quot;</span> + cols[1], dateformat, null);
+<a name="l00415"></a>00415                     <span class="keywordflow">if</span>(ctime &lt; lastTime) <span class="keywordflow">continue</span>; <span class="comment">//[ &gt; | &gt;= ] -- последний бар может быть не полным, поэтому тоже должен быть переписан</span>
+<a name="l00416"></a>00416 
+<a name="l00417"></a>00417                     TimeSpan ts = ctime - <span class="keyword">new</span> DateTime(1970, 01, 01);
+<a name="l00418"></a>00418                     <span class="keywordtype">double</span>[] bar = {ts.TotalSeconds, a2f(cols[2]), a2f(cols[3]), a2f(cols[4]), a2f(cols[5])};
+<a name="l00419"></a>00419                     <span class="keywordtype">object</span>[] args = { ModuleName, sym, frame, bar, completed };
+<a name="l00420"></a>00420                     barsreceiver.Invoke(null, args);
+<a name="l00421"></a>00421                 }
+<a name="l00422"></a>00422             }
+<a name="l00423"></a>00423         }
+<a name="l00424"></a>00424 
+<a name="l00425"></a><a class="code" href="class_skilful_1_1_data_1_1_data_source_class.html#a444fc44e21393a942f9cecaeea296af9">00425</a>         <span class="keyword">public</span> <span class="keywordtype">void</span> get_pip_value(<span class="keywordtype">string</span> sym, <span class="keywordtype">double</span>[] pip)
+<a name="l00426"></a>00426         {
+<a name="l00427"></a>00427             <span class="comment">// pip[0] = 0; //set value only if it`s known</span>
+<a name="l00428"></a>00428         }
+<a name="l00429"></a>00429     }
+<a name="l00430"></a>00430 }
+</pre></div></div>
+</div>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Перечисления</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&nbsp;</span>Свойства</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&nbsp;</span>События</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

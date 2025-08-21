@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Skilful: Исходный файл Skilful/OptionsForm.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javaScript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Создано системой Doxygen 1.7.1 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+--></script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пакеты</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="dirs.html"><span>Алфавитный&nbsp;указатель&nbsp;директорий</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath">
+    <ul>
+      <li><a class="el" href="dir_7adcdc1edff7620168fbc20357cad448.html">Skilful</a>      </li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<h1>OptionsForm.cs</h1>  </div>
+</div>
+<div class="contents">
+<a href="_options_form_8cs.html">См. документацию.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 ﻿<span class="comment">//---------------------------------------------------------------------------------------------------------------</span>
+<a name="l00002"></a>00002 <span class="comment">// Skilful. Tactica Adversa graphic and analysis tool.</span>
+<a name="l00003"></a>00003 <span class="comment">// Copyright (C) 2010 &quot;...&quot;, Andrey Prokhorov(AVP)</span>
+<a name="l00004"></a>00004 <span class="comment">//</span>
+<a name="l00005"></a>00005 <span class="comment">// This program is free software; you can redistribute it and/or</span>
+<a name="l00006"></a>00006 <span class="comment">// modify it under the terms of the GNU General Public License</span>
+<a name="l00007"></a>00007 <span class="comment">// as published by the Free Software Foundation; either version 2</span>
+<a name="l00008"></a>00008 <span class="comment">// of the License, or (at your option) any later version.</span>
+<a name="l00009"></a>00009 <span class="comment">//</span>
+<a name="l00010"></a>00010 <span class="comment">// This program is distributed in the hope that it will be useful,</span>
+<a name="l00011"></a>00011 <span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<a name="l00012"></a>00012 <span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<a name="l00013"></a>00013 <span class="comment">// GNU General Public License for more details.</span>
+<a name="l00014"></a>00014 <span class="comment">//</span>
+<a name="l00015"></a>00015 <span class="comment">// You should have received a copy of the GNU General Public License</span>
+<a name="l00016"></a>00016 <span class="comment">// along with this program; if not, write to the Free Software</span>
+<a name="l00017"></a>00017 <span class="comment">// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</span>
+<a name="l00018"></a>00018 <span class="comment">//</span>
+<a name="l00019"></a>00019 <span class="comment">// mail: support@protoforma.com </span>
+<a name="l00020"></a>00020 <span class="comment">//---------------------------------------------------------------------------------------------------------------</span>
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022 
+<a name="l00023"></a>00023 <span class="keyword">using</span> System;
+<a name="l00024"></a>00024 <span class="keyword">using</span> System.Collections.Generic;
+<a name="l00025"></a>00025 <span class="keyword">using</span> System.ComponentModel;
+<a name="l00026"></a>00026 <span class="keyword">using</span> System.Data;
+<a name="l00027"></a>00027 <span class="keyword">using</span> System.Drawing;
+<a name="l00028"></a>00028 <span class="keyword">using</span> System.Linq;
+<a name="l00029"></a>00029 <span class="keyword">using</span> System.Text;
+<a name="l00030"></a>00030 <span class="keyword">using</span> System.Windows.Forms;
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032 <span class="keyword">namespace </span>Skilful
+<a name="l00033"></a>00033     {
+<a name="l00034"></a><a class="code" href="class_skilful_1_1_options_form.html">00034</a>     <span class="keyword">public</span> <span class="keyword">partial class </span><a class="code" href="class_skilful_1_1_options_form.html">OptionsForm</a> : Form
+<a name="l00035"></a>00035         {
+<a name="l00036"></a><a class="code" href="class_skilful_1_1_options_form.html#a576a308b2f9a2f492dda5b02e9d1db1c">00036</a>             <span class="keyword">public</span> <a class="code" href="class_skilful_1_1_options_form.html#a576a308b2f9a2f492dda5b02e9d1db1c">OptionsForm</a>()
+<a name="l00037"></a>00037             {
+<a name="l00038"></a>00038                 InitializeComponent();
+<a name="l00039"></a>00039             }
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041             <span class="keyword">private</span> <span class="keywordtype">void</span> ModelLbl1_Click(<span class="keywordtype">object</span> sender, EventArgs e)  
+<a name="l00042"></a>00042             {
+<a name="l00043"></a>00043                 colorDialog.Color = (sender as System.Windows.Forms.Label).ForeColor;
+<a name="l00044"></a>00044                 <span class="keywordflow">if</span> (colorDialog.ShowDialog() == DialogResult.OK)
+<a name="l00045"></a>00045                 {
+<a name="l00046"></a>00046                     <span class="comment">// Изменение цвета для модели с номером ...</span>
+<a name="l00047"></a>00047                     <span class="keywordtype">string</span> s = (sender as System.Windows.Forms.Label).Name;
+<a name="l00048"></a>00048                     <span class="keywordtype">int</span> i = Convert.ToInt32(Convert.ToInt32(s.Substring(8)))-1;
+<a name="l00049"></a>00049                     (sender as System.Windows.Forms.Label).ForeColor = colorDialog.Color;
+<a name="l00050"></a>00050                     GlobalMembersTAmodel.cl[i] = (sender as System.Windows.Forms.Label).ForeColor.ToArgb();
+<a name="l00051"></a>00051                 }
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053             }
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055             <span class="keyword">private</span> <span class="keywordtype">void</span> OptionsForm_Shown(<span class="keywordtype">object</span> sender, EventArgs e)
+<a name="l00056"></a>00056             {
+<a name="l00057"></a>00057                 <span class="comment">// Установка значений цветов из массива цветов</span>
+<a name="l00058"></a>00058                 ModelLbl1.ForeColor = Color.FromArgb(GlobalMembersTAmodel.cl[0]);
+<a name="l00059"></a>00059                 ModelLbl2.ForeColor = Color.FromArgb(GlobalMembersTAmodel.cl[1]);
+<a name="l00060"></a>00060                 ModelLbl3.ForeColor = Color.FromArgb(GlobalMembersTAmodel.cl[2]);
+<a name="l00061"></a>00061                 ModelLbl4.ForeColor = Color.FromArgb(GlobalMembersTAmodel.cl[3]);
+<a name="l00062"></a>00062                 ModelLbl5.ForeColor = Color.FromArgb(GlobalMembersTAmodel.cl[4]);
+<a name="l00063"></a>00063                 ModelLbl6.ForeColor = Color.FromArgb(GlobalMembersTAmodel.cl[5]);
+<a name="l00064"></a>00064                 ModelLbl7.ForeColor = Color.FromArgb(GlobalMembersTAmodel.cl[6]);
+<a name="l00065"></a>00065                 ModelLbl8.ForeColor = Color.FromArgb(GlobalMembersTAmodel.cl[7]);
+<a name="l00066"></a>00066                 ModelLbl9.ForeColor = Color.FromArgb(GlobalMembersTAmodel.cl[8]);
+<a name="l00067"></a>00067                 ModelLbl10.ForeColor = Color.FromArgb(GlobalMembersTAmodel.cl[9]);
+<a name="l00068"></a>00068                 ModelLbl11.ForeColor = Color.FromArgb(GlobalMembersTAmodel.cl[10]);
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070                 <span class="comment">// Установка параметров для поиска моделей</span>
+<a name="l00071"></a>00071                 <span class="comment">// Размеры экстремумов</span>
+<a name="l00072"></a>00072                 ExtremumSize1.Value = ModelManager.Options.Extremum1;
+<a name="l00073"></a>00073                 <span class="comment">// Коэффициенты трансформации МР-&gt;МДР и ЧМП-&gt;МДР</span>
+<a name="l00074"></a>00074                 MDBSize1.Value = ModelManager.Options.MBSize1;
+<a name="l00075"></a>00075                 MDBSize2.Value = ModelManager.Options.MBSize2;
+<a name="l00076"></a>00076                 <span class="comment">// Правила отфильтровывания моделей</span>
+<a name="l00077"></a>00077 <span class="comment">/*                for (int i = 0; i &lt; RulesBox.Items.Count; i++)</span>
+<a name="l00078"></a>00078 <span class="comment">                {</span>
+<a name="l00079"></a>00079 <span class="comment">                    if ((ModelManager.Options.CheckedErrors1 &amp; ModelManager.Common.ModelErrors[i + 2].ErrorCode) == ModelManager.Common.ModelErrors[i + 2].ErrorCode)</span>
+<a name="l00080"></a>00080 <span class="comment">                    {</span>
+<a name="l00081"></a>00081 <span class="comment">                        RulesBox.SetItemChecked(i,true);</span>
+<a name="l00082"></a>00082 <span class="comment">                    }</span>
+<a name="l00083"></a>00083 <span class="comment">                }</span>
+<a name="l00084"></a>00084 <span class="comment">*/</span>            }
+<a name="l00085"></a>00085 
+<a name="l00086"></a>00086 
+<a name="l00087"></a>00087             <span class="keyword">private</span> <span class="keywordtype">void</span> OptionsForm_FormClosing(<span class="keywordtype">object</span> sender, FormClosingEventArgs e)
+<a name="l00088"></a>00088             {
+<a name="l00089"></a>00089                 ModelManager.Options.Extremum1 = Convert.ToInt32(ExtremumSize1.Value);
+<a name="l00090"></a>00090 
+<a name="l00091"></a>00091                 ModelManager.Options.MBSize1 = Convert.ToInt32(MDBSize1.Value);
+<a name="l00092"></a>00092                 ModelManager.Options.MBSize2 = Convert.ToInt32(MDBSize2.Value);
+<a name="l00093"></a>00093 
+<a name="l00094"></a>00094 <span class="comment">/*                ModelManager.Options.CheckedErrors1 = 0;</span>
+<a name="l00095"></a>00095 <span class="comment">                for (int i = 0; i &lt; RulesBox.CheckedIndices.Count; i++)</span>
+<a name="l00096"></a>00096 <span class="comment">                {</span>
+<a name="l00097"></a>00097 <span class="comment">                    ModelManager.Options.CheckedErrors1 = ModelManager.Options.CheckedErrors1 + ModelManager.Common.ModelErrors[RulesBox.CheckedIndices[i] + 2].ErrorCode;</span>
+<a name="l00098"></a>00098 <span class="comment">                }</span>
+<a name="l00099"></a>00099 <span class="comment">*/</span>            }
+<a name="l00100"></a>00100         }
+<a name="l00101"></a>00101     }
+</pre></div></div>
+</div>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Перечисления</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&nbsp;</span>Свойства</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&nbsp;</span>События</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

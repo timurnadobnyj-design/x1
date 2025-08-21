@@ -1,0 +1,361 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Skilful: Исходный файл Skilful/Sample.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javaScript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Создано системой Doxygen 1.7.1 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+--></script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пакеты</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="dirs.html"><span>Алфавитный&nbsp;указатель&nbsp;директорий</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath">
+    <ul>
+      <li><a class="el" href="dir_7adcdc1edff7620168fbc20357cad448.html">Skilful</a>      </li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<h1>Sample.cs</h1>  </div>
+</div>
+<div class="contents">
+<a href="_sample_8cs.html">См. документацию.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 ﻿<span class="comment">//---------------------------------------------------------------------------------------------------------------</span>
+<a name="l00002"></a>00002 <span class="comment">// Skilful. Tactica Adversa graphic and analysis tool.</span>
+<a name="l00003"></a>00003 <span class="comment">// Copyright (C) 2010 &quot;...&quot;, Eugeniy Bazarov(obolon)</span>
+<a name="l00004"></a>00004 <span class="comment">//</span>
+<a name="l00005"></a>00005 <span class="comment">// This program is free software; you can redistribute it and/or</span>
+<a name="l00006"></a>00006 <span class="comment">// modify it under the terms of the GNU General Public License</span>
+<a name="l00007"></a>00007 <span class="comment">// as published by the Free Software Foundation; either version 2</span>
+<a name="l00008"></a>00008 <span class="comment">// of the License, or (at your option) any later version.</span>
+<a name="l00009"></a>00009 <span class="comment">//</span>
+<a name="l00010"></a>00010 <span class="comment">// This program is distributed in the hope that it will be useful,</span>
+<a name="l00011"></a>00011 <span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<a name="l00012"></a>00012 <span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<a name="l00013"></a>00013 <span class="comment">// GNU General Public License for more details.</span>
+<a name="l00014"></a>00014 <span class="comment">//</span>
+<a name="l00015"></a>00015 <span class="comment">// You should have received a copy of the GNU General Public License</span>
+<a name="l00016"></a>00016 <span class="comment">// along with this program; if not, write to the Free Software</span>
+<a name="l00017"></a>00017 <span class="comment">// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</span>
+<a name="l00018"></a>00018 <span class="comment">//</span>
+<a name="l00019"></a>00019 <span class="comment">// mail: support@protoforma.com </span>
+<a name="l00020"></a>00020 <span class="comment">//---------------------------------------------------------------------------------------------------------</span>
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022 <span class="keyword">using</span> System.Linq;
+<a name="l00023"></a>00023 <span class="keyword">using</span> System.Text;
+<a name="l00024"></a>00024 <span class="keyword">using</span> System.Windows.Forms;
+<a name="l00025"></a>00025 <span class="keyword">using</span> System.ComponentModel;
+<a name="l00026"></a>00026 <span class="keyword">using</span> System.IO;
+<a name="l00027"></a>00027 <span class="keyword">using</span> System.Drawing;
+<a name="l00028"></a>00028 <span class="keyword">using</span> Skilful.Data;
+<a name="l00029"></a>00029 <span class="keyword">using</span> Skilful.QuotesManager;
+<a name="l00030"></a>00030 <span class="keyword">using</span> ChartV2;
+<a name="l00031"></a>00031 <span class="keyword">using</span> System.Collections.Generic;
+<a name="l00032"></a>00032 <span class="keyword">using</span> ChartV2.Styles;
+<a name="l00033"></a>00033 <span class="keyword">using</span> ChartV2.Axis_Plot;
+<a name="l00034"></a>00034 <span class="keyword">using</span> <a class="code" href="class_grid_splitter_1_1_grid_splitter.html">GridSplitter</a>;
+<a name="l00035"></a>00035 
+<a name="l00036"></a>00036 <span class="keyword">namespace </span>Skilful
+<a name="l00037"></a>00037 {
+<a name="l00038"></a>00038  [System.Serializable]
+<a name="l00039"></a><a class="code" href="class_skilful_1_1_sample.html">00039</a>   <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_skilful_1_1_sample.html">Sample</a>
+<a name="l00040"></a>00040     {
+<a name="l00041"></a>00041      <span class="keyword">static</span> readonly Font Default_Write_Skilful = <span class="keyword">new</span> Font(FontFamily.GenericSansSerif, 10, FontStyle.Regular);
+<a name="l00042"></a>00042      
+<a name="l00043"></a>00043      <span class="keyword">static</span> readonly <a class="code" href="namespace_chart_v2.html#a813b22baa4da3db343ab2ee8f39c442b">ChartType</a> Default_ChartType = <a class="code" href="namespace_chart_v2.html#a813b22baa4da3db343ab2ee8f39c442b">ChartType</a>.Candle;
+<a name="l00044"></a>00044      <span class="keyword">static</span> readonly Color Default_Chart_backColor = Color.White;
+<a name="l00045"></a>00045      <span class="keyword">static</span> readonly Color Default_Grid_Color = Color.Gray;
+<a name="l00046"></a>00046      <span class="keyword">static</span> readonly <span class="keywordtype">bool</span> Default_GridSplitter_IsGridVisible = <span class="keyword">true</span>;
+<a name="l00047"></a>00047      <span class="keyword">static</span> readonly <span class="keywordtype">bool</span> Default_Grid_IsVisible = <span class="keyword">true</span>;
+<a name="l00048"></a>00048      
+<a name="l00049"></a>00049      <span class="keyword">static</span> readonly Font Default_AxisStyleRight = <span class="keyword">new</span> Font(FontFamily.GenericSansSerif, 10, FontStyle.Regular);
+<a name="l00050"></a>00050      <span class="keyword">static</span> readonly Font Default_AxisStyleLeft = <span class="keyword">new</span> Font(FontFamily.GenericSansSerif, 10, FontStyle.Regular);
+<a name="l00051"></a>00051      <span class="keyword">static</span> readonly Font Default_AxisStyleTop = <span class="keyword">new</span> Font(FontFamily.GenericSansSerif, 10, FontStyle.Regular);
+<a name="l00052"></a>00052      <span class="keyword">static</span> readonly Font Default_AxisStyleBottom = <span class="keyword">new</span> Font(FontFamily.GenericSansSerif, 10, FontStyle.Regular);
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054      <span class="keyword">static</span> readonly Font Default_CursorLable_Right = <span class="keyword">new</span> Font(FontFamily.GenericSansSerif, 10, FontStyle.Regular);
+<a name="l00055"></a>00055      <span class="keyword">static</span> readonly Font Default_CursorLable_Left = <span class="keyword">new</span> Font(FontFamily.GenericSansSerif, 10, FontStyle.Regular);
+<a name="l00056"></a>00056      <span class="keyword">static</span> readonly Font Default_CursorLable_Bottom = <span class="keyword">new</span> Font(FontFamily.GenericSansSerif, 10, FontStyle.Regular);
+<a name="l00057"></a>00057 
+<a name="l00058"></a>00058      <span class="keyword">static</span> readonly Font Default_ModelStyle_mainLablesFont = <span class="keyword">new</span> Font(FontFamily.GenericSansSerif, 10, FontStyle.Regular);
+<a name="l00059"></a>00059      <span class="keyword">static</span> readonly Font Default_ModelStyle_additionalLablesFont = <span class="keyword">new</span> Font(FontFamily.GenericSansSerif, 10, FontStyle.Regular);
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061      <span class="keyword">static</span> readonly <span class="keywordtype">float</span> Default_ModelStyle_fadedMainLinesPen_Width = 1;
+<a name="l00062"></a>00062      <span class="keyword">static</span> readonly <span class="keywordtype">float</span> Default_ModelStyle_fadedMainDashedLinesPen_Width = 1;
+<a name="l00063"></a>00063      <span class="keyword">static</span> readonly <span class="keywordtype">float</span> Default_ModelStyle_fadedMainDashDotLinesPen_Width = 1;
+<a name="l00064"></a>00064      <span class="keyword">static</span> readonly <span class="keywordtype">float</span> Default_ModelStyle_fadedAdditionalLinesPen_Width =  0.5F;
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066      <span class="keyword">static</span> readonly <span class="keywordtype">float</span> Default_ModelStyle_selectedMainLinesPen_Width = 3;
+<a name="l00067"></a>00067      <span class="keyword">static</span> readonly <span class="keywordtype">float</span> Default_ModelStyle_selectedMainDashedLinesPen_Width = 3;
+<a name="l00068"></a>00068      <span class="keyword">static</span> readonly <span class="keywordtype">float</span> Default_ModelStyle_selectedMainDashDotLinesPen_Width = 3;
+<a name="l00069"></a>00069      <span class="keyword">static</span> readonly <span class="keywordtype">float</span> Default_ModelStyle_selectedAdditionalLinesPen_Width = 1;
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071 
+<a name="l00072"></a>00072 
+<a name="l00073"></a><a class="code" href="class_skilful_1_1_sample.html#ae4348b009017e041facde38167215a30">00073</a>      <span class="keyword">static</span> <span class="keyword">public</span> Font <a class="code" href="class_skilful_1_1_sample.html#ae4348b009017e041facde38167215a30">Write_Skilful</a> = Default_Write_Skilful;
+<a name="l00074"></a><a class="code" href="class_skilful_1_1_sample.html#a18b4dbf575ca222c3fe0ce893164dfd1">00074</a>      <span class="keyword">static</span> <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_skilful_1_1_sample.html#a18b4dbf575ca222c3fe0ce893164dfd1">currentSample</a> = <span class="stringliteral">&quot;Default&quot;</span>;
+<a name="l00075"></a><a class="code" href="class_skilful_1_1_sample.html#a8a91610e99c3351b20faf8272afa2997">00075</a>      <span class="keyword">static</span> <span class="keyword">public</span> <a class="code" href="namespace_chart_v2.html#a813b22baa4da3db343ab2ee8f39c442b">ChartType</a> <a class="code" href="class_skilful_1_1_sample.html#a8a91610e99c3351b20faf8272afa2997">ChartType_</a> = Default_ChartType;
+<a name="l00076"></a><a class="code" href="class_skilful_1_1_sample.html#a532ccc7007df6f1801c2d8206a16bb0e">00076</a>      <span class="keyword">static</span> <span class="keyword">public</span> Color <a class="code" href="class_skilful_1_1_sample.html#a532ccc7007df6f1801c2d8206a16bb0e">Chart_backColor</a> = Default_Chart_backColor;
+<a name="l00077"></a><a class="code" href="class_skilful_1_1_sample.html#a29078e40c8de23215e2e85ebf12d0a19">00077</a>      <span class="keyword">static</span> <span class="keyword">public</span> Color <a class="code" href="class_skilful_1_1_sample.html#a29078e40c8de23215e2e85ebf12d0a19">Grid_Color</a> = Default_Grid_Color;
+<a name="l00078"></a><a class="code" href="class_skilful_1_1_sample.html#a382a2d36215290f0cfc44553f303346d">00078</a>      <span class="keyword">static</span> <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_skilful_1_1_sample.html#a382a2d36215290f0cfc44553f303346d">GridSplitter_IsGridVisible</a> = Default_GridSplitter_IsGridVisible;
+<a name="l00079"></a><a class="code" href="class_skilful_1_1_sample.html#ad944b9d15633af26ac6c93d6c4f25e49">00079</a>      <span class="keyword">static</span> <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_skilful_1_1_sample.html#ad944b9d15633af26ac6c93d6c4f25e49">Grid_IsVisible</a> = Default_Grid_IsVisible;
+<a name="l00080"></a><a class="code" href="class_skilful_1_1_sample.html#ab7df34c530bb06e258fbe09821144b73">00080</a>      <span class="keyword">static</span> <span class="keyword">public</span> Font <a class="code" href="class_skilful_1_1_sample.html#ab7df34c530bb06e258fbe09821144b73">AxisStyleRight</a> = Default_AxisStyleRight;
+<a name="l00081"></a><a class="code" href="class_skilful_1_1_sample.html#a1e2528ed567928eed2ac77321c95bfcb">00081</a>      <span class="keyword">static</span> <span class="keyword">public</span> Font <a class="code" href="class_skilful_1_1_sample.html#a1e2528ed567928eed2ac77321c95bfcb">AxisStyleLeft</a> = Default_AxisStyleLeft;
+<a name="l00082"></a><a class="code" href="class_skilful_1_1_sample.html#aa27e128e61753dd09933d9adf5344def">00082</a>      <span class="keyword">static</span> <span class="keyword">public</span> Font <a class="code" href="class_skilful_1_1_sample.html#aa27e128e61753dd09933d9adf5344def">AxisStyleTop</a> = Default_AxisStyleTop;
+<a name="l00083"></a><a class="code" href="class_skilful_1_1_sample.html#a51b24a219487846913e5426e6cdfbb3a">00083</a>      <span class="keyword">static</span> <span class="keyword">public</span> Font <a class="code" href="class_skilful_1_1_sample.html#a51b24a219487846913e5426e6cdfbb3a">AxisStyleBottom</a> = Default_AxisStyleBottom;
+<a name="l00084"></a>00084 
+<a name="l00085"></a><a class="code" href="class_skilful_1_1_sample.html#ae3c99d34a2ffb8f8b49102fb09bc8bf7">00085</a>      <span class="keyword">static</span> <span class="keyword">public</span> Font <a class="code" href="class_skilful_1_1_sample.html#ae3c99d34a2ffb8f8b49102fb09bc8bf7">CursorLable_Right</a> = Default_CursorLable_Right;
+<a name="l00086"></a><a class="code" href="class_skilful_1_1_sample.html#abafe2a91c1e75aaf1459da190e76708c">00086</a>      <span class="keyword">static</span> <span class="keyword">public</span> Font <a class="code" href="class_skilful_1_1_sample.html#abafe2a91c1e75aaf1459da190e76708c">CursorLable_Left</a> = Default_CursorLable_Left;
+<a name="l00087"></a><a class="code" href="class_skilful_1_1_sample.html#ad14991a0c6d43a727abfa663676528ec">00087</a>      <span class="keyword">static</span> <span class="keyword">public</span> Font <a class="code" href="class_skilful_1_1_sample.html#ad14991a0c6d43a727abfa663676528ec">CursorLable_Bottom</a> = Default_CursorLable_Bottom;
+<a name="l00088"></a>00088 
+<a name="l00089"></a><a class="code" href="class_skilful_1_1_sample.html#ae32f1bca710b9e132a4429dafdddd591">00089</a>      <span class="keyword">static</span> <span class="keyword">public</span> Font <a class="code" href="class_skilful_1_1_sample.html#ae32f1bca710b9e132a4429dafdddd591">ModelStyle_mainLablesFont</a> = Default_ModelStyle_mainLablesFont;
+<a name="l00090"></a><a class="code" href="class_skilful_1_1_sample.html#ab723e83f69d4c030c98210301ae8c55c">00090</a>      <span class="keyword">static</span> <span class="keyword">public</span> Font <a class="code" href="class_skilful_1_1_sample.html#ab723e83f69d4c030c98210301ae8c55c">ModelStyle_additionalLablesFont</a> = Default_ModelStyle_additionalLablesFont;
+<a name="l00091"></a>00091 
+<a name="l00092"></a><a class="code" href="class_skilful_1_1_sample.html#a8f9c8ff417eef30df4f9b77f1f39a79a">00092</a>      <span class="keyword">static</span> <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_skilful_1_1_sample.html#a8f9c8ff417eef30df4f9b77f1f39a79a">ModelStyle_fadedMainLinesPen_Width</a> = Default_ModelStyle_fadedMainLinesPen_Width;
+<a name="l00093"></a><a class="code" href="class_skilful_1_1_sample.html#a4e633531d76cc9a08f1de454310116e8">00093</a>      <span class="keyword">static</span> <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_skilful_1_1_sample.html#a4e633531d76cc9a08f1de454310116e8">ModelStyle_fadedMainDashedLinesPen_Width</a> = Default_ModelStyle_fadedMainDashedLinesPen_Width;
+<a name="l00094"></a><a class="code" href="class_skilful_1_1_sample.html#a2663d3e17801bc98f8f49e9b7ad7851a">00094</a>      <span class="keyword">static</span> <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_skilful_1_1_sample.html#a2663d3e17801bc98f8f49e9b7ad7851a">ModelStyle_fadedMainDashDotLinesPen_Width</a> = Default_ModelStyle_fadedMainDashDotLinesPen_Width;
+<a name="l00095"></a><a class="code" href="class_skilful_1_1_sample.html#ab7eb1374ce775123e90fdebd38dc19ca">00095</a>      <span class="keyword">static</span> <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_skilful_1_1_sample.html#ab7eb1374ce775123e90fdebd38dc19ca">ModelStyle_fadedAdditionalLinesPen_Width</a> = Default_ModelStyle_fadedAdditionalLinesPen_Width;
+<a name="l00096"></a>00096      
+<a name="l00097"></a><a class="code" href="class_skilful_1_1_sample.html#ab6e02348b30232facb7dbd8923984c84">00097</a>      <span class="keyword">static</span> <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_skilful_1_1_sample.html#ab6e02348b30232facb7dbd8923984c84">ModelStyle_selectedMainLinesPen_Width</a> = Default_ModelStyle_selectedMainLinesPen_Width;
+<a name="l00098"></a><a class="code" href="class_skilful_1_1_sample.html#a83bdff09351b9b59ca02b7e4d33e75db">00098</a>      <span class="keyword">static</span> <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_skilful_1_1_sample.html#a83bdff09351b9b59ca02b7e4d33e75db">ModelStyle_selectedMainDashedLinesPen_Width</a> = Default_ModelStyle_selectedMainDashedLinesPen_Width;
+<a name="l00099"></a><a class="code" href="class_skilful_1_1_sample.html#a43c5754cc79cc81724582ae19c6f3f21">00099</a>      <span class="keyword">static</span> <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_skilful_1_1_sample.html#a43c5754cc79cc81724582ae19c6f3f21">ModelStyle_selectedMainDashDotLinesPen_Width</a> = Default_ModelStyle_selectedMainDashDotLinesPen_Width;
+<a name="l00100"></a><a class="code" href="class_skilful_1_1_sample.html#a5a49bbbeaef91c9800120790ee5f3266">00100</a>      <span class="keyword">static</span> <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_skilful_1_1_sample.html#a5a49bbbeaef91c9800120790ee5f3266">ModelStyle_selectedAdditionalLinesPen_Width</a> = Default_ModelStyle_selectedAdditionalLinesPen_Width;
+<a name="l00101"></a>00101 
+<a name="l00102"></a>00102 
+<a name="l00103"></a>00103 
+<a name="l00104"></a>00104 
+<a name="l00105"></a><a class="code" href="class_skilful_1_1_sample.html#a7bbffc847136b6869517580f7799e260">00105</a>      <span class="keyword">public</span> <a class="code" href="namespace_chart_v2.html#a813b22baa4da3db343ab2ee8f39c442b">ChartType</a> <a class="code" href="class_skilful_1_1_sample.html#a7bbffc847136b6869517580f7799e260">_ChartType_</a>;
+<a name="l00106"></a><a class="code" href="class_skilful_1_1_sample.html#aa3ba9b7d48a50fc76c17f217a2fecc0b">00106</a>      <span class="keyword">public</span> Color <a class="code" href="class_skilful_1_1_sample.html#aa3ba9b7d48a50fc76c17f217a2fecc0b">_Chart_backColor</a>; 
+<a name="l00107"></a><a class="code" href="class_skilful_1_1_sample.html#a6340facea4f6747d49eb6b7a8ca0b477">00107</a>      <span class="keyword">public</span> Color <a class="code" href="class_skilful_1_1_sample.html#a6340facea4f6747d49eb6b7a8ca0b477">_Grid_Color</a>;
+<a name="l00108"></a><a class="code" href="class_skilful_1_1_sample.html#a20e45473ba5a70aec83d1185bb81f4d4">00108</a>      <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_skilful_1_1_sample.html#a20e45473ba5a70aec83d1185bb81f4d4">_GridSplitter_IsGridVisible</a>;
+<a name="l00109"></a><a class="code" href="class_skilful_1_1_sample.html#abb9801efa501ddbe85a43712f40b2a20">00109</a>      <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_skilful_1_1_sample.html#abb9801efa501ddbe85a43712f40b2a20">_Grid_IsVisible</a>;
+<a name="l00110"></a><a class="code" href="class_skilful_1_1_sample.html#af42da8eb9c4be753bcdb4a1a74b70980">00110</a>      <span class="keyword">public</span> Font <a class="code" href="class_skilful_1_1_sample.html#af42da8eb9c4be753bcdb4a1a74b70980">_AxisStyleRight</a>;
+<a name="l00111"></a><a class="code" href="class_skilful_1_1_sample.html#a558206e516a070466f9307fe35a856ce">00111</a>      <span class="keyword">public</span> Font <a class="code" href="class_skilful_1_1_sample.html#a558206e516a070466f9307fe35a856ce">_AxisStyleLeft</a>;
+<a name="l00112"></a><a class="code" href="class_skilful_1_1_sample.html#a2749055bbe1f7579eaa8605f12657c4b">00112</a>      <span class="keyword">public</span> Font <a class="code" href="class_skilful_1_1_sample.html#a2749055bbe1f7579eaa8605f12657c4b">_AxisStyleTop</a>;
+<a name="l00113"></a><a class="code" href="class_skilful_1_1_sample.html#a80d4eb2701764a87803cdca6bd2ca6ce">00113</a>      <span class="keyword">public</span> Font <a class="code" href="class_skilful_1_1_sample.html#a80d4eb2701764a87803cdca6bd2ca6ce">_AxisStyleBottom</a>;
+<a name="l00114"></a>00114 
+<a name="l00115"></a><a class="code" href="class_skilful_1_1_sample.html#a1dcfa810d7ee770daee6c2fa263ef702">00115</a>      <span class="keyword">public</span> Font <a class="code" href="class_skilful_1_1_sample.html#a1dcfa810d7ee770daee6c2fa263ef702">_CursorLable_Right</a>;
+<a name="l00116"></a><a class="code" href="class_skilful_1_1_sample.html#a10f92e7fb4a529e462a7ecff15a020e8">00116</a>      <span class="keyword">public</span> Font <a class="code" href="class_skilful_1_1_sample.html#a10f92e7fb4a529e462a7ecff15a020e8">_CursorLable_Left</a>;
+<a name="l00117"></a><a class="code" href="class_skilful_1_1_sample.html#a01b6dfaf416ac3070280009e69f80680">00117</a>      <span class="keyword">public</span> Font <a class="code" href="class_skilful_1_1_sample.html#a01b6dfaf416ac3070280009e69f80680">_CursorLable_Bottom</a>;
+<a name="l00118"></a>00118 
+<a name="l00119"></a><a class="code" href="class_skilful_1_1_sample.html#a82d36f1530834dbcf2053e3a65604550">00119</a>      <span class="keyword">public</span> Font <a class="code" href="class_skilful_1_1_sample.html#a82d36f1530834dbcf2053e3a65604550">_ModelStyle_mainLablesFont</a>;
+<a name="l00120"></a><a class="code" href="class_skilful_1_1_sample.html#ae79862ebb3c6940ba5c390dde3cb7f94">00120</a>      <span class="keyword">public</span> Font <a class="code" href="class_skilful_1_1_sample.html#ae79862ebb3c6940ba5c390dde3cb7f94">_ModelStyle_additionalLablesFont</a>;
+<a name="l00121"></a>00121 
+<a name="l00122"></a><a class="code" href="class_skilful_1_1_sample.html#a01d9ea2cd7d77f7b009fd14af838da03">00122</a>      <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_skilful_1_1_sample.html#a01d9ea2cd7d77f7b009fd14af838da03">_ModelStyle_fadedMainLinesPen_Width</a>;
+<a name="l00123"></a><a class="code" href="class_skilful_1_1_sample.html#a079649cc98c84e9071922dd3f5adb414">00123</a>      <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_skilful_1_1_sample.html#a079649cc98c84e9071922dd3f5adb414">_ModelStyle_fadedMainDashedLinesPen_Width</a>;
+<a name="l00124"></a><a class="code" href="class_skilful_1_1_sample.html#af45fa30eb60bf5a298f7da90329c7986">00124</a>      <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_skilful_1_1_sample.html#af45fa30eb60bf5a298f7da90329c7986">_ModelStyle_fadedMainDashDotLinesPen_Width</a>;
+<a name="l00125"></a><a class="code" href="class_skilful_1_1_sample.html#a259c97829f655eace123b45bf47c47d5">00125</a>      <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_skilful_1_1_sample.html#a259c97829f655eace123b45bf47c47d5">_ModelStyle_fadedAdditionalLinesPen_Width</a>;
+<a name="l00126"></a>00126 
+<a name="l00127"></a><a class="code" href="class_skilful_1_1_sample.html#a6fb44d074a43c8d547527ee9d702ae59">00127</a>      <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_skilful_1_1_sample.html#a6fb44d074a43c8d547527ee9d702ae59">_ModelStyle_selectedMainLinesPen_Width</a>;
+<a name="l00128"></a><a class="code" href="class_skilful_1_1_sample.html#a696a98aee0627c17dd4808b9c75ee0e0">00128</a>      <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_skilful_1_1_sample.html#a696a98aee0627c17dd4808b9c75ee0e0">_ModelStyle_selectedMainDashedLinesPen_Width</a>;
+<a name="l00129"></a><a class="code" href="class_skilful_1_1_sample.html#ad2c855ece559e7c6db80e288cd48c602">00129</a>      <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_skilful_1_1_sample.html#ad2c855ece559e7c6db80e288cd48c602">_ModelStyle_selectedMainDashDotLinesPen_Width</a>;
+<a name="l00130"></a><a class="code" href="class_skilful_1_1_sample.html#acc91a71d0f088386d5eb9b726b313e36">00130</a>      <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_skilful_1_1_sample.html#acc91a71d0f088386d5eb9b726b313e36">_ModelStyle_selectedAdditionalLinesPen_Width</a>;
+<a name="l00131"></a>00131    
+<a name="l00132"></a>00132 
+<a name="l00133"></a>00133      <span class="comment">// ------  Конструктор для первоначальной загрузки из файла</span>
+<a name="l00134"></a><a class="code" href="class_skilful_1_1_sample.html#a8ee8fbbc9481f7e9b7dde00e152ac0e9">00134</a>      <span class="keyword">public</span> <a class="code" href="class_skilful_1_1_sample.html#a8ee8fbbc9481f7e9b7dde00e152ac0e9">Sample</a>(<a class="code" href="class_skilful_1_1_sample.html">Sample</a> _smp)
+<a name="l00135"></a>00135       {
+<a name="l00136"></a>00136           <a class="code" href="class_skilful_1_1_sample.html#a8a91610e99c3351b20faf8272afa2997">ChartType_</a> = _smp.<a class="code" href="class_skilful_1_1_sample.html#a7bbffc847136b6869517580f7799e260">_ChartType_</a>;
+<a name="l00137"></a>00137           <a class="code" href="class_skilful_1_1_sample.html#a532ccc7007df6f1801c2d8206a16bb0e">Chart_backColor</a> = _smp.<a class="code" href="class_skilful_1_1_sample.html#aa3ba9b7d48a50fc76c17f217a2fecc0b">_Chart_backColor</a>;
+<a name="l00138"></a>00138           <a class="code" href="class_skilful_1_1_sample.html#a29078e40c8de23215e2e85ebf12d0a19">Grid_Color</a> = _smp.<a class="code" href="class_skilful_1_1_sample.html#a6340facea4f6747d49eb6b7a8ca0b477">_Grid_Color</a>;
+<a name="l00139"></a>00139           <a class="code" href="class_skilful_1_1_sample.html#a382a2d36215290f0cfc44553f303346d">GridSplitter_IsGridVisible</a> = _smp.<a class="code" href="class_skilful_1_1_sample.html#a20e45473ba5a70aec83d1185bb81f4d4">_GridSplitter_IsGridVisible</a>;
+<a name="l00140"></a>00140           <a class="code" href="class_skilful_1_1_sample.html#ad944b9d15633af26ac6c93d6c4f25e49">Grid_IsVisible</a> = _smp.<a class="code" href="class_skilful_1_1_sample.html#abb9801efa501ddbe85a43712f40b2a20">_Grid_IsVisible</a>;
+<a name="l00141"></a>00141           
+<a name="l00142"></a>00142           <a class="code" href="class_skilful_1_1_sample.html#ab7df34c530bb06e258fbe09821144b73">AxisStyleRight</a> = _smp.<a class="code" href="class_skilful_1_1_sample.html#af42da8eb9c4be753bcdb4a1a74b70980">_AxisStyleRight</a>;
+<a name="l00143"></a>00143           <a class="code" href="class_skilful_1_1_sample.html#a1e2528ed567928eed2ac77321c95bfcb">AxisStyleLeft</a> = _smp.<a class="code" href="class_skilful_1_1_sample.html#a558206e516a070466f9307fe35a856ce">_AxisStyleLeft</a>;
+<a name="l00144"></a>00144           <a class="code" href="class_skilful_1_1_sample.html#aa27e128e61753dd09933d9adf5344def">AxisStyleTop</a> = _smp.<a class="code" href="class_skilful_1_1_sample.html#a2749055bbe1f7579eaa8605f12657c4b">_AxisStyleTop</a>;
+<a name="l00145"></a>00145           <a class="code" href="class_skilful_1_1_sample.html#a51b24a219487846913e5426e6cdfbb3a">AxisStyleBottom</a> = _smp.<a class="code" href="class_skilful_1_1_sample.html#a80d4eb2701764a87803cdca6bd2ca6ce">_AxisStyleBottom</a>;
+<a name="l00146"></a>00146 
+<a name="l00147"></a>00147           <a class="code" href="class_skilful_1_1_sample.html#ae3c99d34a2ffb8f8b49102fb09bc8bf7">CursorLable_Right</a> = _smp.<a class="code" href="class_skilful_1_1_sample.html#a1dcfa810d7ee770daee6c2fa263ef702">_CursorLable_Right</a>;
+<a name="l00148"></a>00148           <a class="code" href="class_skilful_1_1_sample.html#abafe2a91c1e75aaf1459da190e76708c">CursorLable_Left</a> = _smp.<a class="code" href="class_skilful_1_1_sample.html#a10f92e7fb4a529e462a7ecff15a020e8">_CursorLable_Left</a>;
+<a name="l00149"></a>00149           <a class="code" href="class_skilful_1_1_sample.html#ad14991a0c6d43a727abfa663676528ec">CursorLable_Bottom</a> = _smp.<a class="code" href="class_skilful_1_1_sample.html#a01b6dfaf416ac3070280009e69f80680">_CursorLable_Bottom</a>;
+<a name="l00150"></a>00150 
+<a name="l00151"></a>00151           <a class="code" href="class_skilful_1_1_sample.html#ae32f1bca710b9e132a4429dafdddd591">ModelStyle_mainLablesFont</a> = _smp.<a class="code" href="class_skilful_1_1_sample.html#a82d36f1530834dbcf2053e3a65604550">_ModelStyle_mainLablesFont</a>;
+<a name="l00152"></a>00152           <a class="code" href="class_skilful_1_1_sample.html#ab723e83f69d4c030c98210301ae8c55c">ModelStyle_additionalLablesFont</a> = _smp.<a class="code" href="class_skilful_1_1_sample.html#ae79862ebb3c6940ba5c390dde3cb7f94">_ModelStyle_additionalLablesFont</a>; 
+<a name="l00153"></a>00153           
+<a name="l00154"></a>00154           <a class="code" href="class_skilful_1_1_sample.html#a8f9c8ff417eef30df4f9b77f1f39a79a">ModelStyle_fadedMainLinesPen_Width</a> = _smp.<a class="code" href="class_skilful_1_1_sample.html#a01d9ea2cd7d77f7b009fd14af838da03">_ModelStyle_fadedMainLinesPen_Width</a>;
+<a name="l00155"></a>00155           <a class="code" href="class_skilful_1_1_sample.html#a4e633531d76cc9a08f1de454310116e8">ModelStyle_fadedMainDashedLinesPen_Width</a> = _smp.<a class="code" href="class_skilful_1_1_sample.html#a079649cc98c84e9071922dd3f5adb414">_ModelStyle_fadedMainDashedLinesPen_Width</a>;
+<a name="l00156"></a>00156           <a class="code" href="class_skilful_1_1_sample.html#a2663d3e17801bc98f8f49e9b7ad7851a">ModelStyle_fadedMainDashDotLinesPen_Width</a> = _smp.<a class="code" href="class_skilful_1_1_sample.html#af45fa30eb60bf5a298f7da90329c7986">_ModelStyle_fadedMainDashDotLinesPen_Width</a>;
+<a name="l00157"></a>00157           <a class="code" href="class_skilful_1_1_sample.html#ab7eb1374ce775123e90fdebd38dc19ca">ModelStyle_fadedAdditionalLinesPen_Width</a> = _smp.<a class="code" href="class_skilful_1_1_sample.html#a259c97829f655eace123b45bf47c47d5">_ModelStyle_fadedAdditionalLinesPen_Width</a>;
+<a name="l00158"></a>00158           
+<a name="l00159"></a>00159           <a class="code" href="class_skilful_1_1_sample.html#ab6e02348b30232facb7dbd8923984c84">ModelStyle_selectedMainLinesPen_Width</a> = _smp.<a class="code" href="class_skilful_1_1_sample.html#a6fb44d074a43c8d547527ee9d702ae59">_ModelStyle_selectedMainLinesPen_Width</a>;
+<a name="l00160"></a>00160           <a class="code" href="class_skilful_1_1_sample.html#a83bdff09351b9b59ca02b7e4d33e75db">ModelStyle_selectedMainDashedLinesPen_Width</a> = _smp.<a class="code" href="class_skilful_1_1_sample.html#a696a98aee0627c17dd4808b9c75ee0e0">_ModelStyle_selectedMainDashedLinesPen_Width</a>;
+<a name="l00161"></a>00161           <a class="code" href="class_skilful_1_1_sample.html#a43c5754cc79cc81724582ae19c6f3f21">ModelStyle_selectedMainDashDotLinesPen_Width</a> = _smp.<a class="code" href="class_skilful_1_1_sample.html#ad2c855ece559e7c6db80e288cd48c602">_ModelStyle_selectedMainDashDotLinesPen_Width</a>;
+<a name="l00162"></a>00162           <a class="code" href="class_skilful_1_1_sample.html#a5a49bbbeaef91c9800120790ee5f3266">ModelStyle_selectedAdditionalLinesPen_Width</a> = _smp.<a class="code" href="class_skilful_1_1_sample.html#acc91a71d0f088386d5eb9b726b313e36">_ModelStyle_selectedAdditionalLinesPen_Width</a>;
+<a name="l00163"></a>00163 
+<a name="l00164"></a>00164       }
+<a name="l00165"></a>00165      
+<a name="l00166"></a>00166     <span class="comment">// ------- Конструктор для смены sample на текущем чарте и дальнейшего использования</span>
+<a name="l00167"></a><a class="code" href="class_skilful_1_1_sample.html#a0f0023b2babe71964377a8c0c7e4877f">00167</a>      <span class="keyword">public</span> <a class="code" href="class_skilful_1_1_sample.html#a8ee8fbbc9481f7e9b7dde00e152ac0e9">Sample</a>(<a class="code" href="class_skilful_1_1_sample.html">Sample</a> _smp, ChartV2.Control c) 
+<a name="l00168"></a>00168      {
+<a name="l00169"></a>00169          <a class="code" href="class_skilful_1_1_sample.html#a8a91610e99c3351b20faf8272afa2997">ChartType_</a> = c.seriesList[0].legend.chartType = _smp.<a class="code" href="class_skilful_1_1_sample.html#a7bbffc847136b6869517580f7799e260">_ChartType_</a>;
+<a name="l00170"></a>00170          <a class="code" href="class_skilful_1_1_sample.html#a532ccc7007df6f1801c2d8206a16bb0e">Chart_backColor</a> = c.plot.style.backColor = _smp.<a class="code" href="class_skilful_1_1_sample.html#aa3ba9b7d48a50fc76c17f217a2fecc0b">_Chart_backColor</a>;
+<a name="l00171"></a>00171          <a class="code" href="class_skilful_1_1_sample.html#a29078e40c8de23215e2e85ebf12d0a19">Grid_Color</a> = c.plot.grid.style.minorVerticalPen.Color = c.plot.grid.style.minorHorizontalPen.Color = _smp.<a class="code" href="class_skilful_1_1_sample.html#a6340facea4f6747d49eb6b7a8ca0b477">_Grid_Color</a>;
+<a name="l00172"></a>00172          <a class="code" href="class_skilful_1_1_sample.html#a382a2d36215290f0cfc44553f303346d">GridSplitter_IsGridVisible</a> = c.gridSplitter.IsGridVisible = _smp.<a class="code" href="class_skilful_1_1_sample.html#a20e45473ba5a70aec83d1185bb81f4d4">_GridSplitter_IsGridVisible</a>;
+<a name="l00173"></a>00173          <a class="code" href="class_skilful_1_1_sample.html#ad944b9d15633af26ac6c93d6c4f25e49">Grid_IsVisible</a> = c.plot.grid.IsVisible = _smp.<a class="code" href="class_skilful_1_1_sample.html#abb9801efa501ddbe85a43712f40b2a20">_Grid_IsVisible</a>;
+<a name="l00174"></a>00174          
+<a name="l00175"></a>00175          <a class="code" href="class_skilful_1_1_sample.html#ab7df34c530bb06e258fbe09821144b73">AxisStyleRight</a> = c.rightAxis.style.magorTickFont = _smp.<a class="code" href="class_skilful_1_1_sample.html#af42da8eb9c4be753bcdb4a1a74b70980">_AxisStyleRight</a>;
+<a name="l00176"></a>00176          <a class="code" href="class_skilful_1_1_sample.html#a1e2528ed567928eed2ac77321c95bfcb">AxisStyleLeft</a> = c.leftAxis.style.magorTickFont = _smp.<a class="code" href="class_skilful_1_1_sample.html#a558206e516a070466f9307fe35a856ce">_AxisStyleLeft</a>;
+<a name="l00177"></a>00177          <a class="code" href="class_skilful_1_1_sample.html#aa27e128e61753dd09933d9adf5344def">AxisStyleTop</a> = c.topAxis.style.magorTickFont = _smp.<a class="code" href="class_skilful_1_1_sample.html#a2749055bbe1f7579eaa8605f12657c4b">_AxisStyleTop</a>;
+<a name="l00178"></a>00178          <a class="code" href="class_skilful_1_1_sample.html#a51b24a219487846913e5426e6cdfbb3a">AxisStyleBottom</a> = c.bottomAxis.style.magorTickFont = _smp.<a class="code" href="class_skilful_1_1_sample.html#a80d4eb2701764a87803cdca6bd2ca6ce">_AxisStyleBottom</a>;
+<a name="l00179"></a>00179 
+<a name="l00180"></a>00180          <a class="code" href="class_skilful_1_1_sample.html#ae3c99d34a2ffb8f8b49102fb09bc8bf7">CursorLable_Right</a> = c.rightAxis.cursorLable.font = _smp.<a class="code" href="class_skilful_1_1_sample.html#a1dcfa810d7ee770daee6c2fa263ef702">_CursorLable_Right</a>;
+<a name="l00181"></a>00181          <a class="code" href="class_skilful_1_1_sample.html#abafe2a91c1e75aaf1459da190e76708c">CursorLable_Left</a> = c.leftAxis.cursorLable.font = _smp.<a class="code" href="class_skilful_1_1_sample.html#a10f92e7fb4a529e462a7ecff15a020e8">_CursorLable_Left</a>;
+<a name="l00182"></a>00182          <a class="code" href="class_skilful_1_1_sample.html#ad14991a0c6d43a727abfa663676528ec">CursorLable_Bottom</a> = c.bottomAxis.cursorLable.font = _smp.<a class="code" href="class_skilful_1_1_sample.html#a01b6dfaf416ac3070280009e69f80680">_CursorLable_Bottom</a>;
+<a name="l00183"></a>00183 
+<a name="l00184"></a>00184          <a class="code" href="class_skilful_1_1_sample.html#ae32f1bca710b9e132a4429dafdddd591">ModelStyle_mainLablesFont</a> = <a class="code" href="class_chart_v2_1_1_styles_1_1_model_style.html">ModelStyle</a>.mainLablesFont = _smp.<a class="code" href="class_skilful_1_1_sample.html#a82d36f1530834dbcf2053e3a65604550">_ModelStyle_mainLablesFont</a>;
+<a name="l00185"></a>00185          <a class="code" href="class_skilful_1_1_sample.html#ab723e83f69d4c030c98210301ae8c55c">ModelStyle_additionalLablesFont</a> = <a class="code" href="class_chart_v2_1_1_styles_1_1_model_style.html">ModelStyle</a>.additionalLablesFont = _smp.<a class="code" href="class_skilful_1_1_sample.html#ae79862ebb3c6940ba5c390dde3cb7f94">_ModelStyle_additionalLablesFont</a>;
+<a name="l00186"></a>00186 
+<a name="l00187"></a>00187          <span class="keywordflow">if</span> (<a class="code" href="class_chart_v2_1_1_styles_1_1_model_style.html">ModelStyle</a>.selectedMainLinesPen != null)
+<a name="l00188"></a>00188          {
+<a name="l00189"></a>00189            
+<a name="l00190"></a>00190              <a class="code" href="class_skilful_1_1_sample.html#a8f9c8ff417eef30df4f9b77f1f39a79a">ModelStyle_fadedMainLinesPen_Width</a> = <a class="code" href="class_chart_v2_1_1_styles_1_1_model_style.html">ModelStyle</a>.fadedMainLinesPen.Width = _smp.<a class="code" href="class_skilful_1_1_sample.html#a01d9ea2cd7d77f7b009fd14af838da03">_ModelStyle_fadedMainLinesPen_Width</a>;
+<a name="l00191"></a>00191              <a class="code" href="class_skilful_1_1_sample.html#a4e633531d76cc9a08f1de454310116e8">ModelStyle_fadedMainDashedLinesPen_Width</a> = <a class="code" href="class_chart_v2_1_1_styles_1_1_model_style.html">ModelStyle</a>.fadedMainDashedLinesPen.Width = _smp.<a class="code" href="class_skilful_1_1_sample.html#a079649cc98c84e9071922dd3f5adb414">_ModelStyle_fadedMainDashedLinesPen_Width</a>;
+<a name="l00192"></a>00192              <a class="code" href="class_skilful_1_1_sample.html#a2663d3e17801bc98f8f49e9b7ad7851a">ModelStyle_fadedMainDashDotLinesPen_Width</a> = <a class="code" href="class_chart_v2_1_1_styles_1_1_model_style.html">ModelStyle</a>.fadedMainDashDotLinesPen.Width = _smp.<a class="code" href="class_skilful_1_1_sample.html#af45fa30eb60bf5a298f7da90329c7986">_ModelStyle_fadedMainDashDotLinesPen_Width</a>;
+<a name="l00193"></a>00193              <a class="code" href="class_skilful_1_1_sample.html#ab7eb1374ce775123e90fdebd38dc19ca">ModelStyle_fadedAdditionalLinesPen_Width</a> = <a class="code" href="class_chart_v2_1_1_styles_1_1_model_style.html">ModelStyle</a>.fadedAdditionalLinesPen.Width = _smp.<a class="code" href="class_skilful_1_1_sample.html#a259c97829f655eace123b45bf47c47d5">_ModelStyle_fadedAdditionalLinesPen_Width</a>;
+<a name="l00194"></a>00194 
+<a name="l00195"></a>00195              <a class="code" href="class_skilful_1_1_sample.html#ab6e02348b30232facb7dbd8923984c84">ModelStyle_selectedMainLinesPen_Width</a> = <a class="code" href="class_chart_v2_1_1_styles_1_1_model_style.html">ModelStyle</a>.selectedMainLinesPen.Width = _smp.<a class="code" href="class_skilful_1_1_sample.html#a6fb44d074a43c8d547527ee9d702ae59">_ModelStyle_selectedMainLinesPen_Width</a>;
+<a name="l00196"></a>00196              <a class="code" href="class_skilful_1_1_sample.html#a83bdff09351b9b59ca02b7e4d33e75db">ModelStyle_selectedMainDashedLinesPen_Width</a> = <a class="code" href="class_chart_v2_1_1_styles_1_1_model_style.html">ModelStyle</a>.selectedMainDashedLinesPen.Width = _smp.<a class="code" href="class_skilful_1_1_sample.html#a696a98aee0627c17dd4808b9c75ee0e0">_ModelStyle_selectedMainDashedLinesPen_Width</a>;
+<a name="l00197"></a>00197              <a class="code" href="class_skilful_1_1_sample.html#a43c5754cc79cc81724582ae19c6f3f21">ModelStyle_selectedMainDashDotLinesPen_Width</a> = <a class="code" href="class_chart_v2_1_1_styles_1_1_model_style.html">ModelStyle</a>.selectedMainDashDotLinesPen.Width = _smp.<a class="code" href="class_skilful_1_1_sample.html#ad2c855ece559e7c6db80e288cd48c602">_ModelStyle_selectedMainDashDotLinesPen_Width</a>;
+<a name="l00198"></a>00198              <a class="code" href="class_skilful_1_1_sample.html#a5a49bbbeaef91c9800120790ee5f3266">ModelStyle_selectedAdditionalLinesPen_Width</a> = <a class="code" href="class_chart_v2_1_1_styles_1_1_model_style.html">ModelStyle</a>.selectedAdditionalLinesPen.Width = _smp.<a class="code" href="class_skilful_1_1_sample.html#acc91a71d0f088386d5eb9b726b313e36">_ModelStyle_selectedAdditionalLinesPen_Width</a>;
+<a name="l00199"></a>00199          }
+<a name="l00200"></a>00200 
+<a name="l00201"></a>00201          
+<a name="l00202"></a>00202      }
+<a name="l00203"></a>00203      
+<a name="l00204"></a>00204      <span class="comment">// ------ Конструктор для сохранения в файл и текущего использования</span>
+<a name="l00205"></a><a class="code" href="class_skilful_1_1_sample.html#af1ad48493c148207df2836e14d4f481f">00205</a>      <span class="keyword">public</span> <a class="code" href="class_skilful_1_1_sample.html#a8ee8fbbc9481f7e9b7dde00e152ac0e9">Sample</a>(ChartV2.Control c)
+<a name="l00206"></a>00206      {
+<a name="l00207"></a>00207          <a class="code" href="class_skilful_1_1_sample.html#a8a91610e99c3351b20faf8272afa2997">ChartType_</a> = <a class="code" href="class_skilful_1_1_sample.html#a7bbffc847136b6869517580f7799e260">_ChartType_</a> = c.seriesList[0].legend.chartType;
+<a name="l00208"></a>00208          <a class="code" href="class_skilful_1_1_sample.html#a532ccc7007df6f1801c2d8206a16bb0e">Chart_backColor</a> = <a class="code" href="class_skilful_1_1_sample.html#aa3ba9b7d48a50fc76c17f217a2fecc0b">_Chart_backColor</a> = c.plot.style.backColor;
+<a name="l00209"></a>00209          <a class="code" href="class_skilful_1_1_sample.html#a29078e40c8de23215e2e85ebf12d0a19">Grid_Color</a> = <a class="code" href="class_skilful_1_1_sample.html#a6340facea4f6747d49eb6b7a8ca0b477">_Grid_Color</a> = c.plot.grid.style.minorVerticalPen.Color;
+<a name="l00210"></a>00210          <a class="code" href="class_skilful_1_1_sample.html#a382a2d36215290f0cfc44553f303346d">GridSplitter_IsGridVisible</a> = <a class="code" href="class_skilful_1_1_sample.html#a20e45473ba5a70aec83d1185bb81f4d4">_GridSplitter_IsGridVisible</a> = c.gridSplitter.IsGridVisible;
+<a name="l00211"></a>00211          <a class="code" href="class_skilful_1_1_sample.html#ad944b9d15633af26ac6c93d6c4f25e49">Grid_IsVisible</a> = <a class="code" href="class_skilful_1_1_sample.html#abb9801efa501ddbe85a43712f40b2a20">_Grid_IsVisible</a> = c.plot.grid.IsVisible;
+<a name="l00212"></a>00212          
+<a name="l00213"></a>00213          <a class="code" href="class_skilful_1_1_sample.html#ab7df34c530bb06e258fbe09821144b73">AxisStyleRight</a> = <a class="code" href="class_skilful_1_1_sample.html#af42da8eb9c4be753bcdb4a1a74b70980">_AxisStyleRight</a> = c.rightAxis.style.magorTickFont;
+<a name="l00214"></a>00214          <a class="code" href="class_skilful_1_1_sample.html#a1e2528ed567928eed2ac77321c95bfcb">AxisStyleLeft</a> = <a class="code" href="class_skilful_1_1_sample.html#a558206e516a070466f9307fe35a856ce">_AxisStyleLeft</a> = c.leftAxis.style.magorTickFont;
+<a name="l00215"></a>00215          <a class="code" href="class_skilful_1_1_sample.html#aa27e128e61753dd09933d9adf5344def">AxisStyleTop</a> = <a class="code" href="class_skilful_1_1_sample.html#a2749055bbe1f7579eaa8605f12657c4b">_AxisStyleTop</a> = c.topAxis.style.magorTickFont;
+<a name="l00216"></a>00216          <a class="code" href="class_skilful_1_1_sample.html#a51b24a219487846913e5426e6cdfbb3a">AxisStyleBottom</a> = <a class="code" href="class_skilful_1_1_sample.html#a80d4eb2701764a87803cdca6bd2ca6ce">_AxisStyleBottom</a> = c.bottomAxis.style.magorTickFont;
+<a name="l00217"></a>00217 
+<a name="l00218"></a>00218          <a class="code" href="class_skilful_1_1_sample.html#ae3c99d34a2ffb8f8b49102fb09bc8bf7">CursorLable_Right</a> = <a class="code" href="class_skilful_1_1_sample.html#a1dcfa810d7ee770daee6c2fa263ef702">_CursorLable_Right</a> = c.rightAxis.cursorLable.font;
+<a name="l00219"></a>00219          <a class="code" href="class_skilful_1_1_sample.html#abafe2a91c1e75aaf1459da190e76708c">CursorLable_Left</a> = <a class="code" href="class_skilful_1_1_sample.html#a10f92e7fb4a529e462a7ecff15a020e8">_CursorLable_Left</a> = c.leftAxis.cursorLable.font;
+<a name="l00220"></a>00220          <a class="code" href="class_skilful_1_1_sample.html#ad14991a0c6d43a727abfa663676528ec">CursorLable_Bottom</a> = <a class="code" href="class_skilful_1_1_sample.html#a01b6dfaf416ac3070280009e69f80680">_CursorLable_Bottom</a> = c.bottomAxis.cursorLable.font;
+<a name="l00221"></a>00221 
+<a name="l00222"></a>00222          <a class="code" href="class_skilful_1_1_sample.html#ae32f1bca710b9e132a4429dafdddd591">ModelStyle_mainLablesFont</a> = <a class="code" href="class_skilful_1_1_sample.html#a82d36f1530834dbcf2053e3a65604550">_ModelStyle_mainLablesFont</a> = <a class="code" href="class_chart_v2_1_1_styles_1_1_model_style.html">ModelStyle</a>.mainLablesFont;
+<a name="l00223"></a>00223          <a class="code" href="class_skilful_1_1_sample.html#ab723e83f69d4c030c98210301ae8c55c">ModelStyle_additionalLablesFont</a> = <a class="code" href="class_skilful_1_1_sample.html#ae79862ebb3c6940ba5c390dde3cb7f94">_ModelStyle_additionalLablesFont</a> = <a class="code" href="class_chart_v2_1_1_styles_1_1_model_style.html">ModelStyle</a>.additionalLablesFont;
+<a name="l00224"></a>00224 
+<a name="l00225"></a>00225          <span class="keywordflow">if</span> (<a class="code" href="class_chart_v2_1_1_styles_1_1_model_style.html">ModelStyle</a>.selectedMainLinesPen != null)
+<a name="l00226"></a>00226          {
+<a name="l00227"></a>00227             
+<a name="l00228"></a>00228              <a class="code" href="class_skilful_1_1_sample.html#a8f9c8ff417eef30df4f9b77f1f39a79a">ModelStyle_fadedMainLinesPen_Width</a> = <a class="code" href="class_skilful_1_1_sample.html#a01d9ea2cd7d77f7b009fd14af838da03">_ModelStyle_fadedMainLinesPen_Width</a> = <a class="code" href="class_chart_v2_1_1_styles_1_1_model_style.html">ModelStyle</a>.fadedMainLinesPen.Width;
+<a name="l00229"></a>00229              <a class="code" href="class_skilful_1_1_sample.html#a4e633531d76cc9a08f1de454310116e8">ModelStyle_fadedMainDashedLinesPen_Width</a> = <a class="code" href="class_skilful_1_1_sample.html#a079649cc98c84e9071922dd3f5adb414">_ModelStyle_fadedMainDashedLinesPen_Width</a> = <a class="code" href="class_chart_v2_1_1_styles_1_1_model_style.html">ModelStyle</a>.fadedMainDashedLinesPen.Width;
+<a name="l00230"></a>00230              <a class="code" href="class_skilful_1_1_sample.html#a2663d3e17801bc98f8f49e9b7ad7851a">ModelStyle_fadedMainDashDotLinesPen_Width</a> = <a class="code" href="class_skilful_1_1_sample.html#af45fa30eb60bf5a298f7da90329c7986">_ModelStyle_fadedMainDashDotLinesPen_Width</a> = <a class="code" href="class_chart_v2_1_1_styles_1_1_model_style.html">ModelStyle</a>.fadedMainDashDotLinesPen.Width;
+<a name="l00231"></a>00231              <a class="code" href="class_skilful_1_1_sample.html#ab7eb1374ce775123e90fdebd38dc19ca">ModelStyle_fadedAdditionalLinesPen_Width</a> = <a class="code" href="class_skilful_1_1_sample.html#a259c97829f655eace123b45bf47c47d5">_ModelStyle_fadedAdditionalLinesPen_Width</a> = <a class="code" href="class_chart_v2_1_1_styles_1_1_model_style.html">ModelStyle</a>.fadedAdditionalLinesPen.Width;
+<a name="l00232"></a>00232 
+<a name="l00233"></a>00233              <a class="code" href="class_skilful_1_1_sample.html#ab6e02348b30232facb7dbd8923984c84">ModelStyle_selectedMainLinesPen_Width</a> = <a class="code" href="class_skilful_1_1_sample.html#a6fb44d074a43c8d547527ee9d702ae59">_ModelStyle_selectedMainLinesPen_Width</a> = <a class="code" href="class_chart_v2_1_1_styles_1_1_model_style.html">ModelStyle</a>.selectedMainLinesPen.Width;
+<a name="l00234"></a>00234              <a class="code" href="class_skilful_1_1_sample.html#a83bdff09351b9b59ca02b7e4d33e75db">ModelStyle_selectedMainDashedLinesPen_Width</a> = <a class="code" href="class_skilful_1_1_sample.html#a696a98aee0627c17dd4808b9c75ee0e0">_ModelStyle_selectedMainDashedLinesPen_Width</a> = <a class="code" href="class_chart_v2_1_1_styles_1_1_model_style.html">ModelStyle</a>.selectedMainDashedLinesPen.Width;
+<a name="l00235"></a>00235              <a class="code" href="class_skilful_1_1_sample.html#a43c5754cc79cc81724582ae19c6f3f21">ModelStyle_selectedMainDashDotLinesPen_Width</a> = <a class="code" href="class_skilful_1_1_sample.html#ad2c855ece559e7c6db80e288cd48c602">_ModelStyle_selectedMainDashDotLinesPen_Width</a> = <a class="code" href="class_chart_v2_1_1_styles_1_1_model_style.html">ModelStyle</a>.selectedMainDashDotLinesPen.Width;
+<a name="l00236"></a>00236              <a class="code" href="class_skilful_1_1_sample.html#a5a49bbbeaef91c9800120790ee5f3266">ModelStyle_selectedAdditionalLinesPen_Width</a> = <a class="code" href="class_skilful_1_1_sample.html#acc91a71d0f088386d5eb9b726b313e36">_ModelStyle_selectedAdditionalLinesPen_Width</a> = <a class="code" href="class_chart_v2_1_1_styles_1_1_model_style.html">ModelStyle</a>.selectedAdditionalLinesPen.Width;
+<a name="l00237"></a>00237           }
+<a name="l00238"></a>00238         
+<a name="l00239"></a>00239 
+<a name="l00240"></a>00240      }
+<a name="l00241"></a>00241 
+<a name="l00242"></a>00242 
+<a name="l00243"></a><a class="code" href="class_skilful_1_1_sample.html#ad67bf90779db357d1591d52c2125b136">00243</a>     <span class="keyword">static</span> <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_skilful_1_1_sample.html#ad67bf90779db357d1591d52c2125b136">DefaultSample</a>(ChartV2.Control c)
+<a name="l00244"></a>00244      {
+<a name="l00245"></a>00245       
+<a name="l00246"></a>00246       <a class="code" href="class_skilful_1_1_sample.html#a8a91610e99c3351b20faf8272afa2997">ChartType_</a> = c.seriesList[0].legend.chartType = Default_ChartType;
+<a name="l00247"></a>00247       <a class="code" href="class_skilful_1_1_sample.html#a532ccc7007df6f1801c2d8206a16bb0e">Chart_backColor</a> = c.plot.style.backColor = Default_Chart_backColor;
+<a name="l00248"></a>00248       <a class="code" href="class_skilful_1_1_sample.html#a29078e40c8de23215e2e85ebf12d0a19">Grid_Color</a> = c.plot.grid.style.minorVerticalPen.Color = c.plot.grid.style.minorHorizontalPen.Color = Default_Grid_Color;
+<a name="l00249"></a>00249       <a class="code" href="class_skilful_1_1_sample.html#a382a2d36215290f0cfc44553f303346d">GridSplitter_IsGridVisible</a> = c.gridSplitter.IsGridVisible = Default_GridSplitter_IsGridVisible;
+<a name="l00250"></a>00250       <a class="code" href="class_skilful_1_1_sample.html#ad944b9d15633af26ac6c93d6c4f25e49">Grid_IsVisible</a> = c.plot.grid.IsVisible = Default_Grid_IsVisible;
+<a name="l00251"></a>00251       
+<a name="l00252"></a>00252       <a class="code" href="class_skilful_1_1_sample.html#ab7df34c530bb06e258fbe09821144b73">AxisStyleRight</a> = c.rightAxis.style.magorTickFont = Default_AxisStyleRight;
+<a name="l00253"></a>00253       <a class="code" href="class_skilful_1_1_sample.html#a1e2528ed567928eed2ac77321c95bfcb">AxisStyleLeft</a> = c.leftAxis.style.magorTickFont = Default_AxisStyleLeft;
+<a name="l00254"></a>00254       <a class="code" href="class_skilful_1_1_sample.html#aa27e128e61753dd09933d9adf5344def">AxisStyleTop</a> = c.topAxis.style.magorTickFont = Default_AxisStyleTop;
+<a name="l00255"></a>00255       <a class="code" href="class_skilful_1_1_sample.html#a51b24a219487846913e5426e6cdfbb3a">AxisStyleBottom</a> = c.bottomAxis.style.magorTickFont = Default_AxisStyleBottom;
+<a name="l00256"></a>00256 
+<a name="l00257"></a>00257       <a class="code" href="class_skilful_1_1_sample.html#abafe2a91c1e75aaf1459da190e76708c">CursorLable_Left</a> = c.leftAxis.cursorLable.font = Default_CursorLable_Left;
+<a name="l00258"></a>00258       <a class="code" href="class_skilful_1_1_sample.html#ae3c99d34a2ffb8f8b49102fb09bc8bf7">CursorLable_Right</a> = c.rightAxis.cursorLable.font = Default_CursorLable_Right;
+<a name="l00259"></a>00259       <a class="code" href="class_skilful_1_1_sample.html#ad14991a0c6d43a727abfa663676528ec">CursorLable_Bottom</a> = c.bottomAxis.cursorLable.font = Default_CursorLable_Bottom;
+<a name="l00260"></a>00260 
+<a name="l00261"></a>00261       <a class="code" href="class_skilful_1_1_sample.html#ae32f1bca710b9e132a4429dafdddd591">ModelStyle_mainLablesFont</a> = <a class="code" href="class_chart_v2_1_1_styles_1_1_model_style.html">ModelStyle</a>.mainLablesFont = Default_ModelStyle_mainLablesFont;
+<a name="l00262"></a>00262       <a class="code" href="class_skilful_1_1_sample.html#ab723e83f69d4c030c98210301ae8c55c">ModelStyle_additionalLablesFont</a> = <a class="code" href="class_chart_v2_1_1_styles_1_1_model_style.html">ModelStyle</a>.additionalLablesFont = Default_ModelStyle_additionalLablesFont;
+<a name="l00263"></a>00263   
+<a name="l00264"></a>00264       <span class="keywordflow">if</span> (<a class="code" href="class_chart_v2_1_1_styles_1_1_model_style.html">ModelStyle</a>.selectedMainLinesPen != null)
+<a name="l00265"></a>00265       {
+<a name="l00266"></a>00266          
+<a name="l00267"></a>00267           <a class="code" href="class_skilful_1_1_sample.html#a8f9c8ff417eef30df4f9b77f1f39a79a">ModelStyle_fadedMainLinesPen_Width</a> = <a class="code" href="class_chart_v2_1_1_styles_1_1_model_style.html">ModelStyle</a>.fadedMainLinesPen.Width = Default_ModelStyle_fadedMainLinesPen_Width;
+<a name="l00268"></a>00268           <a class="code" href="class_skilful_1_1_sample.html#a4e633531d76cc9a08f1de454310116e8">ModelStyle_fadedMainDashedLinesPen_Width</a> = <a class="code" href="class_chart_v2_1_1_styles_1_1_model_style.html">ModelStyle</a>.fadedMainDashedLinesPen.Width = Default_ModelStyle_fadedMainDashedLinesPen_Width;
+<a name="l00269"></a>00269           <a class="code" href="class_skilful_1_1_sample.html#a2663d3e17801bc98f8f49e9b7ad7851a">ModelStyle_fadedMainDashDotLinesPen_Width</a> = <a class="code" href="class_chart_v2_1_1_styles_1_1_model_style.html">ModelStyle</a>.fadedMainDashDotLinesPen.Width = Default_ModelStyle_fadedMainDashDotLinesPen_Width;
+<a name="l00270"></a>00270           <a class="code" href="class_skilful_1_1_sample.html#ab7eb1374ce775123e90fdebd38dc19ca">ModelStyle_fadedAdditionalLinesPen_Width</a> = <a class="code" href="class_chart_v2_1_1_styles_1_1_model_style.html">ModelStyle</a>.fadedAdditionalLinesPen.Width = Default_ModelStyle_fadedAdditionalLinesPen_Width;
+<a name="l00271"></a>00271 
+<a name="l00272"></a>00272           <a class="code" href="class_skilful_1_1_sample.html#ab6e02348b30232facb7dbd8923984c84">ModelStyle_selectedMainLinesPen_Width</a> = <a class="code" href="class_chart_v2_1_1_styles_1_1_model_style.html">ModelStyle</a>.selectedMainLinesPen.Width = Default_ModelStyle_selectedMainLinesPen_Width;
+<a name="l00273"></a>00273           <a class="code" href="class_skilful_1_1_sample.html#a83bdff09351b9b59ca02b7e4d33e75db">ModelStyle_selectedMainDashedLinesPen_Width</a> = <a class="code" href="class_chart_v2_1_1_styles_1_1_model_style.html">ModelStyle</a>.selectedMainDashedLinesPen.Width = Default_ModelStyle_selectedMainDashedLinesPen_Width;
+<a name="l00274"></a>00274           <a class="code" href="class_skilful_1_1_sample.html#a43c5754cc79cc81724582ae19c6f3f21">ModelStyle_selectedMainDashDotLinesPen_Width</a> = <a class="code" href="class_chart_v2_1_1_styles_1_1_model_style.html">ModelStyle</a>.selectedMainDashDotLinesPen.Width = Default_ModelStyle_selectedMainDashDotLinesPen_Width;
+<a name="l00275"></a>00275           <a class="code" href="class_skilful_1_1_sample.html#a5a49bbbeaef91c9800120790ee5f3266">ModelStyle_selectedAdditionalLinesPen_Width</a> = <a class="code" href="class_chart_v2_1_1_styles_1_1_model_style.html">ModelStyle</a>.selectedAdditionalLinesPen.Width = Default_ModelStyle_selectedAdditionalLinesPen_Width;
+<a name="l00276"></a>00276       }
+<a name="l00277"></a>00277     
+<a name="l00278"></a>00278 
+<a name="l00279"></a>00279       
+<a name="l00280"></a>00280     }
+<a name="l00281"></a>00281 
+<a name="l00282"></a>00282     }
+<a name="l00283"></a>00283 }
+</pre></div></div>
+</div>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Перечисления</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&nbsp;</span>Свойства</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&nbsp;</span>События</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

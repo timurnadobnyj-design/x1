@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Skilful: Исходный файл Skilful/Data/DataSourceLibraries/randomgen/rtserv.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javaScript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Создано системой Doxygen 1.7.1 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+--></script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пакеты</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="dirs.html"><span>Алфавитный&nbsp;указатель&nbsp;директорий</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath">
+    <ul>
+      <li><a class="el" href="dir_7adcdc1edff7620168fbc20357cad448.html">Skilful</a>      </li>
+      <li><a class="el" href="dir_c777626736fbbff11bce263deda591b3.html">Data</a>      </li>
+      <li><a class="el" href="dir_647839cbd444298f9ebd82118acdfd67.html">DataSourceLibraries</a>      </li>
+      <li><a class="el" href="dir_df317af479dfa30390799c710208ba26.html">randomgen</a>      </li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<h1>rtserv.cs</h1>  </div>
+</div>
+<div class="contents">
+<a href="rtserv_8cs.html">См. документацию.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 ﻿<span class="comment">//---------------------------------------------------------------------------------------------------------------</span>
+<a name="l00002"></a>00002 <span class="comment">// Skilful. Tactica Adversa graphic and analysis tool.</span>
+<a name="l00003"></a>00003 <span class="comment">// Copyright (C) 2010 &quot;...&quot;, Andrey Zyablitsev (skat)</span>
+<a name="l00004"></a>00004 <span class="comment">//</span>
+<a name="l00005"></a>00005 <span class="comment">// This program is free software; you can redistribute it and/or</span>
+<a name="l00006"></a>00006 <span class="comment">// modify it under the terms of the GNU General Public License</span>
+<a name="l00007"></a>00007 <span class="comment">// as published by the Free Software Foundation; either version 2</span>
+<a name="l00008"></a>00008 <span class="comment">// of the License, or (at your option) any later version.</span>
+<a name="l00009"></a>00009 <span class="comment">//</span>
+<a name="l00010"></a>00010 <span class="comment">// This program is distributed in the hope that it will be useful,</span>
+<a name="l00011"></a>00011 <span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<a name="l00012"></a>00012 <span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<a name="l00013"></a>00013 <span class="comment">// GNU General Public License for more details.</span>
+<a name="l00014"></a>00014 <span class="comment">//</span>
+<a name="l00015"></a>00015 <span class="comment">// You should have received a copy of the GNU General Public License</span>
+<a name="l00016"></a>00016 <span class="comment">// along with this program; if not, write to the Free Software</span>
+<a name="l00017"></a>00017 <span class="comment">// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</span>
+<a name="l00018"></a>00018 <span class="comment">//</span>
+<a name="l00019"></a>00019 <span class="comment">// mail: support@protoforma.com </span>
+<a name="l00020"></a>00020 <span class="comment">//---------------------------------------------------------------------------------------------------------------</span>
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022 
+<a name="l00023"></a>00023 <span class="keyword">using</span> System;
+<a name="l00024"></a>00024 <span class="keyword">using</span> System.Collections.Generic;
+<a name="l00025"></a>00025 <span class="keyword">using</span> System.Linq;
+<a name="l00026"></a>00026 <span class="keyword">using</span> System.Text;
+<a name="l00027"></a>00027 
+<a name="l00028"></a><a class="code" href="namespacertservice.html">00028</a> <span class="keyword">namespace </span>rtservice
+<a name="l00029"></a>00029 {
+<a name="l00030"></a><a class="code" href="namespacertservice.html#aba4d693ff4feace372fd12fcec2bda3b">00030</a>     <span class="keyword">enum</span> <a class="code" href="namespacertservice.html#aba4d693ff4feace372fd12fcec2bda3b">TF</a>
+<a name="l00031"></a>00031     {
+<a name="l00032"></a>00032         m60, m240, Day, Week, Month, Quarter, Year, <span class="comment">//набор базовых фреймов</span>
+<a name="l00033"></a>00033     };
+<a name="l00035"></a><a class="code" href="classrtservice_1_1rtserv.html">00035</a>     <span class="keyword">class </span><a class="code" href="classrtservice_1_1rtserv.html">rtserv</a>
+<a name="l00036"></a>00036     {
+<a name="l00037"></a>00037         <span class="keyword">static</span> <span class="keywordtype">void</span> Main(<span class="keywordtype">string</span>[] args)
+<a name="l00038"></a>00038         {
+<a name="l00039"></a>00039             <span class="keywordflow">if</span> (args.Length == 4 &amp;&amp; args[0] == <span class="stringliteral">&quot;get_history&quot;</span>)
+<a name="l00040"></a>00040             {
+<a name="l00041"></a>00041                 <span class="keywordtype">string</span> sym = args[1];
+<a name="l00042"></a>00042                 <a class="code" href="namespacertservice.html#aba4d693ff4feace372fd12fcec2bda3b">TF</a> tf = (TF)<span class="keywordtype">int</span>.Parse(args[2]);
+<a name="l00043"></a>00043                 <span class="keywordtype">int</span> len = <span class="keywordtype">int</span>.Parse(args[3]);
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045                 <a class="code" href="classrtservice_1_1generator.html">generator</a> G = <span class="keyword">new</span> <a class="code" href="classrtservice_1_1generator.html">generator</a>();
+<a name="l00046"></a>00046                 G.<a class="code" href="classrtservice_1_1generator.html#af4498f7b377d8bead012b6cf29af1552">generate_history2</a>(sym, tf, len);
+<a name="l00047"></a>00047             }
+<a name="l00048"></a>00048             <span class="keywordflow">else</span> <span class="keywordflow">if</span> (args.Length == 4 &amp;&amp; args[0] == <span class="stringliteral">&quot;listen&quot;</span>)
+<a name="l00049"></a>00049             {
+<a name="l00050"></a>00050                 <span class="keywordtype">string</span> sym = args[1];
+<a name="l00051"></a>00051                 DateTime lasttime = DateTime.Parse(args[2].Substring(0, 10)+<span class="stringliteral">&quot; &quot;</span>+args[2].Substring(11));
+<a name="l00052"></a>00052                 <span class="keywordtype">double</span> lasttick = a2f(args[3]);
+<a name="l00053"></a>00053      
+<a name="l00054"></a>00054                 <a class="code" href="classrtservice_1_1generator.html">generator</a> G = <span class="keyword">new</span> <a class="code" href="classrtservice_1_1generator.html">generator</a>();
+<a name="l00055"></a>00055                 G.<a class="code" href="classrtservice_1_1generator.html#a048a45f95a56cad58f9e13fe724d2ee5">listen</a>(sym, <a class="code" href="namespacertservice.html#aba4d693ff4feace372fd12fcec2bda3b">TF</a>.m60, lasttime, lasttick);
+<a name="l00056"></a>00056             }
+<a name="l00057"></a>00057             <span class="comment">//else</span>
+<a name="l00058"></a>00058             <span class="comment">//{</span>
+<a name="l00059"></a>00059             <span class="comment">//    generator G = new generator();</span>
+<a name="l00060"></a>00060             <span class="comment">//    G.generate_history2(&quot;uRand123.45&quot;, TF.m60, 50000);</span>
+<a name="l00061"></a>00061             <span class="comment">//    return;</span>
+<a name="l00062"></a>00062             <span class="comment">//}</span>
+<a name="l00063"></a>00063         }
+<a name="l00064"></a>00064         <span class="keyword">static</span> <span class="keywordtype">double</span> a2f(<span class="keywordtype">string</span> s)
+<a name="l00065"></a>00065         {
+<a name="l00066"></a>00066             <span class="keywordtype">string</span>[] dbl = s.Split(<span class="charliteral">&#39;,&#39;</span>, <span class="charliteral">&#39;.&#39;</span>);
+<a name="l00067"></a>00067             <span class="keywordtype">double</span> val = <span class="keywordtype">int</span>.Parse(dbl[0]);
+<a name="l00068"></a>00068             <span class="keywordflow">if</span> (dbl.Length == 2) val += <span class="keywordtype">int</span>.Parse(dbl[1]) / Math.Pow(10, dbl[1].Length);
+<a name="l00069"></a>00069             <span class="keywordflow">return</span> val;
+<a name="l00070"></a>00070         }
+<a name="l00071"></a>00071     }
+<a name="l00073"></a><a class="code" href="classrtservice_1_1generator.html">00073</a>     <span class="keyword">class </span><a class="code" href="classrtservice_1_1generator.html">generator</a>
+<a name="l00074"></a>00074     {
+<a name="l00076"></a><a class="code" href="classrtservice_1_1generator.html#aae697544207c168933c2fa29b201836c">00076</a>         <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classrtservice_1_1generator.html#aae697544207c168933c2fa29b201836c">generate_history</a>(<span class="keywordtype">string</span> sym, <a class="code" href="namespacertservice.html#aba4d693ff4feace372fd12fcec2bda3b">TF</a> tf, <span class="keywordtype">int</span> len)
+<a name="l00077"></a>00077         {
+<a name="l00078"></a>00078             <span class="keywordtype">string</span> number = sym.Substring(sym.LastIndexOf(<span class="stringliteral">&quot;om&quot;</span>) + 2);
+<a name="l00079"></a>00079             <span class="keywordtype">int</span> pwr = number.IndexOf(<span class="charliteral">&#39;.&#39;</span>) - 1;                                <span class="comment">//количество разрядов в целой части</span>
+<a name="l00080"></a>00080             <span class="keywordtype">int</span> digits = number.Substring(number.IndexOf(<span class="charliteral">&#39;.&#39;</span>) + 1).Length;    <span class="comment">//количество разрядов в дробноой части</span>
+<a name="l00081"></a>00081             <span class="keywordtype">int</span> cnt = number.Length - 1;                                      <span class="comment">//общее количество разрядов</span>
+<a name="l00082"></a>00082             <span class="keywordtype">double</span> point = Math.Pow(10, -digits);
+<a name="l00083"></a>00083 
+<a name="l00084"></a>00084             <span class="keywordtype">double</span> o = 0, h, l, c;
+<a name="l00085"></a>00085             <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt;= cnt; i++) o = o * 10 + i;
+<a name="l00086"></a>00086             o *= point;
+<a name="l00087"></a>00087             Random randObj = <span class="keyword">new</span> Random();
+<a name="l00088"></a>00088             DateTime time = <span class="keyword">new</span> DateTime(2000, 01, 01);
+<a name="l00089"></a>00089 
+<a name="l00090"></a>00090             <span class="keywordflow">while</span> (len-- &gt; 0)
+<a name="l00091"></a>00091             {
+<a name="l00092"></a>00092                 h = o + randObj.Next(25) * point;
+<a name="l00093"></a>00093                 l = o - randObj.Next(25) * point;
+<a name="l00094"></a>00094                 c = l + randObj.Next((<span class="keywordtype">int</span>)((h - l) / point)) * point;
+<a name="l00095"></a>00095                 Console.WriteLine(inctime(ref time, tf).ToString(<span class="stringliteral">&quot;yyyy.MM.dd/HH:mm:ss&quot;</span>) + <span class="stringliteral">&quot; &quot;</span> + o + <span class="stringliteral">&quot; &quot;</span> + h + <span class="stringliteral">&quot; &quot;</span> + l + <span class="stringliteral">&quot; &quot;</span> + c);
+<a name="l00096"></a>00096                 o = c + randObj.Next(-6, 7) * point;
+<a name="l00097"></a>00097             }
+<a name="l00098"></a>00098         }
+<a name="l00100"></a>00100         <span class="keyword">static</span> Dictionary&lt;string, DateTime&gt; last_time = <span class="keyword">new</span> Dictionary&lt;string, DateTime&gt;();
+<a name="l00101"></a>00101         <span class="keyword">static</span> Dictionary&lt;string, double&gt; last_tick = <span class="keyword">new</span> Dictionary&lt;string, double&gt;();
+<a name="l00102"></a><a class="code" href="classrtservice_1_1generator.html#af4498f7b377d8bead012b6cf29af1552">00102</a>         <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classrtservice_1_1generator.html#af4498f7b377d8bead012b6cf29af1552">generate_history2</a>(<span class="keywordtype">string</span> sym, <a class="code" href="namespacertservice.html#aba4d693ff4feace372fd12fcec2bda3b">TF</a> tf, <span class="keywordtype">int</span> len)
+<a name="l00103"></a>00103         {
+<a name="l00104"></a>00104             <span class="keywordtype">string</span> number = sym.Substring(sym.LastIndexOf(<span class="stringliteral">&quot;Rand&quot;</span>) + 4);
+<a name="l00105"></a>00105             <span class="keywordtype">int</span> pwr = number.IndexOf(<span class="charliteral">&#39;.&#39;</span>);                                    <span class="comment">//количество разрядов в целой части</span>
+<a name="l00106"></a>00106             <span class="keywordtype">int</span> digits = number.Substring(number.IndexOf(<span class="charliteral">&#39;.&#39;</span>) + 1).Length;    <span class="comment">//количество разрядов в дробноой части</span>
+<a name="l00107"></a>00107             <span class="keywordtype">int</span> cnt = number.Length - 1;                                      <span class="comment">//общее количество разрядов</span>
+<a name="l00108"></a>00108             <span class="keywordtype">double</span> point = Math.Pow(10, -digits);
+<a name="l00109"></a>00109             <span class="keywordtype">double</span> max, min; <span class="comment">//допустимые границы диапазона</span>
+<a name="l00110"></a>00110 
+<a name="l00111"></a>00111             <span class="keywordtype">double</span> o = 0, h, l, c=0;
+<a name="l00112"></a>00112             <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt;= cnt; i++) o = o * 10 + i;<span class="comment">//сгенерируем начальное число вида 12345</span>
+<a name="l00113"></a>00113             o *= point;                                   <span class="comment">//добавим плавающую точку</span>
+<a name="l00114"></a>00114             Random randObj = <span class="keyword">new</span> Random();
+<a name="l00115"></a>00115             DateTime time = <span class="keyword">new</span> DateTime(2000, 01, 01);   <span class="comment">//дата начала отсчета</span>
+<a name="l00116"></a>00116             min = o / 5;
+<a name="l00117"></a>00117             max = o * 5;
+<a name="l00118"></a>00118 
+<a name="l00119"></a>00119             <span class="keywordtype">int</span> w = cnt-2, f=digits;
+<a name="l00120"></a>00120             <span class="keywordflow">while</span> (len-- &gt; 0)
+<a name="l00121"></a>00121             {
+<a name="l00122"></a>00122                 <span class="keywordtype">int</span> vol = randObj.Next(10) + 10;
+<a name="l00123"></a>00123                 h = l = c = o;
+<a name="l00124"></a>00124                 <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; vol; j++)
+<a name="l00125"></a>00125                 {
+<a name="l00126"></a>00126                     c = next(randObj, min, max, c, point);
+<a name="l00127"></a>00127                     <span class="keywordflow">if</span> (h &lt; c) h = c;
+<a name="l00128"></a>00128                     <span class="keywordflow">if</span> (l &gt; c) l = c;
+<a name="l00129"></a>00129                 }
+<a name="l00130"></a>00130                 Console.WriteLine(inctime(ref time, tf).ToString(<span class="stringliteral">&quot;yyyy.MM.dd/HH:mm:ss&quot;</span>)+<span class="stringliteral">&quot; {0,&quot;</span>+w+<span class="stringliteral">&quot;:f&quot;</span>+f+<span class="stringliteral">&quot;} {1,&quot;</span>+w+<span class="stringliteral">&quot;:f&quot;</span>+f+<span class="stringliteral">&quot;} {2,&quot;</span>+w+<span class="stringliteral">&quot;:f&quot;</span>+f+<span class="stringliteral">&quot;} {3,&quot;</span>+w+<span class="stringliteral">&quot;:f&quot;</span>+f+<span class="stringliteral">&quot;}&quot;</span>, o, h, l, c);
+<a name="l00131"></a>00131                 <span class="comment">//Console.WriteLine(inctime(ref time, tf).ToString(&quot;yyyy.MM.dd/HH:mm:ss&quot;) + &quot; &quot; + o + &quot; &quot; + h + &quot; &quot; + l + &quot; &quot; + c);</span>
+<a name="l00132"></a>00132                 o = next(randObj, min, max, c, point);
+<a name="l00133"></a>00133             }
+<a name="l00134"></a>00134             <span class="comment">//сохраним данные для последующего включения генератора тиков</span>
+<a name="l00135"></a>00135             last_time.Add(sym, time);
+<a name="l00136"></a>00136             last_tick.Add(sym, c);
+<a name="l00137"></a>00137         }
+<a name="l00138"></a>00138         <span class="keywordtype">double</span> next(Random randObj, <span class="keywordtype">double</span> min, <span class="keywordtype">double</span> max, <span class="keywordtype">double</span> current, <span class="keywordtype">double</span> point)
+<a name="l00139"></a>00139         {
+<a name="l00140"></a>00140             <span class="comment">//double c = current + randObj.Next(-7, 7) * point;</span>
+<a name="l00141"></a>00141             <span class="keywordtype">double</span> c = ((int)(current / point) + randObj.Next(-5, 6)) * point;
+<a name="l00142"></a>00142             <span class="keywordflow">if</span> (c &lt;= min) c += 14*point;
+<a name="l00143"></a>00143             <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c &gt;= max) c -= 14*point;
+<a name="l00144"></a>00144             <span class="keywordflow">return</span> c;
+<a name="l00145"></a>00145         }
+<a name="l00147"></a><a class="code" href="classrtservice_1_1generator.html#a048a45f95a56cad58f9e13fe724d2ee5">00147</a>         <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classrtservice_1_1generator.html#a048a45f95a56cad58f9e13fe724d2ee5">listen</a>(<span class="keywordtype">string</span> sym, <a class="code" href="namespacertservice.html#aba4d693ff4feace372fd12fcec2bda3b">TF</a> tf, DateTime time, <span class="keywordtype">double</span> initial_tick)
+<a name="l00148"></a>00148         {
+<a name="l00149"></a>00149             <span class="keywordtype">string</span> number = sym.Substring(sym.LastIndexOf(<span class="stringliteral">&quot;Rand&quot;</span>) + 4);
+<a name="l00150"></a>00150             <span class="keywordtype">char</span> delim = number.IndexOf(<span class="charliteral">&#39;.&#39;</span>) &gt;= 0 ? <span class="charliteral">&#39;.&#39;</span> : <span class="charliteral">&#39;,&#39;</span>;
+<a name="l00151"></a>00151             <span class="keywordtype">int</span> digits = number.Substring(number.IndexOf(delim) + 1).Length;    <span class="comment">//количество разрядов в дробноой части</span>
+<a name="l00152"></a>00152             <span class="keywordtype">int</span> cnt = number.Length - 1;                                      <span class="comment">//общее количество разрядов</span>
+<a name="l00153"></a>00153             <span class="keywordtype">double</span> point = Math.Pow(10, -digits);
+<a name="l00154"></a>00154             <span class="keywordtype">double</span> max, min; <span class="comment">//допустимые границы диапазона</span>
+<a name="l00155"></a>00155 
+<a name="l00156"></a>00156             <span class="comment">//Console.WriteLine(&quot;tick&quot; + &quot;;&quot; + sym + &quot;;&quot; + time + &quot;;&quot; + initial_tick + &quot;;&quot; + initial_tick);</span>
+<a name="l00157"></a>00157 
+<a name="l00158"></a>00158             <span class="keywordtype">double</span> o = initial_tick, h, l, c;
+<a name="l00159"></a>00159             min = o / 5;
+<a name="l00160"></a>00160             max = o * 5;
+<a name="l00161"></a>00161             Random randObj = <span class="keyword">new</span> Random();
+<a name="l00162"></a>00162 
+<a name="l00163"></a>00163             <span class="keywordflow">while</span> (<span class="keyword">true</span>)
+<a name="l00164"></a>00164             {
+<a name="l00165"></a>00165                 <span class="keywordtype">int</span> vol = randObj.Next(10) + 10;
+<a name="l00166"></a>00166                 h = l = c = o;
+<a name="l00167"></a>00167                 <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; vol; j++)
+<a name="l00168"></a>00168                 {
+<a name="l00169"></a>00169                     c = next(randObj, min, max, c, point);
+<a name="l00170"></a>00170                     <span class="keywordflow">if</span> (h &lt; c) h = c;
+<a name="l00171"></a>00171                     <span class="keywordflow">if</span> (l &gt; c) l = c;
+<a name="l00172"></a>00172                     <span class="comment">//выдача реал тайм тиков // sym, time, bid, ask</span>
+<a name="l00173"></a>00173                     Console.WriteLine(<span class="stringliteral">&quot;tick;&quot;</span> + sym + <span class="stringliteral">&quot;;&quot;</span> + time.AddSeconds(j+1).ToString(<span class="stringliteral">&quot;yyyy.MM.dd HH:mm:ss&quot;</span>) + <span class="stringliteral">&quot;;&quot;</span> + c + <span class="stringliteral">&quot;;&quot;</span> + (c + randObj.Next(1,3)*point));
+<a name="l00174"></a>00174                     <span class="comment">//Sleep(rand());</span>
+<a name="l00175"></a>00175                     System.Threading.Thread.Sleep(randObj.Next(100, 250));
+<a name="l00176"></a>00176                 }
+<a name="l00177"></a>00177                 Console.WriteLine(<span class="stringliteral">&quot;bar;&quot;</span> + sym + <span class="stringliteral">&quot;;&quot;</span> + (<span class="keywordtype">int</span>)tf + <span class="stringliteral">&quot;;&quot;</span> + inctime(ref time, tf).ToString(<span class="stringliteral">&quot;yyyy.MM.dd HH:mm:ss&quot;</span>) + <span class="stringliteral">&quot;;&quot;</span> + o + <span class="stringliteral">&quot;;&quot;</span> + h + <span class="stringliteral">&quot;;&quot;</span> + l + <span class="stringliteral">&quot;;&quot;</span> + c);
+<a name="l00178"></a>00178                 o = next(randObj, min, max, c, point);
+<a name="l00179"></a>00179             }
+<a name="l00180"></a>00180         }
+<a name="l00182"></a>00182         DateTime inctime(ref DateTime time, <a class="code" href="namespacertservice.html#aba4d693ff4feace372fd12fcec2bda3b">TF</a> tf)
+<a name="l00183"></a>00183         {
+<a name="l00184"></a>00184             <span class="keywordflow">switch</span> (tf)
+<a name="l00185"></a>00185             {
+<a name="l00186"></a>00186                 <span class="keywordflow">case</span> <a class="code" href="namespacertservice.html#aba4d693ff4feace372fd12fcec2bda3b">TF</a>.m60: time = time.AddHours(1);
+<a name="l00187"></a>00187                     <span class="keywordflow">if</span> (time.DayOfWeek == DayOfWeek.Saturday) time = time.AddDays(2);
+<a name="l00188"></a>00188                     <span class="keywordflow">break</span>;
+<a name="l00189"></a>00189             }
+<a name="l00190"></a>00190             <span class="keywordflow">return</span> time;
+<a name="l00191"></a>00191         }
+<a name="l00192"></a>00192     }
+<a name="l00193"></a>00193 }
+</pre></div></div>
+</div>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Перечисления</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&nbsp;</span>Свойства</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&nbsp;</span>События</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>
