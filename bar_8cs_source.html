@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Skilful: Исходный файл Skilful/Data/bar.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javaScript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Создано системой Doxygen 1.7.1 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+--></script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пакеты</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="dirs.html"><span>Алфавитный&nbsp;указатель&nbsp;директорий</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath">
+    <ul>
+      <li><a class="el" href="dir_7adcdc1edff7620168fbc20357cad448.html">Skilful</a>      </li>
+      <li><a class="el" href="dir_c777626736fbbff11bce263deda591b3.html">Data</a>      </li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<h1>bar.cs</h1>  </div>
+</div>
+<div class="contents">
+<a href="bar_8cs.html">См. документацию.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 ﻿<span class="comment">//---------------------------------------------------------------------------------------------------------------</span>
+<a name="l00002"></a>00002 <span class="comment">// Skilful. Tactica Adversa graphic and analysis tool.</span>
+<a name="l00003"></a>00003 <span class="comment">// Copyright (C) 2010 &quot;...&quot;, Alex Kokomov(Loylick)</span>
+<a name="l00004"></a>00004 <span class="comment">//</span>
+<a name="l00005"></a>00005 <span class="comment">// This program is free software; you can redistribute it and/or</span>
+<a name="l00006"></a>00006 <span class="comment">// modify it under the terms of the GNU General Public License</span>
+<a name="l00007"></a>00007 <span class="comment">// as published by the Free Software Foundation; either version 2</span>
+<a name="l00008"></a>00008 <span class="comment">// of the License, or (at your option) any later version.</span>
+<a name="l00009"></a>00009 <span class="comment">//</span>
+<a name="l00010"></a>00010 <span class="comment">// This program is distributed in the hope that it will be useful,</span>
+<a name="l00011"></a>00011 <span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<a name="l00012"></a>00012 <span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<a name="l00013"></a>00013 <span class="comment">// GNU General Public License for more details.</span>
+<a name="l00014"></a>00014 <span class="comment">//</span>
+<a name="l00015"></a>00015 <span class="comment">// You should have received a copy of the GNU General Public License</span>
+<a name="l00016"></a>00016 <span class="comment">// along with this program; if not, write to the Free Software</span>
+<a name="l00017"></a>00017 <span class="comment">// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</span>
+<a name="l00018"></a>00018 <span class="comment">//</span>
+<a name="l00019"></a>00019 <span class="comment">// mail: support@protoforma.com </span>
+<a name="l00020"></a>00020 <span class="comment">//---------------------------------------------------------------------------------------------------------------</span>
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022 
+<a name="l00023"></a>00023 
+<a name="l00024"></a>00024 <span class="keyword">using</span> System;
+<a name="l00025"></a>00025 
+<a name="l00026"></a>00026 <span class="comment">// bars.cs: implementation of the bar class.</span>
+<a name="l00027"></a>00027 <span class="comment">//</span>
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029 
+<a name="l00030"></a><a class="code" href="class_bar.html">00030</a> <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_bar.html">Bar</a>
+<a name="l00031"></a>00031 {
+<a name="l00032"></a>00032     <span class="comment">// Date-0, time - 1, open -2, high -3, low-4, close-5</span>
+<a name="l00033"></a><a class="code" href="class_bar.html#a891b180b870cae0574bff052674fd26d">00033</a>     <span class="keyword">public</span> decimal[] <a class="code" href="class_bar.html#a891b180b870cae0574bff052674fd26d">d</a> = <span class="keyword">new</span> decimal[6];
+<a name="l00034"></a>00034     <span class="comment">//  decimal oc,h_l,ho;</span>
+<a name="l00035"></a>00035     <span class="comment">// r - расстояние в барах до предыдущего экстремума на четырех фреймах</span>
+<a name="l00036"></a><a class="code" href="class_bar.html#a281c65bbf040c3bfb11be8d67a077311">00036</a>     <span class="keyword">public</span> <span class="keywordtype">int</span>[] <a class="code" href="class_bar.html#a281c65bbf040c3bfb11be8d67a077311">r</a> = <span class="keyword">new</span> <span class="keywordtype">int</span>[4];
+<a name="l00037"></a>00037     <span class="comment">//index показывает является ли бар экстремумом, на каком фрейме, </span>
+<a name="l00038"></a>00038     <span class="comment">// направление тренда на этом фрейме более подробно см. makeIndex и getIndex</span>
+<a name="l00039"></a><a class="code" href="class_bar.html#a4e242ea7c93f2f8d2dbcc4ad70579ad2">00039</a>     <span class="keyword">public</span> uint <a class="code" href="class_bar.html#a4e242ea7c93f2f8d2dbcc4ad70579ad2">index</a>;
+<a name="l00040"></a>00040     <span class="comment">//номер бара </span>
+<a name="l00041"></a><a class="code" href="class_bar.html#a73a1d1b49910c3f417413afbd968adc9">00041</a>     <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_bar.html#a73a1d1b49910c3f417413afbd968adc9">i</a>;
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043     <span class="keyword">public</span> DateTime <a class="code" href="class_bar.html#a0160676241508dc1c6dec48119fd4cc8">DT</a>
+<a name="l00044"></a><a class="code" href="class_bar.html#a0160676241508dc1c6dec48119fd4cc8">00044</a>     {
+<a name="l00045"></a>00045         <span class="keyword">get</span>
+<a name="l00046"></a>00046         {
+<a name="l00047"></a>00047             <span class="keywordflow">if</span> (<a class="code" href="class_bar.html#a891b180b870cae0574bff052674fd26d">d</a>[0] != 0)
+<a name="l00048"></a>00048             {
+<a name="l00049"></a>00049                 <span class="keywordtype">int</span> Y = Convert.ToInt32(<a class="code" href="class_bar.html#a891b180b870cae0574bff052674fd26d">d</a>[0] / 10000);
+<a name="l00050"></a>00050                 <span class="keywordtype">int</span> M = Convert.ToInt32((<a class="code" href="class_bar.html#a891b180b870cae0574bff052674fd26d">d</a>[0] - Y * 10000) / 100);
+<a name="l00051"></a>00051                 <span class="keywordtype">int</span> DD = Convert.ToInt32(<a class="code" href="class_bar.html#a891b180b870cae0574bff052674fd26d">d</a>[0] % 100);
+<a name="l00052"></a>00052                 <span class="keywordtype">int</span> H = Convert.ToInt32(Math.Truncate(<a class="code" href="class_bar.html#a891b180b870cae0574bff052674fd26d">d</a>[1] / 10000));
+<a name="l00053"></a>00053                 <span class="keywordtype">int</span> N = Convert.ToInt32((<a class="code" href="class_bar.html#a891b180b870cae0574bff052674fd26d">d</a>[1] - H * 10000) / 100);
+<a name="l00054"></a>00054                 <span class="keywordtype">int</span> S = Convert.ToInt32(<a class="code" href="class_bar.html#a891b180b870cae0574bff052674fd26d">d</a>[1] % 100);
+<a name="l00055"></a>00055                 <span class="keywordflow">return</span> <span class="keyword">new</span> DateTime(Y, M, DD, H, N, S);
+<a name="l00056"></a>00056             }
+<a name="l00057"></a>00057             <span class="keywordflow">else</span>
+<a name="l00058"></a>00058                 <span class="keywordflow">return</span> <span class="keyword">new</span> DateTime();
+<a name="l00059"></a>00059         }
+<a name="l00060"></a>00060         <span class="keyword">set</span>
+<a name="l00061"></a>00061         {
+<a name="l00062"></a>00062             <a class="code" href="class_bar.html#a891b180b870cae0574bff052674fd26d">d</a>[0] = value.Year * 10000 + value.Month * 100 + value.Day;
+<a name="l00063"></a>00063             <a class="code" href="class_bar.html#a891b180b870cae0574bff052674fd26d">d</a>[1] = value.Hour * 10000 + value.Minute * 100 + value.Second;
+<a name="l00064"></a>00064         }
+<a name="l00065"></a>00065     }
+<a name="l00066"></a>00066     <span class="keyword">public</span> <span class="keywordtype">double</span> <a class="code" href="class_bar.html#a1259846e0982b4f03f2e2f5e3af93e85" title="Цена открытия.">Open</a>  
+<a name="l00067"></a><a class="code" href="class_bar.html#a1259846e0982b4f03f2e2f5e3af93e85">00067</a>     {
+<a name="l00068"></a>00068         <span class="keyword">get</span> { <span class="keywordflow">return</span> Convert.ToDouble(<a class="code" href="class_bar.html#a891b180b870cae0574bff052674fd26d">d</a>[2]); }
+<a name="l00069"></a>00069        <span class="comment">// set { }</span>
+<a name="l00070"></a>00070     }
+<a name="l00071"></a>00071     <span class="keyword">public</span> <span class="keywordtype">double</span> <a class="code" href="class_bar.html#a220660322404e5866fcf2db5c325b012" title="Максимальная цена.">High</a>  
+<a name="l00072"></a><a class="code" href="class_bar.html#a220660322404e5866fcf2db5c325b012">00072</a>     {
+<a name="l00073"></a>00073         <span class="keyword">get</span> { <span class="keywordflow">return</span> Convert.ToDouble(<a class="code" href="class_bar.html#a891b180b870cae0574bff052674fd26d">d</a>[3]); }
+<a name="l00074"></a>00074        <span class="comment">// set { }</span>
+<a name="l00075"></a>00075     }
+<a name="l00076"></a>00076     <span class="keyword">public</span> <span class="keywordtype">double</span> <a class="code" href="class_bar.html#ad0b8b3b841d976028892d21cf75063ae" title="Минимальная цена.">Low</a>   
+<a name="l00077"></a><a class="code" href="class_bar.html#ad0b8b3b841d976028892d21cf75063ae">00077</a>     {
+<a name="l00078"></a>00078         <span class="keyword">get</span> { <span class="keywordflow">return</span> Convert.ToDouble(<a class="code" href="class_bar.html#a891b180b870cae0574bff052674fd26d">d</a>[4]); }
+<a name="l00079"></a>00079        <span class="comment">// set { }</span>
+<a name="l00080"></a>00080     }
+<a name="l00081"></a>00081     <span class="keyword">public</span> <span class="keywordtype">double</span> <a class="code" href="class_bar.html#a6b70519525ac45d80dd3a83e27611056" title="Цена закрытия.">Close</a> 
+<a name="l00082"></a><a class="code" href="class_bar.html#a6b70519525ac45d80dd3a83e27611056">00082</a>     {
+<a name="l00083"></a>00083         <span class="keyword">get</span> { <span class="keywordflow">return</span> Convert.ToDouble(<a class="code" href="class_bar.html#a891b180b870cae0574bff052674fd26d">d</a>[5]); }
+<a name="l00084"></a>00084       <span class="comment">//  set { }</span>
+<a name="l00085"></a>00085     }
+<a name="l00086"></a>00086 
+<a name="l00087"></a>00087 
+<a name="l00089"></a>00089     <span class="comment">// Construction/Destruction</span>
+<a name="l00091"></a><a class="code" href="class_bar.html#a955b769a59075258b03244d69574bd73">00091</a> <span class="comment"></span>    <span class="keyword">public</span> <a class="code" href="class_bar.html#a955b769a59075258b03244d69574bd73">Bar</a>()
+<a name="l00092"></a>00092     {
+<a name="l00093"></a>00093         
+<a name="l00094"></a>00094         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; 6; k++)
+<a name="l00095"></a>00095             <a class="code" href="class_bar.html#a891b180b870cae0574bff052674fd26d">d</a>[k] = 0;
+<a name="l00096"></a>00096         
+<a name="l00097"></a>00097     }
+<a name="l00098"></a><a class="code" href="class_bar.html#aaae8911ba1d98efa8854f346e6bfc2e0">00098</a>     <span class="keyword">public</span> <a class="code" href="class_bar.html#a955b769a59075258b03244d69574bd73">Bar</a>(decimal[] dd, <span class="keywordtype">int</span> ii)
+<a name="l00099"></a>00099     {
+<a name="l00100"></a>00100        <span class="comment">// index = 0;</span>
+<a name="l00101"></a>00101         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; 6; k++)
+<a name="l00102"></a>00102             <a class="code" href="class_bar.html#a891b180b870cae0574bff052674fd26d">d</a>[k] = dd[k];
+<a name="l00103"></a>00103         <a class="code" href="class_bar.html#a73a1d1b49910c3f417413afbd968adc9">i</a> = ii;
+<a name="l00104"></a>00104     }
+<a name="l00105"></a><a class="code" href="class_bar.html#a82549a6f9076730b1778e32a30411332">00105</a>     <span class="keyword">public</span> <a class="code" href="class_bar.html#a955b769a59075258b03244d69574bd73">Bar</a>(DateTime <a class="code" href="class_bar.html#a0160676241508dc1c6dec48119fd4cc8">DT</a>, <span class="keywordtype">double</span> <a class="code" href="class_bar.html#a1259846e0982b4f03f2e2f5e3af93e85" title="Цена открытия.">Open</a>, <span class="keywordtype">double</span> <a class="code" href="class_bar.html#a220660322404e5866fcf2db5c325b012" title="Максимальная цена.">High</a>, <span class="keywordtype">double</span> <a class="code" href="class_bar.html#ad0b8b3b841d976028892d21cf75063ae" title="Минимальная цена.">Low</a>, <span class="keywordtype">double</span> <a class="code" href="class_bar.html#a6b70519525ac45d80dd3a83e27611056" title="Цена закрытия.">Close</a>, <span class="keywordtype">int</span> BarNum)
+<a name="l00106"></a>00106     {
+<a name="l00107"></a>00107        <span class="comment">// index = 0;</span>
+<a name="l00108"></a>00108         <a class="code" href="class_bar.html#a891b180b870cae0574bff052674fd26d">d</a>[0] = DT.Year * 10000 + DT.Month * 100 + DT.Day;
+<a name="l00109"></a>00109         <a class="code" href="class_bar.html#a891b180b870cae0574bff052674fd26d">d</a>[1] = DT.Hour * 10000 + DT.Minute * 100 + DT.Second;
+<a name="l00110"></a>00110         <a class="code" href="class_bar.html#a891b180b870cae0574bff052674fd26d">d</a>[2] = Convert.ToDecimal(Open);
+<a name="l00111"></a>00111         <a class="code" href="class_bar.html#a891b180b870cae0574bff052674fd26d">d</a>[3] = Convert.ToDecimal(High);
+<a name="l00112"></a>00112         <a class="code" href="class_bar.html#a891b180b870cae0574bff052674fd26d">d</a>[4] = Convert.ToDecimal(Low);
+<a name="l00113"></a>00113         <a class="code" href="class_bar.html#a891b180b870cae0574bff052674fd26d">d</a>[5] = Convert.ToDecimal(Close);
+<a name="l00114"></a>00114         <a class="code" href="class_bar.html#a73a1d1b49910c3f417413afbd968adc9">i</a> = BarNum;
+<a name="l00115"></a>00115     }
+<a name="l00116"></a>00116 
+<a name="l00117"></a><a class="code" href="class_bar.html#a5b9c63c709760e636de85f8ec6e6057b">00117</a>     <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_bar.html#a5b9c63c709760e636de85f8ec6e6057b">Dispose</a>()
+<a name="l00118"></a>00118     {
+<a name="l00119"></a>00119     }
+<a name="l00120"></a>00120 
+<a name="l00121"></a><a class="code" href="class_bar.html#ab5e97242e09988842d77150ba4913352">00121</a>     <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_bar.html#ab5e97242e09988842d77150ba4913352">getIndex</a>(out <span class="keywordtype">int</span> hl, out <span class="keywordtype">int</span> bar37, out <span class="keywordtype">int</span> frep, out <span class="keywordtype">int</span> trndir)
+<a name="l00122"></a>00122     {
+<a name="l00123"></a>00123         <span class="comment">//является ли бар high или low</span>
+<a name="l00124"></a>00124         hl = (int)(<a class="code" href="class_bar.html#a4e242ea7c93f2f8d2dbcc4ad70579ad2">index</a> &amp; 3);
+<a name="l00125"></a>00125         <span class="comment">//является ли бар баром &quot;3&quot;(для 2-5точек модели) или &quot;7&quot; (для 1-й точкимодели</span>
+<a name="l00126"></a>00126         bar37 = (int)((<a class="code" href="class_bar.html#a4e242ea7c93f2f8d2dbcc4ad70579ad2">index</a> &amp; 60) &gt;&gt; 2);
+<a name="l00127"></a>00127         <span class="comment">//репером какого фрейма является бар</span>
+<a name="l00128"></a>00128         frep = (int)((<a class="code" href="class_bar.html#a4e242ea7c93f2f8d2dbcc4ad70579ad2">index</a> &amp; 192) &gt;&gt; 6);
+<a name="l00129"></a>00129         <span class="comment">//направление тренда на фрейме, на котором бар является репером</span>
+<a name="l00130"></a>00130         trndir = (int)((<a class="code" href="class_bar.html#a4e242ea7c93f2f8d2dbcc4ad70579ad2">index</a> &amp; 261888) &gt;&gt; 8);
+<a name="l00131"></a>00131     }
+<a name="l00132"></a>00132    
+<a name="l00133"></a><a class="code" href="class_bar.html#a4487e0ce19d295749b87bf07727d5f13">00133</a>     <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_bar.html#a4487e0ce19d295749b87bf07727d5f13">whatExtremum</a>()
+<a name="l00134"></a>00134     {
+<a name="l00135"></a>00135         <span class="keywordtype">int</span> stat37 = (int)((<a class="code" href="class_bar.html#a4e242ea7c93f2f8d2dbcc4ad70579ad2">index</a> &amp; 60) &gt;&gt; 2);
+<a name="l00136"></a>00136         <span class="keywordtype">int</span> high37 = (stat37 &amp; 12) &gt;&gt; 2;<span class="comment">//флаг для бара хай является ли он баром &quot;3&quot; или &quot;7&quot;</span>
+<a name="l00137"></a>00137         <span class="keywordtype">int</span> low37 = (stat37 &amp; 3);<span class="comment">//флаг для бара лоу является ли он баром &quot;3&quot; или &quot;7&quot;</span>
+<a name="l00138"></a>00138         <span class="keywordflow">if</span> ((high37 &gt; 0) &amp;&amp; (low37 == 0)) <span class="keywordflow">return</span> <span class="stringliteral">&quot;Up&quot;</span>;
+<a name="l00139"></a>00139         <span class="keywordflow">if</span> ((low37 &gt; 0) &amp;&amp; (high37 == 0)) <span class="keywordflow">return</span> <span class="stringliteral">&quot;Dn&quot;</span>;
+<a name="l00140"></a>00140         <span class="keywordflow">if</span> ((high37 &gt; 0) &amp;&amp; (low37 &gt; 0)) <span class="keywordflow">return</span> <span class="stringliteral">&quot;UpDn&quot;</span>;
+<a name="l00141"></a>00141         <span class="keywordflow">return</span> <span class="stringliteral">&quot; &quot;</span>;
+<a name="l00142"></a>00142     }
+<a name="l00143"></a>00143 }
+<a name="l00144"></a>00144 
+</pre></div></div>
+</div>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Перечисления</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&nbsp;</span>Свойства</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&nbsp;</span>События</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

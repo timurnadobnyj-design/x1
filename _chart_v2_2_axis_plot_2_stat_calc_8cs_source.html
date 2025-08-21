@@ -1,0 +1,539 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Skilful: Исходный файл Skilful/ChartV2/AxisPlot/StatCalc.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javaScript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Создано системой Doxygen 1.7.1 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+--></script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пакеты</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="dirs.html"><span>Алфавитный&nbsp;указатель&nbsp;директорий</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath">
+    <ul>
+      <li><a class="el" href="dir_7adcdc1edff7620168fbc20357cad448.html">Skilful</a>      </li>
+      <li><a class="el" href="dir_8daa841e026a5c92daaf3ffe66f86a47.html">ChartV2</a>      </li>
+      <li><a class="el" href="dir_db22336d0d20789ce8ea0b5152784721.html">AxisPlot</a>      </li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<h1>StatCalc.cs</h1>  </div>
+</div>
+<div class="contents">
+<a href="_chart_v2_2_axis_plot_2_stat_calc_8cs.html">См. документацию.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 ﻿<span class="comment">//---------------------------------------------------------------------------------------------------------------</span>
+<a name="l00002"></a>00002 <span class="comment">// Skilful. Tactica Adversa graphic and analysis tool.</span>
+<a name="l00003"></a>00003 <span class="comment">// Copyright (C) 2010 &quot;...&quot;, Andrey Zyablitsev (skat)</span>
+<a name="l00004"></a>00004 <span class="comment">//</span>
+<a name="l00005"></a>00005 <span class="comment">// This program is free software; you can redistribute it and/or</span>
+<a name="l00006"></a>00006 <span class="comment">// modify it under the terms of the GNU General Public License</span>
+<a name="l00007"></a>00007 <span class="comment">// as published by the Free Software Foundation; either version 2</span>
+<a name="l00008"></a>00008 <span class="comment">// of the License, or (at your option) any later version.</span>
+<a name="l00009"></a>00009 <span class="comment">//</span>
+<a name="l00010"></a>00010 <span class="comment">// This program is distributed in the hope that it will be useful,</span>
+<a name="l00011"></a>00011 <span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<a name="l00012"></a>00012 <span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<a name="l00013"></a>00013 <span class="comment">// GNU General Public License for more details.</span>
+<a name="l00014"></a>00014 <span class="comment">//</span>
+<a name="l00015"></a>00015 <span class="comment">// You should have received a copy of the GNU General Public License</span>
+<a name="l00016"></a>00016 <span class="comment">// along with this program; if not, write to the Free Software</span>
+<a name="l00017"></a>00017 <span class="comment">// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</span>
+<a name="l00018"></a>00018 <span class="comment">//</span>
+<a name="l00019"></a>00019 <span class="comment">// mail: support@protoforma.com </span>
+<a name="l00020"></a>00020 <span class="comment">//---------------------------------------------------------------------------------------------------------------</span>
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022 <span class="keyword">using</span> System;
+<a name="l00023"></a>00023 <span class="keyword">using</span> System.Collections.Generic;
+<a name="l00024"></a>00024 <span class="keyword">using</span> System.Linq;
+<a name="l00025"></a>00025 <span class="keyword">using</span> System.Text;
+<a name="l00026"></a>00026 <span class="keyword">using</span> Skilful.Data;
+<a name="l00027"></a>00027 <span class="keyword">using</span> Skilful.QuotesManager;
+<a name="l00028"></a>00028 <span class="keyword">using</span> Skilful.ModelManager;
+<a name="l00029"></a>00029 <span class="keyword">using</span> ChartV2;
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031 <span class="keyword">using</span> System.Reflection;
+<a name="l00032"></a>00032 <span class="keyword">using</span> System.Threading;
+<a name="l00033"></a>00033 <span class="keyword">using</span> System.ComponentModel;
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035 <span class="keyword">using</span> System.Windows.Forms;
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037 <span class="keyword">using</span> Excel = Microsoft.Office.Interop.Excel;
+<a name="l00038"></a>00038 <span class="comment">//using Office = Microsoft.Office.Core; // это может понадобиться для работы с диалогами</span>
+<a name="l00039"></a>00039 
+<a name="l00040"></a><a class="code" href="namespace_skilful_1_1_statistics.html">00040</a> <span class="keyword">namespace </span>Skilful.Statistics
+<a name="l00041"></a>00041 {
+<a name="l00042"></a><a class="code" href="class_skilful_1_1_statistics_1_1_stat_calc.html">00042</a>     <span class="keyword">class </span><a class="code" href="class_skilful_1_1_statistics_1_1_stat_calc.html">StatCalc</a>
+<a name="l00043"></a>00043     {
+<a name="l00044"></a>00044         DateTime Begin, End; <span class="comment">//Временной горизонт (даты начала и конца истории)</span>
+<a name="l00045"></a>00045         <a class="code" href="namespace_skilful_1_1_quotes_manager.html#a5c84c6ba01636871f8f98492b465c315">TF</a> TFChild, TFBase, TFParent, TFGrand; <span class="comment">//исследуемые фреймы, где TFBase-текущий, TFChild-меньший, TFParent-старший, TFGrand-старший-старший</span>
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047         <span class="keywordtype">int</span> BarCnt, BarsVoid,    <span class="comment">//Количество баров истории / количество баров истории не входящих в состав моделей</span>
+<a name="l00048"></a>00048             ModelCnt,          <span class="comment">//Количество моделей на истории суммарно и с разделением на:</span>
+<a name="l00049"></a>00049             Ext1cnt, Ext2cnt, Ext3cnt, Bal1cnt, Bal2cnt, Bal3cnt, Atr1cnt, Atr2cnt, Atr3cnt;
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052         <span class="comment">//запустим статистику фоновым процессом</span>
+<a name="l00053"></a><a class="code" href="class_skilful_1_1_statistics_1_1_stat_calc.html#a52ba8c834c6471a8c0cb290fd2f74355">00053</a>         <span class="keyword">public</span> <span class="keywordtype">void</span> Describe(<a class="code" href="class_skilful_1_1_quotes_manager_1_1_t_quotes.html" title="Класс хранит массив которивок для заданного фрейма также массивы моделей, протоформ и некоторые допол...">TQuotes</a> quotes)
+<a name="l00054"></a>00054         {
+<a name="l00055"></a>00055             BackgroundWorker bgimporter = <span class="keyword">new</span> BackgroundWorker();
+<a name="l00056"></a>00056             bgimporter.WorkerSupportsCancellation = <span class="keyword">true</span>;
+<a name="l00057"></a>00057             bgimporter.DoWork += describe;
+<a name="l00058"></a>00058             <span class="comment">//bgimporter.RunWorkerCompleted += bgimporter_complete;</span>
+<a name="l00059"></a>00059             bgimporter.RunWorkerAsync(quotes);
+<a name="l00060"></a>00060         }
+<a name="l00061"></a>00061         
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063         <a class="code" href="class_skilful_1_1_quotes_manager_1_1_t_quotes.html" title="Класс хранит массив которивок для заданного фрейма также массивы моделей, протоформ и некоторые допол...">TQuotes</a> quotes, parent_quotes = null, grand_quotes = null, child_quotes = null;
+<a name="l00064"></a>00064         <span class="keywordtype">string</span> source_name, symbol_name;
+<a name="l00065"></a>00065         <a class="code" href="namespace_skilful_1_1_quotes_manager.html#a5c84c6ba01636871f8f98492b465c315">TF</a> tf;
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067         <span class="keyword">private</span> <span class="keywordtype">void</span> describe(<span class="keywordtype">object</span> sender, DoWorkEventArgs e)
+<a name="l00068"></a>00068         {
+<a name="l00069"></a>00069             quotes = e.Argument as <a class="code" href="class_skilful_1_1_quotes_manager_1_1_t_quotes.html" title="Класс хранит массив которивок для заданного фрейма также массивы моделей, протоформ и некоторые допол...">TQuotes</a>;
+<a name="l00070"></a>00070             source_name = quotes.Symbol.moduleName;
+<a name="l00071"></a>00071             symbol_name = quotes.Symbol.Name;
+<a name="l00072"></a>00072             tf = quotes.tf;
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074             <span class="comment">//check quotes, perant, grandparent and child</span>
+<a name="l00075"></a>00075             <span class="keywordflow">if</span> (tf &lt; (<a class="code" href="namespace_skilful_1_1_quotes_manager.html#a5c84c6ba01636871f8f98492b465c315">TF</a>.count - 1)) parent_quotes = quotes.Symbol.Frames[(int)quotes.chartType, ((<span class="keywordtype">int</span>)tf + 1)];
+<a name="l00076"></a>00076             <span class="comment">//if (tf &lt; (TF.count - 2)) grand_quotes = quotes.Symbol.Frames[(int)quotes.chartType, ((int)tf + 2)];</span>
+<a name="l00077"></a>00077             <span class="comment">//if (tf &gt; (TF.m60)) child_quotes = quotes.Symbol.Frames[(int)quotes.chartType, ((int)tf - 1)];</span>
+<a name="l00078"></a>00078 
+<a name="l00079"></a>00079             
+<a name="l00080"></a>00080             TQuotes[] quotelist = { child_quotes, quotes, parent_quotes, grand_quotes };
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082             <span class="comment">//check or calculate models foreach frames;</span>
+<a name="l00083"></a>00083             <span class="keywordflow">foreach</span> (TQuotes qts <span class="keywordflow">in</span> quotelist)
+<a name="l00084"></a>00084             {
+<a name="l00085"></a>00085                 <span class="keywordflow">if</span> (qts != null)
+<a name="l00086"></a>00086                 {
+<a name="l00087"></a>00087                     <span class="keywordflow">if</span> (qts.<a class="code" href="class_skilful_1_1_quotes_manager_1_1_t_quotes.html#af868bed0c00863792d21c4ff268d90bd" title="доступ к массиву моделей.">MM</a> == null) qts.<a class="code" href="class_skilful_1_1_quotes_manager_1_1_t_quotes.html#af868bed0c00863792d21c4ff268d90bd" title="доступ к массиву моделей.">MM</a> = <span class="keyword">new</span> Skilful.ModelManager.<a class="code" href="class_skilful_1_1_model_manager_1_1_models_manager.html#ad749bcbd60a730a3049d4e7483fe5d3e" title="Конструктор.">ModelsManager</a>();
+<a name="l00088"></a>00088                     <span class="keywordflow">if</span> (!qts.<a class="code" href="class_skilful_1_1_quotes_manager_1_1_t_quotes.html#af868bed0c00863792d21c4ff268d90bd" title="доступ к массиву моделей.">MM</a>.<a class="code" href="class_skilful_1_1_model_manager_1_1_models_manager.html#aa3766c6457b5fbcc748d65a8437a4888">SeeksComplete</a>)
+<a name="l00089"></a>00089                         qts.<a class="code" href="class_skilful_1_1_quotes_manager_1_1_t_quotes.html#af868bed0c00863792d21c4ff268d90bd" title="доступ к массиву моделей.">MM</a>.<a class="code" href="class_skilful_1_1_model_manager_1_1_models_manager.html#a37d89667279123cd15454144ac098e4e" title="Метод нахождения моделей от указанной точки до конца котировок.">SeekModels</a>(qts, 
+<a name="l00090"></a>00090                             Skilful.ModelManager.Options.Extremum1 * 3,
+<a name="l00091"></a>00091                             qts.<a class="code" href="class_skilful_1_1_quotes_manager_1_1_t_quotes.html#ae7fcb1fc9c52a4305eb64057d1b10e4c" title="Получение кол-ва баров в массиве исходных котировок.">GetCount</a>() - 1,
+<a name="l00092"></a>00092                             qts.<a class="code" href="class_skilful_1_1_quotes_manager_1_1_t_quotes.html#adb784e02d977eb6ca9ac27555e7bcca6">Symbol</a>.<a class="code" href="class_skilful_1_1_quotes_manager_1_1_t_symbol.html#ab6d393e51dd12a5b77c64cfa36ce032d" title="Кол-во знаков после запятой.">Decimals</a><span class="comment">/*,</span>
+<a name="l00093"></a>00093 <span class="comment">                            sender as BackgroundWorker, e*/</span>);
+<a name="l00094"></a>00094                 }
+<a name="l00095"></a>00095             }
+<a name="l00096"></a>00096 
+<a name="l00097"></a>00097             <span class="comment">//модели текущего и старшего фреймов</span>
+<a name="l00098"></a>00098             List&lt;Model&gt; models = ModelsInit(quotes.MM.Models),
+<a name="l00099"></a>00099                 parent_models = ModelsInit(parent_quotes.MM.Models);
+<a name="l00100"></a>00100 
+<a name="l00101"></a>00101             <span class="comment">//TODO:</span>
+<a name="l00102"></a>00102             <span class="comment">//индексация моделей  quotes.MM.Models и parent_quotes.MM.Models,</span>
+<a name="l00103"></a>00103 
+<a name="l00104"></a>00104             <span class="comment">//сбор статистики по имеющимся фреймам и моделям</span>
+<a name="l00105"></a>00105             <span class="comment">//1.    Временной горизонт (даты начала и конца истории)</span>
+<a name="l00106"></a>00106             Begin = quotes[0].DT;
+<a name="l00107"></a>00107             End = quotes[quotes.lastindex].DT;
+<a name="l00108"></a>00108             <span class="comment">//2.        План</span>
+<a name="l00109"></a>00109             TFBase = tf;
+<a name="l00110"></a>00110             <span class="comment">//3.        Количество баров истории</span>
+<a name="l00111"></a>00111             BarCnt = quotes.GetCount();
+<a name="l00112"></a>00112             <span class="comment">//4.        Количество моделей на истории суммарно</span>
+<a name="l00113"></a>00113             ModelCnt = models.Count;
+<a name="l00114"></a>00114             <span class="comment">//4.a подсчет количества моделей по проходам и типам моделей</span>
+<a name="l00115"></a>00115             CountModelsByType(models);
+<a name="l00116"></a>00116             <span class="comment">//6. количество баров истории не входящих в состав моделей</span>
+<a name="l00118"></a>00118 <span class="comment"></span>            <span class="comment">//7. % пункта 6 к общему количеству баров истории.</span>
+<a name="l00119"></a>00119             <span class="comment">//DarsVoid/BarCnt*100</span>
+<a name="l00120"></a>00120 
+<a name="l00121"></a>00121             <span class="comment">//посчитаны первые 7 пунктов</span>
+<a name="l00122"></a>00122             <span class="comment">//осталось посчитать </span>
+<a name="l00123"></a>00123             <span class="comment">// - Для всех моделей в контексте</span>
+<a name="l00124"></a>00124             <span class="comment">// - Для отдельновзятых моделей каждого типа без контекста</span>
+<a name="l00125"></a>00125             <span class="comment">// - Многоплановый контекст</span>
+<a name="l00126"></a>00126 
+<a name="l00127"></a>00127 
+<a name="l00128"></a>00128             <span class="comment">//создание экселевской книжки</span>
+<a name="l00129"></a>00129             Excel.Worksheet tbl;
+<a name="l00130"></a>00130             Excel.Application xlApp = <span class="keyword">new</span> Excel.Application();
+<a name="l00131"></a>00131             xlApp.Workbooks.Add(Type.Missing);
+<a name="l00132"></a>00132             xlApp.Interactive = <span class="keyword">false</span>;
+<a name="l00133"></a>00133             xlApp.EnableEvents = <span class="keyword">false</span>;
+<a name="l00134"></a>00134             tbl = (Excel.Worksheet)xlApp.ActiveSheet;
+<a name="l00135"></a>00135 
+<a name="l00136"></a>00136             
+<a name="l00137"></a>00137             <span class="comment">//заполнение таблиц</span>
+<a name="l00138"></a>00138             <span class="keywordtype">int</span> x = 1, y = 1;
+<a name="l00139"></a>00139             tbl.Cells[x, y++] = <span class="stringliteral">&quot;Дата начала истории: &quot;</span>;
+<a name="l00140"></a>00140             tbl.Cells[x, y] = Begin.ToString(<span class="stringliteral">&quot;dd.MM.yyyy HH:mm:ss&quot;</span>);
+<a name="l00141"></a>00141             x++; y = 1;
+<a name="l00142"></a>00142             tbl.Cells[x, y++] = <span class="stringliteral">&quot;Дата окончания истории: &quot;</span>;
+<a name="l00143"></a>00143             tbl.Cells[x, y] = End.ToString(<span class="stringliteral">&quot;dd.MM.yyyy HH:mm:ss&quot;</span>);
+<a name="l00144"></a>00144             x++; y = 1;
+<a name="l00145"></a>00145             tbl.Cells[x, y++] = <span class="stringliteral">&quot;План: &quot;</span>;
+<a name="l00146"></a>00146             tbl.Cells[x, y] = TFBase.ToString();
+<a name="l00147"></a>00147             x++; y = 1;
+<a name="l00148"></a>00148             tbl.Cells[x, y++] = <span class="stringliteral">&quot;Количество баров истории: &quot;</span>;
+<a name="l00149"></a>00149             tbl.Cells[x, y] = BarCnt;
+<a name="l00150"></a>00150             x++; y = 1;
+<a name="l00151"></a>00151             tbl.Cells[x, y++] = <span class="stringliteral">&quot;Общее количество моделей: &quot;</span>;
+<a name="l00152"></a>00152             tbl.Cells[x, y] = ModelCnt;
+<a name="l00153"></a>00153             <span class="comment">//подровняем колонки</span>
+<a name="l00154"></a>00154             tbl.Columns.AutoFit();
+<a name="l00155"></a>00155 
+<a name="l00156"></a>00156             x++; y = 1;
+<a name="l00157"></a>00157             tbl.get_Range(tbl.Cells[x, y], tbl.Cells[x, y + 10]).Merge(<span class="keyword">true</span>);
+<a name="l00158"></a>00158             tbl.Cells[x++, y] = <span class="stringliteral">&quot;Из них моделей первого прохода (% от общего количества; % от моделей первого прохода): &quot;</span>;
+<a name="l00159"></a>00159             tbl.Cells[x, y++] = <span class="stringliteral">&quot;МР: &quot;</span>;
+<a name="l00160"></a>00160             tbl.Cells[x, y++] = Ext1cnt;
+<a name="l00161"></a>00161             tbl.Cells[x, y++] = ((double)Ext1cnt / ModelCnt * 100) + <span class="stringliteral">&quot;%&quot;</span>;
+<a name="l00162"></a>00162             tbl.Cells[x, y] = ((double)Ext1cnt / (Ext1cnt + Bal1cnt + Atr1cnt) * 100) + <span class="stringliteral">&quot;%&quot;</span>;
+<a name="l00163"></a>00163             x++; y = 1;
+<a name="l00164"></a>00164             tbl.Cells[x, y++] = <span class="stringliteral">&quot;МДР: &quot;</span>;
+<a name="l00165"></a>00165             tbl.Cells[x, y++] = Bal1cnt;
+<a name="l00166"></a>00166             tbl.Cells[x, y++] = ((double)Bal1cnt / ModelCnt * 100) + <span class="stringliteral">&quot;%&quot;</span>;
+<a name="l00167"></a>00167             tbl.Cells[x, y] = ((double)Bal1cnt / (Ext1cnt + Bal1cnt + Atr1cnt) * 100) + <span class="stringliteral">&quot;%&quot;</span>;
+<a name="l00168"></a>00168             x++; y = 1;
+<a name="l00169"></a>00169             tbl.Cells[x, y++] = <span class="stringliteral">&quot;МП: &quot;</span>;
+<a name="l00170"></a>00170             tbl.Cells[x, y++] = Atr1cnt;
+<a name="l00171"></a>00171             tbl.Cells[x, y++] = ((double)Atr1cnt / ModelCnt * 100) + <span class="stringliteral">&quot;%&quot;</span>;
+<a name="l00172"></a>00172             tbl.Cells[x, y] = ((double)Atr1cnt / (Ext1cnt + Bal1cnt + Atr1cnt) * 100) + <span class="stringliteral">&quot;%&quot;</span>;
+<a name="l00173"></a>00173             x++; y = 1;
+<a name="l00174"></a>00174             tbl.get_Range(tbl.Cells[x, y], tbl.Cells[x, y + 10]).Merge(<span class="keyword">true</span>);
+<a name="l00175"></a>00175             tbl.Cells[x++, y] = <span class="stringliteral">&quot;моделей второго прохода (% от общего количества; % от моделей второго прохода): &quot;</span>;
+<a name="l00176"></a>00176             tbl.Cells[x, y++] = <span class="stringliteral">&quot;МР: &quot;</span>;
+<a name="l00177"></a>00177             tbl.Cells[x, y++] = Ext2cnt;
+<a name="l00178"></a>00178             tbl.Cells[x, y++] = ((double)Ext2cnt / ModelCnt * 100) + <span class="stringliteral">&quot;%&quot;</span>;
+<a name="l00179"></a>00179             tbl.Cells[x, y] = ((double)Ext2cnt / (Ext2cnt + Bal2cnt + Atr2cnt) * 100) + <span class="stringliteral">&quot;%&quot;</span>;
+<a name="l00180"></a>00180             x++; y = 1;
+<a name="l00181"></a>00181             tbl.Cells[x, y++] = <span class="stringliteral">&quot;МДР: &quot;</span>;
+<a name="l00182"></a>00182             tbl.Cells[x, y++] = Bal2cnt;
+<a name="l00183"></a>00183             tbl.Cells[x, y++] = ((double)Bal2cnt / ModelCnt * 100) + <span class="stringliteral">&quot;%&quot;</span>;
+<a name="l00184"></a>00184             tbl.Cells[x, y] = ((double)Bal2cnt / (Ext2cnt + Bal2cnt + Atr2cnt) * 100) + <span class="stringliteral">&quot;%&quot;</span>;
+<a name="l00185"></a>00185             x++; y = 1;
+<a name="l00186"></a>00186             tbl.Cells[x, y++] = <span class="stringliteral">&quot;МП: &quot;</span>;
+<a name="l00187"></a>00187             tbl.Cells[x, y++] = Atr2cnt;
+<a name="l00188"></a>00188             tbl.Cells[x, y++] = ((double)Atr2cnt / ModelCnt * 100) + <span class="stringliteral">&quot;%&quot;</span>;
+<a name="l00189"></a>00189             tbl.Cells[x, y] = ((double)Atr2cnt / (Ext2cnt + Bal2cnt + Atr2cnt) * 100) + <span class="stringliteral">&quot;%&quot;</span>;
+<a name="l00190"></a>00190             x++; y = 1;
+<a name="l00191"></a>00191             tbl.get_Range(tbl.Cells[x, y], tbl.Cells[x, y + 10]).Merge(<span class="keyword">true</span>);
+<a name="l00192"></a>00192             tbl.Cells[x++, y] = <span class="stringliteral">&quot;моделей третьего прохода (% от общего количества; % от моделей третьего прохода): &quot;</span>;
+<a name="l00193"></a>00193             tbl.Cells[x, y++] = <span class="stringliteral">&quot;МР: &quot;</span>;
+<a name="l00194"></a>00194             tbl.Cells[x, y++] = Ext3cnt;
+<a name="l00195"></a>00195             tbl.Cells[x, y++] = ((double)Ext3cnt / ModelCnt * 100) + <span class="stringliteral">&quot;%&quot;</span>;
+<a name="l00196"></a>00196             tbl.Cells[x, y] = ((double)Ext3cnt / (Ext3cnt + Bal3cnt + Atr3cnt) * 100) + <span class="stringliteral">&quot;%&quot;</span>;
+<a name="l00197"></a>00197             x++; y = 1;
+<a name="l00198"></a>00198             tbl.Cells[x, y++] = <span class="stringliteral">&quot;МДР: &quot;</span>;
+<a name="l00199"></a>00199             tbl.Cells[x, y++] = Bal3cnt;
+<a name="l00200"></a>00200             tbl.Cells[x, y++] = ((double)Bal3cnt / ModelCnt * 100) + <span class="stringliteral">&quot;%&quot;</span>;
+<a name="l00201"></a>00201             tbl.Cells[x, y] = ((double)Bal3cnt / (Ext3cnt + Bal3cnt + Atr3cnt) * 100) + <span class="stringliteral">&quot;%&quot;</span>;
+<a name="l00202"></a>00202             x++; y = 1;
+<a name="l00203"></a>00203             tbl.Cells[x, y++] = <span class="stringliteral">&quot;МП: &quot;</span>;
+<a name="l00204"></a>00204             tbl.Cells[x, y++] = Atr3cnt;
+<a name="l00205"></a>00205             tbl.Cells[x, y++] = ((double)Atr3cnt / ModelCnt * 100) + <span class="stringliteral">&quot;%&quot;</span>;
+<a name="l00206"></a>00206             tbl.Cells[x, y] = ((double)Atr3cnt / (Ext3cnt + Bal3cnt + Atr3cnt) * 100) + <span class="stringliteral">&quot;%&quot;</span>;
+<a name="l00207"></a>00207             <span class="comment">//x++; y = 1;</span>
+<a name="l00208"></a>00208             <span class="comment">//tbl.get_Range(tbl.Cells[x, y], tbl.Cells[x, y + 10]).Merge(true);</span>
+<a name="l00209"></a>00209             <span class="comment">//tbl.Cells[x++, y] = &quot;количество баров истории не входящих в состав моделей (% к общему количестау баров): &quot;;</span>
+<a name="l00210"></a>00210             <span class="comment">//tbl.Cells[x, y++] = BarsVoid;</span>
+<a name="l00211"></a>00211             <span class="comment">//tbl.Cells[x, y] = (BarsVoid / BarCnt * 100) + &quot;%&quot;;</span>
+<a name="l00212"></a>00212 
+<a name="l00213"></a>00213             <span class="comment">//сохранение экселевского файла (опционально в виде набора файлов цсв)</span>
+<a name="l00214"></a>00214             tbl.SaveAs(Application.StartupPath + <span class="stringliteral">@&quot;\&quot;</span>+source_name+<span class="stringliteral">&quot;_&quot;</span>+symbol_name+tf.ToString()+<span class="stringliteral">&quot;.xls&quot;</span>,
+<a name="l00215"></a>00215                 Excel.XlFileFormat.xlXMLSpreadsheet,
+<a name="l00216"></a>00216                 <span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keyword">false</span>, Excel.XlSaveAsAccessMode.xlNoChange, <span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);
+<a name="l00217"></a>00217             tbl = null;
+<a name="l00218"></a>00218             xlApp.Interactive = <span class="keyword">true</span>;
+<a name="l00219"></a>00219             xlApp.ScreenUpdating = <span class="keyword">true</span>;
+<a name="l00220"></a>00220             xlApp.UserControl = <span class="keyword">true</span>;
+<a name="l00221"></a>00221             xlApp = null;
+<a name="l00222"></a>00222 
+<a name="l00223"></a>00223 
+<a name="l00224"></a>00224             <span class="comment">//опционально запуск экселя со сгенерированной статистикой</span>
+<a name="l00225"></a>00225 
+<a name="l00226"></a>00226         }
+<a name="l00227"></a>00227 
+<a name="l00228"></a>00228 
+<a name="l00229"></a>00229 <span class="comment">/*</span>
+<a name="l00230"></a>00230 <span class="comment">Блок статистики.</span>
+<a name="l00231"></a>00231 <span class="comment">1.      Временной горизонт (даты начала и конца истории) //</span>
+<a name="l00232"></a>00232 <span class="comment">2.      План</span>
+<a name="l00233"></a>00233 <span class="comment">3.      Количество баров истории</span>
+<a name="l00234"></a>00234 <span class="comment">4.      Количество моделей на истории суммарно и с разделением на:</span>
+<a name="l00235"></a>00235 <span class="comment">А. моделей первого прохода:</span>
+<a name="l00236"></a>00236 <span class="comment">- мр</span>
+<a name="l00237"></a>00237 <span class="comment">- мп</span>
+<a name="l00238"></a>00238 <span class="comment">- мдр</span>
+<a name="l00239"></a>00239 <span class="comment">Б. моделей второго прохода:</span>
+<a name="l00240"></a>00240 <span class="comment">- мр</span>
+<a name="l00241"></a>00241 <span class="comment">- мп</span>
+<a name="l00242"></a>00242 <span class="comment">- мдр</span>
+<a name="l00243"></a>00243 <span class="comment">В. Моделей третьего прохода:</span>
+<a name="l00244"></a>00244 <span class="comment">- мр</span>
+<a name="l00245"></a>00245 <span class="comment">- мп</span>
+<a name="l00246"></a>00246 <span class="comment">- мдр</span>
+<a name="l00247"></a>00247 <span class="comment">5. процентное соотношение моделей из пункта 4 (по разделениям) к общему количеству моделей. Например, мр первого прохода 30% от общего количества моделей и 60% от общего количества моделей первого прохода и т.д.</span>
+<a name="l00248"></a>00248 <span class="comment">6. количество баров истории не входящих в состав моделей. Это значит учет участков в которых есть бары не входящие в состав ни одной модели этого же плана. Размер модели равен: мр - (ст-4)*4 (у нас в алгоритме 4 точно?), мдр - (1-4)*4 и мп – (1-НР)*2 (вроде 2, проверить по алгоритму) </span>
+<a name="l00249"></a>00249 <span class="comment">7. % пункта 6 к общему количеству баров истории.</span>
+<a name="l00250"></a>00250 <span class="comment"></span>
+<a name="l00251"></a>00251 <span class="comment">Для одной мр без контекста:</span>
+<a name="l00252"></a>00252 <span class="comment">Далее везде точки 1 и 2 (отрезок 1-2) - два противоположных экстремума, значит имеется ввиду вертикальный отрезок.</span>
+<a name="l00253"></a>00253 <span class="comment">А например 1-3 – горизонтальный. Но 4-5 может быть двойного смысла в зависимости от того, с чем идет сравнение. Например если соотношение 1-2 и 4-5 – то вертикальный отрезок 4-5 имеется ввиду, а если 1-3 и 4-5 то горизонтальный.</span>
+<a name="l00254"></a>00254 <span class="comment">1.      Какого прохода модель</span>
+<a name="l00255"></a>00255 <span class="comment">2.      Ап или даун</span>
+<a name="l00256"></a>00256 <span class="comment">3.      Сила модели</span>
+<a name="l00257"></a>00257 <span class="comment">4.      Соотношение Базы к БЦ 1-3 к 4-5 и 1-2 к 4-5 в %</span>
+<a name="l00258"></a>00258 <span class="comment">5.      Соотношение Базы ко всей модели – 1-3 к 1-6 (не НР, а именно 6) и 1-2 к 1-6 в %</span>
+<a name="l00259"></a>00259 <span class="comment">6.      Соотношение БЦ ко всей модели – 1-3 к 1-6 (не НР, а именно 6) и 1-2 к 1-6 в %</span>
+<a name="l00260"></a>00260 <span class="comment">7.      Соотношение 2-5 к 1-6 в %</span>
+<a name="l00261"></a>00261 <span class="comment">8.      Соотношение 1-2 к 3-4 в %</span>
+<a name="l00262"></a>00262 <span class="comment">9.      Соотношение 3-4 к 1-6 в %</span>
+<a name="l00263"></a>00263 <span class="comment">10.     Соотношение ст-1 к 4-5 в %</span>
+<a name="l00264"></a>00264 <span class="comment">11.     Соотношение (наклона целевой к вертикали) к (наклону трендовой к горизонтали) </span>
+<a name="l00265"></a>00265 <span class="comment">12.     Достижение НР до пробития целевой и трендовой на промежутке (ст-4)*4</span>
+<a name="l00266"></a>00266 <span class="comment">13.     Достижение 100% и 200% (по отдельности) после пробития ЛЦ на промежутке (ст-4)*4</span>
+<a name="l00267"></a>00267 <span class="comment">14.     Достижение 100% и 200% (по отдельности) после пробития (пробитие – повторный подход к уровню НР с предыдущим образованием противоположного 4 точке абс. экстремума (годного по алгоритму отбора экстремумов Алексея, который отрабатывает на старте алгоритма поиска моделей,  после первого достижения НР) НР на промежутке (ст-4)*4</span>
+<a name="l00268"></a>00268 <span class="comment">15.     Достижение 100% и 200% (по отдельности) без повторного (т.е. уровень НР достигнут с перелетом или пункт в пункт не важно и следующими барами цена идет дальше без образования противоположного абс. экстремума) пробития  НР на промежутке (ст-4)*4</span>
+<a name="l00269"></a>00269 <span class="comment">16.     Достижение 100% и 200% (по отдельности) после пробития ЛЦ и до пробития ЛТ на промежутке (ст-4)*4</span>
+<a name="l00270"></a>00270 <span class="comment">17.     Достижение 100% и 200% (по отдельности) после пробития НР и до пробития ЛТ на промежутке (ст-4)*4</span>
+<a name="l00271"></a>00271 <span class="comment">18.     Достижение целей (3-х по отдельности) без пробития целевой на промежутке (ст-4)*4</span>
+<a name="l00272"></a>00272 <span class="comment">19.     Достижение целей (3-х по отдельности) с пробитой целевой до пробития трендовой на промежутке (ст-4)*4</span>
+<a name="l00273"></a>00273 <span class="comment">20.     Достижение целей (3-х по отдельности) без пробития целевой, но с образованием 6, на промежутке (ст-4)*4</span>
+<a name="l00274"></a>00274 <span class="comment">21.     Достижение целей (3-х по отдельности) без пробития целевой, но без  образования 6 (т.е. 4=6), на промежутке (ст-4)*4</span>
+<a name="l00275"></a>00275 <span class="comment">22.     Соотношение (6 - 1 цель по горизонтали) к 1-6</span>
+<a name="l00276"></a>00276 <span class="comment">23.     Соотношение (6 - 2 цель по горизонтали) к 1-6</span>
+<a name="l00277"></a>00277 <span class="comment">24.     Соотношение (6 - 3 цель по горизонтали) к 1-6</span>
+<a name="l00278"></a>00278 <span class="comment">25.     Модели где 4=6 в % к общему количеству мр</span>
+<a name="l00279"></a>00279 <span class="comment">26.     Модели с 6 точками в % к общему количеству мр</span>
+<a name="l00280"></a>00280 <span class="comment">27.     Доход до НР  в % к 1-НР</span>
+<a name="l00281"></a>00281 <span class="comment">28.     Недоход до НР в % к 1-НР</span>
+<a name="l00282"></a>00282 <span class="comment"></span>
+<a name="l00283"></a>00283 <span class="comment">Для одной мдр без контекста:</span>
+<a name="l00284"></a>00284 <span class="comment">1.      Какого прохода модель</span>
+<a name="l00285"></a>00285 <span class="comment">2.      Ап или даун</span>
+<a name="l00286"></a>00286 <span class="comment">3.      Достижение 100% и 200% (по отдельности) после пробития ЛЦ на промежутке (1-4)*4</span>
+<a name="l00287"></a>00287 <span class="comment">4.      Достижение 100% и 200% (по отдельности) после пробития (пробитие – повторный подход к уровню НР с предыдущим образованием противоположного 4 точке абс. экстремума (годного по алгоритму отбора экстремумов Алексея, который отрабатывает на старте алгоритма поиска моделей,  после первого достижения НР) НР на промежутке (1-4)*4</span>
+<a name="l00288"></a>00288 <span class="comment">5.      Достижение 100% и 200% (по отдельности) без повторного (т.е. уровень НР достигнут с перелетом или пункт в пункт не важно и следующими барами цена идет дальше без образования противоположного абс. экстремума) пробития  НР на промежутке (1-4)*4</span>
+<a name="l00289"></a>00289 <span class="comment">6.      Достижение 100% и 200% (по отдельности) после пробития ЛЦ и до пробития ЛТ на промежутке (1-4)*4</span>
+<a name="l00290"></a>00290 <span class="comment">7.      Достижение 100% и 200% (по отдельности) после пробития НР и до пробития ЛТ на промежутке (1-4)*4</span>
+<a name="l00291"></a>00291 <span class="comment">8.      Достижение целей (3-х по отдельности) без пробития целевой на промежутке (1-4)*4</span>
+<a name="l00292"></a>00292 <span class="comment">9.      Достижение целей (3-х по отдельности) с пробитой целевой до пробития трендовой на промежутке (1-4)*4</span>
+<a name="l00293"></a>00293 <span class="comment">10.     Достижение целей (3-х по отдельности) без пробития целевой, но с образованием 6, на промежутке (1-4)*4</span>
+<a name="l00294"></a>00294 <span class="comment">11.     Достижение целей (3-х по отдельности) без пробития целевой, но без  образования 6 (т.е. 4=6), на промежутке (1-4)*4</span>
+<a name="l00295"></a>00295 <span class="comment">12.     Соотношение (6 - 1 цель по горизонтали) к 1-6</span>
+<a name="l00296"></a>00296 <span class="comment">13.     Соотношение (6 - 2 цель по горизонтали) к 1-6</span>
+<a name="l00297"></a>00297 <span class="comment">14.     Соотношение (6 - 3 цель по горизонтали) к 1-6</span>
+<a name="l00298"></a>00298 <span class="comment">15.     Модели где 4=6 в % к общему количеству мдр</span>
+<a name="l00299"></a>00299 <span class="comment">16.     Модели с 6 точками в % к общему количеству мдр</span>
+<a name="l00300"></a>00300 <span class="comment"></span>
+<a name="l00301"></a>00301 <span class="comment">Для одной мп без контекста:</span>
+<a name="l00302"></a>00302 <span class="comment">1.      Какого прохода модель</span>
+<a name="l00303"></a>00303 <span class="comment">2.      Ап или даун</span>
+<a name="l00304"></a>00304 <span class="comment">3.      Соотношение 1-2 к 3-4</span>
+<a name="l00305"></a>00305 <span class="comment">4.      Соотношение 1-3 к 2-4</span>
+<a name="l00306"></a>00306 <span class="comment">5.      Соотношение 1-4 к 4-НР</span>
+<a name="l00307"></a>00307 <span class="comment">6.      Достижение 100% и 200% до пробития 1 точки на участке (1-НР)*2 (сверить с алгоритмом!)</span>
+<a name="l00308"></a>00308 <span class="comment">7.      Достижение 100% и 200% после пробития 1 точки на участке (1-НР)*2 (сверить с алгоритмом!)</span>
+<a name="l00309"></a>00309 <span class="comment">8.      Доход до НР  в % к 1-НР</span>
+<a name="l00310"></a>00310 <span class="comment">9.      Недоход до НР в % к 1-НР</span>
+<a name="l00311"></a>00311 <span class="comment">10.     Движение от НР к 100% и 200% (отдельно) против движения к 1 цели в %</span>
+<a name="l00312"></a>00312 <span class="comment"></span>
+<a name="l00313"></a>00313 <span class="comment">Контекст моделей должен предварять статистику отдельно взятой модели.</span>
+<a name="l00314"></a>00314 <span class="comment"></span>
+<a name="l00315"></a>00315 <span class="comment">Для всех моделей в контексте все вышеперечисленное, плюс:</span>
+<a name="l00316"></a>00316 <span class="comment"></span>
+<a name="l00317"></a>00317 <span class="comment">1.      Перечислить к каким проходам относятся три последние противоположные друг другу модели общего с моделью для которой собирается статистика Плана, полностью описывающие свои тренды. Например: 1. Третий проход, 2. Первый проход, 3. Второй проход.  (приоритет у моделей 1-го прохода, затем второй итд, она же одна и рисуется)</span>
+<a name="l00318"></a>00318 <span class="comment">2.      Перечислить типы трех моделей. Например, 1. мр, 2. мр, 3. мдр.</span>
+<a name="l00319"></a>00319 <span class="comment">3.      Дать по ним полную статистику аналогично как для отдельной модели вне контекста.</span>
+<a name="l00320"></a>00320 <span class="comment">4.      Общее количество баров для этих трех моделей.  &lt;&lt;&lt; три модели без текущей для которой определяется контекст. Расчет здесь от 1 точки первой модели до 6 точки третьей модели. 6 точка это не НР напоминаю на всякий случай.</span>
+<a name="l00321"></a>00321 <span class="comment">5.      Сумма в пунктах всего движения описываемого тремя моделями. Внимание: не от начала первой и до конца третьей, а для каждой модели отдельно и сложить.</span>
+<a name="l00322"></a>00322 <span class="comment">6.      Соотношение пунктов 4 и 5</span>
+<a name="l00323"></a>00323 <span class="comment">7.      Скорость для каждой из трех моделей по отдельности. Считается:  количество пунктов от 1 до 6 делится на количество баров составляющих отрезок 1-6.</span>
+<a name="l00324"></a>00324 <span class="comment">8.      Модель по тренду или от начала тренда для своего Плана или коррекционная. Поясню: если 1 точка этой модели находится между целевой и трендовой другой модели (ее целевая и трендовая длятся на протяжении (ст-4)*4 от своей ст) этого же Плана, и эта модель сонаправлена большей, то модель считается по тренду.</span>
+<a name="l00325"></a>00325 <span class="comment">9.      Если модель по тренду то: ее 1 точка равна 3 точки (по времени и значению) модели по тренду которой она расположена или нет.</span>
+<a name="l00326"></a>00326 <span class="comment">10.     Соотношение наклона трендовой к горизонтали модели к каждой из трех по отдельности трендовых моделей контекста.</span>
+<a name="l00327"></a>00327 <span class="comment">11.     Соотношение наклона целевой к горизонтали модели к каждой из трех по отдельности целевой моделей контекста.</span>
+<a name="l00328"></a>00328 <span class="comment">12.     Соотношение скорости модели к каждой из трех скоростей моделей контекста по отдельности. Скорость модели прогнозная и считается – 1-НР по вертикали разделить на 1-НР по горизонтали. Т.е. пункты на бары.</span>
+<a name="l00329"></a>00329 <span class="comment">13.     Для каждой модели контекста указать: достигнута НР, 100%, 200%, 1, 2, 3 цель. Перечислить все что в рамках (ст-4)*4 достигнуто.</span>
+<a name="l00330"></a>00330 <span class="comment"></span>
+<a name="l00331"></a>00331 <span class="comment">Многоплановый контекст:</span>
+<a name="l00332"></a>00332 <span class="comment">1.      Указать в какую модель какого Плана входит анализируемая. </span>
+<a name="l00333"></a>00333 <span class="comment">2.      Дать полную статистику модели старшего Плана аналогично вышеперечисленному.</span>
+<a name="l00334"></a>00334 <span class="comment">3.      Указать ее местоположение в рамках модели старшего Плана: от 1 точки, от 3 точки, по тренду, коррекционная.</span>
+<a name="l00335"></a>00335 <span class="comment">======================</span>
+<a name="l00336"></a>00336 <span class="comment"> *  выводить давайте в экселевский файл так, чтобы на каждом листе был ярлык с названием и</span>
+<a name="l00337"></a>00337 <span class="comment"> *  1 лист - общая статистика,</span>
+<a name="l00338"></a>00338 <span class="comment"> *  2. по мр и т.д.</span>
+<a name="l00339"></a>00339 <span class="comment">*/</span>
+<a name="l00340"></a>00340 
+<a name="l00341"></a><a class="code" href="class_skilful_1_1_statistics_1_1_stat_calc.html#a51d92855de5c0dd38629cf5c6fc25389">00341</a>         <span class="keyword">public</span> List&lt;Model&gt; ModelsInit(List&lt;TModel&gt; tmodels)
+<a name="l00342"></a>00342         {
+<a name="l00343"></a>00343             List&lt;Model&gt; models = <span class="keyword">new</span> List&lt;Model&gt;();
+<a name="l00344"></a>00344             <span class="keywordflow">foreach</span> (<a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html">TModel</a> m <span class="keywordflow">in</span> tmodels)
+<a name="l00345"></a>00345                 <span class="keywordflow">if</span> (m.<a class="code" href="class_skilful_1_1_model_manager_1_1_t_model.html#a22987e1136949a4e1e125a122f351f56" title="№ обрабатываемой точки">CurrentPoint</a> &gt;= 4)
+<a name="l00346"></a>00346                     models.Add(<span class="keyword">new</span> <a class="code" href="class_chart_v2_1_1_model.html">Model</a>(m, 0));
+<a name="l00347"></a>00347             <span class="keywordflow">return</span> models;
+<a name="l00348"></a>00348         }
+<a name="l00349"></a>00349         
+<a name="l00350"></a>00350 
+<a name="l00351"></a>00351         <span class="comment">//подсчет количества моделей по проходам и типам моделей</span>
+<a name="l00352"></a>00352         <span class="keywordtype">void</span> CountModelsByType(List&lt;Model&gt; models)
+<a name="l00353"></a>00353         {
+<a name="l00354"></a>00354             <span class="keywordflow">foreach</span> (<a class="code" href="class_chart_v2_1_1_model.html">Model</a> m <span class="keywordflow">in</span> models)
+<a name="l00355"></a>00355             {
+<a name="l00356"></a>00356                 <span class="keywordflow">switch</span> (m.<a class="code" href="class_chart_v2_1_1_model.html#a3334cef9054a4db2fc5aec94c6ca7056">type</a>)
+<a name="l00357"></a>00357                 {
+<a name="l00358"></a>00358                     <span class="keywordflow">case</span> <a class="code" href="namespace_chart_v2.html#ad32c7a3681414adea76a8836845216da">ModelType</a>.ATR:
+<a name="l00359"></a>00359                         <span class="keywordflow">switch</span> (m.<a class="code" href="class_chart_v2_1_1_model.html#aea9086881977a302b4da0b2ac0857792">style</a>.step)
+<a name="l00360"></a>00360                         {
+<a name="l00361"></a>00361                             <span class="keywordflow">case</span> 1: Atr1cnt++; <span class="keywordflow">break</span>;
+<a name="l00362"></a>00362                             <span class="keywordflow">case</span> 2: Atr2cnt++; <span class="keywordflow">break</span>;
+<a name="l00363"></a>00363                             <span class="keywordflow">case</span> 3: Atr3cnt++; <span class="keywordflow">break</span>;
+<a name="l00364"></a>00364                         }
+<a name="l00365"></a>00365                         <span class="keywordflow">break</span>;
+<a name="l00366"></a>00366                     <span class="keywordflow">case</span> <a class="code" href="namespace_chart_v2.html#ad32c7a3681414adea76a8836845216da">ModelType</a>.MDR:
+<a name="l00367"></a>00367                         <span class="keywordflow">switch</span> (m.<a class="code" href="class_chart_v2_1_1_model.html#aea9086881977a302b4da0b2ac0857792">style</a>.step)
+<a name="l00368"></a>00368                         {
+<a name="l00369"></a>00369                             <span class="keywordflow">case</span> 1: Bal1cnt++; <span class="keywordflow">break</span>;
+<a name="l00370"></a>00370                             <span class="keywordflow">case</span> 2: Bal2cnt++; <span class="keywordflow">break</span>;
+<a name="l00371"></a>00371                             <span class="keywordflow">case</span> 3: Bal3cnt++; <span class="keywordflow">break</span>;
+<a name="l00372"></a>00372                         }
+<a name="l00373"></a>00373                         <span class="keywordflow">break</span>;
+<a name="l00374"></a>00374                     <span class="keywordflow">case</span> <a class="code" href="namespace_chart_v2.html#ad32c7a3681414adea76a8836845216da">ModelType</a>.MP:  <span class="comment">// это на самом деле MR а не МР, надо буит переименовать</span>
+<a name="l00375"></a>00375                         <span class="keywordflow">switch</span> (m.<a class="code" href="class_chart_v2_1_1_model.html#aea9086881977a302b4da0b2ac0857792">style</a>.step)
+<a name="l00376"></a>00376                         {
+<a name="l00377"></a>00377                             <span class="keywordflow">case</span> 1: Ext1cnt++; <span class="keywordflow">break</span>;
+<a name="l00378"></a>00378                             <span class="keywordflow">case</span> 2: Ext2cnt++; <span class="keywordflow">break</span>;
+<a name="l00379"></a>00379                             <span class="keywordflow">case</span> 3: Ext3cnt++; <span class="keywordflow">break</span>;
+<a name="l00380"></a>00380                         }
+<a name="l00381"></a>00381                         <span class="keywordflow">break</span>;
+<a name="l00382"></a>00382                 }
+<a name="l00383"></a>00383             }
+<a name="l00384"></a>00384         }
+<a name="l00385"></a>00385 
+<a name="l00386"></a>00386         <span class="comment">//количество баров истории не входящих в состав моделей</span>
+<a name="l00387"></a>00387         <span class="keywordtype">int</span> CountVoidBars(List&lt;Model&gt; models)
+<a name="l00388"></a>00388         {
+<a name="l00389"></a>00389             Range r = <span class="keyword">new</span> Range(0, quotes.lastindex);
+<a name="l00390"></a>00390             List&lt;Range&gt; ranges = <span class="keyword">new</span> List&lt;Range&gt;();
+<a name="l00391"></a>00391             ranges.Add(r);
+<a name="l00392"></a>00392             <span class="keywordtype">int</span> i=0;
+<a name="l00393"></a>00393             <span class="keywordflow">foreach</span> (<a class="code" href="class_chart_v2_1_1_model.html">Model</a> m <span class="keywordflow">in</span> models)
+<a name="l00394"></a>00394             {
+<a name="l00395"></a>00395                 <span class="keywordflow">if</span> (i &lt; 0) i = 0;
+<a name="l00396"></a>00396                 <span class="keywordflow">if</span> (i &gt;= ranges.Count) i = ranges.Count - 1;
+<a name="l00397"></a>00397                 
+<a name="l00398"></a>00398                 <span class="comment">//get poits a, b for this model</span>
+<a name="l00399"></a>00399                 <span class="keywordtype">int</span> a = Convert.ToInt32(m.<a class="code" href="class_chart_v2_1_1_model.html#a855b270a41ae713519f686dc0125f312" title="Точки экстремумы.">ModelPointReal</a>[1].X);
+<a name="l00400"></a>00400                 <span class="keywordtype">int</span> b = Convert.ToInt32(m.<a class="code" href="class_chart_v2_1_1_model.html#a09db15d16d27e923f44be5205b192ecb">LifeTime</a>);
+<a name="l00401"></a>00401 
+<a name="l00402"></a>00402                 <span class="comment">//clear ranges</span>
+<a name="l00403"></a>00403                 <span class="keywordflow">while</span> (i &gt; 0 &amp;&amp; a &gt; ranges[i].b) i--;
+<a name="l00404"></a>00404                 clearRange(ranges, i, a, b);
+<a name="l00405"></a>00405                 <span class="keywordflow">while</span> (i &lt; (ranges.Count-1) &amp;&amp; b &lt; ranges[i].a) i++;
+<a name="l00406"></a>00406                 clearRange(ranges, i, a, b);
+<a name="l00407"></a>00407             }
+<a name="l00408"></a>00408             i = 0;
+<a name="l00409"></a>00409             <span class="keywordflow">foreach</span> (Range range <span class="keywordflow">in</span> ranges) i += (range.b - range.a);
+<a name="l00410"></a>00410            
+<a name="l00411"></a>00411             <span class="keywordflow">return</span> i;
+<a name="l00412"></a>00412         }
+<a name="l00413"></a>00413         <span class="keywordtype">void</span> clearRange(List&lt;Range&gt; ranges, <span class="keywordtype">int</span> i, <span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b)
+<a name="l00414"></a>00414         {
+<a name="l00415"></a>00415             Range range = ranges[i];
+<a name="l00416"></a>00416             <span class="keywordflow">if</span> (a &gt; range.a &amp;&amp; b &lt; range.b) <span class="comment">//split range</span>
+<a name="l00417"></a>00417             {
+<a name="l00418"></a>00418                 ranges.Insert(i + 1, <span class="keyword">new</span> Range(b, range.b));
+<a name="l00419"></a>00419                 range.b = a;
+<a name="l00420"></a>00420             }
+<a name="l00421"></a>00421             <span class="keywordflow">else</span> <span class="keywordflow">if</span> (a &gt; range.a &amp;&amp; a &lt; range.b) <span class="comment">//cut tail</span>
+<a name="l00422"></a>00422                 range.b = a;
+<a name="l00423"></a>00423             <span class="keywordflow">else</span> <span class="keywordflow">if</span> (b &gt; range.a &amp;&amp; b &lt; range.b) <span class="comment">//cut head</span>
+<a name="l00424"></a>00424                 range.a = b;
+<a name="l00425"></a>00425             <span class="keywordflow">else</span> <span class="keywordflow">if</span> (a &lt;= range.a &amp;&amp; b &gt;= range.b) <span class="comment">//remove range</span>
+<a name="l00426"></a>00426                 ranges.RemoveAt(i);
+<a name="l00427"></a>00427         }
+<a name="l00428"></a>00428     }
+<a name="l00432"></a><a class="code" href="class_skilful_1_1_statistics_1_1_range.html">00432</a>     <span class="keyword">class </span><a class="code" href="class_skilful_1_1_statistics_1_1_range.html" title="/// //// ///">Range</a>
+<a name="l00433"></a>00433     {
+<a name="l00434"></a>00434         <span class="keywordtype">int</span>[] r = { 0, 0 };
+<a name="l00435"></a><a class="code" href="class_skilful_1_1_statistics_1_1_range.html#ab52cbb7d77b3dcc28986ec84a2d787e6">00435</a>         <span class="keyword">public</span> <a class="code" href="class_skilful_1_1_statistics_1_1_range.html" title="/// //// ///">Range</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b)
+<a name="l00436"></a>00436         {
+<a name="l00437"></a>00437             this.a = a;
+<a name="l00438"></a>00438             this.b = b;
+<a name="l00439"></a>00439         }
+<a name="l00440"></a>00440         <span class="keyword">public</span> <span class="keywordtype">int</span> a
+<a name="l00441"></a><a class="code" href="class_skilful_1_1_statistics_1_1_range.html#af3a7f593df5c77830bd5ee6f5fbeec8f">00441</a>         {
+<a name="l00442"></a>00442             <span class="keyword">get</span>
+<a name="l00443"></a>00443             {
+<a name="l00444"></a>00444                 <span class="keywordflow">return</span> r[0];
+<a name="l00445"></a>00445             }
+<a name="l00446"></a>00446             <span class="keyword">set</span>
+<a name="l00447"></a>00447             {
+<a name="l00448"></a>00448                 r[0] = value;
+<a name="l00449"></a>00449             }
+<a name="l00450"></a>00450         }
+<a name="l00451"></a>00451         <span class="keyword">public</span> <span class="keywordtype">int</span> b
+<a name="l00452"></a><a class="code" href="class_skilful_1_1_statistics_1_1_range.html#a5f8186efad185e679f25f42aeee1599c">00452</a>         {
+<a name="l00453"></a>00453             <span class="keyword">get</span>
+<a name="l00454"></a>00454             {
+<a name="l00455"></a>00455                 <span class="keywordflow">return</span> r[1];
+<a name="l00456"></a>00456             }
+<a name="l00457"></a>00457             <span class="keyword">set</span>
+<a name="l00458"></a>00458             {
+<a name="l00459"></a>00459                 r[1] = value;
+<a name="l00460"></a>00460             }
+<a name="l00461"></a>00461         }
+<a name="l00462"></a>00462     }
+<a name="l00463"></a>00463 }
+</pre></div></div>
+</div>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Перечисления</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&nbsp;</span>Свойства</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&nbsp;</span>События</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>
