@@ -1,0 +1,683 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Skilful: Класс Skilful.QuotesManager.MDataManager</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javaScript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Создано системой Doxygen 1.7.1 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+--></script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пакеты</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="dirs.html"><span>Алфавитный&nbsp;указатель&nbsp;директорий</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="hierarchy.html"><span>Иерархия&nbsp;классов</span></a></li>
+      <li><a href="functions.html"><span>Члены&nbsp;классов</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath">
+    <ul>
+      <li><a class="el" href="namespace_skilful.html">Skilful</a>      </li>
+      <li><a class="el" href="namespace_skilful_1_1_quotes_manager.html">QuotesManager</a>      </li>
+      <li><a class="el" href="class_skilful_1_1_quotes_manager_1_1_m_data_manager.html">Skilful.QuotesManager.MDataManager</a>      </li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="#events">События</a>  </div>
+  <div class="headertitle">
+<h1>Класс Skilful.QuotesManager.MDataManager</h1>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="Skilful::QuotesManager::MDataManager" -->
+<p><a href="class_skilful_1_1_quotes_manager_1_1_m_data_manager-members.html">Полный список членов класса</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skilful_1_1_quotes_manager_1_1_m_data_manager.html#ac448924e1fc03e09fca2a4a57072d6cd">RefreshHistoryData</a> (string SourceName, string SymbolName)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skilful_1_1_quotes_manager_1_1_m_data_manager.html#a869c7ef5ccd81be5deb05d263657651e">MDataManager</a> (NewTickHandler MainForm_Tick2Chart, NewBarHandler MainForm_Bar2Chart, LibMsgHandler MFMessageBox, RefreshHistoryHandler MFRefreshHistory)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_skilful_1_1_quotes_manager_1_1_t_symbol.html">TSymbol</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skilful_1_1_quotes_manager_1_1_m_data_manager.html#a81efd293d62dc9a4df5364d67b7d08ba">GetSymbol</a> (<a class="el" href="class_skilful_1_1_data_1_1_data_sourse_module.html">DataSourseModule</a> module, string SymbolName)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">возвращает объект <a class="el" href="class_skilful_1_1_quotes_manager_1_1_t_symbol.html">TSymbol</a> ассоциированный с данными ModuleName и SymbolName.  <a href="#a81efd293d62dc9a4df5364d67b7d08ba"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skilful_1_1_quotes_manager_1_1_m_data_manager.html#acdec7de9f2c8ed005123404548da1fc7">Config_Init</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">чтение настроек - выбранные модули и пути - из пользовательского файла конфигурации настройки для всех модулей хранятся в виде хеша(массив[параметр=&gt;значение,...]) преобразованного в одну строку.  <a href="#acdec7de9f2c8ed005123404548da1fc7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skilful_1_1_quotes_manager_1_1_m_data_manager.html#a172101a92b6bd7366c4d9d67834fede7">Config_Save</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">запись настроек датасурс - выбранные модули и пути - в пользовательский файл конфигурации функция вызывается при закрытии окна настроек датасурс.  <a href="#a172101a92b6bd7366c4d9d67834fede7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skilful_1_1_quotes_manager_1_1_m_data_manager.html#a612f72a1f9a730eca54f5b998ce72ca4">SetNewDataSourceFilePath</a> (string ModuleName, string new_filespath)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string[]&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skilful_1_1_quotes_manager_1_1_m_data_manager.html#a90a5460a3375b4d5ba8320484ef70b34">GetSymbolList</a> (int i)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">получает список инструментов для модуля по индексу модуля в списке СелектДатаСурс.  <a href="#a90a5460a3375b4d5ba8320484ef70b34"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">DateTime&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skilful_1_1_quotes_manager_1_1_m_data_manager.html#a2a80edd87866a34041ec8fc9d13a0801">GetLastTime</a> (string SourceName, string SymbolName, <a class="el" href="namespace_skilful_1_1_quotes_manager.html#a5c84c6ba01636871f8f98492b465c315">TF</a> frame, out int lastindex)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skilful_1_1_quotes_manager_1_1_m_data_manager.html#a587a8c21c781460c593fc217fd6261a4">SetPipValue</a> (string SourceName, string SymbolName, int digits)</td></tr>
+<tr><td colspan="2"><h2><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skilful_1_1_quotes_manager_1_1_m_data_manager.html#a45945683433e46f4f4fcc15bb46cf2ba">RecieveNewTick</a> (string SourceName, string SymbolName, DateTime time, double bid, double ask)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Обработка тиков реалтайм и передача их в графический модуль через обработчик события в маинформ.  <a href="#a45945683433e46f4f4fcc15bb46cf2ba"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skilful_1_1_quotes_manager_1_1_m_data_manager.html#a2fb337e6726f99f28168da612203f690">RecieveNewBar</a> (string SourceName, string SymbolName, <a class="el" href="namespace_skilful_1_1_quotes_manager.html#a5c84c6ba01636871f8f98492b465c315">TF</a> frame, double[] bar, bool completed)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">функция обработки баров реал тайм и передача бара в графический модуль через обработчик события в маинформ.  <a href="#a2fb337e6726f99f28168da612203f690"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skilful_1_1_quotes_manager_1_1_m_data_manager.html#a3cf930aaaeda95eaa1e3a2f847bcc7ff">LibMsgReciever</a> (string SourceName, string SymbolName, int code, string text)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">обработука сообщений от модулей датасурс.  <a href="#a3cf930aaaeda95eaa1e3a2f847bcc7ff"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_skilful_1_1_data_1_1_data_source_library_loader.html">DataSourceLibraryLoader</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skilful_1_1_quotes_manager_1_1_m_data_manager.html#ac62fcb90b148661c02f211b01fe5feeb">DataSource</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, Dictionary<br class="typebreak"/>
+&lt; string, string &gt; &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skilful_1_1_quotes_manager_1_1_m_data_manager.html#addcc20e5aced7933be882305a4f7a291">Config</a> = new Dictionary&lt;string, Dictionary&lt;string, string&gt;&gt;()</td></tr>
+<tr><td colspan="2"><h2><a name="events"></a>
+События</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static NewTickHandler&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skilful_1_1_quotes_manager_1_1_m_data_manager.html#a7478797cf58c1d301f378a05f3a1ce3e">Chart_NewTick</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static NewBarHandler&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skilful_1_1_quotes_manager_1_1_m_data_manager.html#ac3eefb1ae52915eaf68ff5b5ed11a0ad">Chart_NewBar</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static LibMsgHandler&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skilful_1_1_quotes_manager_1_1_m_data_manager.html#a5efdaf4033edfee419744035b3ca8c7f">MainForm_MessageBox</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static RefreshHistoryHandler&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skilful_1_1_quotes_manager_1_1_m_data_manager.html#a7d2630ca45a77eb4cdb827bde979a601">RefreshHistory</a></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Подробное описание</h2>
+
+<p>См. определение в файле <a class="el" href="_quotes_manager_8cs_source.html">QuotesManager.cs</a> строка <a class="el" href="_quotes_manager_8cs_source.html#l00038">38</a></p>
+<hr/><h2>Конструктор(ы)</h2>
+<a class="anchor" id="a869c7ef5ccd81be5deb05d263657651e"></a><!-- doxytag: member="Skilful::QuotesManager::MDataManager::MDataManager" ref="a869c7ef5ccd81be5deb05d263657651e" args="(NewTickHandler MainForm_Tick2Chart, NewBarHandler MainForm_Bar2Chart, LibMsgHandler MFMessageBox, RefreshHistoryHandler MFRefreshHistory)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Skilful.QuotesManager.MDataManager.MDataManager </td>
+          <td>(</td>
+          <td class="paramtype">NewTickHandler&nbsp;</td>
+          <td class="paramname"> <em>MainForm_Tick2Chart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">NewBarHandler&nbsp;</td>
+          <td class="paramname"> <em>MainForm_Bar2Chart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LibMsgHandler&nbsp;</td>
+          <td class="paramname"> <em>MFMessageBox</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">RefreshHistoryHandler&nbsp;</td>
+          <td class="paramname"> <em>MFRefreshHistory</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="_quotes_manager_8cs_source.html">QuotesManager.cs</a> строка <a class="el" href="_quotes_manager_8cs_source.html#l00104">104</a></p>
+
+</div>
+</div>
+<hr/><h2>Методы</h2>
+<a class="anchor" id="acdec7de9f2c8ed005123404548da1fc7"></a><!-- doxytag: member="Skilful::QuotesManager::MDataManager::Config_Init" ref="acdec7de9f2c8ed005123404548da1fc7" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Skilful.QuotesManager.MDataManager.Config_Init </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>чтение настроек - выбранные модули и пути - из пользовательского файла конфигурации настройки для всех модулей хранятся в виде хеша(массив[параметр=&gt;значение,...]) преобразованного в одну строку. </p>
+
+<p>См. определение в файле <a class="el" href="_quotes_manager_8cs_source.html">QuotesManager.cs</a> строка <a class="el" href="_quotes_manager_8cs_source.html#l00159">159</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a172101a92b6bd7366c4d9d67834fede7"></a><!-- doxytag: member="Skilful::QuotesManager::MDataManager::Config_Save" ref="a172101a92b6bd7366c4d9d67834fede7" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Skilful.QuotesManager.MDataManager.Config_Save </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>запись настроек датасурс - выбранные модули и пути - в пользовательский файл конфигурации функция вызывается при закрытии окна настроек датасурс. </p>
+
+<p>См. определение в файле <a class="el" href="_quotes_manager_8cs_source.html">QuotesManager.cs</a> строка <a class="el" href="_quotes_manager_8cs_source.html#l00185">185</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a2a80edd87866a34041ec8fc9d13a0801"></a><!-- doxytag: member="Skilful::QuotesManager::MDataManager::GetLastTime" ref="a2a80edd87866a34041ec8fc9d13a0801" args="(string SourceName, string SymbolName, TF frame, out int lastindex)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DateTime Skilful.QuotesManager.MDataManager.GetLastTime </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>SourceName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>SymbolName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_skilful_1_1_quotes_manager.html#a5c84c6ba01636871f8f98492b465c315">TF</a>&nbsp;</td>
+          <td class="paramname"> <em>frame</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out int&nbsp;</td>
+          <td class="paramname"> <em>lastindex</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="_quotes_manager_8cs_source.html">QuotesManager.cs</a> строка <a class="el" href="_quotes_manager_8cs_source.html#l00256">256</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a81efd293d62dc9a4df5364d67b7d08ba"></a><!-- doxytag: member="Skilful::QuotesManager::MDataManager::GetSymbol" ref="a81efd293d62dc9a4df5364d67b7d08ba" args="(DataSourseModule module, string SymbolName)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_skilful_1_1_quotes_manager_1_1_t_symbol.html">TSymbol</a> Skilful.QuotesManager.MDataManager.GetSymbol </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_skilful_1_1_data_1_1_data_sourse_module.html">DataSourseModule</a>&nbsp;</td>
+          <td class="paramname"> <em>module</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>SymbolName</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>возвращает объект <a class="el" href="class_skilful_1_1_quotes_manager_1_1_t_symbol.html">TSymbol</a> ассоциированный с данными ModuleName и SymbolName. </p>
+<dl><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>ModuleName</em>&nbsp;</td><td>имя модуля полученное при инициализации данной длл(функция init()) вызов происходит при инициализации SelectDataSource_Form SelectDataSource_Form.addModuleLayout.DataSource[i].init(out SDSModuleName, out SDSModulePrompt, out description, out login_type); </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>SymbolName</em>&nbsp;</td><td>имя символа</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd>объект <a class="el" href="class_skilful_1_1_quotes_manager_1_1_t_symbol.html">TSymbol</a></dd></dl>
+
+<p>См. определение в файле <a class="el" href="_quotes_manager_8cs_source.html">QuotesManager.cs</a> строка <a class="el" href="_quotes_manager_8cs_source.html#l00123">123</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a90a5460a3375b4d5ba8320484ef70b34"></a><!-- doxytag: member="Skilful::QuotesManager::MDataManager::GetSymbolList" ref="a90a5460a3375b4d5ba8320484ef70b34" args="(int i)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string [] Skilful.QuotesManager.MDataManager.GetSymbolList </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>i</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>получает список инструментов для модуля по индексу модуля в списке СелектДатаСурс. </p>
+<dl><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>i</em>&nbsp;</td><td>индекс модуля датаСурс</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd></dd></dl>
+
+<p>См. определение в файле <a class="el" href="_quotes_manager_8cs_source.html">QuotesManager.cs</a> строка <a class="el" href="_quotes_manager_8cs_source.html#l00242">242</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a3cf930aaaeda95eaa1e3a2f847bcc7ff"></a><!-- doxytag: member="Skilful::QuotesManager::MDataManager::LibMsgReciever" ref="a3cf930aaaeda95eaa1e3a2f847bcc7ff" args="(string SourceName, string SymbolName, int code, string text)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Skilful.QuotesManager.MDataManager.LibMsgReciever </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>SourceName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>SymbolName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>text</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>обработука сообщений от модулей датасурс. </p>
+<dl><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>SourceName</em>&nbsp;</td><td></td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>SymbolName</em>&nbsp;</td><td></td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>code</em>&nbsp;</td><td></td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>text</em>&nbsp;</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="_quotes_manager_8cs_source.html">QuotesManager.cs</a> строка <a class="el" href="_quotes_manager_8cs_source.html#l00086">86</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a2fb337e6726f99f28168da612203f690"></a><!-- doxytag: member="Skilful::QuotesManager::MDataManager::RecieveNewBar" ref="a2fb337e6726f99f28168da612203f690" args="(string SourceName, string SymbolName, TF frame, double[] bar, bool completed)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Skilful.QuotesManager.MDataManager.RecieveNewBar </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>SourceName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>SymbolName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_skilful_1_1_quotes_manager.html#a5c84c6ba01636871f8f98492b465c315">TF</a>&nbsp;</td>
+          <td class="paramname"> <em>frame</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double[]&nbsp;</td>
+          <td class="paramname"> <em>bar</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>completed</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>функция обработки баров реал тайм и передача бара в графический модуль через обработчик события в маинформ. </p>
+<dl><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>SourceName</em>&nbsp;</td><td></td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>SymbolName</em>&nbsp;</td><td></td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>frame</em>&nbsp;</td><td></td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>bar</em>&nbsp;</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="_quotes_manager_8cs_source.html">QuotesManager.cs</a> строка <a class="el" href="_quotes_manager_8cs_source.html#l00066">66</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a45945683433e46f4f4fcc15bb46cf2ba"></a><!-- doxytag: member="Skilful::QuotesManager::MDataManager::RecieveNewTick" ref="a45945683433e46f4f4fcc15bb46cf2ba" args="(string SourceName, string SymbolName, DateTime time, double bid, double ask)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Skilful.QuotesManager.MDataManager.RecieveNewTick </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>SourceName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>SymbolName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DateTime&nbsp;</td>
+          <td class="paramname"> <em>time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>bid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>ask</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Обработка тиков реалтайм и передача их в графический модуль через обработчик события в маинформ. </p>
+<dl><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>SourceName</em>&nbsp;</td><td>имя модуля длл</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>&lt;param name="SymbolName"имя инструмента&gt;</p>
+<dl><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>time</em>&nbsp;</td><td>дата и время</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>bid</em>&nbsp;</td><td>бид</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>ask</em>&nbsp;</td><td>аск</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="_quotes_manager_8cs_source.html">QuotesManager.cs</a> строка <a class="el" href="_quotes_manager_8cs_source.html#l00054">54</a></p>
+
+</div>
+</div>
+<a class="anchor" id="ac448924e1fc03e09fca2a4a57072d6cd"></a><!-- doxytag: member="Skilful::QuotesManager::MDataManager::RefreshHistoryData" ref="ac448924e1fc03e09fca2a4a57072d6cd" args="(string SourceName, string SymbolName)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Skilful.QuotesManager.MDataManager.RefreshHistoryData </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>SourceName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>SymbolName</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="_quotes_manager_8cs_source.html">QuotesManager.cs</a> строка <a class="el" href="_quotes_manager_8cs_source.html#l00092">92</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a612f72a1f9a730eca54f5b998ce72ca4"></a><!-- doxytag: member="Skilful::QuotesManager::MDataManager::SetNewDataSourceFilePath" ref="a612f72a1f9a730eca54f5b998ce72ca4" args="(string ModuleName, string new_filespath)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Skilful.QuotesManager.MDataManager.SetNewDataSourceFilePath </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>ModuleName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>new_filespath</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="_quotes_manager_8cs_source.html">QuotesManager.cs</a> строка <a class="el" href="_quotes_manager_8cs_source.html#l00209">209</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a587a8c21c781460c593fc217fd6261a4"></a><!-- doxytag: member="Skilful::QuotesManager::MDataManager::SetPipValue" ref="a587a8c21c781460c593fc217fd6261a4" args="(string SourceName, string SymbolName, int digits)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Skilful.QuotesManager.MDataManager.SetPipValue </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>SourceName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>SymbolName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>digits</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="_quotes_manager_8cs_source.html">QuotesManager.cs</a> строка <a class="el" href="_quotes_manager_8cs_source.html#l00271">271</a></p>
+
+</div>
+</div>
+<hr/><h2>Данные класса</h2>
+<a class="anchor" id="addcc20e5aced7933be882305a4f7a291"></a><!-- doxytag: member="Skilful::QuotesManager::MDataManager::Config" ref="addcc20e5aced7933be882305a4f7a291" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;string, Dictionary&lt;string, string&gt; &gt; <a class="el" href="class_skilful_1_1_quotes_manager_1_1_m_data_manager.html#addcc20e5aced7933be882305a4f7a291">Skilful.QuotesManager.MDataManager.Config</a> = new Dictionary&lt;string, Dictionary&lt;string, string&gt;&gt;()</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="_quotes_manager_8cs_source.html">QuotesManager.cs</a> строка <a class="el" href="_quotes_manager_8cs_source.html#l00100">100</a></p>
+
+</div>
+</div>
+<a class="anchor" id="ac62fcb90b148661c02f211b01fe5feeb"></a><!-- doxytag: member="Skilful::QuotesManager::MDataManager::DataSource" ref="ac62fcb90b148661c02f211b01fe5feeb" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_skilful_1_1_data_1_1_data_source_library_loader.html">DataSourceLibraryLoader</a> <a class="el" href="class_skilful_1_1_quotes_manager_1_1_m_data_manager.html#ac62fcb90b148661c02f211b01fe5feeb">Skilful.QuotesManager.MDataManager.DataSource</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="_quotes_manager_8cs_source.html">QuotesManager.cs</a> строка <a class="el" href="_quotes_manager_8cs_source.html#l00097">97</a></p>
+
+</div>
+</div>
+<hr/><h2>Cобытия</h2>
+<a class="anchor" id="ac3eefb1ae52915eaf68ff5b5ed11a0ad"></a><!-- doxytag: member="Skilful::QuotesManager::MDataManager::Chart_NewBar" ref="ac3eefb1ae52915eaf68ff5b5ed11a0ad" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NewBarHandler Skilful.QuotesManager.MDataManager.Chart_NewBar<code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="_quotes_manager_8cs_source.html">QuotesManager.cs</a> строка <a class="el" href="_quotes_manager_8cs_source.html#l00041">41</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a7478797cf58c1d301f378a05f3a1ce3e"></a><!-- doxytag: member="Skilful::QuotesManager::MDataManager::Chart_NewTick" ref="a7478797cf58c1d301f378a05f3a1ce3e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NewTickHandler Skilful.QuotesManager.MDataManager.Chart_NewTick<code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="_quotes_manager_8cs_source.html">QuotesManager.cs</a> строка <a class="el" href="_quotes_manager_8cs_source.html#l00040">40</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a5efdaf4033edfee419744035b3ca8c7f"></a><!-- doxytag: member="Skilful::QuotesManager::MDataManager::MainForm_MessageBox" ref="a5efdaf4033edfee419744035b3ca8c7f" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LibMsgHandler Skilful.QuotesManager.MDataManager.MainForm_MessageBox<code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="_quotes_manager_8cs_source.html">QuotesManager.cs</a> строка <a class="el" href="_quotes_manager_8cs_source.html#l00042">42</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a7d2630ca45a77eb4cdb827bde979a601"></a><!-- doxytag: member="Skilful::QuotesManager::MDataManager::RefreshHistory" ref="a7d2630ca45a77eb4cdb827bde979a601" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RefreshHistoryHandler Skilful.QuotesManager.MDataManager.RefreshHistory<code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="_quotes_manager_8cs_source.html">QuotesManager.cs</a> строка <a class="el" href="_quotes_manager_8cs_source.html#l00043">43</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>Skilful/Data/<a class="el" href="_quotes_manager_8cs_source.html">QuotesManager.cs</a></li>
+</ul>
+</div>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Перечисления</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&nbsp;</span>Свойства</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&nbsp;</span>События</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

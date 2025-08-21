@@ -1,0 +1,447 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Skilful: Класс Skilful.ModelManager.ModelTree</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javaScript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Создано системой Doxygen 1.7.1 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+--></script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пакеты</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="dirs.html"><span>Алфавитный&nbsp;указатель&nbsp;директорий</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="hierarchy.html"><span>Иерархия&nbsp;классов</span></a></li>
+      <li><a href="functions.html"><span>Члены&nbsp;классов</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath">
+    <ul>
+      <li><a class="el" href="namespace_skilful.html">Skilful</a>      </li>
+      <li><a class="el" href="namespace_skilful_1_1_model_manager.html">ModelManager</a>      </li>
+      <li><a class="el" href="class_skilful_1_1_model_manager_1_1_model_tree.html">Skilful.ModelManager.ModelTree</a>      </li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#properties">Свойства</a>  </div>
+  <div class="headertitle">
+<h1>Класс Skilful.ModelManager.ModelTree</h1>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="Skilful::ModelManager::ModelTree" -->
+<p><a href="class_skilful_1_1_model_manager_1_1_model_tree-members.html">Полный список членов класса</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_skilful_1_1_model_manager_1_1_t_model.html">TModel</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skilful_1_1_model_manager_1_1_model_tree.html#a6d271e78f0cdd21cbf8612d465ce9d36">GetModel</a> (<a class="el" href="namespace_skilful_1_1_quotes_manager.html#a5c84c6ba01636871f8f98492b465c315">TF</a> tf, int id)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skilful_1_1_model_manager_1_1_model_tree.html#ac6953ff37b6426acdfc75390b4656af9">ModelTree</a> (int rootFrame, int cnt, <a class="el" href="class_skilful_1_1_quotes_manager_1_1_t_symbol.html">TSymbol</a> sym)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">конструктор.  <a href="#ac6953ff37b6426acdfc75390b4656af9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skilful_1_1_model_manager_1_1_model_tree.html#a3809fd5ee999f05d572d98683e64b943">SearchParentModel</a> (<a class="el" href="class_skilful_1_1_model_manager_1_1_t_model.html">TModel</a> m)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">возвращает id родительской модели если аналогичная модель существует на старшем плане parentID = ее индекс в массиве моделей старшего плана.  <a href="#a3809fd5ee999f05d572d98683e64b943"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skilful_1_1_model_manager_1_1_model_tree.html#a19fbeb1ae64a1926aa51f4ab9b015266">nextGlobalModel</a> (int srcID, <a class="el" href="namespace_skilful_1_1_quotes_manager.html#a5c84c6ba01636871f8f98492b465c315">TF</a> tf)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skilful_1_1_model_manager_1_1_model_tree.html#a12038bca70b2e1d6467db5a20b49fb01">isGlobalTrendModel</a> (<a class="el" href="class_skilful_1_1_model_manager_1_1_t_model.html">TModel</a> m, uint[] points)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">model является глобальной для тренда от данной т1 на этом же плане  <a href="#a12038bca70b2e1d6467db5a20b49fb01"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skilful_1_1_model_manager_1_1_model_tree.html#a93adc0ef92be68b7a08b473c61ad8ad3">prevGlobalModel</a> (int srcID, <a class="el" href="namespace_skilful_1_1_quotes_manager.html#a5c84c6ba01636871f8f98492b465c315">TF</a> tf)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">поиск предыдущей глобальной модели на данном плане.  <a href="#a93adc0ef92be68b7a08b473c61ad8ad3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skilful_1_1_model_manager_1_1_model_tree.html#a1ac3b56bf51ff05fb4ebca2432f04825">initFrame</a> (<a class="el" href="class_skilful_1_1_quotes_manager_1_1_t_quotes.html">TQuotes</a> q)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">1. установка индексов точек соответствующих точкам моделей на данном плане для массива quotes младшего фрейма 2. инициализация узлов дерева моделей на данном плане  <a href="#a1ac3b56bf51ff05fb4ebca2432f04825"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skilful_1_1_model_manager_1_1_model_tree.html#a77b363b82d73014c98b166a9dc98e5af">mpoint</a> (<a class="el" href="class_skilful_1_1_model_manager_1_1_t_model.html">TModel</a> m, int i)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skilful_1_1_model_manager_1_1_model_tree.html#a260b03be816542e634a54e60a3daca9c">mpointonchild</a> (int imodel, int ipoint, int lparent, int lchild)</td></tr>
+<tr><td colspan="2"><h2><a name="properties"></a>
+Свойства</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_skilful_1_1_model_manager_1_1_node.html">Node</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skilful_1_1_model_manager_1_1_model_tree.html#add2862e6a59e168d81cb9fbfea16ba29">cr</a><code> [get]</code></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Подробное описание</h2>
+
+<p>См. определение в файле <a class="el" href="_model_tree_8cs_source.html">ModelTree.cs</a> строка <a class="el" href="_model_tree_8cs_source.html#l00073">73</a></p>
+<hr/><h2>Конструктор(ы)</h2>
+<a class="anchor" id="ac6953ff37b6426acdfc75390b4656af9"></a><!-- doxytag: member="Skilful::ModelManager::ModelTree::ModelTree" ref="ac6953ff37b6426acdfc75390b4656af9" args="(int rootFrame, int cnt, TSymbol sym)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Skilful.ModelManager.ModelTree.ModelTree </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>rootFrame</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>cnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_skilful_1_1_quotes_manager_1_1_t_symbol.html">TSymbol</a>&nbsp;</td>
+          <td class="paramname"> <em>sym</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>конструктор. </p>
+<dl><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>rootFrame</em>&nbsp;</td><td>TF верхнего яруса</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>cnt</em>&nbsp;</td><td>количество фреймов в дереве</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>sym</em>&nbsp;</td><td>объект TSymbol</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="_model_tree_8cs_source.html">ModelTree.cs</a> строка <a class="el" href="_model_tree_8cs_source.html#l00112">112</a></p>
+
+</div>
+</div>
+<hr/><h2>Методы</h2>
+<a class="anchor" id="a6d271e78f0cdd21cbf8612d465ce9d36"></a><!-- doxytag: member="Skilful::ModelManager::ModelTree::GetModel" ref="a6d271e78f0cdd21cbf8612d465ce9d36" args="(TF tf, int id)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_skilful_1_1_model_manager_1_1_t_model.html">TModel</a> Skilful.ModelManager.ModelTree.GetModel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_skilful_1_1_quotes_manager.html#a5c84c6ba01636871f8f98492b465c315">TF</a>&nbsp;</td>
+          <td class="paramname"> <em>tf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>id</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="_model_tree_8cs_source.html">ModelTree.cs</a> строка <a class="el" href="_model_tree_8cs_source.html#l00100">100</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a1ac3b56bf51ff05fb4ebca2432f04825"></a><!-- doxytag: member="Skilful::ModelManager::ModelTree::initFrame" ref="a1ac3b56bf51ff05fb4ebca2432f04825" args="(TQuotes q)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Skilful.ModelManager.ModelTree.initFrame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_skilful_1_1_quotes_manager_1_1_t_quotes.html">TQuotes</a>&nbsp;</td>
+          <td class="paramname"> <em>q</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>1. установка индексов точек соответствующих точкам моделей на данном плане для массива quotes младшего фрейма 2. инициализация узлов дерева моделей на данном плане </p>
+<dl><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>tf</em>&nbsp;</td><td>текущий Фрейм</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>ctype</em>&nbsp;</td><td>тип графика, обычно ChartType.Candle</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="_model_tree_8cs_source.html">ModelTree.cs</a> строка <a class="el" href="_model_tree_8cs_source.html#l00286">286</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a12038bca70b2e1d6467db5a20b49fb01"></a><!-- doxytag: member="Skilful::ModelManager::ModelTree::isGlobalTrendModel" ref="a12038bca70b2e1d6467db5a20b49fb01" args="(TModel m, uint[] points)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Skilful.ModelManager.ModelTree.isGlobalTrendModel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_skilful_1_1_model_manager_1_1_t_model.html">TModel</a>&nbsp;</td>
+          <td class="paramname"> <em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint[]&nbsp;</td>
+          <td class="paramname"> <em>points</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>model является глобальной для тренда от данной т1 на этом же плане </p>
+<dl><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>m</em>&nbsp;</td><td></td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>points</em>&nbsp;</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd></dd></dl>
+
+<p><p>return stick.mlist[i].Stat &amp; MStat.GlobalTrend;</p>
+</p>
+
+<p>См. определение в файле <a class="el" href="_model_tree_8cs_source.html">ModelTree.cs</a> строка <a class="el" href="_model_tree_8cs_source.html#l00220">220</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a77b363b82d73014c98b166a9dc98e5af"></a><!-- doxytag: member="Skilful::ModelManager::ModelTree::mpoint" ref="a77b363b82d73014c98b166a9dc98e5af" args="(TModel m, int i)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Skilful.ModelManager.ModelTree.mpoint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_skilful_1_1_model_manager_1_1_t_model.html">TModel</a>&nbsp;</td>
+          <td class="paramname"> <em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>i</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="_model_tree_8cs_source.html">ModelTree.cs</a> строка <a class="el" href="_model_tree_8cs_source.html#l00421">421</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a260b03be816542e634a54e60a3daca9c"></a><!-- doxytag: member="Skilful::ModelManager::ModelTree::mpointonchild" ref="a260b03be816542e634a54e60a3daca9c" args="(int imodel, int ipoint, int lparent, int lchild)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Skilful.ModelManager.ModelTree.mpointonchild </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>imodel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ipoint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>lparent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>lchild</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="_model_tree_8cs_source.html">ModelTree.cs</a> строка <a class="el" href="_model_tree_8cs_source.html#l00435">435</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a19fbeb1ae64a1926aa51f4ab9b015266"></a><!-- doxytag: member="Skilful::ModelManager::ModelTree::nextGlobalModel" ref="a19fbeb1ae64a1926aa51f4ab9b015266" args="(int srcID, TF tf)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Skilful.ModelManager.ModelTree.nextGlobalModel </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>srcID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_skilful_1_1_quotes_manager.html#a5c84c6ba01636871f8f98492b465c315">TF</a>&nbsp;</td>
+          <td class="paramname"> <em>tf</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="_model_tree_8cs_source.html">ModelTree.cs</a> строка <a class="el" href="_model_tree_8cs_source.html#l00209">209</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a93adc0ef92be68b7a08b473c61ad8ad3"></a><!-- doxytag: member="Skilful::ModelManager::ModelTree::prevGlobalModel" ref="a93adc0ef92be68b7a08b473c61ad8ad3" args="(int srcID, TF tf)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Skilful.ModelManager.ModelTree.prevGlobalModel </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>srcID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_skilful_1_1_quotes_manager.html#a5c84c6ba01636871f8f98492b465c315">TF</a>&nbsp;</td>
+          <td class="paramname"> <em>tf</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>поиск предыдущей глобальной модели на данном плане. </p>
+<dl><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>srcID</em>&nbsp;</td><td></td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>tf</em>&nbsp;</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd></dd></dl>
+
+<p><p>if(stick.mlist[i].Stat &amp; MStat.GlobalTrend) return i; </p>
+</p>
+
+<p>См. определение в файле <a class="el" href="_model_tree_8cs_source.html">ModelTree.cs</a> строка <a class="el" href="_model_tree_8cs_source.html#l00243">243</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a3809fd5ee999f05d572d98683e64b943"></a><!-- doxytag: member="Skilful::ModelManager::ModelTree::SearchParentModel" ref="a3809fd5ee999f05d572d98683e64b943" args="(TModel m)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Skilful.ModelManager.ModelTree.SearchParentModel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_skilful_1_1_model_manager_1_1_t_model.html">TModel</a>&nbsp;</td>
+          <td class="paramname"> <em>m</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>возвращает id родительской модели если аналогичная модель существует на старшем плане parentID = ее индекс в массиве моделей старшего плана. </p>
+<dl><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>m</em>&nbsp;</td><td>искомая модель на младшем плане</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>parentID</em>&nbsp;</td><td>индекс последней из проверенных моделей старшего плана</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd>id родительской модели если модель существует на старшем плане, false если нет или при остсутствии старшего плана</dd></dl>
+
+<p>См. определение в файле <a class="el" href="_model_tree_8cs_source.html">ModelTree.cs</a> строка <a class="el" href="_model_tree_8cs_source.html#l00144">144</a></p>
+
+</div>
+</div>
+<hr/><h2>Полный список свойств</h2>
+<a class="anchor" id="add2862e6a59e168d81cb9fbfea16ba29"></a><!-- doxytag: member="Skilful::ModelManager::ModelTree::cr" ref="add2862e6a59e168d81cb9fbfea16ba29" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_skilful_1_1_model_manager_1_1_node.html">Node</a> Skilful.ModelManager.ModelTree.cr<code> [get]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="_model_tree_8cs_source.html">ModelTree.cs</a> строка <a class="el" href="_model_tree_8cs_source.html#l00076">76</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>Skilful/ModelManager/<a class="el" href="_model_tree_8cs_source.html">ModelTree.cs</a></li>
+</ul>
+</div>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Перечисления</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&nbsp;</span>Свойства</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&nbsp;</span>События</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>
