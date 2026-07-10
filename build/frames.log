@@ -1,0 +1,8 @@
+frame tf=Year bars=11 models=0 firstDT=2016.08.25 19:00 secondDT=2017.01.02 00:00 lastDT=2026.01.02 00:00
+frame tf=Quarter bars=40 models=0 firstDT=2016.08.25 19:00 secondDT=2016.10.03 00:00 lastDT=2026.04.01 00:00
+frame tf=Month bars=118 models=1 firstDT=2016.08.25 19:00 secondDT=2016.09.01 00:00 lastDT=2026.06.08 00:00
+frame tf=Week bars=506 models=17 firstDT=2016.08.25 19:00 secondDT=2016.08.29 00:00 lastDT=2026.06.08 00:00
+frame tf=Day bars=60000 models=3830 firstDT=2016.08.25 19:00 secondDT=2016.08.25 20:00 lastDT=2026.06.08 05:00
+frame tf=m240 bars=15025 models=982 firstDT=2016.08.25 19:00 secondDT=2016.08.25 20:00 lastDT=2026.06.08 04:00
+frame tf=m60 bars=60000 models=4103 firstDT=2016.08.25 19:00 secondDT=2016.08.25 20:00 lastDT=2026.06.08 05:00
+frame tf=custom bars=60000 models=4418 firstDT=2016.08.25 19:00 secondDT=2016.08.25 20:00 lastDT=2026.06.08 05:00

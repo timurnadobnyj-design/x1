@@ -1,0 +1,2065 @@
+2026-06-28 16:37:09.586: Drawing  finished
+2026-06-28 20:45:14.107: Opening TextFiles: EURUSD60 m60 start
+2026-06-28 20:45:14.193:    Preparing data started
+2026-06-28 20:45:14.193:    Preparing data ended
+2026-06-28 20:45:14.685: Drawing TextFiles: EURUSD60 m60 finished
+2026-06-28 20:46:00.581: Search started
+2026-06-28 20:46:00.582: Searching ended. 0 models found. Duration time=00:00:00
+2026-06-28 20:46:00.582: First step models. 0 models found.
+2026-06-28 20:46:00.583: Filtering started. 
+2026-06-28 20:46:00.585: Filtering ended. 
+2026-06-28 20:46:00.586: Searching Hypothesize Tangent Lines started. 
+2026-06-28 20:46:00.586: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-28 20:46:00.587: Processing ended. 0 models
+2026-06-28 20:46:00.590: Search started
+2026-06-28 20:46:00.591: Searching ended. 0 models found. Duration time=00:00:00.0010000
+2026-06-28 20:46:00.591: First step models. 0 models found.
+2026-06-28 20:46:00.591: Filtering started. 
+2026-06-28 20:46:00.591: Filtering ended. 
+2026-06-28 20:46:00.591: Searching Hypothesize Tangent Lines started. 
+2026-06-28 20:46:00.591: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-28 20:46:00.591: Processing ended. 0 models
+2026-06-28 20:46:00.591: Search started
+2026-06-28 20:46:00.592: Searching ended. 0 models found. Duration time=00:00:00.0010001
+2026-06-28 20:46:00.592: First step models. 0 models found.
+2026-06-28 20:46:00.592: Filtering started. 
+2026-06-28 20:46:00.592: Filtering ended. 
+2026-06-28 20:46:00.592: Searching Hypothesize Tangent Lines started. 
+2026-06-28 20:46:00.592: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-28 20:46:00.592: Processing ended. 0 models
+2026-06-28 20:46:00.593: Search started
+2026-06-28 20:46:00.623: Searching ended. 2 models found. Duration time=00:00:00.0300002
+2026-06-28 20:46:00.623: First step models. 0 models found.
+2026-06-28 20:46:00.623: Filtering started. 
+2026-06-28 20:46:00.624: Filtering ended. 
+2026-06-28 20:46:00.624: Searching Hypothesize Tangent Lines started. 
+2026-06-28 20:46:00.624: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-28 20:46:00.624: Processing ended. 0 models
+2026-06-28 20:46:00.627: Search started
+2026-06-28 20:46:00.630: Searching ended. 12 models found. Duration time=00:00:00.0030000
+2026-06-28 20:46:00.640: First step models. 6 models found.
+2026-06-28 20:46:00.640: Filtering started. 
+2026-06-28 20:46:00.641: Filtering ended. 
+2026-06-28 20:46:00.641: Searching Hypothesize Tangent Lines started. 
+2026-06-28 20:46:00.642: Searching Hypothesize Tangent Lines ended. 5 lines build.
+2026-06-28 20:46:00.642: Processing ended. 9 models
+2026-06-28 20:46:00.667: Search started
+2026-06-28 20:46:00.690: Searching ended. 62 models found. Duration time=00:00:00.0230002
+2026-06-28 20:46:00.690: First step models. 31 models found.
+2026-06-28 20:46:00.691: Filtering started. 
+2026-06-28 20:46:00.691: Filtering ended. 
+2026-06-28 20:46:00.691: Searching Hypothesize Tangent Lines started. 
+2026-06-28 20:46:00.691: Searching Hypothesize Tangent Lines ended. 38 lines build.
+2026-06-28 20:46:00.691: Processing ended. 45 models
+2026-06-28 20:46:00.696: Search started
+2026-06-28 20:46:00.916: Searching ended. 252 models found. Duration time=00:00:00.2200017
+2026-06-28 20:46:00.916: First step models. 138 models found.
+2026-06-28 20:46:00.917: Filtering started. 
+2026-06-28 20:46:00.918: Filtering ended. 
+2026-06-28 20:46:00.918: Searching Hypothesize Tangent Lines started. 
+2026-06-28 20:46:00.918: Searching Hypothesize Tangent Lines ended. 146 lines build.
+2026-06-28 20:46:00.918: Processing ended. 161 models
+2026-06-28 20:46:01.192: Search started
+2026-06-28 20:46:01.397: Searching ended. 252 models found. Duration time=00:00:00.2050016
+2026-06-28 20:46:01.397: First step models. 138 models found.
+2026-06-28 20:46:01.397: Filtering started. 
+2026-06-28 20:46:01.398: Filtering ended. 
+2026-06-28 20:46:01.398: Searching Hypothesize Tangent Lines started. 
+2026-06-28 20:46:01.398: Searching Hypothesize Tangent Lines ended. 162 lines build.
+2026-06-28 20:46:01.398: Processing ended. 183 models
+2026-06-28 21:38:01.064: Opening TextFiles: EURUSD m60 start
+2026-06-28 21:38:01.206:    Preparing data started
+2026-06-28 21:38:01.208:    Preparing data ended
+2026-06-28 21:38:01.966: Drawing TextFiles: EURUSD m60 finished
+2026-06-28 21:38:04.612: Search started
+2026-06-28 21:38:04.615: Searching ended. 0 models found. Duration time=00:00:00
+2026-06-28 21:38:04.615: First step models. 0 models found.
+2026-06-28 21:38:04.616: Filtering started. 
+2026-06-28 21:38:04.619: Filtering ended. 
+2026-06-28 21:38:04.620: Searching Hypothesize Tangent Lines started. 
+2026-06-28 21:38:04.620: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-28 21:38:04.621: Processing ended. 0 models
+2026-06-28 21:38:04.625: Search started
+2026-06-28 21:38:04.626: Searching ended. 0 models found. Duration time=00:00:00.0009999
+2026-06-28 21:38:04.626: First step models. 0 models found.
+2026-06-28 21:38:04.626: Filtering started. 
+2026-06-28 21:38:04.626: Filtering ended. 
+2026-06-28 21:38:04.626: Searching Hypothesize Tangent Lines started. 
+2026-06-28 21:38:04.626: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-28 21:38:04.626: Processing ended. 0 models
+2026-06-28 21:38:04.626: Search started
+2026-06-28 21:38:04.628: Searching ended. 0 models found. Duration time=00:00:00.0020000
+2026-06-28 21:38:04.628: First step models. 0 models found.
+2026-06-28 21:38:04.628: Filtering started. 
+2026-06-28 21:38:04.628: Filtering ended. 
+2026-06-28 21:38:04.628: Searching Hypothesize Tangent Lines started. 
+2026-06-28 21:38:04.628: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-28 21:38:04.628: Processing ended. 0 models
+2026-06-28 21:38:04.630: Search started
+2026-06-28 21:38:04.664: Searching ended. 2 models found. Duration time=00:00:00.0339996
+2026-06-28 21:38:04.664: First step models. 0 models found.
+2026-06-28 21:38:04.664: Filtering started. 
+2026-06-28 21:38:04.665: Filtering ended. 
+2026-06-28 21:38:04.665: Searching Hypothesize Tangent Lines started. 
+2026-06-28 21:38:04.665: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-28 21:38:04.665: Processing ended. 0 models
+2026-06-28 21:38:04.671: Search started
+2026-06-28 21:38:04.677: Searching ended. 12 models found. Duration time=00:00:00.0059999
+2026-06-28 21:38:04.677: First step models. 6 models found.
+2026-06-28 21:38:04.677: Filtering started. 
+2026-06-28 21:38:04.679: Filtering ended. 
+2026-06-28 21:38:04.679: Searching Hypothesize Tangent Lines started. 
+2026-06-28 21:38:04.681: Searching Hypothesize Tangent Lines ended. 5 lines build.
+2026-06-28 21:38:04.681: Processing ended. 9 models
+2026-06-28 21:38:04.721: Search started
+2026-06-28 21:38:04.772: Searching ended. 62 models found. Duration time=00:00:00.0509994
+2026-06-28 21:38:04.772: First step models. 31 models found.
+2026-06-28 21:38:04.772: Filtering started. 
+2026-06-28 21:38:04.772: Filtering ended. 
+2026-06-28 21:38:04.772: Searching Hypothesize Tangent Lines started. 
+2026-06-28 21:38:04.772: Searching Hypothesize Tangent Lines ended. 38 lines build.
+2026-06-28 21:38:04.772: Processing ended. 45 models
+2026-06-28 21:38:04.792: Search started
+2026-06-28 21:38:05.118: Searching ended. 252 models found. Duration time=00:00:00.3259961
+2026-06-28 21:38:05.118: First step models. 138 models found.
+2026-06-28 21:38:05.118: Filtering started. 
+2026-06-28 21:38:05.119: Filtering ended. 
+2026-06-28 21:38:05.119: Searching Hypothesize Tangent Lines started. 
+2026-06-28 21:38:05.120: Searching Hypothesize Tangent Lines ended. 146 lines build.
+2026-06-28 21:38:05.120: Processing ended. 161 models
+2026-06-28 21:38:05.548: Search started
+2026-06-28 21:38:05.885: Searching ended. 252 models found. Duration time=00:00:00.3369959
+2026-06-28 21:38:05.885: First step models. 138 models found.
+2026-06-28 21:38:05.885: Filtering started. 
+2026-06-28 21:38:05.887: Filtering ended. 
+2026-06-28 21:38:05.887: Searching Hypothesize Tangent Lines started. 
+2026-06-28 21:38:05.887: Searching Hypothesize Tangent Lines ended. 162 lines build.
+2026-06-28 21:38:05.888: Processing ended. 183 models
+2026-06-28 21:59:54.349: Opening CSV: EURUSD m60 start
+2026-06-28 21:59:54.584:    Preparing data started
+2026-06-28 21:59:54.585:    Preparing data ended
+2026-06-28 21:59:55.569: Drawing CSV: EURUSD m60 finished
+2026-06-28 22:09:25.287: Search started
+2026-06-28 22:09:25.289: Searching ended. 0 models found. Duration time=00:00:00
+2026-06-28 22:09:25.289: First step models. 0 models found.
+2026-06-28 22:09:25.290: Filtering started. 
+2026-06-28 22:09:25.292: Filtering ended. 
+2026-06-28 22:09:25.293: Searching Hypothesize Tangent Lines started. 
+2026-06-28 22:09:25.293: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-28 22:09:25.294: Processing ended. 0 models
+2026-06-28 22:09:25.306: Search started
+2026-06-28 22:09:25.306: Searching ended. 0 models found. Duration time=00:00:00
+2026-06-28 22:09:25.306: First step models. 0 models found.
+2026-06-28 22:09:25.306: Filtering started. 
+2026-06-28 22:09:25.306: Filtering ended. 
+2026-06-28 22:09:25.306: Searching Hypothesize Tangent Lines started. 
+2026-06-28 22:09:25.306: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-28 22:09:25.306: Processing ended. 0 models
+2026-06-28 22:09:25.307: Search started
+2026-06-28 22:09:25.308: Searching ended. 0 models found. Duration time=00:00:00.0010000
+2026-06-28 22:09:25.308: First step models. 0 models found.
+2026-06-28 22:09:25.308: Filtering started. 
+2026-06-28 22:09:25.308: Filtering ended. 
+2026-06-28 22:09:25.308: Searching Hypothesize Tangent Lines started. 
+2026-06-28 22:09:25.308: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-28 22:09:25.308: Processing ended. 0 models
+2026-06-28 22:09:25.329: Search started
+2026-06-28 22:09:25.355: Searching ended. 2 models found. Duration time=00:00:00.0260004
+2026-06-28 22:09:25.355: First step models. 0 models found.
+2026-06-28 22:09:25.355: Filtering started. 
+2026-06-28 22:09:25.356: Filtering ended. 
+2026-06-28 22:09:25.356: Searching Hypothesize Tangent Lines started. 
+2026-06-28 22:09:25.356: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-28 22:09:25.356: Processing ended. 0 models
+2026-06-28 22:09:25.360: Search started
+2026-06-28 22:09:25.782: Searching ended. 285 models found. Duration time=00:00:00.4220061
+2026-06-28 22:09:25.782: First step models. 189 models found.
+2026-06-28 22:09:25.782: Filtering started. 
+2026-06-28 22:09:25.785: Filtering ended. 
+2026-06-28 22:09:25.785: Searching Hypothesize Tangent Lines started. 
+2026-06-28 22:09:25.786: Searching Hypothesize Tangent Lines ended. 158 lines build.
+2026-06-28 22:09:25.786: Processing ended. 173 models
+2026-06-28 22:09:25.787: Search started
+2026-06-28 22:09:25.821: Searching ended. 70 models found. Duration time=00:00:00.0340005
+2026-06-28 22:09:25.821: First step models. 34 models found.
+2026-06-28 22:09:25.821: Filtering started. 
+2026-06-28 22:09:25.822: Filtering ended. 
+2026-06-28 22:09:25.822: Searching Hypothesize Tangent Lines started. 
+2026-06-28 22:09:25.822: Searching Hypothesize Tangent Lines ended. 46 lines build.
+2026-06-28 22:09:25.822: Processing ended. 52 models
+2026-06-28 22:09:25.829: Search started
+2026-06-28 22:09:26.194: Searching ended. 285 models found. Duration time=00:00:00.3650053
+2026-06-28 22:09:26.194: First step models. 186 models found.
+2026-06-28 22:09:26.195: Filtering started. 
+2026-06-28 22:09:26.196: Filtering ended. 
+2026-06-28 22:09:26.196: Searching Hypothesize Tangent Lines started. 
+2026-06-28 22:09:26.196: Searching Hypothesize Tangent Lines ended. 168 lines build.
+2026-06-28 22:09:26.197: Processing ended. 187 models
+2026-06-28 22:09:26.584: Search started
+2026-06-28 22:09:26.974: Searching ended. 285 models found. Duration time=00:00:00.3900056
+2026-06-28 22:09:26.975: First step models. 186 models found.
+2026-06-28 22:09:26.975: Filtering started. 
+2026-06-28 22:09:26.978: Filtering ended. 
+2026-06-28 22:09:26.978: Searching Hypothesize Tangent Lines started. 
+2026-06-28 22:09:26.979: Searching Hypothesize Tangent Lines ended. 185 lines build.
+2026-06-28 22:09:26.979: Processing ended. 208 models
+ models. 3626 models found.
+2026-06-28 22:05:19.545: Filtering started. 
+2026-06-28 22:05:19.574: Filtering ended. 
+2026-06-28 22:05:19.574: Searching Hypothesize Tangent Lines started. 
+2026-06-28 22:05:19.580: Searching Hypothesize Tangent Lines ended. 3840 lines build.
+2026-06-28 22:05:19.581: Processing ended. 4214 models
+2026-06-28 22:09:05.348: Opening CSV: /media/linnkod/2gb/yandex.disk/projects/gt/tactica_pattern/datasets/EURUSD_H1 m60 start
+2026-06-28 22:09:06.348:    Preparing data started
+2026-06-28 22:09:06.353:    Preparing data ended
+2026-06-28 22:09:06.750: Drawing CSV: /media/linnkod/2gb/yandex.disk/projects/gt/tactica_pattern/datasets/EURUSD_H1 m60 finished
+2026-06-28 22:09:09.335: Search started
+2026-06-28 22:09:09.358: Searching ended. 0 models found. Duration time=00:00:00.0226910
+2026-06-28 22:09:09.358: First step models. 0 models found.
+2026-06-28 22:09:09.359: Filtering started. 
+2026-06-28 22:09:09.361: Filtering ended. 
+2026-06-28 22:09:09.362: Searching Hypothesize Tangent Lines started. 
+2026-06-28 22:09:09.362: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-28 22:09:09.362: Processing ended. 0 models
+2026-06-28 22:09:09.365: Search started
+2026-06-28 22:09:09.369: Searching ended. 2 models found. Duration time=00:00:00.0037480
+2026-06-28 22:09:09.369: First step models. 2 models found.
+2026-06-28 22:09:09.369: Filtering started. 
+2026-06-28 22:09:09.370: Filtering ended. 
+2026-06-28 22:09:09.370: Searching Hypothesize Tangent Lines started. 
+2026-06-28 22:09:09.370: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-28 22:09:09.370: Processing ended. 0 models
+2026-06-28 22:09:09.381: Search started
+2026-06-28 22:09:09.385: Searching ended. 6 models found. Duration time=00:00:00.0045630
+2026-06-28 22:09:09.385: First step models. 3 models found.
+2026-06-28 22:09:09.385: Filtering started. 
+2026-06-28 22:09:09.386: Filtering ended. 
+2026-06-28 22:09:09.386: Searching Hypothesize Tangent Lines started. 
+2026-06-28 22:09:09.388: Searching Hypothesize Tangent Lines ended. 1 lines build.
+2026-06-28 22:09:09.388: Processing ended. 3 models
+2026-06-28 22:09:09.422: Search started
+2026-06-28 22:09:09.435: Searching ended. 39 models found. Duration time=00:00:00.0130520
+2026-06-28 22:09:09.435: First step models. 15 models found.
+2026-06-28 22:09:09.436: Filtering started. 
+2026-06-28 22:09:09.436: Filtering ended. 
+2026-06-28 22:09:09.436: Searching Hypothesize Tangent Lines started. 
+2026-06-28 22:09:09.436: Searching Hypothesize Tangent Lines ended. 25 lines build.
+2026-06-28 22:09:09.436: Processing ended. 29 models
+2026-06-28 22:09:09.461: Search started
+2026-06-28 22:09:41.743: Searching ended. 5572 models found. Duration time=00:00:32.2818650
+2026-06-28 22:09:41.743: First step models. 3604 models found.
+2026-06-28 22:09:41.745: Filtering started. 
+2026-06-28 22:09:41.800: Filtering ended. 
+2026-06-28 22:09:41.800: Searching Hypothesize Tangent Lines started. 
+2026-06-28 22:09:41.804: Searching Hypothesize Tangent Lines ended. 3307 lines build.
+2026-06-28 22:09:41.805: Processing ended. 3592 models
+2026-06-28 22:09:41.834: Search started
+2026-06-28 22:09:44.016: Searching ended. 1236 models found. Duration time=00:00:02.1824260
+2026-06-28 22:09:44.017: First step models. 663 models found.
+2026-06-28 22:09:44.017: Filtering started. 
+2026-06-28 22:09:44.023: Filtering ended. 
+2026-06-28 22:09:44.024: Searching Hypothesize Tangent Lines started. 
+2026-06-28 22:09:44.025: Searching Hypothesize Tangent Lines ended. 878 lines build.
+2026-06-28 22:09:44.025: Processing ended. 954 models
+2026-06-28 22:09:44.400: Search started
+2026-06-28 22:10:12.956: Searching ended. 5599 models found. Duration time=00:00:28.5563070
+2026-06-28 22:10:12.956: First step models. 3626 models found.
+2026-06-28 22:10:12.957: Filtering started. 
+2026-06-28 22:10:12.996: Filtering ended. 
+2026-06-28 22:10:12.996: Searching Hypothesize Tangent Lines started. 
+2026-06-28 22:10:13.002: Searching Hypothesize Tangent Lines ended. 3502 lines build.
+2026-06-28 22:10:13.003: Processing ended. 3822 models
+2026-06-28 22:10:13.587: Search started
+2026-06-28 22:10:43.284: Searching ended. 5599 models found. Duration time=00:00:29.6968370
+2026-06-28 22:10:43.284: First step models. 3626 models found.
+2026-06-28 22:10:43.285: Filtering started. 
+2026-06-28 22:10:43.314: Filtering ended. 
+2026-06-28 22:10:43.314: Searching Hypothesize Tangent Lines started. 
+2026-06-28 22:10:43.320: Searching Hypothesize Tangent Lines ended. 3840 lines build.
+2026-06-28 22:10:43.321: Processing ended. 4214 models
+2026-06-28 22:29:21.238: Opening CSV: EURUSD m60 start
+2026-06-28 22:29:21.345:    Preparing data started
+2026-06-28 22:29:21.346:    Preparing data ended
+2026-06-28 22:29:21.871: Drawing CSV: EURUSD m60 finished
+2026-06-28 22:29:45.039: Search started
+2026-06-28 22:29:45.040: Searching ended. 0 models found. Duration time=00:00:00
+2026-06-28 22:29:45.040: First step models. 0 models found.
+2026-06-28 22:29:45.041: Filtering started. 
+2026-06-28 22:29:45.043: Filtering ended. 
+2026-06-28 22:29:45.043: Searching Hypothesize Tangent Lines started. 
+2026-06-28 22:29:45.043: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-28 22:29:45.044: Processing ended. 0 models
+2026-06-28 22:29:45.047: Search started
+2026-06-28 22:29:45.047: Searching ended. 0 models found. Duration time=00:00:00
+2026-06-28 22:29:45.047: First step models. 0 models found.
+2026-06-28 22:29:45.047: Filtering started. 
+2026-06-28 22:29:45.047: Filtering ended. 
+2026-06-28 22:29:45.047: Searching Hypothesize Tangent Lines started. 
+2026-06-28 22:29:45.047: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-28 22:29:45.047: Processing ended. 0 models
+2026-06-28 22:29:45.047: Search started
+2026-06-28 22:29:45.048: Searching ended. 0 models found. Duration time=00:00:00.0010000
+2026-06-28 22:29:45.048: First step models. 0 models found.
+2026-06-28 22:29:45.048: Filtering started. 
+2026-06-28 22:29:45.048: Filtering ended. 
+2026-06-28 22:29:45.048: Searching Hypothesize Tangent Lines started. 
+2026-06-28 22:29:45.048: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-28 22:29:45.048: Processing ended. 0 models
+2026-06-28 22:29:45.049: Search started
+2026-06-28 22:29:45.069: Searching ended. 2 models found. Duration time=00:00:00.0200001
+2026-06-28 22:29:45.069: First step models. 0 models found.
+2026-06-28 22:29:45.069: Filtering started. 
+2026-06-28 22:29:45.069: Filtering ended. 
+2026-06-28 22:29:45.069: Searching Hypothesize Tangent Lines started. 
+2026-06-28 22:29:45.069: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-28 22:29:45.069: Processing ended. 0 models
+2026-06-28 22:29:45.073: Search started
+2026-06-28 22:29:45.389: Searching ended. 285 models found. Duration time=00:00:00.3160013
+2026-06-28 22:29:45.389: First step models. 189 models found.
+2026-06-28 22:29:45.389: Filtering started. 
+2026-06-28 22:29:45.391: Filtering ended. 
+2026-06-28 22:29:45.391: Searching Hypothesize Tangent Lines started. 
+2026-06-28 22:29:45.393: Searching Hypothesize Tangent Lines ended. 158 lines build.
+2026-06-28 22:29:45.393: Processing ended. 173 models
+2026-06-28 22:29:45.394: Search started
+2026-06-28 22:29:45.420: Searching ended. 70 models found. Duration time=00:00:00.0260001
+2026-06-28 22:29:45.420: First step models. 34 models found.
+2026-06-28 22:29:45.420: Filtering started. 
+2026-06-28 22:29:45.420: Filtering ended. 
+2026-06-28 22:29:45.420: Searching Hypothesize Tangent Lines started. 
+2026-06-28 22:29:45.420: Searching Hypothesize Tangent Lines ended. 46 lines build.
+2026-06-28 22:29:45.420: Processing ended. 52 models
+2026-06-28 22:29:45.425: Search started
+2026-06-28 22:29:45.672: Searching ended. 285 models found. Duration time=00:00:00.2470010
+2026-06-28 22:29:45.672: First step models. 186 models found.
+2026-06-28 22:29:45.672: Filtering started. 
+2026-06-28 22:29:45.674: Filtering ended. 
+2026-06-28 22:29:45.674: Searching Hypothesize Tangent Lines started. 
+2026-06-28 22:29:45.674: Searching Hypothesize Tangent Lines ended. 168 lines build.
+2026-06-28 22:29:45.674: Processing ended. 187 models
+2026-06-28 22:29:45.923: Search started
+2026-06-28 22:29:46.166: Searching ended. 285 models found. Duration time=00:00:00.2430010
+2026-06-28 22:29:46.166: First step models. 186 models found.
+2026-06-28 22:29:46.167: Filtering started. 
+2026-06-28 22:29:46.167: Filtering ended. 
+2026-06-28 22:29:46.167: Searching Hypothesize Tangent Lines started. 
+2026-06-28 22:29:46.167: Searching Hypothesize Tangent Lines ended. 185 lines build.
+2026-06-28 22:29:46.168: Processing ended. 208 models
+hing Hypothesize Tangent Lines ended. 3840 lines build.
+2026-06-28 22:29:33.695: Processing ended. 4214 models
+2026-06-28 22:33:36.249: Opening CSV: EURUSD m60 start
+2026-06-28 22:33:36.364:    Preparing data started
+2026-06-28 22:33:36.365:    Preparing data ended
+2026-06-28 22:33:36.793: Drawing CSV: EURUSD m60 finished
+2026-06-28 22:33:39.581: Search started
+2026-06-28 22:33:39.583: Searching ended. 0 models found. Duration time=00:00:00.0010000
+2026-06-28 22:33:39.583: First step models. 0 models found.
+2026-06-28 22:33:39.584: Filtering started. 
+2026-06-28 22:33:39.586: Filtering ended. 
+2026-06-28 22:33:39.587: Searching Hypothesize Tangent Lines started. 
+2026-06-28 22:33:39.587: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-28 22:33:39.587: Processing ended. 0 models
+2026-06-28 22:33:39.590: Search started
+2026-06-28 22:33:39.591: Searching ended. 0 models found. Duration time=00:00:00.0010000
+2026-06-28 22:33:39.591: First step models. 0 models found.
+2026-06-28 22:33:39.591: Filtering started. 
+2026-06-28 22:33:39.591: Filtering ended. 
+2026-06-28 22:33:39.591: Searching Hypothesize Tangent Lines started. 
+2026-06-28 22:33:39.591: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-28 22:33:39.591: Processing ended. 0 models
+2026-06-28 22:33:39.591: Search started
+2026-06-28 22:33:39.591: Searching ended. 0 models found. Duration time=00:00:00
+2026-06-28 22:33:39.591: First step models. 0 models found.
+2026-06-28 22:33:39.591: Filtering started. 
+2026-06-28 22:33:39.591: Filtering ended. 
+2026-06-28 22:33:39.591: Searching Hypothesize Tangent Lines started. 
+2026-06-28 22:33:39.591: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-28 22:33:39.591: Processing ended. 0 models
+2026-06-28 22:33:39.592: Search started
+2026-06-28 22:33:39.613: Searching ended. 2 models found. Duration time=00:00:00.0210000
+2026-06-28 22:33:39.613: First step models. 0 models found.
+2026-06-28 22:33:39.613: Filtering started. 
+2026-06-28 22:33:39.613: Filtering ended. 
+2026-06-28 22:33:39.613: Searching Hypothesize Tangent Lines started. 
+2026-06-28 22:33:39.613: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-28 22:33:39.613: Processing ended. 0 models
+2026-06-28 22:33:39.616: Search started
+2026-06-28 22:33:39.910: Searching ended. 285 models found. Duration time=00:00:00.2940010
+2026-06-28 22:33:39.910: First step models. 189 models found.
+2026-06-28 22:33:39.910: Filtering started. 
+2026-06-28 22:33:39.912: Filtering ended. 
+2026-06-28 22:33:39.912: Searching Hypothesize Tangent Lines started. 
+2026-06-28 22:33:39.913: Searching Hypothesize Tangent Lines ended. 158 lines build.
+2026-06-28 22:33:39.913: Processing ended. 173 models
+2026-06-28 22:33:39.915: Search started
+2026-06-28 22:33:39.937: Searching ended. 70 models found. Duration time=00:00:00.0220000
+2026-06-28 22:33:39.937: First step models. 34 models found.
+2026-06-28 22:33:39.937: Filtering started. 
+2026-06-28 22:33:39.937: Filtering ended. 
+2026-06-28 22:33:39.937: Searching Hypothesize Tangent Lines started. 
+2026-06-28 22:33:39.937: Searching Hypothesize Tangent Lines ended. 46 lines build.
+2026-06-28 22:33:39.937: Processing ended. 52 models
+2026-06-28 22:33:39.942: Search started
+2026-06-28 22:33:40.170: Searching ended. 285 models found. Duration time=00:00:00.2280008
+2026-06-28 22:33:40.170: First step models. 186 models found.
+2026-06-28 22:33:40.170: Filtering started. 
+2026-06-28 22:33:40.171: Filtering ended. 
+2026-06-28 22:33:40.171: Searching Hypothesize Tangent Lines started. 
+2026-06-28 22:33:40.172: Searching Hypothesize Tangent Lines ended. 168 lines build.
+2026-06-28 22:33:40.172: Processing ended. 187 models
+2026-06-28 22:33:40.428: Search started
+2026-06-28 22:33:40.670: Searching ended. 285 models found. Duration time=00:00:00.2420009
+2026-06-28 22:33:40.670: First step models. 186 models found.
+2026-06-28 22:33:40.670: Filtering started. 
+2026-06-28 22:33:40.671: Filtering ended. 
+2026-06-28 22:33:40.671: Searching Hypothesize Tangent Lines started. 
+2026-06-28 22:33:40.671: Searching Hypothesize Tangent Lines ended. 185 lines build.
+2026-06-28 22:33:40.671: Processing ended. 208 models
+2026-06-28 23:43:50.050: Opening CSV: EURUSD m60 start
+2026-06-28 23:43:50.230:    Preparing data started
+2026-06-28 23:43:50.232:    Preparing data ended
+2026-06-28 23:43:51.155: Drawing CSV: EURUSD m60 finished
+2026-06-28 23:43:53.533: Search started
+2026-06-28 23:43:53.535: Searching ended. 0 models found. Duration time=00:00:00
+2026-06-28 23:43:53.535: First step models. 0 models found.
+2026-06-28 23:43:53.537: Filtering started. 
+2026-06-28 23:43:53.541: Filtering ended. 
+2026-06-28 23:43:53.543: Searching Hypothesize Tangent Lines started. 
+2026-06-28 23:43:53.543: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-28 23:43:53.544: Processing ended. 0 models
+2026-06-28 23:43:53.550: Search started
+2026-06-28 23:43:53.550: Searching ended. 0 models found. Duration time=00:00:00
+2026-06-28 23:43:53.550: First step models. 0 models found.
+2026-06-28 23:43:53.550: Filtering started. 
+2026-06-28 23:43:53.550: Filtering ended. 
+2026-06-28 23:43:53.550: Searching Hypothesize Tangent Lines started. 
+2026-06-28 23:43:53.550: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-28 23:43:53.550: Processing ended. 0 models
+2026-06-28 23:43:53.550: Search started
+2026-06-28 23:43:53.553: Searching ended. 0 models found. Duration time=00:00:00.0020000
+2026-06-28 23:43:53.553: First step models. 0 models found.
+2026-06-28 23:43:53.553: Filtering started. 
+2026-06-28 23:43:53.553: Filtering ended. 
+2026-06-28 23:43:53.553: Searching Hypothesize Tangent Lines started. 
+2026-06-28 23:43:53.553: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-28 23:43:53.553: Processing ended. 0 models
+2026-06-28 23:43:53.554: Search started
+2026-06-28 23:43:53.603: Searching ended. 2 models found. Duration time=00:00:00.0490002
+2026-06-28 23:43:53.603: First step models. 0 models found.
+2026-06-28 23:43:53.603: Filtering started. 
+2026-06-28 23:43:53.604: Filtering ended. 
+2026-06-28 23:43:53.604: Searching Hypothesize Tangent Lines started. 
+2026-06-28 23:43:53.604: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-28 23:43:53.604: Processing ended. 0 models
+2026-06-28 23:43:53.623: Search started
+2026-06-28 23:43:54.259: Searching ended. 285 models found. Duration time=00:00:00.6360029
+2026-06-28 23:43:54.259: First step models. 189 models found.
+2026-06-28 23:43:54.260: Filtering started. 
+2026-06-28 23:43:54.263: Filtering ended. 
+2026-06-28 23:43:54.263: Searching Hypothesize Tangent Lines started. 
+2026-06-28 23:43:54.265: Searching Hypothesize Tangent Lines ended. 158 lines build.
+2026-06-28 23:43:54.265: Processing ended. 173 models
+2026-06-28 23:43:54.266: Search started
+2026-06-28 23:43:54.325: Searching ended. 70 models found. Duration time=00:00:00.0590002
+2026-06-28 23:43:54.325: First step models. 34 models found.
+2026-06-28 23:43:54.325: Filtering started. 
+2026-06-28 23:43:54.326: Filtering ended. 
+2026-06-28 23:43:54.326: Searching Hypothesize Tangent Lines started. 
+2026-06-28 23:43:54.326: Searching Hypothesize Tangent Lines ended. 46 lines build.
+2026-06-28 23:43:54.326: Processing ended. 52 models
+2026-06-28 23:43:54.340: Search started
+2026-06-28 23:43:54.947: Searching ended. 285 models found. Duration time=00:00:00.6070028
+2026-06-28 23:43:54.947: First step models. 186 models found.
+2026-06-28 23:43:54.948: Filtering started. 
+2026-06-28 23:43:54.950: Filtering ended. 
+2026-06-28 23:43:54.950: Searching Hypothesize Tangent Lines started. 
+2026-06-28 23:43:54.951: Searching Hypothesize Tangent Lines ended. 168 lines build.
+2026-06-28 23:43:54.951: Processing ended. 187 models
+2026-06-28 23:43:55.641: Search started
+2026-06-28 23:43:56.191: Searching ended. 285 models found. Duration time=00:00:00.5500025
+2026-06-28 23:43:56.191: First step models. 186 models found.
+2026-06-28 23:43:56.191: Filtering started. 
+2026-06-28 23:43:56.193: Filtering ended. 
+2026-06-28 23:43:56.193: Searching Hypothesize Tangent Lines started. 
+2026-06-28 23:43:56.194: Searching Hypothesize Tangent Lines ended. 185 lines build.
+2026-06-28 23:43:56.194: Processing ended. 208 models
+2026-06-28 23:48:40.469: Opening CSV: EURUSD m60 start
+2026-06-28 23:48:40.649:    Preparing data started
+2026-06-28 23:48:40.650:    Preparing data ended
+2026-06-28 23:48:41.685: Drawing CSV: EURUSD m60 finished
+2026-06-28 23:48:43.840: Search started
+2026-06-28 23:48:43.842: Searching ended. 0 models found. Duration time=00:00:00
+2026-06-28 23:48:43.842: First step models. 0 models found.
+2026-06-28 23:48:43.843: Filtering started. 
+2026-06-28 23:48:43.846: Filtering ended. 
+2026-06-28 23:48:43.847: Searching Hypothesize Tangent Lines started. 
+2026-06-28 23:48:43.847: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-28 23:48:43.847: Processing ended. 0 models
+2026-06-28 23:48:43.852: Search started
+2026-06-28 23:48:43.852: Searching ended. 0 models found. Duration time=00:00:00
+2026-06-28 23:48:43.852: First step models. 0 models found.
+2026-06-28 23:48:43.852: Filtering started. 
+2026-06-28 23:48:43.852: Filtering ended. 
+2026-06-28 23:48:43.852: Searching Hypothesize Tangent Lines started. 
+2026-06-28 23:48:43.852: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-28 23:48:43.852: Processing ended. 0 models
+2026-06-28 23:48:43.852: Search started
+2026-06-28 23:48:43.853: Searching ended. 0 models found. Duration time=00:00:00.0010000
+2026-06-28 23:48:43.853: First step models. 0 models found.
+2026-06-28 23:48:43.853: Filtering started. 
+2026-06-28 23:48:43.853: Filtering ended. 
+2026-06-28 23:48:43.853: Searching Hypothesize Tangent Lines started. 
+2026-06-28 23:48:43.853: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-28 23:48:43.853: Processing ended. 0 models
+2026-06-28 23:48:43.855: Search started
+2026-06-28 23:48:43.883: Searching ended. 2 models found. Duration time=00:00:00.0280001
+2026-06-28 23:48:43.883: First step models. 0 models found.
+2026-06-28 23:48:43.883: Filtering started. 
+2026-06-28 23:48:43.884: Filtering ended. 
+2026-06-28 23:48:43.884: Searching Hypothesize Tangent Lines started. 
+2026-06-28 23:48:43.884: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-28 23:48:43.884: Processing ended. 0 models
+2026-06-28 23:48:43.889: Search started
+2026-06-28 23:48:44.359: Searching ended. 285 models found. Duration time=00:00:00.4690019
+2026-06-28 23:48:44.359: First step models. 189 models found.
+2026-06-28 23:48:44.359: Filtering started. 
+2026-06-28 23:48:44.365: Filtering ended. 
+2026-06-28 23:48:44.366: Searching Hypothesize Tangent Lines started. 
+2026-06-28 23:48:44.368: Searching Hypothesize Tangent Lines ended. 158 lines build.
+2026-06-28 23:48:44.368: Processing ended. 173 models
+2026-06-28 23:48:44.379: Search started
+2026-06-28 23:48:44.456: Searching ended. 70 models found. Duration time=00:00:00.0770003
+2026-06-28 23:48:44.457: First step models. 34 models found.
+2026-06-28 23:48:44.457: Filtering started. 
+2026-06-28 23:48:44.457: Filtering ended. 
+2026-06-28 23:48:44.457: Searching Hypothesize Tangent Lines started. 
+2026-06-28 23:48:44.457: Searching Hypothesize Tangent Lines ended. 46 lines build.
+2026-06-28 23:48:44.457: Processing ended. 52 models
+2026-06-28 23:48:44.482: Search started
+2026-06-28 23:48:45.132: Searching ended. 285 models found. Duration time=00:00:00.6500027
+2026-06-28 23:48:45.132: First step models. 186 models found.
+2026-06-28 23:48:45.132: Filtering started. 
+2026-06-28 23:48:45.134: Filtering ended. 
+2026-06-28 23:48:45.134: Searching Hypothesize Tangent Lines started. 
+2026-06-28 23:48:45.135: Searching Hypothesize Tangent Lines ended. 168 lines build.
+2026-06-28 23:48:45.135: Processing ended. 187 models
+2026-06-28 23:48:45.709: Search started
+2026-06-28 23:48:46.289: Searching ended. 285 models found. Duration time=00:00:00.5800024
+2026-06-28 23:48:46.289: First step models. 186 models found.
+2026-06-28 23:48:46.289: Filtering started. 
+2026-06-28 23:48:46.291: Filtering ended. 
+2026-06-28 23:48:46.291: Searching Hypothesize Tangent Lines started. 
+2026-06-28 23:48:46.292: Searching Hypothesize Tangent Lines ended. 185 lines build.
+2026-06-28 23:48:46.292: Processing ended. 208 models
+2026-06-28 23:54:18.346: Opening CSV: EURUSD m60 start
+2026-06-28 23:54:18.564:    Preparing data started
+2026-06-28 23:54:18.566:    Preparing data ended
+2026-06-28 23:54:19.657: Drawing CSV: EURUSD m60 finished
+2026-06-28 23:54:21.830: Search started
+2026-06-28 23:54:21.832: Searching ended. 0 models found. Duration time=00:00:00
+2026-06-28 23:54:21.832: First step models. 0 models found.
+2026-06-28 23:54:21.835: Filtering started. 
+2026-06-28 23:54:21.839: Filtering ended. 
+2026-06-28 23:54:21.840: Searching Hypothesize Tangent Lines started. 
+2026-06-28 23:54:21.840: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-28 23:54:21.841: Processing ended. 0 models
+2026-06-28 23:54:21.847: Search started
+2026-06-28 23:54:21.847: Searching ended. 0 models found. Duration time=00:00:00
+2026-06-28 23:54:21.847: First step models. 0 models found.
+2026-06-28 23:54:21.847: Filtering started. 
+2026-06-28 23:54:21.848: Filtering ended. 
+2026-06-28 23:54:21.848: Searching Hypothesize Tangent Lines started. 
+2026-06-28 23:54:21.848: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-28 23:54:21.848: Processing ended. 0 models
+2026-06-28 23:54:21.849: Search started
+2026-06-28 23:54:21.851: Searching ended. 0 models found. Duration time=00:00:00.0020000
+2026-06-28 23:54:21.851: First step models. 0 models found.
+2026-06-28 23:54:21.851: Filtering started. 
+2026-06-28 23:54:21.851: Filtering ended. 
+2026-06-28 23:54:21.851: Searching Hypothesize Tangent Lines started. 
+2026-06-28 23:54:21.851: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-28 23:54:21.851: Processing ended. 0 models
+2026-06-28 23:54:21.853: Search started
+2026-06-28 23:54:21.900: Searching ended. 2 models found. Duration time=00:00:00.0470003
+2026-06-28 23:54:21.900: First step models. 0 models found.
+2026-06-28 23:54:21.900: Filtering started. 
+2026-06-28 23:54:21.901: Filtering ended. 
+2026-06-28 23:54:21.901: Searching Hypothesize Tangent Lines started. 
+2026-06-28 23:54:21.901: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-28 23:54:21.901: Processing ended. 0 models
+2026-06-28 23:54:21.909: Search started
+2026-06-28 23:54:22.602: Searching ended. 285 models found. Duration time=00:00:00.6930039
+2026-06-28 23:54:22.602: First step models. 189 models found.
+2026-06-28 23:54:22.603: Filtering started. 
+2026-06-28 23:54:22.607: Filtering ended. 
+2026-06-28 23:54:22.607: Searching Hypothesize Tangent Lines started. 
+2026-06-28 23:54:22.609: Searching Hypothesize Tangent Lines ended. 158 lines build.
+2026-06-28 23:54:22.609: Processing ended. 173 models
+2026-06-28 23:54:22.611: Search started
+2026-06-28 23:54:22.668: Searching ended. 70 models found. Duration time=00:00:00.0570003
+2026-06-28 23:54:22.668: First step models. 34 models found.
+2026-06-28 23:54:22.668: Filtering started. 
+2026-06-28 23:54:22.669: Filtering ended. 
+2026-06-28 23:54:22.669: Searching Hypothesize Tangent Lines started. 
+2026-06-28 23:54:22.669: Searching Hypothesize Tangent Lines ended. 46 lines build.
+2026-06-28 23:54:22.669: Processing ended. 52 models
+2026-06-28 23:54:22.685: Search started
+2026-06-28 23:54:23.230: Searching ended. 285 models found. Duration time=00:00:00.5450031
+2026-06-28 23:54:23.230: First step models. 186 models found.
+2026-06-28 23:54:23.230: Filtering started. 
+2026-06-28 23:54:23.233: Filtering ended. 
+2026-06-28 23:54:23.233: Searching Hypothesize Tangent Lines started. 
+2026-06-28 23:54:23.233: Searching Hypothesize Tangent Lines ended. 168 lines build.
+2026-06-28 23:54:23.233: Processing ended. 187 models
+2026-06-28 23:54:23.842: Search started
+2026-06-28 23:54:24.318: Searching ended. 285 models found. Duration time=00:00:00.4760028
+2026-06-28 23:54:24.318: First step models. 186 models found.
+2026-06-28 23:54:24.318: Filtering started. 
+2026-06-28 23:54:24.320: Filtering ended. 
+2026-06-28 23:54:24.320: Searching Hypothesize Tangent Lines started. 
+2026-06-28 23:54:24.320: Searching Hypothesize Tangent Lines ended. 185 lines build.
+2026-06-28 23:54:24.320: Processing ended. 208 models
+2026-06-29 00:05:27.525: Opening CSV: EURUSD m60 start
+2026-06-29 00:05:27.749:    Preparing data started
+2026-06-29 00:05:27.751:    Preparing data ended
+2026-06-29 00:05:28.825: Drawing CSV: EURUSD m60 finished
+2026-06-29 00:05:30.964: Search started
+2026-06-29 00:05:30.967: Searching ended. 0 models found. Duration time=00:00:00
+2026-06-29 00:05:30.967: First step models. 0 models found.
+2026-06-29 00:05:30.969: Filtering started. 
+2026-06-29 00:05:30.973: Filtering ended. 
+2026-06-29 00:05:30.975: Searching Hypothesize Tangent Lines started. 
+2026-06-29 00:05:30.975: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 00:05:30.976: Processing ended. 0 models
+2026-06-29 00:05:30.982: Search started
+2026-06-29 00:05:30.982: Searching ended. 0 models found. Duration time=00:00:00
+2026-06-29 00:05:30.982: First step models. 0 models found.
+2026-06-29 00:05:30.982: Filtering started. 
+2026-06-29 00:05:30.982: Filtering ended. 
+2026-06-29 00:05:30.982: Searching Hypothesize Tangent Lines started. 
+2026-06-29 00:05:30.982: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 00:05:30.982: Processing ended. 0 models
+2026-06-29 00:05:30.983: Search started
+2026-06-29 00:05:30.984: Searching ended. 0 models found. Duration time=00:00:00.0010000
+2026-06-29 00:05:30.984: First step models. 0 models found.
+2026-06-29 00:05:30.984: Filtering started. 
+2026-06-29 00:05:30.984: Filtering ended. 
+2026-06-29 00:05:30.984: Searching Hypothesize Tangent Lines started. 
+2026-06-29 00:05:30.985: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 00:05:30.985: Processing ended. 0 models
+2026-06-29 00:05:30.986: Search started
+2026-06-29 00:05:31.035: Searching ended. 2 models found. Duration time=00:00:00.0490002
+2026-06-29 00:05:31.035: First step models. 0 models found.
+2026-06-29 00:05:31.035: Filtering started. 
+2026-06-29 00:05:31.036: Filtering ended. 
+2026-06-29 00:05:31.036: Searching Hypothesize Tangent Lines started. 
+2026-06-29 00:05:31.036: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 00:05:31.036: Processing ended. 0 models
+2026-06-29 00:05:31.045: Search started
+2026-06-29 00:05:31.698: Searching ended. 285 models found. Duration time=00:00:00.6530029
+2026-06-29 00:05:31.698: First step models. 189 models found.
+2026-06-29 00:05:31.698: Filtering started. 
+2026-06-29 00:05:31.703: Filtering ended. 
+2026-06-29 00:05:31.703: Searching Hypothesize Tangent Lines started. 
+2026-06-29 00:05:31.705: Searching Hypothesize Tangent Lines ended. 158 lines build.
+2026-06-29 00:05:31.706: Processing ended. 173 models
+2026-06-29 00:05:31.708: Search started
+2026-06-29 00:05:31.772: Searching ended. 70 models found. Duration time=00:00:00.0640003
+2026-06-29 00:05:31.772: First step models. 34 models found.
+2026-06-29 00:05:31.772: Filtering started. 
+2026-06-29 00:05:31.773: Filtering ended. 
+2026-06-29 00:05:31.773: Searching Hypothesize Tangent Lines started. 
+2026-06-29 00:05:31.773: Searching Hypothesize Tangent Lines ended. 46 lines build.
+2026-06-29 00:05:31.773: Processing ended. 52 models
+2026-06-29 00:05:31.792: Search started
+2026-06-29 00:05:32.312: Searching ended. 285 models found. Duration time=00:00:00.5200024
+2026-06-29 00:05:32.313: First step models. 186 models found.
+2026-06-29 00:05:32.313: Filtering started. 
+2026-06-29 00:05:32.315: Filtering ended. 
+2026-06-29 00:05:32.315: Searching Hypothesize Tangent Lines started. 
+2026-06-29 00:05:32.317: Searching Hypothesize Tangent Lines ended. 168 lines build.
+2026-06-29 00:05:32.318: Processing ended. 187 models
+2026-06-29 00:05:32.802: Search started
+2026-06-29 00:05:33.296: Searching ended. 285 models found. Duration time=00:00:00.4940023
+2026-06-29 00:05:33.296: First step models. 186 models found.
+2026-06-29 00:05:33.296: Filtering started. 
+2026-06-29 00:05:33.299: Filtering ended. 
+2026-06-29 00:05:33.299: Searching Hypothesize Tangent Lines started. 
+2026-06-29 00:05:33.299: Searching Hypothesize Tangent Lines ended. 185 lines build.
+2026-06-29 00:05:33.300: Processing ended. 208 models
+2026-06-29 00:37:40.872: Opening CSV: EURUSD m60 start
+2026-06-29 00:37:41.119:    Preparing data started
+2026-06-29 00:37:41.120:    Preparing data ended
+2026-06-29 00:37:42.429: Drawing CSV: EURUSD m60 finished
+2026-06-29 00:37:44.271: Search started
+2026-06-29 00:37:44.273: Searching ended. 0 models found. Duration time=00:00:00
+2026-06-29 00:37:44.273: First step models. 0 models found.
+2026-06-29 00:37:44.274: Filtering started. 
+2026-06-29 00:37:44.277: Filtering ended. 
+2026-06-29 00:37:44.278: Searching Hypothesize Tangent Lines started. 
+2026-06-29 00:37:44.278: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 00:37:44.279: Processing ended. 0 models
+2026-06-29 00:37:44.284: Search started
+2026-06-29 00:37:44.284: Searching ended. 0 models found. Duration time=00:00:00
+2026-06-29 00:37:44.284: First step models. 0 models found.
+2026-06-29 00:37:44.284: Filtering started. 
+2026-06-29 00:37:44.284: Filtering ended. 
+2026-06-29 00:37:44.284: Searching Hypothesize Tangent Lines started. 
+2026-06-29 00:37:44.284: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 00:37:44.284: Processing ended. 0 models
+2026-06-29 00:37:44.284: Search started
+2026-06-29 00:37:44.286: Searching ended. 0 models found. Duration time=00:00:00.0020000
+2026-06-29 00:37:44.286: First step models. 0 models found.
+2026-06-29 00:37:44.286: Filtering started. 
+2026-06-29 00:37:44.286: Filtering ended. 
+2026-06-29 00:37:44.286: Searching Hypothesize Tangent Lines started. 
+2026-06-29 00:37:44.286: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 00:37:44.286: Processing ended. 0 models
+2026-06-29 00:37:44.288: Search started
+2026-06-29 00:37:44.322: Searching ended. 2 models found. Duration time=00:00:00.0330000
+2026-06-29 00:37:44.322: First step models. 0 models found.
+2026-06-29 00:37:44.322: Filtering started. 
+2026-06-29 00:37:44.322: Filtering ended. 
+2026-06-29 00:37:44.322: Searching Hypothesize Tangent Lines started. 
+2026-06-29 00:37:44.322: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 00:37:44.322: Processing ended. 0 models
+2026-06-29 00:37:44.329: Search started
+2026-06-29 00:37:44.784: Searching ended. 285 models found. Duration time=00:00:00.4549996
+2026-06-29 00:37:44.784: First step models. 189 models found.
+2026-06-29 00:37:44.784: Filtering started. 
+2026-06-29 00:37:44.789: Filtering ended. 
+2026-06-29 00:37:44.789: Searching Hypothesize Tangent Lines started. 
+2026-06-29 00:37:44.791: Searching Hypothesize Tangent Lines ended. 158 lines build.
+2026-06-29 00:37:44.791: Processing ended. 173 models
+2026-06-29 00:37:44.792: Search started
+2026-06-29 00:37:44.822: Searching ended. 70 models found. Duration time=00:00:00.0300000
+2026-06-29 00:37:44.822: First step models. 34 models found.
+2026-06-29 00:37:44.822: Filtering started. 
+2026-06-29 00:37:44.822: Filtering ended. 
+2026-06-29 00:37:44.822: Searching Hypothesize Tangent Lines started. 
+2026-06-29 00:37:44.822: Searching Hypothesize Tangent Lines ended. 46 lines build.
+2026-06-29 00:37:44.822: Processing ended. 52 models
+2026-06-29 00:37:44.828: Search started
+2026-06-29 00:37:45.269: Searching ended. 285 models found. Duration time=00:00:00.4409997
+2026-06-29 00:37:45.269: First step models. 186 models found.
+2026-06-29 00:37:45.269: Filtering started. 
+2026-06-29 00:37:45.272: Filtering ended. 
+2026-06-29 00:37:45.272: Searching Hypothesize Tangent Lines started. 
+2026-06-29 00:37:45.272: Searching Hypothesize Tangent Lines ended. 168 lines build.
+2026-06-29 00:37:45.272: Processing ended. 187 models
+2026-06-29 00:37:45.847: Search started
+2026-06-29 00:37:46.380: Searching ended. 285 models found. Duration time=00:00:00.5329996
+2026-06-29 00:37:46.380: First step models. 186 models found.
+2026-06-29 00:37:46.380: Filtering started. 
+2026-06-29 00:37:46.382: Filtering ended. 
+2026-06-29 00:37:46.382: Searching Hypothesize Tangent Lines started. 
+2026-06-29 00:37:46.383: Searching Hypothesize Tangent Lines ended. 185 lines build.
+2026-06-29 00:37:46.384: Processing ended. 208 models
+2026-06-29 00:46:10.589: Opening CSV: EURUSD m60 start
+2026-06-29 00:46:10.772:    Preparing data started
+2026-06-29 00:46:10.773:    Preparing data ended
+2026-06-29 00:46:11.559: Drawing CSV: EURUSD m60 finished
+2026-06-29 00:46:14.147: Search started
+2026-06-29 00:46:14.153: Searching ended. 0 models found. Duration time=00:00:00
+2026-06-29 00:46:14.153: First step models. 0 models found.
+2026-06-29 00:46:14.158: Filtering started. 
+2026-06-29 00:46:14.166: Filtering ended. 
+2026-06-29 00:46:14.168: Searching Hypothesize Tangent Lines started. 
+2026-06-29 00:46:14.168: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 00:46:14.168: Processing ended. 0 models
+2026-06-29 00:46:14.185: Search started
+2026-06-29 00:46:14.185: Searching ended. 0 models found. Duration time=00:00:00
+2026-06-29 00:46:14.185: First step models. 0 models found.
+2026-06-29 00:46:14.185: Filtering started. 
+2026-06-29 00:46:14.185: Filtering ended. 
+2026-06-29 00:46:14.186: Searching Hypothesize Tangent Lines started. 
+2026-06-29 00:46:14.186: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 00:46:14.186: Processing ended. 0 models
+2026-06-29 00:46:14.186: Search started
+2026-06-29 00:46:14.191: Searching ended. 0 models found. Duration time=00:00:00.0050000
+2026-06-29 00:46:14.191: First step models. 0 models found.
+2026-06-29 00:46:14.191: Filtering started. 
+2026-06-29 00:46:14.191: Filtering ended. 
+2026-06-29 00:46:14.191: Searching Hypothesize Tangent Lines started. 
+2026-06-29 00:46:14.191: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 00:46:14.191: Processing ended. 0 models
+2026-06-29 00:46:14.193: Search started
+2026-06-29 00:46:14.249: Searching ended. 2 models found. Duration time=00:00:00.0560001
+2026-06-29 00:46:14.249: First step models. 0 models found.
+2026-06-29 00:46:14.249: Filtering started. 
+2026-06-29 00:46:14.251: Filtering ended. 
+2026-06-29 00:46:14.251: Searching Hypothesize Tangent Lines started. 
+2026-06-29 00:46:14.251: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 00:46:14.251: Processing ended. 0 models
+2026-06-29 00:46:14.260: Search started
+2026-06-29 00:46:15.336: Searching ended. 285 models found. Duration time=00:00:01.0750011
+2026-06-29 00:46:15.336: First step models. 189 models found.
+2026-06-29 00:46:15.337: Filtering started. 
+2026-06-29 00:46:15.344: Filtering ended. 
+2026-06-29 00:46:15.345: Searching Hypothesize Tangent Lines started. 
+2026-06-29 00:46:15.347: Searching Hypothesize Tangent Lines ended. 158 lines build.
+2026-06-29 00:46:15.348: Processing ended. 173 models
+2026-06-29 00:46:15.350: Search started
+2026-06-29 00:46:15.494: Searching ended. 70 models found. Duration time=00:00:00.1440002
+2026-06-29 00:46:15.494: First step models. 34 models found.
+2026-06-29 00:46:15.494: Filtering started. 
+2026-06-29 00:46:15.495: Filtering ended. 
+2026-06-29 00:46:15.495: Searching Hypothesize Tangent Lines started. 
+2026-06-29 00:46:15.495: Searching Hypothesize Tangent Lines ended. 46 lines build.
+2026-06-29 00:46:15.495: Processing ended. 52 models
+2026-06-29 00:46:15.509: Search started
+2026-06-29 00:46:16.356: Searching ended. 285 models found. Duration time=00:00:00.8470009
+2026-06-29 00:46:16.356: First step models. 186 models found.
+2026-06-29 00:46:16.356: Filtering started. 
+2026-06-29 00:46:16.359: Filtering ended. 
+2026-06-29 00:46:16.359: Searching Hypothesize Tangent Lines started. 
+2026-06-29 00:46:16.359: Searching Hypothesize Tangent Lines ended. 168 lines build.
+2026-06-29 00:46:16.359: Processing ended. 187 models
+2026-06-29 00:46:16.999: Search started
+2026-06-29 00:46:17.592: Searching ended. 285 models found. Duration time=00:00:00.5930006
+2026-06-29 00:46:17.592: First step models. 186 models found.
+2026-06-29 00:46:17.592: Filtering started. 
+2026-06-29 00:46:17.594: Filtering ended. 
+2026-06-29 00:46:17.594: Searching Hypothesize Tangent Lines started. 
+2026-06-29 00:46:17.595: Searching Hypothesize Tangent Lines ended. 185 lines build.
+2026-06-29 00:46:17.595: Processing ended. 208 models
+2026-06-29 00:57:34.453: Opening CSV: /media/linnkod/2gb/yandex.disk/projects/gt/tactica_pattern/datasets/INTC_1d m60 start
+2026-06-29 00:57:34.863:    Preparing data started
+2026-06-29 00:57:34.865:    Preparing data ended
+2026-06-29 00:57:35.711: Drawing CSV: /media/linnkod/2gb/yandex.disk/projects/gt/tactica_pattern/datasets/INTC_1d m60 finished
+2026-06-29 00:57:37.524: Search started
+2026-06-29 00:57:37.578: Searching ended. 0 models found. Duration time=00:00:00.0537600
+2026-06-29 00:57:37.579: First step models. 0 models found.
+2026-06-29 00:57:37.580: Filtering started. 
+2026-06-29 00:57:37.583: Filtering ended. 
+2026-06-29 00:57:37.584: Searching Hypothesize Tangent Lines started. 
+2026-06-29 00:57:37.584: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 00:57:37.586: Processing ended. 0 models
+2026-06-29 00:57:37.601: Search started
+2026-06-29 00:57:37.618: Searching ended. 6 models found. Duration time=00:00:00.0165770
+2026-06-29 00:57:37.618: First step models. 3 models found.
+2026-06-29 00:57:37.618: Filtering started. 
+2026-06-29 00:57:37.620: Filtering ended. 
+2026-06-29 00:57:37.620: Searching Hypothesize Tangent Lines started. 
+2026-06-29 00:57:37.632: Searching Hypothesize Tangent Lines ended. 1 lines build.
+2026-06-29 00:57:37.633: Processing ended. 3 models
+2026-06-29 00:57:37.696: Search started
+2026-06-29 00:57:37.717: Searching ended. 39 models found. Duration time=00:00:00.0216850
+2026-06-29 00:57:37.718: First step models. 18 models found.
+2026-06-29 00:57:37.718: Filtering started. 
+2026-06-29 00:57:37.718: Filtering ended. 
+2026-06-29 00:57:37.718: Searching Hypothesize Tangent Lines started. 
+2026-06-29 00:57:37.718: Searching Hypothesize Tangent Lines ended. 24 lines build.
+2026-06-29 00:57:37.718: Processing ended. 29 models
+2026-06-29 00:57:37.803: Search started
+2026-06-29 00:57:37.988: Searching ended. 120 models found. Duration time=00:00:00.1848470
+2026-06-29 00:57:37.988: First step models. 64 models found.
+2026-06-29 00:57:37.988: Filtering started. 
+2026-06-29 00:57:37.989: Filtering ended. 
+2026-06-29 00:57:37.989: Searching Hypothesize Tangent Lines started. 
+2026-06-29 00:57:37.990: Searching Hypothesize Tangent Lines ended. 76 lines build.
+2026-06-29 00:57:37.990: Processing ended. 87 models
+2026-06-29 00:57:38.001: Search started
+2026-06-29 00:57:39.789: Searching ended. 625 models found. Duration time=00:00:01.7877930
+2026-06-29 00:57:39.789: First step models. 316 models found.
+2026-06-29 00:57:39.789: Filtering started. 
+2026-06-29 00:57:39.796: Filtering ended. 
+2026-06-29 00:57:39.796: Searching Hypothesize Tangent Lines started. 
+2026-06-29 00:57:39.797: Searching Hypothesize Tangent Lines ended. 399 lines build.
+2026-06-29 00:57:39.797: Processing ended. 436 models
+2026-06-29 00:57:39.977: Search started
+2026-06-29 00:57:39.977: Searching ended. 0 models found. Duration time=00:00:00.0000950
+2026-06-29 00:57:39.977: First step models. 0 models found.
+2026-06-29 00:57:39.977: Filtering started. 
+2026-06-29 00:57:39.978: Filtering ended. 
+2026-06-29 00:57:39.978: Searching Hypothesize Tangent Lines started. 
+2026-06-29 00:57:39.978: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 00:57:39.978: Processing ended. 0 models
+2026-06-29 00:57:39.984: Search started
+2026-06-29 00:57:39.984: Searching ended. 0 models found. Duration time=00:00:00.0001020
+2026-06-29 00:57:39.984: First step models. 0 models found.
+2026-06-29 00:57:39.984: Filtering started. 
+2026-06-29 00:57:39.984: Filtering ended. 
+2026-06-29 00:57:39.984: Searching Hypothesize Tangent Lines started. 
+2026-06-29 00:57:39.984: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 00:57:39.984: Processing ended. 0 models
+2026-06-29 00:57:39.989: Search started
+2026-06-29 00:57:39.989: Searching ended. 0 models found. Duration time=00:00:00.0000580
+2026-06-29 00:57:39.989: First step models. 0 models found.
+2026-06-29 00:57:39.989: Filtering started. 
+2026-06-29 00:57:39.989: Filtering ended. 
+2026-06-29 00:57:39.989: Searching Hypothesize Tangent Lines started. 
+2026-06-29 00:57:39.989: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 00:57:39.989: Processing ended. 0 models
+2026-06-29 01:10:57.382: Opening CSV: EURUSD m60 start
+2026-06-29 01:10:59.665:    Preparing data started
+2026-06-29 01:10:59.680:    Preparing data ended
+2026-06-29 01:11:01.562: Drawing CSV: EURUSD m60 finished
+2026-06-29 01:11:05.912: Search started
+2026-06-29 01:11:06.016: Searching ended. 0 models found. Duration time=00:00:00.1010000
+2026-06-29 01:11:06.016: First step models. 0 models found.
+2026-06-29 01:11:06.019: Filtering started. 
+2026-06-29 01:11:06.024: Filtering ended. 
+2026-06-29 01:11:06.025: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:11:06.025: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 01:11:06.027: Processing ended. 0 models
+2026-06-29 01:11:06.037: Search started
+2026-06-29 01:11:06.048: Searching ended. 2 models found. Duration time=00:00:00.0110000
+2026-06-29 01:11:06.048: First step models. 2 models found.
+2026-06-29 01:11:06.048: Filtering started. 
+2026-06-29 01:11:06.049: Filtering ended. 
+2026-06-29 01:11:06.049: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:11:06.050: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 01:11:06.050: Processing ended. 0 models
+2026-06-29 01:11:06.078: Search started
+2026-06-29 01:11:06.101: Searching ended. 6 models found. Duration time=00:00:00.0230000
+2026-06-29 01:11:06.101: First step models. 3 models found.
+2026-06-29 01:11:06.101: Filtering started. 
+2026-06-29 01:11:06.102: Filtering ended. 
+2026-06-29 01:11:06.102: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:11:06.107: Searching Hypothesize Tangent Lines ended. 1 lines build.
+2026-06-29 01:11:06.107: Processing ended. 3 models
+2026-06-29 01:11:06.166: Search started
+2026-06-29 01:11:06.246: Searching ended. 39 models found. Duration time=00:00:00.0800000
+2026-06-29 01:11:06.246: First step models. 15 models found.
+2026-06-29 01:11:06.246: Filtering started. 
+2026-06-29 01:11:06.247: Filtering ended. 
+2026-06-29 01:11:06.247: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:11:06.247: Searching Hypothesize Tangent Lines ended. 25 lines build.
+2026-06-29 01:11:06.247: Processing ended. 29 models
+2026-06-29 01:11:06.315: Search started
+2026-06-29 01:12:29.093: Searching ended. 5574 models found. Duration time=00:01:22.7780088
+2026-06-29 01:12:29.093: First step models. 3606 models found.
+2026-06-29 01:12:29.099: Filtering started. 
+2026-06-29 01:12:29.241: Filtering ended. 
+2026-06-29 01:12:29.241: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:12:29.267: Searching Hypothesize Tangent Lines ended. 3304 lines build.
+2026-06-29 01:12:29.271: Processing ended. 3589 models
+2026-06-29 01:12:29.412: Search started
+2026-06-29 01:12:34.145: Searching ended. 1236 models found. Duration time=00:00:04.7330010
+2026-06-29 01:12:34.146: First step models. 663 models found.
+2026-06-29 01:12:34.146: Filtering started. 
+2026-06-29 01:12:34.179: Filtering ended. 
+2026-06-29 01:12:34.179: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:12:34.181: Searching Hypothesize Tangent Lines ended. 878 lines build.
+2026-06-29 01:12:34.181: Processing ended. 954 models
+2026-06-29 01:12:35.014: Search started
+2026-06-29 01:13:42.630: Searching ended. 5599 models found. Duration time=00:01:07.6160192
+2026-06-29 01:13:42.632: First step models. 3626 models found.
+2026-06-29 01:13:42.635: Filtering started. 
+2026-06-29 01:13:42.721: Filtering ended. 
+2026-06-29 01:13:42.722: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:13:42.731: Searching Hypothesize Tangent Lines ended. 3501 lines build.
+2026-06-29 01:13:42.733: Processing ended. 3821 models
+2026-06-29 01:13:45.574: Search started
+2026-06-29 01:15:07.240: Searching ended. 5599 models found. Duration time=00:01:21.6660350
+2026-06-29 01:15:07.240: First step models. 3626 models found.
+2026-06-29 01:15:07.247: Filtering started. 
+2026-06-29 01:15:07.366: Filtering ended. 
+2026-06-29 01:15:07.368: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:15:07.383: Searching Hypothesize Tangent Lines ended. 3840 lines build.
+2026-06-29 01:15:07.389: Processing ended. 4214 models
+2026-06-29 01:28:43.932: Opening CSV: EURUSD m60 start
+2026-06-29 01:28:45.990:    Preparing data started
+2026-06-29 01:28:45.999:    Preparing data ended
+2026-06-29 01:28:47.536: Drawing CSV: EURUSD m60 finished
+2026-06-29 01:28:52.933: Search started
+2026-06-29 01:28:52.986: Searching ended. 0 models found. Duration time=00:00:00.0510001
+2026-06-29 01:28:52.986: First step models. 0 models found.
+2026-06-29 01:28:52.987: Filtering started. 
+2026-06-29 01:28:52.992: Filtering ended. 
+2026-06-29 01:28:52.993: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:28:52.993: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 01:28:52.994: Processing ended. 0 models
+2026-06-29 01:28:53.002: Search started
+2026-06-29 01:28:53.014: Searching ended. 2 models found. Duration time=00:00:00.0120000
+2026-06-29 01:28:53.014: First step models. 2 models found.
+2026-06-29 01:28:53.014: Filtering started. 
+2026-06-29 01:28:53.016: Filtering ended. 
+2026-06-29 01:28:53.016: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:28:53.016: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 01:28:53.016: Processing ended. 1 models
+2026-06-29 01:28:53.035: Search started
+2026-06-29 01:28:53.049: Searching ended. 4 models found. Duration time=00:00:00.0140000
+2026-06-29 01:28:53.049: First step models. 3 models found.
+2026-06-29 01:28:53.049: Filtering started. 
+2026-06-29 01:28:53.049: Filtering ended. 
+2026-06-29 01:28:53.049: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:28:53.049: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 01:28:53.049: Processing ended. 2 models
+2026-06-29 01:28:53.114: Search started
+2026-06-29 01:28:53.149: Searching ended. 26 models found. Duration time=00:00:00.0350001
+2026-06-29 01:28:53.149: First step models. 14 models found.
+2026-06-29 01:28:53.149: Filtering started. 
+2026-06-29 01:28:53.150: Filtering ended. 
+2026-06-29 01:28:53.150: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:28:53.151: Searching Hypothesize Tangent Lines ended. 13 lines build.
+2026-06-29 01:28:53.151: Processing ended. 17 models
+2026-06-29 01:28:53.221: Search started
+2026-06-29 01:29:42.644: Searching ended. 5299 models found. Duration time=00:00:49.4230575
+2026-06-29 01:29:42.644: First step models. 3331 models found.
+2026-06-29 01:29:42.646: Filtering started. 
+2026-06-29 01:29:42.743: Filtering ended. 
+2026-06-29 01:29:42.743: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:29:42.752: Searching Hypothesize Tangent Lines ended. 3155 lines build.
+2026-06-29 01:29:42.753: Processing ended. 3430 models
+2026-06-29 01:29:42.822: Search started
+2026-06-29 01:29:47.422: Searching ended. 1269 models found. Duration time=00:00:04.6000054
+2026-06-29 01:29:47.422: First step models. 657 models found.
+2026-06-29 01:29:47.423: Filtering started. 
+2026-06-29 01:29:47.437: Filtering ended. 
+2026-06-29 01:29:47.437: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:29:47.439: Searching Hypothesize Tangent Lines ended. 922 lines build.
+2026-06-29 01:29:47.439: Processing ended. 1002 models
+2026-06-29 01:29:48.107: Search started
+2026-06-29 01:30:33.399: Searching ended. 5316 models found. Duration time=00:00:45.2920534
+2026-06-29 01:30:33.399: First step models. 3349 models found.
+2026-06-29 01:30:33.401: Filtering started. 
+2026-06-29 01:30:33.485: Filtering ended. 
+2026-06-29 01:30:33.486: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:30:33.507: Searching Hypothesize Tangent Lines ended. 3369 lines build.
+2026-06-29 01:30:33.508: Processing ended. 3689 models
+2026-06-29 01:30:36.605: Search started
+2026-06-29 01:31:24.948: Searching ended. 5316 models found. Duration time=00:00:48.3430576
+2026-06-29 01:31:24.949: First step models. 3349 models found.
+2026-06-29 01:31:24.952: Filtering started. 
+2026-06-29 01:31:25.018: Filtering ended. 
+2026-06-29 01:31:25.018: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:31:25.028: Searching Hypothesize Tangent Lines ended. 3611 lines build.
+2026-06-29 01:31:25.031: Processing ended. 3967 models
+2026-06-29 01:36:30.584: Opening CSV: EURUSD m60 start
+2026-06-29 01:36:33.131:    Preparing data started
+2026-06-29 01:36:33.150:    Preparing data ended
+2026-06-29 01:36:34.862: Drawing CSV: EURUSD m60 finished
+2026-06-29 01:36:39.445: Search started
+2026-06-29 01:36:39.510: Searching ended. 0 models found. Duration time=00:00:00.0609983
+2026-06-29 01:36:39.510: First step models. 0 models found.
+2026-06-29 01:36:39.511: Filtering started. 
+2026-06-29 01:36:39.518: Filtering ended. 
+2026-06-29 01:36:39.520: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:36:39.520: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 01:36:39.521: Processing ended. 0 models
+2026-06-29 01:36:39.527: Search started
+2026-06-29 01:36:39.557: Searching ended. 1 models found. Duration time=00:00:00.0299992
+2026-06-29 01:36:39.557: First step models. 1 models found.
+2026-06-29 01:36:39.557: Filtering started. 
+2026-06-29 01:36:39.557: Filtering ended. 
+2026-06-29 01:36:39.557: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:36:39.557: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 01:36:39.557: Processing ended. 0 models
+2026-06-29 01:36:39.581: Search started
+2026-06-29 01:36:39.594: Searching ended. 5 models found. Duration time=00:00:00.0129997
+2026-06-29 01:36:39.594: First step models. 5 models found.
+2026-06-29 01:36:39.594: Filtering started. 
+2026-06-29 01:36:39.595: Filtering ended. 
+2026-06-29 01:36:39.595: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:36:39.595: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 01:36:39.595: Processing ended. 1 models
+2026-06-29 01:36:39.787: Search started
+2026-06-29 01:36:39.837: Searching ended. 34 models found. Duration time=00:00:00.0499986
+2026-06-29 01:36:39.838: First step models. 17 models found.
+2026-06-29 01:36:39.838: Filtering started. 
+2026-06-29 01:36:39.838: Filtering ended. 
+2026-06-29 01:36:39.838: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:36:39.844: Searching Hypothesize Tangent Lines ended. 16 lines build.
+2026-06-29 01:36:39.844: Processing ended. 17 models
+2026-06-29 01:36:39.934: Search started
+2026-06-29 01:37:11.344: Searching ended. 5879 models found. Duration time=00:00:31.4101445
+2026-06-29 01:37:11.345: First step models. 3850 models found.
+2026-06-29 01:37:11.346: Filtering started. 
+2026-06-29 01:37:11.455: Filtering ended. 
+2026-06-29 01:37:11.455: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:37:11.462: Searching Hypothesize Tangent Lines ended. 3512 lines build.
+2026-06-29 01:37:11.463: Processing ended. 3830 models
+2026-06-29 01:37:11.528: Search started
+2026-06-29 01:37:13.867: Searching ended. 1296 models found. Duration time=00:00:02.3389380
+2026-06-29 01:37:13.867: First step models. 726 models found.
+2026-06-29 01:37:13.867: Filtering started. 
+2026-06-29 01:37:13.874: Filtering ended. 
+2026-06-29 01:37:13.874: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:37:13.875: Searching Hypothesize Tangent Lines ended. 909 lines build.
+2026-06-29 01:37:13.875: Processing ended. 982 models
+2026-06-29 01:37:14.703: Search started
+2026-06-29 01:37:40.945: Searching ended. 5865 models found. Duration time=00:00:26.2423223
+2026-06-29 01:37:40.945: First step models. 3832 models found.
+2026-06-29 01:37:40.947: Filtering started. 
+2026-06-29 01:37:41.029: Filtering ended. 
+2026-06-29 01:37:41.029: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:37:41.040: Searching Hypothesize Tangent Lines ended. 3751 lines build.
+2026-06-29 01:37:41.041: Processing ended. 4103 models
+2026-06-29 01:37:42.369:    Invalid Point in model (i=206), Points 1,3 pt1.X = -3.422736E+13 && pt3.X = 1.369094E+14
+2026-06-29 01:37:42.370:    Invalid Point in model (i=206), Points 21,4 pt21.X = -3.422736E+13 && pt4.X = 1.369094E+14
+2026-06-29 01:37:42.881: Search started
+2026-06-29 01:37:58.804: Searching ended. 5865 models found. Duration time=00:00:15.9226041
+2026-06-29 01:37:58.804: First step models. 3832 models found.
+2026-06-29 01:37:58.806: Filtering started. 
+2026-06-29 01:37:58.846: Filtering ended. 
+2026-06-29 01:37:58.846: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:37:58.853: Searching Hypothesize Tangent Lines ended. 4031 lines build.
+2026-06-29 01:37:58.854: Processing ended. 4418 models
+2026-06-29 01:39:40.775: Opening CSV: EURUSD m60 start
+2026-06-29 01:39:42.009:    Preparing data started
+2026-06-29 01:39:42.017:    Preparing data ended
+2026-06-29 01:39:42.830: Drawing CSV: EURUSD m60 finished
+2026-06-29 01:39:49.448: Search started
+2026-06-29 01:39:49.470: Searching ended. 0 models found. Duration time=00:00:00.0199996
+2026-06-29 01:39:49.470: First step models. 0 models found.
+2026-06-29 01:39:49.471: Filtering started. 
+2026-06-29 01:39:49.474: Filtering ended. 
+2026-06-29 01:39:49.475: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:39:49.475: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 01:39:49.476: Processing ended. 0 models
+2026-06-29 01:39:49.480: Search started
+2026-06-29 01:39:49.490: Searching ended. 2 models found. Duration time=00:00:00.0099998
+2026-06-29 01:39:49.490: First step models. 0 models found.
+2026-06-29 01:39:49.490: Filtering started. 
+2026-06-29 01:39:49.490: Filtering ended. 
+2026-06-29 01:39:49.490: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:39:49.490: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 01:39:49.490: Processing ended. 0 models
+2026-06-29 01:39:49.499: Search started
+2026-06-29 01:39:49.503: Searching ended. 5 models found. Duration time=00:00:00.0039999
+2026-06-29 01:39:49.503: First step models. 3 models found.
+2026-06-29 01:39:49.504: Filtering started. 
+2026-06-29 01:39:49.504: Filtering ended. 
+2026-06-29 01:39:49.504: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:39:49.505: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 01:39:49.505: Processing ended. 3 models
+2026-06-29 01:39:49.535: Search started
+2026-06-29 01:39:49.550: Searching ended. 46 models found. Duration time=00:00:00.0149997
+2026-06-29 01:39:49.550: First step models. 25 models found.
+2026-06-29 01:39:49.550: Filtering started. 
+2026-06-29 01:39:49.550: Filtering ended. 
+2026-06-29 01:39:49.550: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:39:49.551: Searching Hypothesize Tangent Lines ended. 22 lines build.
+2026-06-29 01:39:49.551: Processing ended. 26 models
+2026-06-29 01:39:49.577: Search started
+2026-06-29 01:40:09.938: Searching ended. 5931 models found. Duration time=00:00:20.3615879
+2026-06-29 01:40:09.938: First step models. 4193 models found.
+2026-06-29 01:40:09.939: Filtering started. 
+2026-06-29 01:40:10.003: Filtering ended. 
+2026-06-29 01:40:10.003: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:40:10.007: Searching Hypothesize Tangent Lines ended. 3345 lines build.
+2026-06-29 01:40:10.008: Processing ended. 3602 models
+2026-06-29 01:40:10.047: Search started
+2026-06-29 01:40:11.893: Searching ended. 1359 models found. Duration time=00:00:01.8459633
+2026-06-29 01:40:11.893: First step models. 818 models found.
+2026-06-29 01:40:11.893: Filtering started. 
+2026-06-29 01:40:11.901: Filtering ended. 
+2026-06-29 01:40:11.901: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:40:11.902: Searching Hypothesize Tangent Lines ended. 973 lines build.
+2026-06-29 01:40:11.903: Processing ended. 1046 models
+2026-06-29 01:40:12.428: Search started
+2026-06-29 01:40:27.172: Searching ended. 5953 models found. Duration time=00:00:14.7437107
+2026-06-29 01:40:27.172: First step models. 4205 models found.
+2026-06-29 01:40:27.173: Filtering started. 
+2026-06-29 01:40:27.227: Filtering ended. 
+2026-06-29 01:40:27.227: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:40:27.231: Searching Hypothesize Tangent Lines ended. 3611 lines build.
+2026-06-29 01:40:27.232: Processing ended. 3910 models
+2026-06-29 01:40:28.412: Search started
+2026-06-29 01:40:43.635: Searching ended. 5953 models found. Duration time=00:00:15.2237087
+2026-06-29 01:40:43.635: First step models. 4205 models found.
+2026-06-29 01:40:43.635: Filtering started. 
+2026-06-29 01:40:43.658: Filtering ended. 
+2026-06-29 01:40:43.658: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:40:43.662: Searching Hypothesize Tangent Lines ended. 3926 lines build.
+2026-06-29 01:40:43.662: Processing ended. 4265 models
+2026-06-29 01:42:49.165: Opening CSV: EURUSD m60 start
+2026-06-29 01:42:49.860:    Preparing data started
+2026-06-29 01:42:49.864:    Preparing data ended
+2026-06-29 01:42:50.331: Drawing CSV: EURUSD m60 finished
+2026-06-29 01:42:57.816: Search started
+2026-06-29 01:42:57.838: Searching ended. 0 models found. Duration time=00:00:00.0199997
+2026-06-29 01:42:57.838: First step models. 0 models found.
+2026-06-29 01:42:57.838: Filtering started. 
+2026-06-29 01:42:57.840: Filtering ended. 
+2026-06-29 01:42:57.841: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:42:57.841: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 01:42:57.842: Processing ended. 0 models
+2026-06-29 01:42:57.845: Search started
+2026-06-29 01:42:57.851: Searching ended. 0 models found. Duration time=00:00:00.0060000
+2026-06-29 01:42:57.851: First step models. 0 models found.
+2026-06-29 01:42:57.851: Filtering started. 
+2026-06-29 01:42:57.851: Filtering ended. 
+2026-06-29 01:42:57.851: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:42:57.851: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 01:42:57.851: Processing ended. 0 models
+2026-06-29 01:42:57.858: Search started
+2026-06-29 01:42:57.861: Searching ended. 5 models found. Duration time=00:00:00.0030000
+2026-06-29 01:42:57.861: First step models. 2 models found.
+2026-06-29 01:42:57.861: Filtering started. 
+2026-06-29 01:42:57.862: Filtering ended. 
+2026-06-29 01:42:57.862: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:42:57.862: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 01:42:57.862: Processing ended. 1 models
+2026-06-29 01:42:57.889: Search started
+2026-06-29 01:42:57.904: Searching ended. 45 models found. Duration time=00:00:00.0149997
+2026-06-29 01:42:57.904: First step models. 27 models found.
+2026-06-29 01:42:57.904: Filtering started. 
+2026-06-29 01:42:57.904: Filtering ended. 
+2026-06-29 01:42:57.904: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:42:57.905: Searching Hypothesize Tangent Lines ended. 29 lines build.
+2026-06-29 01:42:57.905: Processing ended. 30 models
+2026-06-29 01:42:57.922: Search started
+2026-06-29 01:43:48.991: Searching ended. 5485 models found. Duration time=00:00:51.0692370
+2026-06-29 01:43:48.991: First step models. 3292 models found.
+2026-06-29 01:43:48.992: Filtering started. 
+2026-06-29 01:43:49.038: Filtering ended. 
+2026-06-29 01:43:49.038: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:43:49.041: Searching Hypothesize Tangent Lines ended. 3251 lines build.
+2026-06-29 01:43:49.042: Processing ended. 3565 models
+2026-06-29 01:43:49.067: Search started
+2026-06-29 01:43:52.763: Searching ended. 1232 models found. Duration time=00:00:03.6959469
+2026-06-29 01:43:52.763: First step models. 664 models found.
+2026-06-29 01:43:52.763: Filtering started. 
+2026-06-29 01:43:52.769: Filtering ended. 
+2026-06-29 01:43:52.769: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:43:52.770: Searching Hypothesize Tangent Lines ended. 847 lines build.
+2026-06-29 01:43:52.770: Processing ended. 943 models
+2026-06-29 01:43:53.007: Search started
+2026-06-29 01:44:38.526: Searching ended. 5521 models found. Duration time=00:00:45.5183679
+2026-06-29 01:44:38.526: First step models. 3297 models found.
+2026-06-29 01:44:38.527: Filtering started. 
+2026-06-29 01:44:38.562: Filtering ended. 
+2026-06-29 01:44:38.562: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:44:38.566: Searching Hypothesize Tangent Lines ended. 3475 lines build.
+2026-06-29 01:44:38.566: Processing ended. 3828 models
+2026-06-29 01:44:39.567: Search started
+2026-06-29 01:45:21.223: Searching ended. 5521 models found. Duration time=00:00:41.6564557
+2026-06-29 01:45:21.223: First step models. 3297 models found.
+2026-06-29 01:45:21.224: Filtering started. 
+2026-06-29 01:45:21.249: Filtering ended. 
+2026-06-29 01:45:21.249: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:45:21.252: Searching Hypothesize Tangent Lines ended. 3769 lines build.
+2026-06-29 01:45:21.253: Processing ended. 4162 models
+2026-06-29 01:45:56.609: Opening CSV: EURUSD m60 start
+2026-06-29 01:45:57.452:    Preparing data started
+2026-06-29 01:45:57.460:    Preparing data ended
+2026-06-29 01:45:58.166: Drawing CSV: EURUSD m60 finished
+2026-06-29 01:46:05.292: Search started
+2026-06-29 01:46:05.308: Searching ended. 0 models found. Duration time=00:00:00.0149998
+2026-06-29 01:46:05.308: First step models. 0 models found.
+2026-06-29 01:46:05.308: Filtering started. 
+2026-06-29 01:46:05.310: Filtering ended. 
+2026-06-29 01:46:05.311: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:46:05.311: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 01:46:05.311: Processing ended. 0 models
+2026-06-29 01:46:05.315: Search started
+2026-06-29 01:46:05.326: Searching ended. 1 models found. Duration time=00:00:00.0109999
+2026-06-29 01:46:05.326: First step models. 1 models found.
+2026-06-29 01:46:05.326: Filtering started. 
+2026-06-29 01:46:05.326: Filtering ended. 
+2026-06-29 01:46:05.326: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:46:05.326: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 01:46:05.326: Processing ended. 0 models
+2026-06-29 01:46:05.335: Search started
+2026-06-29 01:46:05.338: Searching ended. 7 models found. Duration time=00:00:00.0030000
+2026-06-29 01:46:05.338: First step models. 5 models found.
+2026-06-29 01:46:05.338: Filtering started. 
+2026-06-29 01:46:05.339: Filtering ended. 
+2026-06-29 01:46:05.339: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:46:05.340: Searching Hypothesize Tangent Lines ended. 2 lines build.
+2026-06-29 01:46:05.340: Processing ended. 3 models
+2026-06-29 01:46:05.368: Search started
+2026-06-29 01:46:05.384: Searching ended. 30 models found. Duration time=00:00:00.0159998
+2026-06-29 01:46:05.384: First step models. 15 models found.
+2026-06-29 01:46:05.384: Filtering started. 
+2026-06-29 01:46:05.384: Filtering ended. 
+2026-06-29 01:46:05.384: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:46:05.384: Searching Hypothesize Tangent Lines ended. 15 lines build.
+2026-06-29 01:46:05.384: Processing ended. 19 models
+2026-06-29 01:46:05.404: Search started
+2026-06-29 01:46:26.021: Searching ended. 5225 models found. Duration time=00:00:20.6177559
+2026-06-29 01:46:26.021: First step models. 2962 models found.
+2026-06-29 01:46:26.021: Filtering started. 
+2026-06-29 01:46:26.062: Filtering ended. 
+2026-06-29 01:46:26.062: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:46:26.065: Searching Hypothesize Tangent Lines ended. 3162 lines build.
+2026-06-29 01:46:26.066: Processing ended. 3453 models
+2026-06-29 01:46:26.090: Search started
+2026-06-29 01:46:28.411: Searching ended. 1234 models found. Duration time=00:00:02.3209729
+2026-06-29 01:46:28.411: First step models. 615 models found.
+2026-06-29 01:46:28.411: Filtering started. 
+2026-06-29 01:46:28.417: Filtering ended. 
+2026-06-29 01:46:28.417: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:46:28.418: Searching Hypothesize Tangent Lines ended. 873 lines build.
+2026-06-29 01:46:28.418: Processing ended. 965 models
+2026-06-29 01:46:28.662: Search started
+2026-06-29 01:46:46.711: Searching ended. 5250 models found. Duration time=00:00:18.0487922
+2026-06-29 01:46:46.711: First step models. 2965 models found.
+2026-06-29 01:46:46.712: Filtering started. 
+2026-06-29 01:46:46.738: Filtering ended. 
+2026-06-29 01:46:46.738: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:46:46.743: Searching Hypothesize Tangent Lines ended. 3390 lines build.
+2026-06-29 01:46:46.744: Processing ended. 3706 models
+2026-06-29 01:46:47.342: Search started
+2026-06-29 01:47:05.930: Searching ended. 5250 models found. Duration time=00:00:18.5877911
+2026-06-29 01:47:05.930: First step models. 2965 models found.
+2026-06-29 01:47:05.931: Filtering started. 
+2026-06-29 01:47:05.958: Filtering ended. 
+2026-06-29 01:47:05.958: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:47:05.965: Searching Hypothesize Tangent Lines ended. 3612 lines build.
+2026-06-29 01:47:05.966: Processing ended. 3963 models
+2026-06-29 01:49:04.096: Opening CSV: EURUSD m60 start
+2026-06-29 01:49:05.101:    Preparing data started
+2026-06-29 01:49:05.105:    Preparing data ended
+2026-06-29 01:49:05.672: Drawing CSV: EURUSD m60 finished
+2026-06-29 01:49:12.759: Search started
+2026-06-29 01:49:12.780: Searching ended. 0 models found. Duration time=00:00:00.0199998
+2026-06-29 01:49:12.780: First step models. 0 models found.
+2026-06-29 01:49:12.781: Filtering started. 
+2026-06-29 01:49:12.783: Filtering ended. 
+2026-06-29 01:49:12.784: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:49:12.784: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 01:49:12.785: Processing ended. 0 models
+2026-06-29 01:49:12.788: Search started
+2026-06-29 01:49:12.799: Searching ended. 3 models found. Duration time=00:00:00.0109999
+2026-06-29 01:49:12.799: First step models. 0 models found.
+2026-06-29 01:49:12.799: Filtering started. 
+2026-06-29 01:49:12.800: Filtering ended. 
+2026-06-29 01:49:12.800: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:49:12.800: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 01:49:12.800: Processing ended. 1 models
+2026-06-29 01:49:12.808: Search started
+2026-06-29 01:49:12.810: Searching ended. 8 models found. Duration time=00:00:00.0020000
+2026-06-29 01:49:12.810: First step models. 5 models found.
+2026-06-29 01:49:12.810: Filtering started. 
+2026-06-29 01:49:12.810: Filtering ended. 
+2026-06-29 01:49:12.810: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:49:12.811: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 01:49:12.811: Processing ended. 4 models
+2026-06-29 01:49:12.837: Search started
+2026-06-29 01:49:12.855: Searching ended. 39 models found. Duration time=00:00:00.0179999
+2026-06-29 01:49:12.855: First step models. 20 models found.
+2026-06-29 01:49:12.855: Filtering started. 
+2026-06-29 01:49:12.855: Filtering ended. 
+2026-06-29 01:49:12.855: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:49:12.857: Searching Hypothesize Tangent Lines ended. 19 lines build.
+2026-06-29 01:49:12.857: Processing ended. 24 models
+2026-06-29 01:49:12.879: Search started
+2026-06-29 01:49:45.727: Searching ended. 5709 models found. Duration time=00:00:32.8486913
+2026-06-29 01:49:45.728: First step models. 3822 models found.
+2026-06-29 01:49:45.728: Filtering started. 
+2026-06-29 01:49:45.773: Filtering ended. 
+2026-06-29 01:49:45.773: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:49:45.776: Searching Hypothesize Tangent Lines ended. 3316 lines build.
+2026-06-29 01:49:45.777: Processing ended. 3574 models
+2026-06-29 01:49:45.801: Search started
+2026-06-29 01:49:47.872: Searching ended. 1290 models found. Duration time=00:00:02.0709809
+2026-06-29 01:49:47.872: First step models. 708 models found.
+2026-06-29 01:49:47.872: Filtering started. 
+2026-06-29 01:49:47.879: Filtering ended. 
+2026-06-29 01:49:47.879: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:49:47.880: Searching Hypothesize Tangent Lines ended. 889 lines build.
+2026-06-29 01:49:47.880: Processing ended. 967 models
+2026-06-29 01:49:48.253: Search started
+2026-06-29 01:50:15.329: Searching ended. 5688 models found. Duration time=00:00:27.0757543
+2026-06-29 01:50:15.329: First step models. 3799 models found.
+2026-06-29 01:50:15.329: Filtering started. 
+2026-06-29 01:50:15.366: Filtering ended. 
+2026-06-29 01:50:15.366: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:50:15.369: Searching Hypothesize Tangent Lines ended. 3542 lines build.
+2026-06-29 01:50:15.370: Processing ended. 3835 models
+2026-06-29 01:50:16.477: Search started
+2026-06-29 01:50:43.998: Searching ended. 5688 models found. Duration time=00:00:27.5207577
+2026-06-29 01:50:43.998: First step models. 3799 models found.
+2026-06-29 01:50:43.998: Filtering started. 
+2026-06-29 01:50:44.025: Filtering ended. 
+2026-06-29 01:50:44.025: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:50:44.028: Searching Hypothesize Tangent Lines ended. 3821 lines build.
+2026-06-29 01:50:44.029: Processing ended. 4150 models
+2026-06-29 01:52:11.562: Opening CSV: EURUSD m60 start
+2026-06-29 01:52:12.240:    Preparing data started
+2026-06-29 01:52:12.244:    Preparing data ended
+2026-06-29 01:52:12.693: Drawing CSV: EURUSD m60 finished
+2026-06-29 01:52:20.230: Search started
+2026-06-29 01:52:20.251: Searching ended. 0 models found. Duration time=00:00:00.0189999
+2026-06-29 01:52:20.251: First step models. 0 models found.
+2026-06-29 01:52:20.251: Filtering started. 
+2026-06-29 01:52:20.252: Filtering ended. 
+2026-06-29 01:52:20.253: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:52:20.253: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 01:52:20.253: Processing ended. 0 models
+2026-06-29 01:52:20.256: Search started
+2026-06-29 01:52:20.264: Searching ended. 2 models found. Duration time=00:00:00.0079999
+2026-06-29 01:52:20.264: First step models. 0 models found.
+2026-06-29 01:52:20.264: Filtering started. 
+2026-06-29 01:52:20.265: Filtering ended. 
+2026-06-29 01:52:20.265: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:52:20.265: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 01:52:20.265: Processing ended. 1 models
+2026-06-29 01:52:20.273: Search started
+2026-06-29 01:52:20.276: Searching ended. 8 models found. Duration time=00:00:00.0030000
+2026-06-29 01:52:20.276: First step models. 5 models found.
+2026-06-29 01:52:20.276: Filtering started. 
+2026-06-29 01:52:20.276: Filtering ended. 
+2026-06-29 01:52:20.276: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:52:20.278: Searching Hypothesize Tangent Lines ended. 1 lines build.
+2026-06-29 01:52:20.278: Processing ended. 5 models
+2026-06-29 01:52:20.300: Search started
+2026-06-29 01:52:20.310: Searching ended. 42 models found. Duration time=00:00:00.0099999
+2026-06-29 01:52:20.310: First step models. 20 models found.
+2026-06-29 01:52:20.310: Filtering started. 
+2026-06-29 01:52:20.310: Filtering ended. 
+2026-06-29 01:52:20.310: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:52:20.310: Searching Hypothesize Tangent Lines ended. 24 lines build.
+2026-06-29 01:52:20.310: Processing ended. 30 models
+2026-06-29 01:52:20.330: Search started
+2026-06-29 01:52:41.131: Searching ended. 5439 models found. Duration time=00:00:20.8008374
+2026-06-29 01:52:41.131: First step models. 3528 models found.
+2026-06-29 01:52:41.131: Filtering started. 
+2026-06-29 01:52:41.168: Filtering ended. 
+2026-06-29 01:52:41.168: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:52:41.171: Searching Hypothesize Tangent Lines ended. 3172 lines build.
+2026-06-29 01:52:41.171: Processing ended. 3442 models
+2026-06-29 01:52:41.194: Search started
+2026-06-29 01:52:42.901: Searching ended. 1196 models found. Duration time=00:00:01.7069868
+2026-06-29 01:52:42.901: First step models. 668 models found.
+2026-06-29 01:52:42.901: Filtering started. 
+2026-06-29 01:52:42.908: Filtering ended. 
+2026-06-29 01:52:42.908: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:52:42.909: Searching Hypothesize Tangent Lines ended. 868 lines build.
+2026-06-29 01:52:42.909: Processing ended. 945 models
+2026-06-29 01:52:43.241: Search started
+2026-06-29 01:52:59.460: Searching ended. 5459 models found. Duration time=00:00:16.2188756
+2026-06-29 01:52:59.460: First step models. 3537 models found.
+2026-06-29 01:52:59.460: Filtering started. 
+2026-06-29 01:52:59.492: Filtering ended. 
+2026-06-29 01:52:59.492: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:52:59.500: Searching Hypothesize Tangent Lines ended. 3370 lines build.
+2026-06-29 01:52:59.501: Processing ended. 3672 models
+2026-06-29 01:53:00.658: Search started
+2026-06-29 01:53:16.294: Searching ended. 5459 models found. Duration time=00:00:15.6358820
+2026-06-29 01:53:16.294: First step models. 3537 models found.
+2026-06-29 01:53:16.294: Filtering started. 
+2026-06-29 01:53:16.318: Filtering ended. 
+2026-06-29 01:53:16.318: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:53:16.321: Searching Hypothesize Tangent Lines ended. 3642 lines build.
+2026-06-29 01:53:16.322: Processing ended. 3982 models
+2026-06-29 01:55:18.945: Opening CSV: EURUSD m60 start
+2026-06-29 01:55:19.661:    Preparing data started
+2026-06-29 01:55:19.665:    Preparing data ended
+2026-06-29 01:55:20.144: Drawing CSV: EURUSD m60 finished
+2026-06-29 01:55:27.629: Search started
+2026-06-29 01:55:27.645: Searching ended. 0 models found. Duration time=00:00:00.0149999
+2026-06-29 01:55:27.645: First step models. 0 models found.
+2026-06-29 01:55:27.646: Filtering started. 
+2026-06-29 01:55:27.647: Filtering ended. 
+2026-06-29 01:55:27.648: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:55:27.648: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 01:55:27.648: Processing ended. 0 models
+2026-06-29 01:55:27.652: Search started
+2026-06-29 01:55:27.661: Searching ended. 1 models found. Duration time=00:00:00.0090000
+2026-06-29 01:55:27.661: First step models. 0 models found.
+2026-06-29 01:55:27.661: Filtering started. 
+2026-06-29 01:55:27.662: Filtering ended. 
+2026-06-29 01:55:27.662: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:55:27.662: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 01:55:27.662: Processing ended. 0 models
+2026-06-29 01:55:27.669: Search started
+2026-06-29 01:55:27.673: Searching ended. 5 models found. Duration time=00:00:00.0040000
+2026-06-29 01:55:27.673: First step models. 1 models found.
+2026-06-29 01:55:27.673: Filtering started. 
+2026-06-29 01:55:27.674: Filtering ended. 
+2026-06-29 01:55:27.674: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:55:27.675: Searching Hypothesize Tangent Lines ended. 1 lines build.
+2026-06-29 01:55:27.675: Processing ended. 3 models
+2026-06-29 01:55:27.698: Search started
+2026-06-29 01:55:27.716: Searching ended. 34 models found. Duration time=00:00:00.0179999
+2026-06-29 01:55:27.716: First step models. 11 models found.
+2026-06-29 01:55:27.716: Filtering started. 
+2026-06-29 01:55:27.716: Filtering ended. 
+2026-06-29 01:55:27.716: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:55:27.716: Searching Hypothesize Tangent Lines ended. 28 lines build.
+2026-06-29 01:55:27.716: Processing ended. 32 models
+2026-06-29 01:55:27.735: Search started
+2026-06-29 01:56:04.960: Searching ended. 5424 models found. Duration time=00:00:37.2257530
+2026-06-29 01:56:04.960: First step models. 3619 models found.
+2026-06-29 01:56:04.960: Filtering started. 
+2026-06-29 01:56:05.008: Filtering ended. 
+2026-06-29 01:56:05.008: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:56:05.013: Searching Hypothesize Tangent Lines ended. 3070 lines build.
+2026-06-29 01:56:05.013: Processing ended. 3354 models
+2026-06-29 01:56:05.036: Search started
+2026-06-29 01:56:07.818: Searching ended. 1239 models found. Duration time=00:00:02.7819818
+2026-06-29 01:56:07.818: First step models. 689 models found.
+2026-06-29 01:56:07.818: Filtering started. 
+2026-06-29 01:56:07.824: Filtering ended. 
+2026-06-29 01:56:07.824: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:56:07.825: Searching Hypothesize Tangent Lines ended. 877 lines build.
+2026-06-29 01:56:07.825: Processing ended. 950 models
+2026-06-29 01:56:08.191: Search started
+2026-06-29 01:56:38.370: Searching ended. 5462 models found. Duration time=00:00:30.1788051
+2026-06-29 01:56:38.370: First step models. 3653 models found.
+2026-06-29 01:56:38.371: Filtering started. 
+2026-06-29 01:56:38.406: Filtering ended. 
+2026-06-29 01:56:38.406: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:56:38.410: Searching Hypothesize Tangent Lines ended. 3285 lines build.
+2026-06-29 01:56:38.410: Processing ended. 3598 models
+2026-06-29 01:56:39.701: Search started
+2026-06-29 01:57:11.000: Searching ended. 5462 models found. Duration time=00:00:31.2988023
+2026-06-29 01:57:11.000: First step models. 3653 models found.
+2026-06-29 01:57:11.001: Filtering started. 
+2026-06-29 01:57:11.027: Filtering ended. 
+2026-06-29 01:57:11.027: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:57:11.031: Searching Hypothesize Tangent Lines ended. 3566 lines build.
+2026-06-29 01:57:11.031: Processing ended. 3914 models
+2026-06-29 01:58:26.459: Opening CSV: EURUSD m60 start
+2026-06-29 01:58:27.321:    Preparing data started
+2026-06-29 01:58:27.325:    Preparing data ended
+2026-06-29 01:58:27.828: Drawing CSV: EURUSD m60 finished
+2026-06-29 01:58:35.139: Search started
+2026-06-29 01:58:35.155: Searching ended. 0 models found. Duration time=00:00:00.0150000
+2026-06-29 01:58:35.155: First step models. 0 models found.
+2026-06-29 01:58:35.156: Filtering started. 
+2026-06-29 01:58:35.157: Filtering ended. 
+2026-06-29 01:58:35.158: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:58:35.158: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 01:58:35.158: Processing ended. 0 models
+2026-06-29 01:58:35.161: Search started
+2026-06-29 01:58:35.170: Searching ended. 2 models found. Duration time=00:00:00.0090000
+2026-06-29 01:58:35.170: First step models. 2 models found.
+2026-06-29 01:58:35.170: Filtering started. 
+2026-06-29 01:58:35.171: Filtering ended. 
+2026-06-29 01:58:35.171: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:58:35.171: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 01:58:35.171: Processing ended. 1 models
+2026-06-29 01:58:35.176: Search started
+2026-06-29 01:58:35.178: Searching ended. 4 models found. Duration time=00:00:00.0020000
+2026-06-29 01:58:35.178: First step models. 3 models found.
+2026-06-29 01:58:35.178: Filtering started. 
+2026-06-29 01:58:35.178: Filtering ended. 
+2026-06-29 01:58:35.178: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:58:35.178: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 01:58:35.178: Processing ended. 2 models
+2026-06-29 01:58:35.205: Search started
+2026-06-29 01:58:35.220: Searching ended. 26 models found. Duration time=00:00:00.0149999
+2026-06-29 01:58:35.220: First step models. 10 models found.
+2026-06-29 01:58:35.220: Filtering started. 
+2026-06-29 01:58:35.220: Filtering ended. 
+2026-06-29 01:58:35.220: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:58:35.221: Searching Hypothesize Tangent Lines ended. 10 lines build.
+2026-06-29 01:58:35.221: Processing ended. 12 models
+2026-06-29 01:58:35.238: Search started
+2026-06-29 01:59:06.170: Searching ended. 5436 models found. Duration time=00:00:30.9318185
+2026-06-29 01:59:06.170: First step models. 3353 models found.
+2026-06-29 01:59:06.171: Filtering started. 
+2026-06-29 01:59:06.226: Filtering ended. 
+2026-06-29 01:59:06.226: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:59:06.230: Searching Hypothesize Tangent Lines ended. 3261 lines build.
+2026-06-29 01:59:06.231: Processing ended. 3539 models
+2026-06-29 01:59:06.261: Search started
+2026-06-29 01:59:09.564: Searching ended. 1215 models found. Duration time=00:00:03.3029809
+2026-06-29 01:59:09.564: First step models. 617 models found.
+2026-06-29 01:59:09.564: Filtering started. 
+2026-06-29 01:59:09.570: Filtering ended. 
+2026-06-29 01:59:09.570: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:59:09.570: Searching Hypothesize Tangent Lines ended. 861 lines build.
+2026-06-29 01:59:09.570: Processing ended. 950 models
+2026-06-29 01:59:09.909: Search started
+2026-06-29 01:59:42.528: Searching ended. 5438 models found. Duration time=00:00:32.6188124
+2026-06-29 01:59:42.528: First step models. 3355 models found.
+2026-06-29 01:59:42.529: Filtering started. 
+2026-06-29 01:59:42.563: Filtering ended. 
+2026-06-29 01:59:42.563: Searching Hypothesize Tangent Lines started. 
+2026-06-29 01:59:42.567: Searching Hypothesize Tangent Lines ended. 3488 lines build.
+2026-06-29 01:59:42.567: Processing ended. 3806 models
+2026-06-29 01:59:43.446: Search started
+2026-06-29 02:00:09.769: Searching ended. 5438 models found. Duration time=00:00:26.3228512
+2026-06-29 02:00:09.769: First step models. 3355 models found.
+2026-06-29 02:00:09.770: Filtering started. 
+2026-06-29 02:00:09.794: Filtering ended. 
+2026-06-29 02:00:09.794: Searching Hypothesize Tangent Lines started. 
+2026-06-29 02:00:09.799: Searching Hypothesize Tangent Lines ended. 3763 lines build.
+2026-06-29 02:00:09.799: Processing ended. 4115 models
+2026-06-29 02:10:17.085: Opening CSV: EURUSD m60 start
+2026-06-29 02:10:17.983:    Preparing data started
+2026-06-29 02:10:17.988:    Preparing data ended
+2026-06-29 02:10:18.539: Drawing CSV: EURUSD m60 finished
+2026-06-29 02:10:25.800: Search started
+2026-06-29 02:10:25.815: Searching ended. 0 models found. Duration time=00:00:00.0140000
+2026-06-29 02:10:25.815: First step models. 0 models found.
+2026-06-29 02:10:25.816: Filtering started. 
+2026-06-29 02:10:25.817: Filtering ended. 
+2026-06-29 02:10:25.818: Searching Hypothesize Tangent Lines started. 
+2026-06-29 02:10:25.818: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 02:10:25.818: Processing ended. 0 models
+2026-06-29 02:10:25.821: Search started
+2026-06-29 02:10:25.828: Searching ended. 1 models found. Duration time=00:00:00.0070000
+2026-06-29 02:10:25.828: First step models. 1 models found.
+2026-06-29 02:10:25.828: Filtering started. 
+2026-06-29 02:10:25.828: Filtering ended. 
+2026-06-29 02:10:25.828: Searching Hypothesize Tangent Lines started. 
+2026-06-29 02:10:25.828: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 02:10:25.828: Processing ended. 0 models
+2026-06-29 02:10:25.833: Search started
+2026-06-29 02:10:25.835: Searching ended. 5 models found. Duration time=00:00:00.0020000
+2026-06-29 02:10:25.835: First step models. 5 models found.
+2026-06-29 02:10:25.835: Filtering started. 
+2026-06-29 02:10:25.836: Filtering ended. 
+2026-06-29 02:10:25.836: Searching Hypothesize Tangent Lines started. 
+2026-06-29 02:10:25.836: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-06-29 02:10:25.836: Processing ended. 1 models
+2026-06-29 02:10:25.855: Search started
+2026-06-29 02:10:25.862: Searching ended. 34 models found. Duration time=00:00:00.0069999
+2026-06-29 02:10:25.862: First step models. 17 models found.
+2026-06-29 02:10:25.862: Filtering started. 
+2026-06-29 02:10:25.862: Filtering ended. 
+2026-06-29 02:10:25.862: Searching Hypothesize Tangent Lines started. 
+2026-06-29 02:10:25.863: Searching Hypothesize Tangent Lines ended. 16 lines build.
+2026-06-29 02:10:25.863: Processing ended. 17 models
+2026-06-29 02:10:25.882: Search started
+2026-06-29 02:10:39.492: Searching ended. 5879 models found. Duration time=00:00:13.6099381
+2026-06-29 02:10:39.492: First step models. 3850 models found.
+2026-06-29 02:10:39.493: Filtering started. 
+2026-06-29 02:10:39.534: Filtering ended. 
+2026-06-29 02:10:39.534: Searching Hypothesize Tangent Lines started. 
+2026-06-29 02:10:39.537: Searching Hypothesize Tangent Lines ended. 3512 lines build.
+2026-06-29 02:10:39.538: Processing ended. 3830 models
+2026-06-29 02:10:39.563: Search started
+2026-06-29 02:10:40.805: Searching ended. 1296 models found. Duration time=00:00:01.2419943
+2026-06-29 02:10:40.805: First step models. 726 models found.
+2026-06-29 02:10:40.806: Filtering started. 
+2026-06-29 02:10:40.813: Filtering ended. 
+2026-06-29 02:10:40.813: Searching Hypothesize Tangent Lines started. 
+2026-06-29 02:10:40.814: Searching Hypothesize Tangent Lines ended. 909 lines build.
+2026-06-29 02:10:40.814: Processing ended. 982 models
+2026-06-29 02:10:41.181: Search started
+2026-06-29 02:10:51.825: Searching ended. 5865 models found. Duration time=00:00:10.6439517
+2026-06-29 02:10:51.825: First step models. 3832 models found.
+2026-06-29 02:10:51.826: Filtering started. 
+2026-06-29 02:10:51.860: Filtering ended. 
+2026-06-29 02:10:51.860: Searching Hypothesize Tangent Lines started. 
+2026-06-29 02:10:51.864: Searching Hypothesize Tangent Lines ended. 3751 lines build.
+2026-06-29 02:10:51.865: Processing ended. 4103 models
+2026-06-29 02:10:52.479:    Invalid Point in model (i=206), Points 1,3 pt1.X = -3.422736E+13 && pt3.X = 1.369094E+14
+2026-06-29 02:10:52.479:    Invalid Point in model (i=206), Points 21,4 pt21.X = -3.422736E+13 && pt4.X = 1.369094E+14
+2026-06-29 02:10:52.860: Search started
+2026-06-29 02:11:05.175: Searching ended. 5865 models found. Duration time=00:00:12.3149443
+2026-06-29 02:11:05.175: First step models. 3832 models found.
+2026-06-29 02:11:05.176: Filtering started. 
+2026-06-29 02:11:05.202: Filtering ended. 
+2026-06-29 02:11:05.202: Searching Hypothesize Tangent Lines started. 
+2026-06-29 02:11:05.207: Searching Hypothesize Tangent Lines ended. 4031 lines build.
+2026-06-29 02:11:05.208: Processing ended. 4418 models
+2026-07-03 00:19:02.882: Opening CSV: EURUSD m60 start
+2026-07-03 00:19:03.557:    Preparing data started
+2026-07-03 00:19:03.561:    Preparing data ended
+2026-07-03 00:19:03.978: Drawing CSV: EURUSD m60 finished
+2026-07-03 00:19:11.542: Search started
+2026-07-03 00:19:11.556: Searching ended. 0 models found. Duration time=00:00:00.0130001
+2026-07-03 00:19:11.556: First step models. 0 models found.
+2026-07-03 00:19:11.557: Filtering started. 
+2026-07-03 00:19:11.558: Filtering ended. 
+2026-07-03 00:19:11.559: Searching Hypothesize Tangent Lines started. 
+2026-07-03 00:19:11.559: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-07-03 00:19:11.559: Processing ended. 0 models
+2026-07-03 00:19:11.562: Search started
+2026-07-03 00:19:11.569: Searching ended. 1 models found. Duration time=00:00:00.0070001
+2026-07-03 00:19:11.569: First step models. 1 models found.
+2026-07-03 00:19:11.569: Filtering started. 
+2026-07-03 00:19:11.569: Filtering ended. 
+2026-07-03 00:19:11.569: Searching Hypothesize Tangent Lines started. 
+2026-07-03 00:19:11.569: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-07-03 00:19:11.569: Processing ended. 0 models
+2026-07-03 00:19:11.573: Search started
+2026-07-03 00:19:11.575: Searching ended. 5 models found. Duration time=00:00:00.0020000
+2026-07-03 00:19:11.575: First step models. 5 models found.
+2026-07-03 00:19:11.575: Filtering started. 
+2026-07-03 00:19:11.576: Filtering ended. 
+2026-07-03 00:19:11.576: Searching Hypothesize Tangent Lines started. 
+2026-07-03 00:19:11.576: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-07-03 00:19:11.576: Processing ended. 1 models
+2026-07-03 00:19:11.594: Search started
+2026-07-03 00:19:11.604: Searching ended. 34 models found. Duration time=00:00:00.0100001
+2026-07-03 00:19:11.604: First step models. 17 models found.
+2026-07-03 00:19:11.604: Filtering started. 
+2026-07-03 00:19:11.604: Filtering ended. 
+2026-07-03 00:19:11.604: Searching Hypothesize Tangent Lines started. 
+2026-07-03 00:19:11.606: Searching Hypothesize Tangent Lines ended. 16 lines build.
+2026-07-03 00:19:11.606: Processing ended. 17 models
+2026-07-03 00:19:11.623: Search started
+2026-07-03 00:19:21.814: Searching ended. 5879 models found. Duration time=00:00:10.1910673
+2026-07-03 00:19:21.814: First step models. 3850 models found.
+2026-07-03 00:19:21.815: Filtering started. 
+2026-07-03 00:19:21.850: Filtering ended. 
+2026-07-03 00:19:21.850: Searching Hypothesize Tangent Lines started. 
+2026-07-03 00:19:21.853: Searching Hypothesize Tangent Lines ended. 3512 lines build.
+2026-07-03 00:19:21.853: Processing ended. 3830 models
+2026-07-03 00:19:21.874: Search started
+2026-07-03 00:19:23.009: Searching ended. 1296 models found. Duration time=00:00:01.1350074
+2026-07-03 00:19:23.010: First step models. 726 models found.
+2026-07-03 00:19:23.010: Filtering started. 
+2026-07-03 00:19:23.015: Filtering ended. 
+2026-07-03 00:19:23.015: Searching Hypothesize Tangent Lines started. 
+2026-07-03 00:19:23.016: Searching Hypothesize Tangent Lines ended. 909 lines build.
+2026-07-03 00:19:23.016: Processing ended. 982 models
+2026-07-03 00:19:23.305: Search started
+2026-07-03 00:19:32.782: Searching ended. 5865 models found. Duration time=00:00:09.4770619
+2026-07-03 00:19:32.782: First step models. 3832 models found.
+2026-07-03 00:19:32.782: Filtering started. 
+2026-07-03 00:19:32.806: Filtering ended. 
+2026-07-03 00:19:32.806: Searching Hypothesize Tangent Lines started. 
+2026-07-03 00:19:32.809: Searching Hypothesize Tangent Lines ended. 3751 lines build.
+2026-07-03 00:19:32.809: Processing ended. 4103 models
+2026-07-03 00:19:33.211:    Invalid Point in model (i=206), Points 1,3 pt1.X = -3.422736E+13 && pt3.X = 1.369094E+14
+2026-07-03 00:19:33.211:    Invalid Point in model (i=206), Points 21,4 pt21.X = -3.422736E+13 && pt4.X = 1.369094E+14
+2026-07-03 00:19:33.538: Search started
+2026-07-03 00:19:43.659: Searching ended. 5865 models found. Duration time=00:00:10.1210655
+2026-07-03 00:19:43.659: First step models. 3832 models found.
+2026-07-03 00:19:43.660: Filtering started. 
+2026-07-03 00:19:43.680: Filtering ended. 
+2026-07-03 00:19:43.680: Searching Hypothesize Tangent Lines started. 
+2026-07-03 00:19:43.683: Searching Hypothesize Tangent Lines ended. 4031 lines build.
+2026-07-03 00:19:43.684: Processing ended. 4418 models
+2026-07-03 00:51:33.263: Opening CSV: EURUSD m60 start
+2026-07-03 00:51:33.924:    Preparing data started
+2026-07-03 00:51:33.927:    Preparing data ended
+2026-07-03 00:51:34.348: Drawing CSV: EURUSD m60 finished
+2026-07-03 00:51:41.930: Search started
+2026-07-03 00:51:41.946: Searching ended. 0 models found. Duration time=00:00:00.0150003
+2026-07-03 00:51:41.946: First step models. 0 models found.
+2026-07-03 00:51:41.947: Filtering started. 
+2026-07-03 00:51:41.948: Filtering ended. 
+2026-07-03 00:51:41.949: Searching Hypothesize Tangent Lines started. 
+2026-07-03 00:51:41.949: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-07-03 00:51:41.949: Processing ended. 0 models
+2026-07-03 00:51:41.953: Search started
+2026-07-03 00:51:41.960: Searching ended. 1 models found. Duration time=00:00:00.0070001
+2026-07-03 00:51:41.960: First step models. 1 models found.
+2026-07-03 00:51:41.960: Filtering started. 
+2026-07-03 00:51:41.961: Filtering ended. 
+2026-07-03 00:51:41.961: Searching Hypothesize Tangent Lines started. 
+2026-07-03 00:51:41.961: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-07-03 00:51:41.961: Processing ended. 0 models
+2026-07-03 00:51:41.965: Search started
+2026-07-03 00:51:41.967: Searching ended. 5 models found. Duration time=00:00:00.0020000
+2026-07-03 00:51:41.967: First step models. 5 models found.
+2026-07-03 00:51:41.967: Filtering started. 
+2026-07-03 00:51:41.968: Filtering ended. 
+2026-07-03 00:51:41.968: Searching Hypothesize Tangent Lines started. 
+2026-07-03 00:51:41.968: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-07-03 00:51:41.968: Processing ended. 1 models
+2026-07-03 00:51:41.987: Search started
+2026-07-03 00:51:41.993: Searching ended. 34 models found. Duration time=00:00:00.0060001
+2026-07-03 00:51:41.993: First step models. 17 models found.
+2026-07-03 00:51:41.993: Filtering started. 
+2026-07-03 00:51:41.993: Filtering ended. 
+2026-07-03 00:51:41.993: Searching Hypothesize Tangent Lines started. 
+2026-07-03 00:51:41.994: Searching Hypothesize Tangent Lines ended. 16 lines build.
+2026-07-03 00:51:41.994: Processing ended. 17 models
+2026-07-03 00:51:42.011: Search started
+2026-07-03 00:51:51.894: Searching ended. 5879 models found. Duration time=00:00:09.8821884
+2026-07-03 00:51:51.894: First step models. 3850 models found.
+2026-07-03 00:51:51.895: Filtering started. 
+2026-07-03 00:51:51.926: Filtering ended. 
+2026-07-03 00:51:51.926: Searching Hypothesize Tangent Lines started. 
+2026-07-03 00:51:51.928: Searching Hypothesize Tangent Lines ended. 3512 lines build.
+2026-07-03 00:51:51.929: Processing ended. 3830 models
+2026-07-03 00:51:51.951: Search started
+2026-07-03 00:51:52.904: Searching ended. 1296 models found. Duration time=00:00:00.9530180
+2026-07-03 00:51:52.904: First step models. 726 models found.
+2026-07-03 00:51:52.904: Filtering started. 
+2026-07-03 00:51:52.909: Filtering ended. 
+2026-07-03 00:51:52.909: Searching Hypothesize Tangent Lines started. 
+2026-07-03 00:51:52.909: Searching Hypothesize Tangent Lines ended. 909 lines build.
+2026-07-03 00:51:52.909: Processing ended. 982 models
+2026-07-03 00:51:53.241: Search started
+2026-07-03 00:52:02.207: Searching ended. 5865 models found. Duration time=00:00:08.9661690
+2026-07-03 00:52:02.207: First step models. 3832 models found.
+2026-07-03 00:52:02.207: Filtering started. 
+2026-07-03 00:52:02.233: Filtering ended. 
+2026-07-03 00:52:02.233: Searching Hypothesize Tangent Lines started. 
+2026-07-03 00:52:02.236: Searching Hypothesize Tangent Lines ended. 3751 lines build.
+2026-07-03 00:52:02.237: Processing ended. 4103 models
+2026-07-03 00:52:02.744:    Invalid Point in model (i=206), Points 1,3 pt1.X = -3.422736E+13 && pt3.X = 1.369094E+14
+2026-07-03 00:52:02.744:    Invalid Point in model (i=206), Points 21,4 pt21.X = -3.422736E+13 && pt4.X = 1.369094E+14
+2026-07-03 00:52:03.081: Search started
+2026-07-03 00:52:11.838: Searching ended. 5865 models found. Duration time=00:00:08.7571633
+2026-07-03 00:52:11.838: First step models. 3832 models found.
+2026-07-03 00:52:11.839: Filtering started. 
+2026-07-03 00:52:11.857: Filtering ended. 
+2026-07-03 00:52:11.857: Searching Hypothesize Tangent Lines started. 
+2026-07-03 00:52:11.861: Searching Hypothesize Tangent Lines ended. 4031 lines build.
+2026-07-03 00:52:11.861: Processing ended. 4418 models
+2026-07-03 13:36:38.836: Opening CSV: EURUSD m60 start
+2026-07-03 13:36:39.446:    Preparing data started
+2026-07-03 13:36:39.450:    Preparing data ended
+2026-07-03 13:36:39.860: Drawing CSV: EURUSD m60 finished
+2026-07-03 13:36:47.537: Search started
+2026-07-03 13:36:47.551: Searching ended. 0 models found. Duration time=00:00:00.0130000
+2026-07-03 13:36:47.551: First step models. 0 models found.
+2026-07-03 13:36:47.552: Filtering started. 
+2026-07-03 13:36:47.554: Filtering ended. 
+2026-07-03 13:36:47.555: Searching Hypothesize Tangent Lines started. 
+2026-07-03 13:36:47.555: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-07-03 13:36:47.555: Processing ended. 0 models
+2026-07-03 13:36:47.558: Search started
+2026-07-03 13:36:47.565: Searching ended. 1 models found. Duration time=00:00:00.0070000
+2026-07-03 13:36:47.565: First step models. 1 models found.
+2026-07-03 13:36:47.565: Filtering started. 
+2026-07-03 13:36:47.565: Filtering ended. 
+2026-07-03 13:36:47.565: Searching Hypothesize Tangent Lines started. 
+2026-07-03 13:36:47.565: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-07-03 13:36:47.565: Processing ended. 0 models
+2026-07-03 13:36:47.570: Search started
+2026-07-03 13:36:47.572: Searching ended. 5 models found. Duration time=00:00:00.0020000
+2026-07-03 13:36:47.572: First step models. 5 models found.
+2026-07-03 13:36:47.572: Filtering started. 
+2026-07-03 13:36:47.573: Filtering ended. 
+2026-07-03 13:36:47.573: Searching Hypothesize Tangent Lines started. 
+2026-07-03 13:36:47.573: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-07-03 13:36:47.573: Processing ended. 1 models
+2026-07-03 13:36:47.591: Search started
+2026-07-03 13:36:47.598: Searching ended. 34 models found. Duration time=00:00:00.0070001
+2026-07-03 13:36:47.598: First step models. 17 models found.
+2026-07-03 13:36:47.598: Filtering started. 
+2026-07-03 13:36:47.598: Filtering ended. 
+2026-07-03 13:36:47.598: Searching Hypothesize Tangent Lines started. 
+2026-07-03 13:36:47.599: Searching Hypothesize Tangent Lines ended. 16 lines build.
+2026-07-03 13:36:47.599: Processing ended. 17 models
+2026-07-03 13:36:47.618: Search started
+2026-07-03 13:36:57.574: Searching ended. 5879 models found. Duration time=00:00:09.9560429
+2026-07-03 13:36:57.574: First step models. 3850 models found.
+2026-07-03 13:36:57.575: Filtering started. 
+2026-07-03 13:36:57.606: Filtering ended. 
+2026-07-03 13:36:57.606: Searching Hypothesize Tangent Lines started. 
+2026-07-03 13:36:57.609: Searching Hypothesize Tangent Lines ended. 3512 lines build.
+2026-07-03 13:36:57.610: Processing ended. 3830 models
+2026-07-03 13:36:57.628: Search started
+2026-07-03 13:36:58.571: Searching ended. 1296 models found. Duration time=00:00:00.9430041
+2026-07-03 13:36:58.571: First step models. 726 models found.
+2026-07-03 13:36:58.571: Filtering started. 
+2026-07-03 13:36:58.576: Filtering ended. 
+2026-07-03 13:36:58.576: Searching Hypothesize Tangent Lines started. 
+2026-07-03 13:36:58.577: Searching Hypothesize Tangent Lines ended. 909 lines build.
+2026-07-03 13:36:58.577: Processing ended. 982 models
+2026-07-03 13:36:58.833: Search started
+2026-07-03 13:37:07.378: Searching ended. 5865 models found. Duration time=00:00:08.5450366
+2026-07-03 13:37:07.378: First step models. 3832 models found.
+2026-07-03 13:37:07.379: Filtering started. 
+2026-07-03 13:37:07.403: Filtering ended. 
+2026-07-03 13:37:07.403: Searching Hypothesize Tangent Lines started. 
+2026-07-03 13:37:07.406: Searching Hypothesize Tangent Lines ended. 3751 lines build.
+2026-07-03 13:37:07.407: Processing ended. 4103 models
+2026-07-03 13:37:07.805:    Invalid Point in model (i=206), Points 1,3 pt1.X = -3.422736E+13 && pt3.X = 1.369094E+14
+2026-07-03 13:37:07.805:    Invalid Point in model (i=206), Points 21,4 pt21.X = -3.422736E+13 && pt4.X = 1.369094E+14
+2026-07-03 13:37:08.132: Search started
+2026-07-03 13:37:16.705: Searching ended. 5865 models found. Duration time=00:00:08.5730366
+2026-07-03 13:37:16.705: First step models. 3832 models found.
+2026-07-03 13:37:16.706: Filtering started. 
+2026-07-03 13:37:16.725: Filtering ended. 
+2026-07-03 13:37:16.725: Searching Hypothesize Tangent Lines started. 
+2026-07-03 13:37:16.728: Searching Hypothesize Tangent Lines ended. 4031 lines build.
+2026-07-03 13:37:16.728: Processing ended. 4418 models
+2026-07-04 15:02:26.324: Opening CSV: EURUSD m60 start
+2026-07-04 15:02:27.017:    Preparing data started
+2026-07-04 15:02:27.021:    Preparing data ended
+2026-07-04 15:02:27.432: Drawing CSV: EURUSD m60 finished
+2026-07-04 15:02:35.224: Search started
+2026-07-04 15:02:35.243: Searching ended. 0 models found. Duration time=00:00:00.0170001
+2026-07-04 15:02:35.243: First step models. 0 models found.
+2026-07-04 15:02:35.243: Filtering started. 
+2026-07-04 15:02:35.245: Filtering ended. 
+2026-07-04 15:02:35.246: Searching Hypothesize Tangent Lines started. 
+2026-07-04 15:02:35.246: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-07-04 15:02:35.246: Processing ended. 0 models
+2026-07-04 15:02:35.250: Search started
+2026-07-04 15:02:35.259: Searching ended. 1 models found. Duration time=00:00:00.0090000
+2026-07-04 15:02:35.260: First step models. 1 models found.
+2026-07-04 15:02:35.260: Filtering started. 
+2026-07-04 15:02:35.260: Filtering ended. 
+2026-07-04 15:02:35.260: Searching Hypothesize Tangent Lines started. 
+2026-07-04 15:02:35.260: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-07-04 15:02:35.260: Processing ended. 0 models
+2026-07-04 15:02:35.267: Search started
+2026-07-04 15:02:35.271: Searching ended. 5 models found. Duration time=00:00:00.0040000
+2026-07-04 15:02:35.271: First step models. 5 models found.
+2026-07-04 15:02:35.271: Filtering started. 
+2026-07-04 15:02:35.273: Filtering ended. 
+2026-07-04 15:02:35.273: Searching Hypothesize Tangent Lines started. 
+2026-07-04 15:02:35.273: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-07-04 15:02:35.273: Processing ended. 1 models
+2026-07-04 15:02:35.347: Search started
+2026-07-04 15:02:35.380: Searching ended. 34 models found. Duration time=00:00:00.0330001
+2026-07-04 15:02:35.380: First step models. 17 models found.
+2026-07-04 15:02:35.381: Filtering started. 
+2026-07-04 15:02:35.381: Filtering ended. 
+2026-07-04 15:02:35.381: Searching Hypothesize Tangent Lines started. 
+2026-07-04 15:02:35.385: Searching Hypothesize Tangent Lines ended. 16 lines build.
+2026-07-04 15:02:35.385: Processing ended. 17 models
+2026-07-04 15:02:35.500: Search started
+2026-07-04 15:02:46.877: Searching ended. 5879 models found. Duration time=00:00:11.3770277
+2026-07-04 15:02:46.877: First step models. 3850 models found.
+2026-07-04 15:02:46.878: Filtering started. 
+2026-07-04 15:02:46.915: Filtering ended. 
+2026-07-04 15:02:46.915: Searching Hypothesize Tangent Lines started. 
+2026-07-04 15:02:46.918: Searching Hypothesize Tangent Lines ended. 3512 lines build.
+2026-07-04 15:02:46.919: Processing ended. 3830 models
+2026-07-04 15:02:46.940: Search started
+2026-07-04 15:02:48.424: Searching ended. 1296 models found. Duration time=00:00:01.4840036
+2026-07-04 15:02:48.424: First step models. 726 models found.
+2026-07-04 15:02:48.424: Filtering started. 
+2026-07-04 15:02:48.430: Filtering ended. 
+2026-07-04 15:02:48.430: Searching Hypothesize Tangent Lines started. 
+2026-07-04 15:02:48.430: Searching Hypothesize Tangent Lines ended. 909 lines build.
+2026-07-04 15:02:48.430: Processing ended. 982 models
+2026-07-04 15:02:48.762: Search started
+2026-07-04 15:02:57.961: Searching ended. 5865 models found. Duration time=00:00:09.1990224
+2026-07-04 15:02:57.961: First step models. 3832 models found.
+2026-07-04 15:02:57.962: Filtering started. 
+2026-07-04 15:02:57.987: Filtering ended. 
+2026-07-04 15:02:57.987: Searching Hypothesize Tangent Lines started. 
+2026-07-04 15:02:57.990: Searching Hypothesize Tangent Lines ended. 3751 lines build.
+2026-07-04 15:02:57.991: Processing ended. 4103 models
+2026-07-04 15:02:58.464:    Invalid Point in model (i=206), Points 1,3 pt1.X = -3.422736E+13 && pt3.X = 1.369094E+14
+2026-07-04 15:02:58.465:    Invalid Point in model (i=206), Points 21,4 pt21.X = -3.422736E+13 && pt4.X = 1.369094E+14
+2026-07-04 15:02:58.905: Search started
+2026-07-04 15:03:09.116: Searching ended. 5865 models found. Duration time=00:00:10.2110250
+2026-07-04 15:03:09.116: First step models. 3832 models found.
+2026-07-04 15:03:09.117: Filtering started. 
+2026-07-04 15:03:09.147: Filtering ended. 
+2026-07-04 15:03:09.147: Searching Hypothesize Tangent Lines started. 
+2026-07-04 15:03:09.153: Searching Hypothesize Tangent Lines ended. 4031 lines build.
+2026-07-04 15:03:09.154: Processing ended. 4418 models
+2026-07-04 15:12:33.117: Opening CSV: EURUSD m60 start
+2026-07-04 15:12:33.996:    Preparing data started
+2026-07-04 15:12:34.000:    Preparing data ended
+2026-07-04 15:12:34.403: Drawing CSV: EURUSD m60 finished
+2026-07-04 15:12:42.023: Search started
+2026-07-04 15:12:42.042: Searching ended. 0 models found. Duration time=00:00:00.0180001
+2026-07-04 15:12:42.043: First step models. 0 models found.
+2026-07-04 15:12:42.043: Filtering started. 
+2026-07-04 15:12:42.045: Filtering ended. 
+2026-07-04 15:12:42.046: Searching Hypothesize Tangent Lines started. 
+2026-07-04 15:12:42.046: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-07-04 15:12:42.046: Processing ended. 0 models
+2026-07-04 15:12:42.049: Search started
+2026-07-04 15:12:42.060: Searching ended. 1 models found. Duration time=00:00:00.0110000
+2026-07-04 15:12:42.060: First step models. 1 models found.
+2026-07-04 15:12:42.060: Filtering started. 
+2026-07-04 15:12:42.060: Filtering ended. 
+2026-07-04 15:12:42.060: Searching Hypothesize Tangent Lines started. 
+2026-07-04 15:12:42.060: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-07-04 15:12:42.060: Processing ended. 0 models
+2026-07-04 15:12:42.068: Search started
+2026-07-04 15:12:42.073: Searching ended. 5 models found. Duration time=00:00:00.0050001
+2026-07-04 15:12:42.073: First step models. 5 models found.
+2026-07-04 15:12:42.073: Filtering started. 
+2026-07-04 15:12:42.075: Filtering ended. 
+2026-07-04 15:12:42.075: Searching Hypothesize Tangent Lines started. 
+2026-07-04 15:12:42.075: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-07-04 15:12:42.075: Processing ended. 1 models
+2026-07-04 15:12:42.151: Search started
+2026-07-04 15:12:42.194: Searching ended. 34 models found. Duration time=00:00:00.0430001
+2026-07-04 15:12:42.194: First step models. 17 models found.
+2026-07-04 15:12:42.194: Filtering started. 
+2026-07-04 15:12:42.195: Filtering ended. 
+2026-07-04 15:12:42.195: Searching Hypothesize Tangent Lines started. 
+2026-07-04 15:12:42.199: Searching Hypothesize Tangent Lines ended. 16 lines build.
+2026-07-04 15:12:42.200: Processing ended. 17 models
+2026-07-04 15:12:42.297: Search started
+2026-07-04 15:12:53.099: Searching ended. 5879 models found. Duration time=00:00:10.8020283
+2026-07-04 15:12:53.099: First step models. 3850 models found.
+2026-07-04 15:12:53.100: Filtering started. 
+2026-07-04 15:12:53.136: Filtering ended. 
+2026-07-04 15:12:53.136: Searching Hypothesize Tangent Lines started. 
+2026-07-04 15:12:53.139: Searching Hypothesize Tangent Lines ended. 3512 lines build.
+2026-07-04 15:12:53.139: Processing ended. 3830 models
+2026-07-04 15:12:53.161: Search started
+2026-07-04 15:12:54.873: Searching ended. 1296 models found. Duration time=00:00:01.7120044
+2026-07-04 15:12:54.873: First step models. 726 models found.
+2026-07-04 15:12:54.873: Filtering started. 
+2026-07-04 15:12:54.879: Filtering ended. 
+2026-07-04 15:12:54.879: Searching Hypothesize Tangent Lines started. 
+2026-07-04 15:12:54.879: Searching Hypothesize Tangent Lines ended. 909 lines build.
+2026-07-04 15:12:54.879: Processing ended. 982 models
+2026-07-04 15:12:55.216: Search started
+2026-07-04 15:13:06.648: Searching ended. 5865 models found. Duration time=00:00:11.4320300
+2026-07-04 15:13:06.648: First step models. 3832 models found.
+2026-07-04 15:13:06.649: Filtering started. 
+2026-07-04 15:13:06.677: Filtering ended. 
+2026-07-04 15:13:06.677: Searching Hypothesize Tangent Lines started. 
+2026-07-04 15:13:06.680: Searching Hypothesize Tangent Lines ended. 3751 lines build.
+2026-07-04 15:13:06.680: Processing ended. 4103 models
+2026-07-04 15:13:07.180:    Invalid Point in model (i=206), Points 1,3 pt1.X = -3.422736E+13 && pt3.X = 1.369094E+14
+2026-07-04 15:13:07.180:    Invalid Point in model (i=206), Points 21,4 pt21.X = -3.422736E+13 && pt4.X = 1.369094E+14
+2026-07-04 15:13:07.644: Search started
+2026-07-04 15:13:19.088: Searching ended. 5865 models found. Duration time=00:00:11.4440299
+2026-07-04 15:13:19.088: First step models. 3832 models found.
+2026-07-04 15:13:19.093: Filtering started. 
+2026-07-04 15:13:19.186: Filtering ended. 
+2026-07-04 15:13:19.186: Searching Hypothesize Tangent Lines started. 
+2026-07-04 15:13:19.200: Searching Hypothesize Tangent Lines ended. 4031 lines build.
+2026-07-04 15:13:19.203: Processing ended. 4418 models
+2026-07-04 15:25:54.457: Opening CSV: EURUSD m60 start
+2026-07-04 15:25:55.447:    Preparing data started
+2026-07-04 15:25:55.451:    Preparing data ended
+2026-07-04 15:25:55.897: Drawing CSV: EURUSD m60 finished
+2026-07-04 15:26:03.363: Search started
+2026-07-04 15:26:03.379: Searching ended. 0 models found. Duration time=00:00:00.0150001
+2026-07-04 15:26:03.379: First step models. 0 models found.
+2026-07-04 15:26:03.380: Filtering started. 
+2026-07-04 15:26:03.381: Filtering ended. 
+2026-07-04 15:26:03.382: Searching Hypothesize Tangent Lines started. 
+2026-07-04 15:26:03.382: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-07-04 15:26:03.382: Processing ended. 0 models
+2026-07-04 15:26:03.385: Search started
+2026-07-04 15:26:03.394: Searching ended. 1 models found. Duration time=00:00:00.0090000
+2026-07-04 15:26:03.394: First step models. 1 models found.
+2026-07-04 15:26:03.394: Filtering started. 
+2026-07-04 15:26:03.394: Filtering ended. 
+2026-07-04 15:26:03.394: Searching Hypothesize Tangent Lines started. 
+2026-07-04 15:26:03.394: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-07-04 15:26:03.394: Processing ended. 0 models
+2026-07-04 15:26:03.398: Search started
+2026-07-04 15:26:03.400: Searching ended. 5 models found. Duration time=00:00:00.0020000
+2026-07-04 15:26:03.400: First step models. 5 models found.
+2026-07-04 15:26:03.400: Filtering started. 
+2026-07-04 15:26:03.401: Filtering ended. 
+2026-07-04 15:26:03.401: Searching Hypothesize Tangent Lines started. 
+2026-07-04 15:26:03.401: Searching Hypothesize Tangent Lines ended. 0 lines build.
+2026-07-04 15:26:03.401: Processing ended. 1 models
+2026-07-04 15:26:03.423: Search started
+2026-07-04 15:26:03.429: Searching ended. 34 models found. Duration time=00:00:00.0060000
+2026-07-04 15:26:03.429: First step models. 17 models found.
+2026-07-04 15:26:03.429: Filtering started. 
+2026-07-04 15:26:03.430: Filtering ended. 
+2026-07-04 15:26:03.430: Searching Hypothesize Tangent Lines started. 
+2026-07-04 15:26:03.431: Searching Hypothesize Tangent Lines ended. 16 lines build.
+2026-07-04 15:26:03.431: Processing ended. 17 models
+2026-07-04 15:26:03.456: Search started
+2026-07-04 15:26:15.529: Searching ended. 5879 models found. Duration time=00:00:12.0730323
+2026-07-04 15:26:15.529: First step models. 3850 models found.
+2026-07-04 15:26:15.530: Filtering started. 
+2026-07-04 15:26:15.571: Filtering ended. 
+2026-07-04 15:26:15.571: Searching Hypothesize Tangent Lines started. 
+2026-07-04 15:26:15.574: Searching Hypothesize Tangent Lines ended. 3512 lines build.
+2026-07-04 15:26:15.575: Processing ended. 3830 models
+2026-07-04 15:26:15.599: Search started
+2026-07-04 15:26:16.691: Searching ended. 1296 models found. Duration time=00:00:01.0920029
+2026-07-04 15:26:16.691: First step models. 726 models found.
+2026-07-04 15:26:16.692: Filtering started. 
+2026-07-04 15:26:16.697: Filtering ended. 
+2026-07-04 15:26:16.698: Searching Hypothesize Tangent Lines started. 
+2026-07-04 15:26:16.698: Searching Hypothesize Tangent Lines ended. 909 lines build.
+2026-07-04 15:26:16.698: Processing ended. 982 models
+2026-07-04 15:26:17.033: Search started
+2026-07-04 15:26:27.129: Searching ended. 5865 models found. Duration time=00:00:10.0960270
+2026-07-04 15:26:27.129: First step models. 3832 models found.
+2026-07-04 15:26:27.130: Filtering started. 
+2026-07-04 15:26:27.159: Filtering ended. 
+2026-07-04 15:26:27.159: Searching Hypothesize Tangent Lines started. 
+2026-07-04 15:26:27.163: Searching Hypothesize Tangent Lines ended. 3751 lines build.
+2026-07-04 15:26:27.163: Processing ended. 4103 models
+2026-07-04 15:26:27.678:    Invalid Point in model (i=206), Points 1,3 pt1.X = -3.422736E+13 && pt3.X = 1.369094E+14
+2026-07-04 15:26:27.678:    Invalid Point in model (i=206), Points 21,4 pt21.X = -3.422736E+13 && pt4.X = 1.369094E+14
+2026-07-04 15:26:28.167: Search started
+2026-07-04 15:26:38.341: Searching ended. 5865 models found. Duration time=00:00:10.1740273
+2026-07-04 15:26:38.341: First step models. 3832 models found.
+2026-07-04 15:26:38.342: Filtering started. 
+2026-07-04 15:26:38.367: Filtering ended. 
+2026-07-04 15:26:38.367: Searching Hypothesize Tangent Lines started. 
+2026-07-04 15:26:38.371: Searching Hypothesize Tangent Lines ended. 4031 lines build.
+2026-07-04 15:26:38.372: Processing ended. 4418 models

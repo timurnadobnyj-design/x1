@@ -1,0 +1,132 @@
+PORTFOLIO_EX VTBR;
+DESCRIPTION VTBR;
+CLIENTS_LIST ALL_CLIENTS;
+FIRMS_LIST ALL_FIRMS;
+USE_CASE_SENSITIVE_CONSTANTS;
+
+PROGRAM
+
+'Ќастраиваемые параметры, в самом квике создать график с соответствующим таймфреймом   
+'---------------------------------------------------
+ClassCodeList="EQNL" ' код класса инструмента
+Instrument="VTBR" ' название инструмента
+Interval=60 ' интервал (таймфрейм) на графике 
+DayToFind=1500 ' сколько дней назад искать свечи (можно уменьшить, чтоы ускорить работу программы)
+CandleToFind=5000 ' сколько свечей надо найти (можно уменьшить, чтоы ускорить работу программы)
+OutFile = "d:\"&Instrument&".txt" 'файл с котировками
+'---------------------------------------------------
+
+
+All_candles = ""
+CandleCount=0
+CurYear=get_value(GET_DATETIME(), "YEAR")
+CurMonth=get_value(GET_DATETIME(), "MONTH")
+CurDay=get_value(GET_DATETIME(), "DAY")
+CurHour = GET_VALUE(GET_DATETIME(), "HOUR")
+CurMinNotFloor = GET_VALUE(GET_DATETIME(), "MIN")+0 'SEC'
+CurSec = GET_VALUE(GET_DATETIME(), "SEC")+0 'SEC'MILLISEC
+CurMin = Interval*Floor(CurMinNotFloor/Interval)+0 ' округл€ем минуты до "интервальных"
+
+DELETE_ALL_ITEMS()
+ToCicleBars = (DayToFind*24)*(Floor(60/Interval))
+Bars=CREATE_MAP()'массив Bars содержащий значени€ баров'
+GetBars()'функци€ заполн€юща€ массив Bars'
+DELETE_ALL_ITEMS()
+CLEAR_FILE(OutFile)
+
+ItemLine=CandleToFind-1
+FOR joo FROM 1 TO CandleToFind-1
+CurrentBar  =  GET_VALUE(Bars, ItemLine)
+outpute = CREATE_MAP() 
+outpute=SET_VALUE(outpute,"BAR",CurrentBar)
+        if LEN (outpute) > 30 'отсеваем пустые бары'
+        ADD_ITEM(joo,outpute)
+        WRITELN(OutFile, CurrentBar )
+        end if
+ItemLine = ItemLine-1
+END FOR
+
+
+
+func GetBars()
+CurSec = GET_VALUE(GET_DATETIME(), "SEC") 'SEC'
+CountBarsArray=1
+for i from 1 to  ToCicleBars    
+       
+if (CandleCount<CandleToFind+10) ' если нашли сколько нам надо свечей - гон€ем пустой цикл
+   CurMILLISEC = GET_VALUE(GET_DATETIME(), "MILLISEC")+0 'SEC'MILLISEC
+   TextData=fTextData(CurYear,CurMonth,CurDay) &""
+   TextTime=fTextTime(CurHour,CurMin) & ""
+                                      
+   Candle=GET_CANDLE(ClassCodeList,Instrument, "", Interval & "", "PRICE", TextData, TextTime)
+   Open=GET_VALUE (Candle, "OPEN")+ 0
+   
+   if (Open>0) 
+       CandleCount=CandleCount+1
+       High=GET_VALUE (Candle, "HIGH")+0
+       Low=GET_VALUE (Candle, "LOW")+0
+       Close=GET_VALUE (Candle, "CLOSE")+0
+       Volume=GET_VALUE (Candle, "VOLUME")+0
+       All_candles = Instrument & "," & Interval & "," & TextData & "," & TextTime & "," & Open & "," & High & "," & Low & "," & Close & "," & Volume
+       Bars=SET_VALUE(Bars,CountBarsArray, All_candles)
+       CountBarsArray=CountBarsArray+1
+   end if
+         ' откат на "интервал" назад
+           CurMin=CurMin-Interval
+           if (CurMin<0) 'если минута меньше 0
+              CurMin=60+CurMin
+              CurHour=CurHour-1
+                 if CurHour<0'если час меньше 0
+                    CurHour=23
+                    CurDay=CurDay-1
+                       if curDay<1'если число мес€ца меньше 1
+                          CurDay=31
+                          CurMonth=CurMonth-1
+                             if CurMonth<1'если мес€ц €нварь
+                                    CurMonth=12
+                                    CurYear=CurYear-1
+                             end if
+                       end if
+                 end if
+             end if
+end if
+end for  
+                       
+end func
+
+
+
+
+
+
+' функци€ перевода даты в текстовый формат
+func fTextData(Year,Month,Day)
+if (LEN(Month) < 2)
+Month = "0" & Month
+end if
+if (LEN(Day) < 2)
+Day = "0" & Day
+end if
+result = Year & Month & Day
+end func
+
+' функци€ перевода времени в текстовый формат
+func fTextTime(Hour,Min,Sec)
+if (LEN(Hour) < 2)
+Hour = "0" & Hour
+end if
+if (LEN(Min) < 2)
+Min = "0" & Min
+end if
+result = Hour & Min & "00"
+end func
+
+END_PROGRAM
+
+PARAMETER BAR;
+PARAMETER_TITLE BAR;
+PARAMETER_DESCRIPTION BAR;
+PARAMETER_TYPE STRING(150);
+END
+
+END_PORTFOLIO_EX 

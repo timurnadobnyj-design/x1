@@ -1,0 +1,11 @@
+[saveas] System.IO.DirectoryNotFoundException: Could not find a part of the path "/media/linnkod/2gb/yandex.disk/projects/gt/tactica_pattern/skilful/out\CSV_/media/linnkod/2gb/yandex.disk/projects/gt/tactica_pattern/datasets/INTC_1dDay_General.csv".
+  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) [0x001ac] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.IO.FileOptions options) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileStream..ctor(string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,System.IO.FileOptions)
+  at System.IO.StreamWriter..ctor (System.String path, System.Boolean append, System.Text.Encoding encoding, System.Int32 bufferSize) [0x00061] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.IO.StreamWriter..ctor (System.String path, System.Boolean append, System.Text.Encoding encoding) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.StreamWriter..ctor(string,bool,System.Text.Encoding)
+  at Skilful.Statistics.CsvSheet.WriteCsv (System.String fn) [0x0000d] in <18cb3d0c35af4c97867333f5fa37ddf9>:0 
+  at Skilful.Statistics.CsvSheet.SaveAs (System.String path, System.Object[] ignore) [0x00093] in <18cb3d0c35af4c97867333f5fa37ddf9>:0 
+  at Skilful.Statistics.StatCalc.describe (System.Object sender, System.ComponentModel.DoWorkEventArgs e) [0x067ce] in <18cb3d0c35af4c97867333f5fa37ddf9>:0 
+

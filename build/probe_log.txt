@@ -1,0 +1,13 @@
+=== Skilful plugin-load probe ===
+Probe folder : Z:\media\linnkod\2gb\yandex.disk\projects\gt\tactica_pattern\skilful\out\
+.NET runtime : 4.0.30319.42000
+OS / 64-bit  : Microsoft Windows NT 6.2.9200.0 / True
+DLL files next to me: 7
+-------------------------------------------
+dukascopylib.dll : OK  (DataSourceClass=True, types=7)
+Microsoft.Office.Interop.Excel.dll : OK  (DataSourceClass=False, types=795)
+Microsoft.Vbe.Interop.dll : OK  (DataSourceClass=False, types=95)
+mt4text.dll : OK  (DataSourceClass=True, types=7)
+office.dll : OK  (DataSourceClass=False, types=260)
+randlib.dll : OK  (DataSourceClass=True, types=7)
+TextFiles.dll : OK  (DataSourceClass=True, types=4)

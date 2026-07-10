@@ -1,0 +1,13 @@
+<settings>
+  <LoadLastSession>True</LoadLastSession>
+  <LoadWithNewSearch>True</LoadWithNewSearch>
+  <ShowHypotheticalTarget>True</ShowHypotheticalTarget>
+  <ShowIndexCheckedModel>True</ShowIndexCheckedModel>
+  <MaxBarInChart>150</MaxBarInChart>
+  <ShowSourceName>True</ShowSourceName>
+  <EnableHistoryCache>False</EnableHistoryCache>
+  <SaveModelsToFiles>False</SaveModelsToFiles>
+  <CurrentSample>Default</CurrentSample>
+  <DataSourceLibraries>Dukascopy^prompt&gt;Please enter URL, Login and Password~checked&gt;0~storagePath&gt;Dukascopy|Random quotes generator^prompt&gt;set preferred length and period~checked&gt;0~storagePath&gt;|TextFiles^prompt&gt;C:\qcsv~checked&gt;0~storagePath&gt;|CSV^prompt&gt;C:\qcsv\EURUSD.csv~checked&gt;1~storagePath&gt;</DataSourceLibraries>
+  <AgreedWithGPL>true</AgreedWithGPL>
+</settings>
